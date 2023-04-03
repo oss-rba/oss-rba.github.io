@@ -1,0 +1,26 @@
+{
+  "name": "PIA - OSS RBA",
+  "version": "5.0.0",
+  "description": "Documentation for the REST api access provided at OSS",
+  "title": "PIA - OSS RBA",
+  "url" : "https://api-stg.oss.go.id/stg/v1/kl/rba",
+  "sampleUrl": "https://server.digitaltelkom.dev/oss-sandbox",
+  "output": "/tmp/apidoc-output",
+  "input": [
+    "endpoint"
+  ],
+  "header": {
+    "title": "Introduction",
+    "filename": "header.md"
+  },
+  "footer": {
+    "title": "Lampiran",
+    "filename": "footer.md"
+  },
+  "template": {
+    "showRequiredLabels": true,
+    "withCompare": true,
+    "withGenerator": true,
+    "aloneDisplay": true
+  }
+}
