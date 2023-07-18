@@ -15,7 +15,7 @@
 | KODE  | JENIS PERUSAHAAN                              | KETERANGAN                                                                                                                                                                                                                                                                                                     |
 |   01  |   Perusahaan Terbatas (PT)                    | Badan Usaha yang Berbadan Hukum resmi yang dimiliki oleh minimal dua orang dengan tanggung jawab yang hanya berlaku pada perusahaan tanpa melibatkan harta pribadi atau perseorangan yang ada di dalamnya.                                                                                                     |
 |   02  |   Perseroan Komanditer (CV)                   | Badan Usaha bisnis yang didirikan dan dimiliki oleh dua orang atau lebih. Salah satu pihak melibatkan harta pribadi dan pihak lainnya hanya menyertakan modal saja tanpa harus melibatkan harta pribadi ketika krisis finansial.                                                                               |
-|   04  |   Badan Usaha Pemerintah                      | Badan Usaha yang didirikan dan dikelola oleh pemerintah seperti BUMD,BUMDES dan sejenisnya                                                                                                                                                                                                                     |
+|   04  |   Badan Usaha Pemerintah                      | Badan Usaha yang didirikan dan dikelola oleh Pemerintah                                                                                                                                                                                                                     |
 |  05   |  Firma (Fa)                                   | Badan Usaha yang didirikan oleh 2 orang atau lebih dimana tiap anggota bertanggung jawab penuh atas perusahaan.                                                                                                                                                                                                |
 |  06   |  Persekutuan Perdata                          | Sekumpulan orang yang memiliki profesi yangsama dan berkeinginan untuk berhimpun dengan menggunakan nama bersama.                                                                                                                                                                                              |
 |   07  |   Koperasi                                    | Badan Usaha yang beranggotakan orang – orang atau badan hukum koperasi dengan melandaskan kegiatannya berdasarkan prinsip koperasi sekaligus sebagai gerakan ekonomi rakyat yang berlandaskan asas kekeluargaan.                                                                                               |
@@ -32,6 +32,8 @@
 |  25   | Badan Usaha Perwakilan                        |                                                                                                                                                                                                                                                                                                                |
 |  26   | Perseroan Terbatas (PT) Perorangan            |                                                                                                                                                                                                                                                                                                                |
 |  27   | Pedagang Berjangka Asing (PBA)                | Pedagang Berjangka Asing (PBA)                                                                                                                                                                                                                                                                                 |
+|  28   | Badan Usaha Milik Desa (BUM Desa)                | Badan usaha milik desa merupakan usaha desa yang dikelola oleh Pemerintah Desa, dan berbadan hukum. Pemerintah Desa dapat mendirikan BUM Desa sesuai dengan kebutuhan dan potensi Desa                                                                                                                                                                                                                                                        |
+|  29   | Badan Usaha Milik Desa Bersama (BUM Desa Bersama)                | BUM Desa Bersama merupakan gabungan dari dua atau lebih desa yang sama-sama membangun BUM Desa.                                                                                                                                                                                                                                                        |
 
 #### <span id="api-example-for-a-submenu-entry">Lampiran 3 - DATA JENIS ANGKA PENGENAL IMPORTIR (API)</span>
 
@@ -91,11 +93,16 @@ Untuk Referensi Kode Izin Bisa didapatkan melalui method getDataReferensi dengan
 #### <span id="api-example-for-a-submenu-entry">Lampiran 10 - DATA KODE STATUS IZIN</span>
 | KODE | STATUS                                  | KETERANGAN                                                                                 |
 |------|-----------------------------------------|--------------------------------------------------------------------------------------------|
+|  09  | Telah Melengkapi Persyaratan            | Dokumen permohonan dan persyaratan izin sudah diisi dan dilengkapi                         |
 |  10  |  Dokumen Lengkap                        | Dokumen permohonan izin sudah lengkap dan benar                                            |
 |  11  |  Dokumen Belum Lengkap                  |  Dokumen permohonan izin belum lengkap                                                     |
+|  12  |  Pemenuhan Komitmen                     |  Pemenuhan Komitmen                                                                        |
 |  20  | Validasi                                | Petugas melakukan pengecekkan terhadap permohonan izin tersebut                            |
 |  30  |  Verifikasi Pembayaran                  | Petugas melakukan verifikasi pembayaran terhadap Pelaku Usaha                              |
 |  31  | Konfirmasi Pembayaran                   | Petugas melakukan konfirmasi pembayaran terhadap Pelaku Usaha                              |
+|  32  | Menunggu Verifikasi Bukti Bayar PNBP    | Pelaku usaha telah melakukan pembayaran PNBP                                               |
+|  33  | Persetujuan Pembayaran                  | Petugas melakukan verifikasi pembayaran                                                    |
+|  34  | Perbaikan Konfirmasi Pembayaran         | Pelaku usaha upload kembali PNBP                                                           |
 |  40  | Inspeksi                                | Petugas melakukan pengecekan ke lapangan                                                   |
 |  41  | Konfirmasi Persyaratan                  | Pemberhentian perhitungan SLA perizinan karena ada urgensi tertentu                        |
 |  42  | Data Konfirmasi Persyaratan             | Mulai kembali perhitungan SLA perizinan                                                    |
@@ -108,6 +115,7 @@ Untuk Referensi Kode Izin Bisa didapatkan melalui method getDataReferensi dengan
 | 90   | Ditolak                                 | Petugas menolak permohonan Izin Usaha                                                      |
 | 91   | Pencabutan Perizinan Berusaha           | Petugas mencabut Izin Usaha                                                                |
 | 92   | Pembatalan Perizinan Berusaha           | Petugas membatalkan Izin Berusaha                                                          |
+| 93   | Penolakan Persyaratan                   | Penolakan status persyaratan oleh Dinas Teknis                                             |
 #### <span id="api-example-for-a-submenu-entry">Lampiran 11 - DATA KODE KLASIFIKASI SAHAM</span>
 | KODE                              | KETERANGAN                                |
 |-----------------------------------|-------------------------------------------|
