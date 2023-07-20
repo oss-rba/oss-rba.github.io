@@ -900,9 +900,35 @@
 
  * @apiParamExample {json} RequestBody-Example:
  *     HTTP/1.1 200 OK
- *     {
- *       "AKTA": {
- *         "id_perusahaan": "",
+ *       {
+ *       "dataNIB": {
+ *         "nib": "",
+ *         "tgl_pengajuan_nib": "",
+ *         "tgl_terbit_nib": "",
+ *         "tgl_perubahan_nib": "",
+ *         "oss_id": "",
+ *         "id_izin": "",
+ *         "kd_izin": "",
+ *         "kd_daerah": "",
+ *         "kewenangan": "",
+ *         "jenis_pelaku_usaha": "",
+ *         "no_npp": "",
+ *         "no_va": "",
+ *         "no_wlkp": "",
+ *         "flag_perusahaan": "",
+ *         "flag_ekspor": "",
+ *         "flag_impor": "",
+ *         "jenis_api": "",
+ *         "gabung_negara": "",
+ *         "negara_pma_dominan": "",
+ *         "total_pma": "",
+ *         "nilai_pma_dominan": "",
+ *         "nilai_pmdn": "",
+ *         "persen_pma": "",
+ *         "persen_pmdn": "",
+ *         "kd_kawasan": "",
+ *         "jenis_kawasan": "",
+ *         "versi_pia": "",
  *         "jangka_waktu": "",
  *         "status_badan_hukum": "",
  *         "status_penanaman_modal": "",
@@ -922,41 +948,36 @@
  *         "dalam_bentuk_lain": "",
  *         "total_modal_dasar": "",
  *         "total_modal_ditempatkan": "",
- *         "data_kbli": [
- *           {
- *             "kbli": "",
- *             "uraian_usaha": ""
- *           }
- *         ],
+ *         "flag_umk": "",
  *         "pemegang_saham": [
  *           {
  *             "jenis_pemegang_saham": "",
  *             "flag_asing": "",
- *             "klasifikasi_saham_pemegang": "",
- *             "jum_lbr_saham_pemegang": "",
  *             "total_modal_pemegang": "",
  *             "jabatan_pemegang_saham": "",
  *             "nama_pemegang_saham": "",
  *             "jns_identitas_pemegang_saham": "",
  *             "no_identitas_pemegang_saham": "",
  *             "valid_identitas_pemegang_saham": "",
+ *             "negara_asal_pemegang_saham": "",
  *             "pengendali_pemegang_saham": "",
  *             "npwp_pemegang_saham": "",
  *             "alamat_pemegang_saham": "",
  *             "fax_pemegang_saham": "",
- *             "email_pemegang_saham": ""
+ *             "email_pemegang_saham": "",
+ *             "flag_pajak_pemegang_saham": "",
+ *             "ket_pajak_pemegang_saham": ""
  *           }
  *         ],
  *         "penanggung_jwb": [
  *           {
  *             "flag_asing": "",
+ *             "jns_identitas_penanggung_jwb": "",
+ *             "no_identitas_penanggung_jwb": "",
  *             "nama_penanggung_jwb": "",
  *             "jabatan_penanggung_jwb": " ",
  *             "kebangsaan_penanggung_jwb": "",
- *             "jenis_identitas_penanggung_jwb": "",
- *             "no_identitas_penanggung_jwb": "",
  *             "negara_asal_penanggung_jwb": "",
- *             "no_paspor_penanggung_jwb": "",
  *             "npwp_penanggung_jwb": "",
  *             "alamat_penanggung_jwb": "",
  *             "jalan_penanggung_jwb": "",
@@ -969,7 +990,9 @@
  *             "no_telp_penanggung_jwb": "",
  *             "no_hp_penanggung_jwb": "",
  *             "no_fax_penanggung_jwb": "",
- *             "email_penanggung_jwb": ""
+ *             "email_penanggung_jwb": "",
+ *             "flag_pajak_penanggung_jwb": "",
+ *             "ket_pajak_penanggung_jwb": ""
  *           }
  *         ],
  *         "no_pengesahan": "",
@@ -980,14 +1003,214 @@
  *         "tgl_pengesahan_lama": "",
  *         "legalitas": [
  *           {
- *             "jenis_akta": "",
- *             "no_akta": "",
- *             "tgl_akta": "",
+ *             "jenis_legal": "",
+ *             "no_legal": "",
+ *             "tgl_legal": "",
  *             "alamat_notaris": "",
  *             "nama_notaris": "",
  *             "telepon_notaris": ""
  *           }
- *         ]
+ *         ],
+ *         "data_rptka": {
+ *           "jenis_rptka": "",
+ *           "no_rptka": "",
+ *           "rptka_awal": "",
+ *           "rptka_akhir": "",
+ *           "rptka_gaji": "",
+ *           "jumlah_tka_rptka": "",
+ *           "jangka_penggunaan_waktu": "",
+ *           "jangka_waktu_permohonan_rptka": "",
+ *           "rptka_jabatan": [
+ *             {
+ *               "id_jabatan": "",
+ *               "jabatan": "",
+ *               "jumlah": "",
+ *               "tgl_mulai": "",
+ *               "tgl_selesai": "",
+ *               "keterangan": "",
+ *               "rptka_tki_pendamping": [
+ *                 {
+ *                   "id_jabatan": "",
+ *                   "id_pendamping": "",
+ *                   "nama": "",
+ *                   "nik": "",
+ *                   "jabatan": "",
+ *                   "hp": "",
+ *                   "email": "",
+ *                   "foto": "",
+ *                   "pendidikan_min": "",
+ *                   "sertifikat": "",
+ *                   "pengalaman_kerja": "",
+ *                   "keterangan": ""
+ *                 }
+ *               ]
+ *             }
+ *           ],
+ *           "rptka_negara": [
+ *             {
+ *               "id_negara": "",
+ *               "jumlah": ""
+ *             }
+ *           ],
+ *           "rptka_lokasi": [
+ *             {
+ *               "lokasi_id": "",
+ *               "jumlah": ""
+ *             }
+ *           ]
+ *         },
+ *         "data_proyek": [
+ *           {
+ *             "id_proyek": "",
+ *             "nomor_proyek": "",
+ *             "uraian_usaha": "",
+ *             "jumlah_tki_l": "",
+ *             "jumlah_tki_p": "",
+ *             "jumlah_tka_l": "",
+ *             "jumlah_tka_p": "",
+ *             "kbli": "",
+ *             "sektor": "",
+ *             "memiliki_menguasai": "",
+ *             "jenis_lokasi": "",
+ *             "status_tanah": "",
+ *             "luas_tanah": "",
+ *             "satuan_luas_tanah": "",
+ *             "pembelian_pematang_tanah": "",
+ *             "bangunan_gedung": "",
+ *             "mesin_peralatan": "",
+ *             "mesin_peralatan_usd": "",
+ *             "investasi_lain": "",
+ *             "sub_jumlah": "",
+ *             "modal_kerja": "",
+ *             "jumlah_investasi": "",
+ *             "tanggal_kurs": "",
+ *             "nilai_kurs": "",
+ *             "kd_kawasan": "",
+ *             "jawab_lokasi_b": "",
+ *             "jawab_lokasi_c": "",
+ *             "jawab_lokasi_d": "",
+ *             "jawab_lokasi_e": "",
+ *             "jawab_lokasi_f": "",
+ *             "jawab_lokasi_g": "",
+ *             "flag_perluasan": "",
+ *             "flag_cabang": "",
+ *             "npwp_cabang": "",
+ *             "nama_cabang": "",
+ *             "jenis_identitas_pj": "",
+ *             "no_identitas_pj": "",
+ *             "nama_pj": "",
+ *             "status_proyek": "",
+ *             "jenis_proyek": "",
+ *             "nama_kegiatan": "",
+ *             "flag_merger": "",
+ *             "npwp_perseroan_merger": "",
+ *             "nama_perseroan_merger": "",
+ *             "skala_usaha": "",
+ *             "skala_resiko": "",
+ *             "deskripsi_kegiatan": "",
+ *             "data_lokasi_proyek": [
+ *               {
+ *                 "id_proyek_lokasi": "",
+ *                 "proyek_daerah_id": "",
+ *                 "kd_kawasan": "",
+ *                 "alamat_usaha": "",
+ *                 "id_kegiatan": "",
+ *                 "response_kegiatan": "",
+ *                 "jenis_kawasan": "",
+ *                 "jenis_lokasi": "",
+ *                 "status_lokasi": "",
+ *                 "data_lokasi_proyek": [
+ *                   {
+ *                     "serial": "",
+ *                     "lat_lng": ""
+ *                   }
+ *                 ],
+ *                 "data_posisi_proyek": [
+ *                   {
+ *                     "id_proyek_posisi": "",
+ *                     "id_proyek_lokasi": "",
+ *                     "posisi_lokasi": ""
+ *                   }
+ *                 ]
+ *               }
+ *             ],
+ *             "data_proyek_produk": [
+ *               {
+ *                 "id_produk": "",
+ *                 "id_proyek": "",
+ *                 "kbli": "",
+ *                 "id_bidang_usaha": "",
+ *                 "jenis_produksi": "",
+ *                 "kapasitas": "",
+ *                 "satuan": "",
+ *                 "merk_dagang": "",
+ *                 "pemegang_haki": "",
+ *                 "pemegang_paten": "",
+ *                 "pi_nomor": "",
+ *                 "pi_tanggal": "",
+ *                 "pi_npwp": "",
+ *                 "id_kbli_ta": "",
+ *                 "tkdn": ""
+ *               }
+ *             ]
+ *           }
+ *         ],
+ *         "data_dni": [
+ *           {
+ *             "kd_dni": ""
+ *           }
+ *         ],
+ *         "data_checklist": [
+ *           {
+ *             "id_produk": "",
+ *             "id_proyek": "",
+ *             "id_izin": "",
+ *             "jenis_izin": "",
+ *             "kd_izin": "",
+ *             "kd_daerah": "",
+ *             "nama_izin": "",
+ *             "instansi": "",
+ *             "id_bidang_spesifik": "",
+ *             "bidang_spesifik": "",
+ *             "id_kewenangan": "",
+ *             "parameter_kewenangan": "",
+ *             "kewenangan": "",
+ *             "flag_checklist": "",
+ *             "flag_transaksional": "",
+ *             "flag_perpanjangan": "",
+ *             "no_izin": "",
+ *             "tgl_izin": "",
+ *             "file_izin": "",
+ *             "kd_dokumen": "",
+ *             "nm_dokumen": "",
+ *             "kbli_konversi": "",
+ *             "data_persyaratan": [
+ *               {
+ *                 "id_syarat": "",
+ *                 "no_dokumen": "",
+ *                 "tgl_dokumen": "",
+ *                 "file_dokumen": "",
+ *                 "keterangan": ""
+ *               }
+ *             ]
+ *           }
+ *         ],
+ *         "jenis_id_user_proses": "",
+ *         "no_id_user_proses": "",
+ *         "nama_user_proses": "",
+ *         "email_user_proses": "",
+ *         "hp_user_proses": "",
+ *         "alamat_user_proses": "",
+ *         "jns_kelamin_user_proses": "",
+ *         "tempat_lahir_user_proses": "",
+ *         "tgl_lahir_user_proses": "",
+ *         "daerah_id_user_proses": "",
+ *         "rt_rw_user_proses": "",
+ *         "agama_user_proses": "",
+ *         "status_perkawinan_user_proses": "",
+ *         "pekerjaan_user_proses": "",
+ *         "status_nib": "",
+ *         "tipe_dokumen ": ""
  *       }
  *     }
  * 
