@@ -1537,20 +1537,20 @@
  *       }
  *     }
  * 
- * @apiSuccess (200) {object}	    responreceiveLicenseStatus	                responreceiveLicenseStatus
- * @apiSuccess (200) {string(3)}    	responreceiveLicenseStatus.kode	            Kode Respon (*Lihat Lampiran 9)
- * @apiSuccess (200) {string(255)}    	responreceiveLicenseStatus.keterangan	    Keterangan Respon
- * @apiSuccess (200) {object}    	responreceiveLicenseStatus.dataIZIN	        dataIZIN
- * @apiSuccess (200) {string(13)}    	responreceiveLicenseStatus.dataIZIN.nib	    Nomor Induk Berusaha
- * @apiSuccess (200) {string(25)}    	responreceiveLicenseStatus.dataIZIN.id_proyek	    ID proyek
- * @apiSuccess (200) {string(25)}    	responreceiveLicenseStatus.dataIZIN.id_izin	        Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
- * @apiSuccess (200) {string(2)}    	responreceiveLicenseStatus.dataIZIN.kd_status	    Kode Status Perizinan (* Lihat Lampiran 10)
- * @apiSuccess (200) {string(255)}    	responreceiveLicenseStatus.dataIZIN.uraian_status	    Uraian status
+ * @apiSuccess (200) {object}	    responcheckLicenseStatus	                responcheckLicenseStatus
+ * @apiSuccess (200) {string(3)}    	responcheckLicenseStatus.kode	            Kode Respon (*Lihat Lampiran 9)
+ * @apiSuccess (200) {string(255)}    	responcheckLicenseStatus.keterangan	    Keterangan Respon
+ * @apiSuccess (200) {object}    	responcheckLicenseStatus.dataIZIN	        dataIZIN
+ * @apiSuccess (200) {string(13)}    	responcheckLicenseStatus.dataIZIN.nib	    Nomor Induk Berusaha
+ * @apiSuccess (200) {string(25)}    	responcheckLicenseStatus.dataIZIN.id_proyek	    ID proyek
+ * @apiSuccess (200) {string(25)}    	responcheckLicenseStatus.dataIZIN.id_izin	        Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
+ * @apiSuccess (200) {string(2)}    	responcheckLicenseStatus.dataIZIN.kd_status	    Kode Status Perizinan (* Lihat Lampiran 10)
+ * @apiSuccess (200) {string(255)}    	responcheckLicenseStatus.dataIZIN.uraian_status	    Uraian status
 
  * @apiSuccessExample {json} Success-Response:
  *     HTTP/1.1 200 OK
  *     {
- *       "responreceiveLicenseStatus": {
+ *       "responcheckLicenseStatus": {
  *         "kode": "",
  *         "keterangan": "",
  *         "dataIZIN": {
