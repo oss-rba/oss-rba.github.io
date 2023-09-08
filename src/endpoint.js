@@ -2265,7 +2265,7 @@
 /**
  * @api {post} /checkNIBError Check NIB Error
  * @apiVersion 5.0.0
- * @apiDescription Cek Data Nomor Induk Berusaha (NIB) gagal kirim dari Sistem OSS edited
+ * @apiDescription Cek Data Nomor Induk Berusaha (NIB) gagal kirim dari Sistem OSS
  * @apiName checkNIBError
  * @apiGroup NIB
  * @apiExample {curl} Curl Request Example:
