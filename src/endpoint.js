@@ -104,7 +104,7 @@
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
- *       "user_key": "846ee507525c6b00d18733e066bd5686"
+ *       "user_key": {{user_key}}
  *     }
  * @apiParam {object}	    AKTA	                        AKTA
  * @apiParam {string(11)}    	AKTA.id_perusahaan	            ID Perusahaan Dari Sistem AHU
@@ -1253,17 +1253,15 @@
  *     --header 'Content-Type: application/json' \
  *     --data-raw '{
  *         "IZINFINAL": {
- *             "nib": "8120207732259",
- *             "id_produk": "O-202112141149467572120",
- *             "id_proyek": "R-202112141140213935332",
- *             "oss_id": "P02-201912162112383017732",
- *             "id_izin": "I-202111181604410538066",
- *             "kd_izin": "033000000007",
+ *             "nib": "812020773XXXX",
+ *             "id_proyek": "R-20211214114021393XXXX",
+ *             "oss_id": "P02-20191216211238301XXXX",
+ *             "id_izin": "I-20211118160441053XXXX",
+ *             "kd_izin": "033000000XXX",
  *             "kd_daerah": "3201000000",
- *             "kewenangan": "01",
  *             "nomor_izin": "",
- *             "tgl_terbit_izin": "",
- *             "tgl_berlaku_izin": "",
+ *             "tgl_terbit_izin": "YYYY-MM-DD",
+ *             "tgl_berlaku_izin": "YYYY-MM-DD",
  *             "nama_ttd": "",
  *             "nip_ttd": "",
  *             "jabatan_ttd": "",
@@ -1272,15 +1270,17 @@
  *             "keterangan": "",
  *             "file_lampiran": "",
  *             "nomenklatur_nomor_izin": "",
- *             "bln_berlaku_izin": "",
- *             "thn_berlaku_izin": "",
- *             "data_pnbp": [
- *                 {
- *                     "kd_akun": "",
- *                     "kd_penerimaan": "",
- *                     "nominal": ""
- *                 }
- *             ]
+ *             "bln_berlaku_izin": 6,
+ *             "thn_berlaku_izin": 1,
+ *             "jenis_perizinan": "02",
+ *             "data_teknis": {
+ *                "id_komitmen": ""
+ *                "luas_bangunan_disetujui": "",
+ *                "jumlah_lantai_disetujui": "",
+ *                "tinggi_bangunan_disetujui": "",
+ *                "luas_basement_disetujui": "",
+ *                "jumlah_lantai_basement_disetujui": ""
+ *             }
  *         }
  *     }'
  * @apiHeader {String} Content-Type Content Type Request.
@@ -1288,98 +1288,114 @@
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
- *       "user_key": "846ee507525c6b00d18733e066bd5686"
+ *       "user_key": "{{user_key}}"
  *     }
- * @apiParam {object}	    IZINFINAL	                                IZINFINAL
- * @apiParam {string(13)}    	IZINFINAL.nib	                            Nomor Induk Berusaha
- * @apiParam {string(25)}    	IZINFINAL.id_produk	                        Id produk
- * @apiParam {string(25)}    	IZINFINAL.id_proyek	                        Id Proyek
- * @apiParam {string(25)}    	IZINFINAL.oss_id	                        Oss Id adalah ID yang di Generate Sistem OSS dan Dikirimkan ke K/L/D Bersama Permohonan Nomor Induk Berusaha
- * @apiParam {string(25)}    	IZINFINAL.id_izin	                        Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
- * @apiParam {string(12)}    	IZINFINAL.kd_izin	                        Kode Izin Sistem K/L/D (* Lihat Lampiran 8)
- * @apiParam {string(10)}    	IZINFINAL.kd_daerah	                        Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
- * @apiParam {string(2)}    	IZINFINAL.kewenangan	                    Kewenangan (00: Kewenangan Pusat; 01: Kewenangan Provinsi; 02: Kewenangan Kab/Kota)
- * @apiParam {string(50)}    	IZINFINAL.nomor_izin	                    Nomor Izin Final
- * @apiParam {string(10)}    	IZINFINAL.tgl_terbit_izin	                Tanggal Izin Final (format date : YYYY-MM-DD)
- * @apiParam {string(10)}    	IZINFINAL.tgl_berlaku_izin	                Tanggal Berlaku Izin Final (format date : YYYY-MM-DD)
- * @apiParam {string(50)}    	IZINFINAL.nama_ttd	                        Nama Penandatangan Izin
- * @apiParam {string(25)}    	IZINFINAL.nip_ttd	                        Nip Penandatangan Izin
- * @apiParam {string(150)}    	IZINFINAL.jabatan_ttd	                    Jabatan Penandatangan Izin
- * @apiParam {string(2)}    	IZINFINAL.status_izin	                    Status Izin di Sistem OSS (* Lihat Lampiran 10)
- * @apiParam {string(65535)}    	IZINFINAL.file_izin	                        Attachment File Izin dalam Bentuk File PDF Berupa Link (* Ukuran File Maks: 2MB) 
- * @apiParam {string(65535)}    	IZINFINAL.keterangan	                    Keterangan Status Izin
- * @apiParam {string(65535)}    	IZINFINAL.file_lampiran	                    Attachment File Izin dalam Bentuk File PDF Berupa Link (* Ukuran File Maks: 2MB) 
- * @apiParam {string(255)}    	IZINFINAL.nomenklatur_nomor_izin	        Nomenklatur nomor izin
- * @apiParam {number(5)}    	IZINFINAL.bln_berlaku_izin	                angka waktu berlaku izin dalam bulan
- * @apiParam {number(5)}    	IZINFINAL.thn_berlaku_izin	                angka waktu berlaku izin dalam tahun
- * @apiParam {object[]}    	IZINFINAL.data_pnbp	                        data_pnbp
- * @apiParam {string(20)}    	IZINFINAL.data_pnbp.kd_akun	            Kode Akun PNBP dari Simponi Kemenkeu
- * @apiParam {string(20)}    	IZINFINAL.data_pnbp.kd_penerimaan	    Kode Jenis Penerimaan dari Simponi Kemenkeu
- * @apiParam {number(20)}    	IZINFINAL.data_pnbp.nominal	            Jumlah Nilai PNBP (Default Valuta : IDR)
-
-
  * @apiParamExample {json} RequestBody-Example:
  *     HTTP/1.1 200 OK
  *     {
  *       "IZINFINAL": {
- *         "nib": "",
- *         "id_produk": "",
- *         "id_proyek": "",
- *         "oss_id": "",
- *         "id_izin": "",
- *         "kd_izin": "",
- *         "kd_daerah": "",
- *         "kewenangan": "",
+ *         "nib": "812020773XXXX",
+ *         "id_proyek": "R-20211214114021393XXXX",
+ *         "oss_id": "P02-20191216211238301XXXX",
+ *         "id_izin": "I-20211118160441053XXXX",
+ *         "kd_izin": "033000000XXX",
+ *         "kd_daerah": "3201000000",
  *         "nomor_izin": "",
- *         "tgl_terbit_izin": "",
- *         "tgl_berlaku_izin": "",
+ *         "tgl_terbit_izin": "YYYY-MM-DD",
+ *         "tgl_berlaku_izin": "YYYY-MM-DD",
  *         "nama_ttd": "",
  *         "nip_ttd": "",
  *         "jabatan_ttd": "",
- *         "status_izin": "",
+ *         "status_izin": "45",
  *         "file_izin": "",
  *         "keterangan": "",
  *         "file_lampiran": "",
  *         "nomenklatur_nomor_izin": "",
- *         "bln_berlaku_izin": "",
- *         "thn_berlaku_izin": "",
- *         "data_pnbp": [
- *          { 
- *            "kd_akun": "", 
- *            "kd_penerimaan": "", 
- *            "nominal": "" 
- *          }
- *         ]
+ *         "bln_berlaku_izin": 6,
+ *         "thn_berlaku_izin": 1,
+ *         "jenis_perizinan": "02",
+ *         "data_teknis": {
+ *            "id_komitmen": ""
+ *            "luas_bangunan_disetujui": "",
+ *            "jumlah_lantai_disetujui": "",
+ *            "tinggi_bangunan_disetujui": "",
+ *            "luas_basement_disetujui": "",
+ *            "jumlah_lantai_basement_disetujui": ""
+ *         }
  *       }
  *     }
+ * @apiBody {Object}	    IZINFINAL	                                IZINFINAL
+ * @apiBody {String(13){13}}    	IZINFINAL.nib	                            Nomor Induk Berusaha
+ * @apiBody {String(25){25}}    	IZINFINAL.id_proyek	                        Id Proyek
+ * @apiBody {String(25){25}}    	IZINFINAL.oss_id	                        Oss Id adalah ID yang di Generate Sistem OSS dan Dikirimkan ke K/L/D Bersama Permohonan Nomor Induk Berusaha
+ * @apiBody {String(25){25}}    	IZINFINAL.id_izin	                        Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
+ * @apiBody {String(12){12}}    	IZINFINAL.kd_izin	                        Kode Izin Sistem K/L/D (* Lihat Lampiran 8)
+ * @apiBody {String(10){10}}    	IZINFINAL.kd_daerah	                        Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
+ * @apiBody {String(50){50}}    	IZINFINAL.nomor_izin	                    Nomor Izin Final
+ * @apiBody {String(10){10}}    	IZINFINAL.tgl_terbit_izin	                Tanggal Izin Final (format date : YYYY-MM-DD)
+ * @apiBody {String(10){10}}    	IZINFINAL.tgl_berlaku_izin	                Tanggal Berlaku Izin Final (format date : YYYY-MM-DD)
+ * @apiBody {String(50){50}}    	IZINFINAL.nama_ttd	                        Nama Penandatangan Izin
+ * @apiBody {String(25){25}}    	IZINFINAL.nip_ttd	                        Nip Penandatangan Izin
+ * @apiBody {String(150){150}}    	IZINFINAL.jabatan_ttd	                    Jabatan Penandatangan Izin
+ * @apiBody {String(2){2}}    	IZINFINAL.status_izin	                    Status Izin di Sistem OSS (* Lihat Lampiran 10)
+ * @apiBody {String(65535){65535}}    	[IZINFINAL.file_izin]	                        Attachment File Izin dalam Bentuk File PDF Berupa Link (* Ukuran File Maks: 2MB) 
+ * @apiBody {String(65535){65535}}    	[IZINFINAL.keterangan]	                    Keterangan Status Izin
+ * @apiBody {String(65535){65535}}    	[IZINFINAL.file_lampiran]	                    Attachment File Izin dalam Bentuk File PDF Berupa Link (* Ukuran File Maks: 2MB) 
+ * @apiBody {String(255){255}}    	[IZINFINAL.nomenklatur_nomor_izin]	        Nomenklatur nomor izin
+ * @apiBody {Number(5){5}}    	[IZINFINAL.bln_berlaku_izin]	                angka waktu berlaku izin dalam bulan
+ * @apiBody {Number(5){5}}    	[IZINFINAL.thn_berlaku_izin]	                angka waktu berlaku izin dalam tahun
+ * @apiBody {String(3){3}} [IZINFINAL.jenis_perizinan] Jenis Izin (* Lihat Lampiran 27)
+ * @apiBody {Object} [IZINFINAL.data_teknis] data teknis
+ * @apiBody {String(25){25}} [IZINFINAL.data_teknis.id_komitmen] ID komitmen data teknis
+ * @apiBody {String(25){25}} [IZINFINAL.data_teknis.luas_bangunan_disetujui] luas bangungan yang disetujui
+ * @apiBody {String(2){2}} [IZINFINAL.data_teknis.jumlah_lantai_disetujui] jumlah lantai yang disetujui
+ * @apiBody {String(5){5}} [IZINFINAL.data_teknis.tinggi_bangunan_disetujui] tinggi bangunan disetujui yang disetujui
+ * @apiBody {String(25){25}} [IZINFINAL.data_teknis.luas_basement_disetujui] luas basement yang disetujui
+ * @apiBody {String(25){25}} [IZINFINAL.data_teknis.jumlah_lantai_basement_disetujui] jumlah basement yang disetujui
 
  * @apiSuccess (200) {Object} responreceiveLicense                  Response receive license
- * @apiSuccess (200) {String(3)} responreceiveLicense.kode             Kode Respon
+ * @apiSuccess (200) {Number(3)} responreceiveLicense.kode             Kode Respon <b>(* Lihat Lampiran 9)</b>
  * @apiSuccess (200) {String(255)} responreceiveLicense.keterangan       Keterangan Respon
- * @apiSuccess (200) {String(20)} responreceiveLicense.nomor_izin       Nomor Izin yang diterbitkan OSS
+ * @apiSuccess (200) {String(30)} responreceiveLicense.nomor_izin       Nomor Izin yang diterbitkan OSS
+ * @apiSuccess (200) {String(3){3}} [responreceiveLicense.jenis_perizinan] Jenis Izin <b>(* Lihat Lampiran 27)</b>
+ * @apiSuccess (200) {String(65535){65535}} [IZINFINAL.file_lampiran]	Attachment File Izin dalam Bentuk File PDF Berupa Link (* Ukuran File Maks: 2MB) 
  * @apiSuccessExample {json} Success-Response:
  *     HTTP/1.1 200 OK
  *     {
  *     	 "responreceiveLicense": {
- *     		 "kode": "",
- *     		 "keterangan": "",
- *              "nomor_izin": ""
+ *            "kode": 200,
+ *            "keterangan": "",
+ *            "nomor_izin": "",
+ *            "jenis_perizinan": "",
+ *            "file_lampiran": "",
  *     	 }
  *     }
- * 
- * @apiError (400) 400 Data Parameter Salah.
- * @apiError (401) 401 User Akses Tidak Valid.
- * @apiError (403) 403 Ilegal Inquiry / Akses.
- * @apiError (404) 404  Service Tidak Ditemukan.
- * @apiError (405) 405 Akses Service Ditolak.
- * @apiError (500) 500 Proses Payload Data Di Sistem OSS Gagal.
- * @apiError (504) 504 Proses Payload Data Di Sistem OSS Timeout.
+ * @apiError (400) {Object} responreceiveLicense Response receive license.
+ * @apiError (400) {Number(3){3}} responreceiveLicense.kode Kode Respon <b>(* Lihat Lampiran 9)</b>
+ * @apiError (400) {String(255)} responreceiveLicense.keterangan Keterangan Respon (Data Parameter Salah)
+ * @apiError (401) {Object} responreceiveLicense Response receive license.
+ * @apiError (401) {Number(3){3}} responreceiveLicense.kode Kode Respon <b>(* Lihat Lampiran 9)</b>
+ * @apiError (401) {String(255)} responreceiveLicense.keterangan Keterangan Respon (User Akses Tidak Valid)
+ * @apiError (403) {Object} responreceiveLicense Response receive license.
+ * @apiError (403) {Number(3){3}} responreceiveLicense.kode Kode Respon <b>(* Lihat Lampiran 9)</b>
+ * @apiError (403) {String(255)} responreceiveLicense.keterangan Keterangan Respon (Ilegal Inquiry / Akses.)
+ * @apiError (404) {Object} responreceiveLicense Response receive license.
+ * @apiError (404) {Number(3){3}} responreceiveLicense.kode Kode Respon <b>(* Lihat Lampiran 9)</b>
+ * @apiError (404) {String(255)} responreceiveLicense.keterangan Keterangan Respon (Data / Service Tidak Ditemukan.)
+ * @apiError (405) {Object} responreceiveLicense Response receive license.
+ * @apiError (405) {Number(3){3}} responreceiveLicense.kode Kode Respon <b>(* Lihat Lampiran 9)</b>
+ * @apiError (405) {String(255)} responreceiveLicense.keterangan Keterangan Respon (Akses Service Ditolak)
+ * @apiError (500) {Object} responreceiveLicense Response receive license.
+ * @apiError (500) {Number(3){3}} responreceiveLicense.kode Kode Respon <b>(* Lihat Lampiran 9)</b>
+ * @apiError (500) {String(255)} responreceiveLicense.keterangan Keterangan Respon (Proses Payload Data Di Sistem OSS Gagal)
+ * @apiError (504) {Object} responreceiveLicense Response receive license.
+ * @apiError (504) {Number(3){3}} responreceiveLicense.kode Kode Respon <b>(* Lihat Lampiran 9)</b>
+ * @apiError (504) {String(255)} responreceiveLicense.keterangan Keterangan Respon (Proses Payload Data Di Sistem OSS Timeout)
  * @apiErrorExample Error-Response:
  *     {
  *     	 "responreceiveLicense": {
- *     		 "kode": "",
+ *     		 "kode": 500,
  *     		 "keterangan": "",
- *           "nomor_izin": ""
  *     	 }
  *     }
  */
@@ -1423,7 +1439,7 @@
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
- *       "user_key": "846ee507525c6b00d18733e066bd5686"
+ *       "user_key": {{user_key}}
  *     }
  * @apiParam {object}	    IZINSTATUS	IZINSTATUS
  * @apiParam {string(13)}    	IZINSTATUS.nib	            Nomor Induk Berusaha
@@ -1524,7 +1540,7 @@
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
- *       "user_key": "846ee507525c6b00d18733e066bd5686"
+ *       "user_key": {{user_key}}
  *     }
  * @apiParam {object}	    IZINSTATUS	            IZINSTATUS
  * @apiParam {string(13)}    	IZINSTATUS.id_izin	    id_izin
@@ -1599,7 +1615,7 @@
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
- *       "user_key": "846ee507525c6b00d18733e066bd5686"
+ *       "user_key": {{user_key}}
  *     }
  * @apiParam {object}	    INQUERYNIB	        INQUERYNIB
  * @apiParam {string(13)}    	INQUERYNIB.nib	    Nomor Induk Berusaha
@@ -2211,7 +2227,7 @@
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
- *       "user_key": "846ee507525c6b00d18733e066bd5686"
+ *       "user_key": {{user_key}}
  *     }
  * @apiParam {object}	    CHECKNIB	        CHECKNIB
  * @apiParam {string(13)}    	CHECKNIB.nib	    Nomor Induk Berusaha
@@ -2283,7 +2299,7 @@
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
- *       "user_key": "846ee507525c6b00d18733e066bd5686"
+ *       "user_key": {{user_key}}
  *     }
  * @apiParam {object}	    CHECKNIBERROR	Data check NIB error
  * @apiParam {string(10)}    	CHECKNIBERROR.tgl_awal	    Periode Tanggal Awal NIB Terbit (*Date Format YYYY-MM-DD)
@@ -2361,7 +2377,7 @@
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
- *       "user_key": "846ee507525c6b00d18733e066bd5686"
+ *       "user_key": {{user_key}}
  *     }
  * @apiParam {object}	    CHECKNIBUPDATE	                Data check NIB updated
  * @apiParam {string(10)}    	CHECKNIBUPDATE.tgl_awal	        Periode Tanggal Awal NIB Terbit (*Date Format YYYY-MM-DD)
@@ -2443,7 +2459,7 @@
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
- *       "user_key": "846ee507525c6b00d18733e066bd5686"
+ *       "user_key": {{user_key}}
  *     }
  * @apiParam {object}	    REKONNIB	                Data Rekon NIB
  * @apiParam {string(10)}    	REKONNIB.tgl_awal	        Periode Tanggal Awal NIB Terbit (*Date Format YYYY-MM-DD)
@@ -2743,7 +2759,7 @@
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
- *       "user_key": "846ee507525c6b00d18733e066bd5686"
+ *       "user_key": {{user_key}}
  *     }
  * @apiParam {object}	    INQUERYNIBSTPW	        INQUERYNIBSTPW
  * @apiParam {string(13)}    	INQUERYNIBSTPW.nib	    Nomor Induk Berusaha
@@ -2755,63 +2771,63 @@
  *     	 }
  *     }
  * 
-  * @apiSuccess (200) {object}	responinqueryNIBSTPW	responinqueryNIBSTPW		
- * @apiSuccess (200) {string(3)}    	responinqueryNIBSTPW.kode	    kode		
- * @apiSuccess (200) {string(255)}    	responinqueryNIBSTPW.keterangan	    keterangan		
- * @apiSuccess (200) {object}    	responinqueryNIBSTPW.dataNIBSTPW	    dataNIBSTPW		
- * @apiSuccess (200) {string(13)}   	responinqueryNIBSTPW.dataNIBSTPW.nib	Nomor Induk Berusaha		
- * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.tgl_pengajuan_nib	Tanggal Pengajuan NIB (* Date Format YYYY-MM-DD)		
- * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.tgl_terbit_nib	Tanggal Terbit NIB (* Date Format YYYY-MM-DD)		
- * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.tgl_perubahan_nib	Tanggal Perubahan NIB (* Date Format YYYY-MM-DD)		
- * @apiSuccess (200) {string(25)}   	responinqueryNIBSTPW.dataNIBSTPW.oss_id	Oss ID adalah ID yang di Generate Sistem OSS dan Dikirimkan ke L/L/D Bersama Permohonan Nomor Induk Berusaha (NIB)		
- * @apiSuccess (200) {string(2)}   	responinqueryNIBSTPW.dataNIBSTPW.jenis_pelaku_usaha	Jenis Pelaku Usaha (* Lihat Lampiran 18)		
- * @apiSuccess (200) {string(25)}   	responinqueryNIBSTPW.dataNIBSTPW.nama_pj	Nama Penanggung Jawab		
- * @apiSuccess (200) {string(255)}   	responinqueryNIBSTPW.dataNIBSTPW.alamat_pj	Alamat Penanggung Jawab		
- * @apiSuccess (200) {string(20)}   	responinqueryNIBSTPW.dataNIBSTPW.paspor_pj	Nomor Paspor Penanggung Jawab		
- * @apiSuccess (200) {string(50)}   	responinqueryNIBSTPW.dataNIBSTPW.email_pj	Email Penanggung Jawab		
- * @apiSuccess (200) {string(2)}   	responinqueryNIBSTPW.dataNIBSTPW.asal_negara_pj	Negara Asal Penanggung Jawab (* Sumber Kodefikasi Negara Mengikuti Standar Unedifact : http://www.unece.org/cefact/locode/ service/location )		
- * @apiSuccess (200) {string(50)}   	responinqueryNIBSTPW.dataNIBSTPW.telp_pj	Telpon Penanggung Jawab		
- * @apiSuccess (200) {string(255)}   	responinqueryNIBSTPW.dataNIBSTPW.nama_perusahaan_ln	Nama Prinsipal		
- * @apiSuccess (200) {string(255)}   	responinqueryNIBSTPW.dataNIBSTPW.alamat_perusahaan_ln	Alamat Prinsipal		
- * @apiSuccess (200) {string(2)}   	responinqueryNIBSTPW.dataNIBSTPW.negara_perusahaan_ln	Negara Prinsipal (* Sumber Kodefikasi Negara Mengikuti Standar Unedifact: http://www.unece.org/cefact/locode/ service/location )		
- * @apiSuccess (200) {string(50)}   	responinqueryNIBSTPW.dataNIBSTPW.telp_perusahaan_ln	Telpon Prinsipal		
- * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.jangka_waktu	Jangka Waktu (* Date Format YYYY- MM-DD)		
- * @apiSuccess (200) {string(65535)}   	responinqueryNIBSTPW.dataNIBSTPW.file_prospektus	Attachment File Prospektus dalam Bentuk File PDF/Image Berupa Link (* Ukuran File Maks: 2MB)		
- * @apiSuccess (200) {string(5)}   	responinqueryNIBSTPW.dataNIBSTPW.versi_pia	Versi PIA OSS		
- * @apiSuccess (200) {object[]}    	responinqueryNIBSTPW.dataNIBSTPW.data_checklist	Data checklist		
- * @apiSuccess (200) {string(25)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.id_izin	Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin		
- * @apiSuccess (200) {string(3)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.jenis_izin	Jenis Perizinan (* Lihat Lampiran 27)		
- * @apiSuccess (200) {string(13)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.kd_izin	Kode Izin Sistem K/L/D (*https://services.oss.go.id/getListIzin)		
- * @apiSuccess (200) {string(10)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.kd_daerah	Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)		
- * @apiSuccess (200) {string(255)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.nama_izin	Nama Izin		
- * @apiSuccess (200) {string(100)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.instansi	Nama Instansi		
- * @apiSuccess (200) {number(19)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.id_bidang_spesifik	ID Bidang Spesifik		
- * @apiSuccess (200) {string(65535)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.bidang_spesifik	Uraian Bidang Spesifik		
- * @apiSuccess (200) {number(19)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.id_kewenangan	ID Kewenangan		
- * @apiSuccess (200) {string(255)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.parameter_kewenangan	Parameter Kewenangan Izin		
- * @apiSuccess (200) {string(2)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.kewenangan	00: Kewenangan Pusat; 01: Kewenangan Provinsi; 02: Kewenangan Kab/Kota		
- * @apiSuccess (200) {string(65535)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.file_izin	Attachment File Izin Hasil Pemenuhan Komitmen dari K/L/D dalam Bentuk File PDF/Image Berupa Link (* Ukuran File Maks: 2MB)		
- * @apiSuccess (200) {string(65535)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.file_izin_oss	Attachment File Izin yang diterbitkan ole Lembaga OSS dalam Bentuk File PDF/Image Berupa Link (* Ukuran File Maks: 2MB)		
- * @apiSuccess (200) {string(1)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.flag_checklist	Flag Checklist Komitmen (* Lihat Lampiran 28)		
- * @apiSuccess (200) {string(2)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.status_checklist	Status Penerbitan Izin / Checklist (* Lihat Lampiran 10)		
- * @apiSuccess (200) {string(1)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.flag_transaksional	Flag : Y/N, Flag Izin Komersial / Operasional Diajukan Transaksional (Bisa Mengajukan Berulang)		
- * @apiSuccess (200) {string(1)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.flag_perpanjangan	Flag : Y/N, Flag Bahwa Izin Usaha Ini Adalah Hasil Perpanjangan Dari Izin Usaha Yang Terbit Sebelum OSS		
- * @apiSuccess (200) {string(2)}   	responinqueryNIBSTPW.dataNIBSTPW.jenis_id_user_proses	Kode Jenis Identitas (* Lihat Lampiran 4)		
- * @apiSuccess (200) {string(25)}   	responinqueryNIBSTPW.dataNIBSTPW.no_id_user_proses	No Identitas Pemroses NIB		
- * @apiSuccess (200) {string(100)}   	responinqueryNIBSTPW.dataNIBSTPW.nama_user_proses	Nama User Pemroses NIB		
- * @apiSuccess (200) {string(50)}   	responinqueryNIBSTPW.dataNIBSTPW.email_user_proses	Email User Pemroses NIB		
- * @apiSuccess (200) {string(25)}   	responinqueryNIBSTPW.dataNIBSTPW.hp_user_proses	No HP Pemroses NIB		
- * @apiSuccess (200) {string(255)}   	responinqueryNIBSTPW.dataNIBSTPW.alamat_user_proses	Alamat Pemroses NIB		
- * @apiSuccess (200) {string(1)}   	responinqueryNIBSTPW.dataNIBSTPW.jns_kelamin_user_proses	Jenis Kelamin Pemroses NIB (L : Laki- Laki, P : Perempuan)		
- * @apiSuccess (200) {string(100)}   	responinqueryNIBSTPW.dataNIBSTPW.tempat_lahir_user_proses	Tempat Lahir Pemroses NIB		
- * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.tgl_lahir_user_proses	Tanggal Lahir User Pemroses (format date : YYYY-MM-DD)		
- * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.daerah_id_user_proses	ID Daerah User Pemroses(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)		
- * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.rt_rw_user_proses	RT RW Pemroses NIB		
- * @apiSuccess (200) {string(50)}   	responinqueryNIBSTPW.dataNIBSTPW.agama_user_proses	Agama Pemroses NIB		
- * @apiSuccess (200) {string(50)}   	responinqueryNIBSTPW.dataNIBSTPW.status_perkawinan_user_proses	Status Perkawinan Pemroses NIB		
- * @apiSuccess (200) {string(50)}   	responinqueryNIBSTPW.dataNIBSTPW.pekerjaan_user_proses	Pekerjaan Pemroses NIB		
- * @apiSuccess (200) {string(2)}   	responinqueryNIBSTPW.dataNIBSTPW.status_nib	Status Penerbitan NIB (* Lihat Lampiran 14)		
- * @apiSuccess (200) {string(1)}   	responinqueryNIBSTPW.dataNIBSTPW.tipe_dokumen 	Tipe Dokumen (9:Original, 5:Update, 3:Pencabutan, 4:Pembatalan)		 
+  * @apiSuccess (200) {object}	responinqueryNIBSTPW	responinqueryNIBSTPW		
+ * @apiSuccess (200) {string(3)}    	responinqueryNIBSTPW.kode	    kode		
+ * @apiSuccess (200) {string(255)}    	responinqueryNIBSTPW.keterangan	    keterangan		
+ * @apiSuccess (200) {object}    	responinqueryNIBSTPW.dataNIBSTPW	    dataNIBSTPW		
+ * @apiSuccess (200) {string(13)}   	responinqueryNIBSTPW.dataNIBSTPW.nib	Nomor Induk Berusaha		
+ * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.tgl_pengajuan_nib	Tanggal Pengajuan NIB (* Date Format YYYY-MM-DD)		
+ * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.tgl_terbit_nib	Tanggal Terbit NIB (* Date Format YYYY-MM-DD)		
+ * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.tgl_perubahan_nib	Tanggal Perubahan NIB (* Date Format YYYY-MM-DD)		
+ * @apiSuccess (200) {string(25)}   	responinqueryNIBSTPW.dataNIBSTPW.oss_id	Oss ID adalah ID yang di Generate Sistem OSS dan Dikirimkan ke L/L/D Bersama Permohonan Nomor Induk Berusaha (NIB)		
+ * @apiSuccess (200) {string(2)}   	responinqueryNIBSTPW.dataNIBSTPW.jenis_pelaku_usaha	Jenis Pelaku Usaha (* Lihat Lampiran 18)		
+ * @apiSuccess (200) {string(25)}   	responinqueryNIBSTPW.dataNIBSTPW.nama_pj	Nama Penanggung Jawab		
+ * @apiSuccess (200) {string(255)}   	responinqueryNIBSTPW.dataNIBSTPW.alamat_pj	Alamat Penanggung Jawab		
+ * @apiSuccess (200) {string(20)}   	responinqueryNIBSTPW.dataNIBSTPW.paspor_pj	Nomor Paspor Penanggung Jawab		
+ * @apiSuccess (200) {string(50)}   	responinqueryNIBSTPW.dataNIBSTPW.email_pj	Email Penanggung Jawab		
+ * @apiSuccess (200) {string(2)}   	responinqueryNIBSTPW.dataNIBSTPW.asal_negara_pj	Negara Asal Penanggung Jawab (* Sumber Kodefikasi Negara Mengikuti Standar Unedifact : http://www.unece.org/cefact/locode/ service/location )		
+ * @apiSuccess (200) {string(50)}   	responinqueryNIBSTPW.dataNIBSTPW.telp_pj	Telpon Penanggung Jawab		
+ * @apiSuccess (200) {string(255)}   	responinqueryNIBSTPW.dataNIBSTPW.nama_perusahaan_ln	Nama Prinsipal		
+ * @apiSuccess (200) {string(255)}   	responinqueryNIBSTPW.dataNIBSTPW.alamat_perusahaan_ln	Alamat Prinsipal		
+ * @apiSuccess (200) {string(2)}   	responinqueryNIBSTPW.dataNIBSTPW.negara_perusahaan_ln	Negara Prinsipal (* Sumber Kodefikasi Negara Mengikuti Standar Unedifact: http://www.unece.org/cefact/locode/ service/location )		
+ * @apiSuccess (200) {string(50)}   	responinqueryNIBSTPW.dataNIBSTPW.telp_perusahaan_ln	Telpon Prinsipal		
+ * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.jangka_waktu	Jangka Waktu (* Date Format YYYY- MM-DD)		
+ * @apiSuccess (200) {string(65535)}   	responinqueryNIBSTPW.dataNIBSTPW.file_prospektus	Attachment File Prospektus dalam Bentuk File PDF/Image Berupa Link (* Ukuran File Maks: 2MB)		
+ * @apiSuccess (200) {string(5)}   	responinqueryNIBSTPW.dataNIBSTPW.versi_pia	Versi PIA OSS		
+ * @apiSuccess (200) {object[]}    	responinqueryNIBSTPW.dataNIBSTPW.data_checklist	Data checklist		
+ * @apiSuccess (200) {string(25)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.id_izin	Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin		
+ * @apiSuccess (200) {string(3)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.jenis_izin	Jenis Perizinan (* Lihat Lampiran 27)		
+ * @apiSuccess (200) {string(13)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.kd_izin	Kode Izin Sistem K/L/D (*https://services.oss.go.id/getListIzin)		
+ * @apiSuccess (200) {string(10)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.kd_daerah	Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)		
+ * @apiSuccess (200) {string(255)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.nama_izin	Nama Izin		
+ * @apiSuccess (200) {string(100)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.instansi	Nama Instansi		
+ * @apiSuccess (200) {number(19)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.id_bidang_spesifik	ID Bidang Spesifik		
+ * @apiSuccess (200) {string(65535)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.bidang_spesifik	Uraian Bidang Spesifik		
+ * @apiSuccess (200) {number(19)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.id_kewenangan	ID Kewenangan		
+ * @apiSuccess (200) {string(255)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.parameter_kewenangan	Parameter Kewenangan Izin		
+ * @apiSuccess (200) {string(2)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.kewenangan	00: Kewenangan Pusat; 01: Kewenangan Provinsi; 02: Kewenangan Kab/Kota		
+ * @apiSuccess (200) {string(65535)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.file_izin	Attachment File Izin Hasil Pemenuhan Komitmen dari K/L/D dalam Bentuk File PDF/Image Berupa Link (* Ukuran File Maks: 2MB)		
+ * @apiSuccess (200) {string(65535)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.file_izin_oss	Attachment File Izin yang diterbitkan ole Lembaga OSS dalam Bentuk File PDF/Image Berupa Link (* Ukuran File Maks: 2MB)		
+ * @apiSuccess (200) {string(1)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.flag_checklist	Flag Checklist Komitmen (* Lihat Lampiran 28)		
+ * @apiSuccess (200) {string(2)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.status_checklist	Status Penerbitan Izin / Checklist (* Lihat Lampiran 10)		
+ * @apiSuccess (200) {string(1)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.flag_transaksional	Flag : Y/N, Flag Izin Komersial / Operasional Diajukan Transaksional (Bisa Mengajukan Berulang)		
+ * @apiSuccess (200) {string(1)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.flag_perpanjangan	Flag : Y/N, Flag Bahwa Izin Usaha Ini Adalah Hasil Perpanjangan Dari Izin Usaha Yang Terbit Sebelum OSS		
+ * @apiSuccess (200) {string(2)}   	responinqueryNIBSTPW.dataNIBSTPW.jenis_id_user_proses	Kode Jenis Identitas (* Lihat Lampiran 4)		
+ * @apiSuccess (200) {string(25)}   	responinqueryNIBSTPW.dataNIBSTPW.no_id_user_proses	No Identitas Pemroses NIB		
+ * @apiSuccess (200) {string(100)}   	responinqueryNIBSTPW.dataNIBSTPW.nama_user_proses	Nama User Pemroses NIB		
+ * @apiSuccess (200) {string(50)}   	responinqueryNIBSTPW.dataNIBSTPW.email_user_proses	Email User Pemroses NIB		
+ * @apiSuccess (200) {string(25)}   	responinqueryNIBSTPW.dataNIBSTPW.hp_user_proses	No HP Pemroses NIB		
+ * @apiSuccess (200) {string(255)}   	responinqueryNIBSTPW.dataNIBSTPW.alamat_user_proses	Alamat Pemroses NIB		
+ * @apiSuccess (200) {string(1)}   	responinqueryNIBSTPW.dataNIBSTPW.jns_kelamin_user_proses	Jenis Kelamin Pemroses NIB (L : Laki- Laki, P : Perempuan)		
+ * @apiSuccess (200) {string(100)}   	responinqueryNIBSTPW.dataNIBSTPW.tempat_lahir_user_proses	Tempat Lahir Pemroses NIB		
+ * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.tgl_lahir_user_proses	Tanggal Lahir User Pemroses (format date : YYYY-MM-DD)		
+ * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.daerah_id_user_proses	ID Daerah User Pemroses(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)		
+ * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.rt_rw_user_proses	RT RW Pemroses NIB		
+ * @apiSuccess (200) {string(50)}   	responinqueryNIBSTPW.dataNIBSTPW.agama_user_proses	Agama Pemroses NIB		
+ * @apiSuccess (200) {string(50)}   	responinqueryNIBSTPW.dataNIBSTPW.status_perkawinan_user_proses	Status Perkawinan Pemroses NIB		
+ * @apiSuccess (200) {string(50)}   	responinqueryNIBSTPW.dataNIBSTPW.pekerjaan_user_proses	Pekerjaan Pemroses NIB		
+ * @apiSuccess (200) {string(2)}   	responinqueryNIBSTPW.dataNIBSTPW.status_nib	Status Penerbitan NIB (* Lihat Lampiran 14)		
+ * @apiSuccess (200) {string(1)}   	responinqueryNIBSTPW.dataNIBSTPW.tipe_dokumen 	Tipe Dokumen (9:Original, 5:Update, 3:Pencabutan, 4:Pembatalan)		 
  * @apiSuccessExample {json} Success-Response:
  *     HTTP/1.1 200 OK
  *     {
@@ -2914,7 +2930,7 @@
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
- *       "user_key": "846ee507525c6b00d18733e066bd5686"
+ *       "user_key": {{user_key}}
  *     }
  * @apiParam {object}	    GETDATAREFERENSI	    GETDATAREFERENSI
  * @apiParam {string(3)}    	GETDATAREFERENSI.kode	Kode Referensi (* Lihat Lampiran 29)
@@ -4025,7 +4041,7 @@
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
- *       "user_key": "846ee507525c6b00d18733e066bd5686"
+ *       "user_key": {{user_key}}
  *     }
  * @apiParam {object}	    IZINFINALKKPR	IZINFINALKKPR
  * @apiParam {string(25)}    	IZINFINALKKPR.id_proyek	    ID / Kode Proyek
@@ -4409,7 +4425,7 @@
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
- *       "user_key": "846ee507525c6b00d18733e066bd5686"
+ *       "user_key": {{user_key}}
  *     }
  * @apiParam {object}	    INQUERYFILEDS	                        INQUERYFILEDS
  * @apiParam {string(25)}    	INQUERYFILEDS.id_permohonan_izin	    Merupakan ID pengajuan, yaitu permohonan perizinan yang digenerate oleh sistem OSS
@@ -4497,7 +4513,7 @@
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
- *       "user_key": "846ee507525c6b00d18733e066bd5686"
+ *       "user_key": {{user_key}}
  *     }
  * @apiParam {object}    	IZINFINAL	        IZINFINAL
  * @apiParam {string(13)}    	IZINFINAL.nib	    Nomor Induk Berusaha
@@ -4617,7 +4633,7 @@
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
- *       "user_key": "846ee507525c6b00d18733e066bd5686"
+ *       "user_key": {{user_key}}
  *     }
  * @apiParam {object}	 receiveCertificate	                        receiveCertificate
  * @apiParam {string}    receiveCertificate.id_permohonan_izin	    id_permohonan_izin
@@ -4699,7 +4715,7 @@
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
- *       "user_key": "846ee507525c6b00d18733e066bd5686"
+ *       "user_key": {{user_key}}
  *     }
  * @apiSuccess (200) {object}	    responInqueryCertificate	                                        responInqueryCertificate
  * @apiSuccess (200) {string}    	responInqueryCertificate.kode	                                    kode
