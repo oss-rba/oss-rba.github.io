@@ -1441,27 +1441,27 @@
  *       "Content-Type": "application/json",
  *       "user_key": {{user_key}}
  *     }
- * @apiParam {object}	    IZINSTATUS	IZINSTATUS
- * @apiParam {string(13)}    	IZINSTATUS.nib	            Nomor Induk Berusaha
- * @apiParam {string(25)}    	IZINSTATUS.id_produk	    id produk
- * @apiParam {string(25)}    	IZINSTATUS.id_proyek	    id proyek
- * @apiParam {string(25)}    	IZINSTATUS.oss_id	        Oss Id adalah ID yang di Generate Sistem OSS dan Dikirimkan ke K/L/D Bersama Pengajuan Perizinan
- * @apiParam {string(25)}    	IZINSTATUS.id_izin	        Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
- * @apiParam {string(12)}    	IZINSTATUS.kd_izin	        Kode Izin Sistem K/L/D (* Lihat Lampiran 8)
- * @apiParam {string(3)}    	IZINSTATUS.kd_instansi	    Kode Instansi
- * @apiParam {string(2)}    	IZINSTATUS.kd_status	    Kode Status Perizinan (* Lihat Lampiran 10)
- * @apiParam {string(18)}    	IZINSTATUS.tgl_status	    Tanggal Proses Status Izin (format date: YYYY-MM-DD HH:II:SS)
- * @apiParam {string(50)}    	IZINSTATUS.nip_status	    Nip Status Izin
- * @apiParam {string(50)}    	IZINSTATUS.nama_status	    Nama Status Izin
- * @apiParam {string(65535)}    	IZINSTATUS.keterangan	    keterangan
- * @apiParam {object}    	IZINSTATUS.data_pnbp	    data_pnbp
- * @apiParam {string(20)}    	IZINSTATUS.data_pnbp.kd_akun	    Kode Akun simponi
- * @apiParam {string(20)}    	IZINSTATUS.data_pnbp.kd_penerimaan	    Kode Penerimaan
- * @apiParam {string(50)}    	IZINSTATUS.data_pnbp.kd_billing	    Kode Billing
- * @apiParam {Date(10)}    	IZINSTATUS.data_pnbp.tgl_billing	    Tgl terbit billing
- * @apiParam {Date(10)}    	IZINSTATUS.data_pnbp.tgl_expire	    Tgl berlaku billing
- * @apiParam {number(20.0)}    	IZINSTATUS.data_pnbp.nominal	    Nominal PNBP
- * @apiParam {string(255)}    	IZINSTATUS.data_pnbp.url_dokumen	    URL Dokumen SPS
+ * @apiBody {object}	    IZINSTATUS	IZINSTATUS
+ * @apiBody {string(13)}    	IZINSTATUS.nib	            Nomor Induk Berusaha
+ * @apiBody {string(25)}    	IZINSTATUS.id_produk	    id produk
+ * @apiBody {string(25)}    	IZINSTATUS.id_proyek	    id proyek
+ * @apiBody {string(25)}    	IZINSTATUS.oss_id	        Oss Id adalah ID yang di Generate Sistem OSS dan Dikirimkan ke K/L/D Bersama Pengajuan Perizinan
+ * @apiBody {string(25)}    	IZINSTATUS.id_izin	        Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
+ * @apiBody {string(12)}    	IZINSTATUS.kd_izin	        Kode Izin Sistem K/L/D (* Lihat Lampiran 8)
+ * @apiBody {string(3)}    	IZINSTATUS.kd_instansi	    Kode Instansi
+ * @apiBody {string(2)}    	IZINSTATUS.kd_status	    Kode Status Perizinan (* Lihat Lampiran 10)
+ * @apiBody {string(18)}    	IZINSTATUS.tgl_status	    Tanggal Proses Status Izin (format date: YYYY-MM-DD HH:II:SS)
+ * @apiBody {string(50)}    	IZINSTATUS.nip_status	    Nip Status Izin
+ * @apiBody {string(50)}    	IZINSTATUS.nama_status	    Nama Status Izin
+ * @apiBody {string(65535)}    	IZINSTATUS.keterangan	    keterangan
+ * @apiBody {object}    	[IZINSTATUS.data_pnbp]	    data_pnbp
+ * @apiBody {string(20)}    	[IZINSTATUS.data_pnbp.kd_akun]	    Kode Akun simponi
+ * @apiBody {string(20)}    	[IZINSTATUS.data_pnbp.kd_penerimaan]	    Kode Penerimaan
+ * @apiBody {string(50)}    	[IZINSTATUS.data_pnbp.kd_billing]	    Kode Billing
+ * @apiBody {Date(10)}    	[IZINSTATUS.data_pnbp.tgl_billing]	    Tgl terbit billing
+ * @apiBody {Date(10)}    	[IZINSTATUS.data_pnbp.tgl_expire]	    Tgl berlaku billing
+ * @apiBody {number(20.0)}    	[IZINSTATUS.data_pnbp.nominal]	    Nominal PNBP
+ * @apiBody {string(255)}    	[IZINSTATUS.data_pnbp.url_dokumen]	    URL Dokumen SPS
 
 
  * @apiParamExample {json} RequestBody-Example:
