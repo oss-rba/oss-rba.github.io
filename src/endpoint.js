@@ -1423,6 +1423,8 @@
  *         "nip_status": "",
  *         "nama_status": "",
  *         "keterangan": "",
+ *         "file_lampiran": "abc.pdf",
+ *         "persetujuan_form": false,
  *         "data_pnbp": {
  *           "kd_akun": "",
  *           "kd_penerimaan": "",
@@ -1454,6 +1456,8 @@
  * @apiBody {string(50)}    	IZINSTATUS.nip_status	    Nip Status Izin
  * @apiBody {string(50)}    	IZINSTATUS.nama_status	    Nama Status Izin
  * @apiBody {string(65535)}    	IZINSTATUS.keterangan	    keterangan
+ * @apiBody {boolean}    	[IZINSTATUS.persetujuan_form]	    Form Persetujuan
+ * @apiBody {String(65535)}    	[IZINSTATUS.file_lampiran]	    File Lampiran
  * @apiBody {object}    	[IZINSTATUS.data_pnbp]	    data_pnbp
  * @apiBody {string(20)}    	[IZINSTATUS.data_pnbp.kd_akun]	    Kode Akun simponi
  * @apiBody {string(20)}    	[IZINSTATUS.data_pnbp.kd_penerimaan]	    Kode Penerimaan
@@ -1480,6 +1484,8 @@
  *         "nip_status": "",
  *         "nama_status": "",
  *         "keterangan": "",
+ *         "file_lampiran": "abc.pdf",
+ *         "persetujuan_form": false,
  *         "data_pnbp": {
  *           "kd_akun": "",
  *           "kd_penerimaan": "",
