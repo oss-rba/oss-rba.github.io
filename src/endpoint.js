@@ -1503,12 +1503,13 @@
  * @apiSuccess (200) {String(255)} responreceiveLicenseStatus.keterangan Keterangan Respon
  * @apiSuccessExample {json} Success-Response:
  *     HTTP/1.1 200 OK
- *     {
- *     	 "responreceiveLicenseStatus": {
- *     		 "kode": "",
- *     		 "keterangan": ""
- *     	 }
- *     }
+ *      {
+ *         "responreceiveLicenseStatus": {
+ *           "kode": 200,
+ *           "keterangan": "Sukses",
+ *           "dataNIB": {}
+ *         }
+ *      }
 
  * @apiError (400) 400 Data Parameter Salah.
  * @apiError (401) 401 User Akses Tidak Valid.
@@ -1518,12 +1519,13 @@
  * @apiError (500) 500 Proses Payload Data Di Sistem OSS Gagal.
  * @apiError (504) 504 Proses Payload Data Di Sistem OSS Timeout.
  * @apiErrorExample Error-Response:
- *     {
- *     	 "responreceiveLicenseStatus": {
- *     		 "kode": "",
- *     		 "keterangan": ""
- *     	 }
- *     }
+ *      {
+ *         "responreceiveLicenseStatus": {
+ *           "kode": 200,
+ *           "keterangan": "Sukses",
+ *           "dataNIB": {}
+ *         }
+ *      }
  */
 
 /**
