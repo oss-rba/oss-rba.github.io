@@ -1452,7 +1452,6 @@
  * @apiBody {String(12)} IZINSTATUS.kd_izin Kode Izin Sistem K/L/D (* Lihat Lampiran 8)
  * @apiBody {String(3)} IZINSTATUS.kd_instansi  Kode Instansi
  * @apiBody {String(2)} IZINSTATUS.kd_status  Kode Status Perizinan (* Lihat Lampiran 10)
- * @apiBody {String(2)} IZINSTATUS.kd_status  Kode Status Perizinan (* Lihat Lampiran 10)
  * @apiBody {String(18)} IZINSTATUS.tgl_status  Tanggal Proses Status Izin (format date: YYYY-MM-DD HH:II:SS)
  * @apiBody {String(50)} IZINSTATUS.nip_status  Nip Status Izin
  * @apiBody {String(50)} IZINSTATUS.nama_status Nama Status Izin
