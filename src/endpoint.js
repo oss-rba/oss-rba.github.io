@@ -1356,7 +1356,7 @@
  * @apiSuccess (200) {Object} responreceiveLicense                  Response receive license
  * @apiSuccess (200) {Number(3)} responreceiveLicense.kode             Kode Respon <b>(* Lihat Lampiran 9)</b>
  * @apiSuccess (200) {String(255)} responreceiveLicense.keterangan       Keterangan Respon
- * @apiSuccess (200) {String(20)} responreceiveLicense.nomor_izin       Nomor Izin yang diterbitkan OSS
+ * @apiSuccess (200) {String(30)} responreceiveLicense.nomor_izin       Nomor Izin yang diterbitkan OSS
  * @apiSuccess (200) {String(3){3}} [responreceiveLicense.jenis_perizinan] Jenis Izin <b>(* Lihat Lampiran 27)</b>
  * @apiSuccess (200) {String(65535){65535}} [IZINFINAL.file_lampiran]	Attachment File Izin dalam Bentuk File PDF Berupa Link (* Ukuran File Maks: 2MB) 
  * @apiSuccessExample {json} Success-Response:
