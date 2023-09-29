@@ -1443,29 +1443,30 @@
  *       "Content-Type": "application/json",
  *       "user_key": {{user_key}}
  *     }
- * @apiBody {object}	    IZINSTATUS	IZINSTATUS
- * @apiBody {string(13)}    	IZINSTATUS.nib	            Nomor Induk Berusaha
- * @apiBody {string(25)}    	IZINSTATUS.id_produk	    id produk
- * @apiBody {string(25)}    	IZINSTATUS.id_proyek	    id proyek
- * @apiBody {string(25)}    	IZINSTATUS.oss_id	        Oss Id adalah ID yang di Generate Sistem OSS dan Dikirimkan ke K/L/D Bersama Pengajuan Perizinan
- * @apiBody {string(25)}    	IZINSTATUS.id_izin	        Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
- * @apiBody {string(12)}    	IZINSTATUS.kd_izin	        Kode Izin Sistem K/L/D (* Lihat Lampiran 8)
- * @apiBody {string(3)}    	IZINSTATUS.kd_instansi	    Kode Instansi
- * @apiBody {string(2)}    	IZINSTATUS.kd_status	    Kode Status Perizinan (* Lihat Lampiran 10)
- * @apiBody {string(18)}    	IZINSTATUS.tgl_status	    Tanggal Proses Status Izin (format date: YYYY-MM-DD HH:II:SS)
- * @apiBody {string(50)}    	IZINSTATUS.nip_status	    Nip Status Izin
- * @apiBody {string(50)}    	IZINSTATUS.nama_status	    Nama Status Izin
- * @apiBody {string(65535)}    	IZINSTATUS.keterangan	    keterangan
- * @apiBody {boolean}    	[IZINSTATUS.persetujuan_form]	    Form Persetujuan
- * @apiBody {String(65535)}    	[IZINSTATUS.file_lampiran]	    File Lampiran
- * @apiBody {object}    	[IZINSTATUS.data_pnbp]	    data_pnbp
- * @apiBody {string(20)}    	[IZINSTATUS.data_pnbp.kd_akun]	    Kode Akun simponi
- * @apiBody {string(20)}    	[IZINSTATUS.data_pnbp.kd_penerimaan]	    Kode Penerimaan
- * @apiBody {string(50)}    	[IZINSTATUS.data_pnbp.kd_billing]	    Kode Billing
- * @apiBody {Date(10)}    	[IZINSTATUS.data_pnbp.tgl_billing]	    Tgl terbit billing
- * @apiBody {Date(10)}    	[IZINSTATUS.data_pnbp.tgl_expire]	    Tgl berlaku billing
- * @apiBody {number(20.0)}    	[IZINSTATUS.data_pnbp.nominal]	    Nominal PNBP
- * @apiBody {string(255)}    	[IZINSTATUS.data_pnbp.url_dokumen]	    URL Dokumen SPS
+ * @apiBody {Object} IZINSTATUS IZINSTATUS
+ * @apiBody {String(13)} IZINSTATUS.nib Nomor Induk Berusaha
+ * @apiBody {String(25)} IZINSTATUS.id_produk Id Produk
+ * @apiBody {String(25)} IZINSTATUS.id_proyek Id Proyek
+ * @apiBody {String(25)} IZINSTATUS.oss_id  Oss Id adalah ID yang di Generate Sistem OSS dan Dikirimkan ke K/L/D Bersama Pengajuan Perizinan
+ * @apiBody {String(25)} IZINSTATUS.id_izin Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
+ * @apiBody {String(12)} IZINSTATUS.kd_izin Kode Izin Sistem K/L/D (* Lihat Lampiran 8)
+ * @apiBody {String(3)} IZINSTATUS.kd_instansi  Kode Instansi
+ * @apiBody {String(2)} IZINSTATUS.kd_status  Kode Status Perizinan (* Lihat Lampiran 10)
+ * @apiBody {String(2)} IZINSTATUS.kd_status  Kode Status Perizinan (* Lihat Lampiran 10)
+ * @apiBody {String(18)} IZINSTATUS.tgl_status  Tanggal Proses Status Izin (format date: YYYY-MM-DD HH:II:SS)
+ * @apiBody {String(50)} IZINSTATUS.nip_status  Nip Status Izin
+ * @apiBody {String(50)} IZINSTATUS.nama_status Nama Status Izin
+ * @apiBody {String(65535)} IZINSTATUS.keterangan keterangan
+ * @apiBody {boolean} [IZINSTATUS.persetujuan_form] Form Persetujuan
+ * @apiBody {String(65535)} [IZINSTATUS.file_lampiran] File Lampiran
+ * @apiBody {Object} [IZINSTATUS.data_pnbp] data_pnbp
+ * @apiBody {String(20)} [IZINSTATUS.data_pnbp.kd_akun] Kode Akun simponi
+ * @apiBody {String(20)} [IZINSTATUS.data_pnbp.kd_penerimaan] Kode Penerimaan
+ * @apiBody {String(50)} [IZINSTATUS.data_pnbp.kd_billing] Kode Billing
+ * @apiBody {Date(10)} [IZINSTATUS.data_pnbp.tgl_billing] Tgl terbit billing
+ * @apiBody {Date(10)} [IZINSTATUS.data_pnbp.tgl_expire]  Tgl berlaku billing
+ * @apiBody {number(20.0)} [IZINSTATUS.data_pnbp.nominal] Nominal PNBP
+ * @apiBody {String(255)} [IZINSTATUS.data_pnbp.url_dokumen]  URL Dokumen SPS
 
 
  * @apiParamExample {json} RequestBody-Example:
@@ -1501,6 +1502,7 @@
  * @apiSuccess (200) {Object} responreceiveLicenseStatus Response receive License Status
  * @apiSuccess (200) {String(3)} responreceiveLicenseStatus.kode Kode Respon 
  * @apiSuccess (200) {String(255)} responreceiveLicenseStatus.keterangan Keterangan Respon
+ * @apiSuccess (200) {Object} responreceiveLicenseStatus.dataNIB object kosong
  * @apiSuccessExample {json} Success-Response:
  *     HTTP/1.1 200 OK
  *      {
