@@ -218,14 +218,14 @@
  * @apiBody {string(100)}    	AKTA.legalitas.alamat_notaris	    alamat_notaris
  * @apiBody {string(255)}    	AKTA.legalitas.nama_notaris	    nama_notaris
  * @apiBody {string(100)}    	AKTA.legalitas.telepon_notaris	    telepon_notaris
- * @apiBody {object[]} AKTA.merger Berulang (N) Rows
- * @apiBody {string(10){10}} AKTA.merger.tanggal_efektif Tanggal Efektif Merger (format date: YYYY-MM-DD)
- * @apiBody {string(100){100}} AKTA.merger.id_pt_surviving ID PT Yang Menerima Penggabungan
- * @apiBody {string(255){255}} AKTA.merger.nama_pt_surviving Nama PT Yang Menerima Penggabungan
- * @apiBody {string(16){16}} AKTA.merger.npwp_pt_surviving NPWP PT Yang Menerima Penggabungan
- * @apiBody {string(100){100}} AKTA.merger.id_pt_merger ID PT Merger
- * @apiBody {string(255){255}} AKTA.merger.nama_pt_merger Nama PT Merger
- * @apiBody {string(16){16}} AKTA.merger.npwp_pt_merger NPWP PT Merger
+ * @apiBody {object[]} [AKTA.merger] Berulang (N) Rows
+ * @apiBody {string(10){10}} [AKTA.merger.tanggal_efektif] Tanggal Efektif Merger (format date: YYYY-MM-DD)
+ * @apiBody {string(100){100}} [AKTA.merger.id_pt_surviving] ID PT Yang Menerima Penggabungan
+ * @apiBody {string(255){255}} [AKTA.merger.nama_pt_surviving] Nama PT Yang Menerima Penggabungan
+ * @apiBody {string(16){16}} [AKTA.merger.npwp_pt_surviving] NPWP PT Yang Menerima Penggabungan
+ * @apiBody {string(100){100}} [AKTA.merger.id_pt_merger] ID PT Merger
+ * @apiBody {string(255){255}} [AKTA.merger.nama_pt_merger] Nama PT Merger
+ * @apiBody {string(16){16}} [AKTA.merger.npwp_pt_merger] NPWP PT Merger
 
  * @apiParamExample {json} RequestBody-Example:
  *     HTTP/1.1 200 OK
