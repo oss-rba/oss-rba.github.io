@@ -3124,6 +3124,7 @@
  *     --header 'Content-Type: application/json' \
  *     --data-raw '{
  *       "dataNIB": {
+ *         "tgl_terkirim_oss": "",
  *         "nib": "",
  *         "tgl_pengajuan_nib": "",
  *         "tgl_terbit_nib": "",
@@ -3171,6 +3172,9 @@
  *         "total_modal_dasar": "",
  *         "total_modal_ditempatkan": "",
  *         "flag_umk": "",
+ *         "flag_perubahan_data_teknis": "",
+ *         "skala_usaha": "",
+ *         "jenis_perubahan_terakhir": "",
  *         "pemegang_saham": [
  *           {
  *             "jenis_pemegang_saham": "",
@@ -3451,283 +3455,288 @@
  *       "Content-Type": "application/json",
  *       "Token": "OSS000qw13242628gssssss812345654709820180514"
  *     }
-* @apiParam {object}	dataNIB	dataNIB
-* @apiParam {string(13)}    	dataNIB.nib	Nomor Induk Berusaha
-* @apiParam {string(10)}    	dataNIB.tgl_pengajuan_nib	Tanggal Pengajuan NIB (format date : YYYY-MM-DD)
-* @apiParam {string(10)}    	dataNIB.tgl_terbit_nib	Tanggal Penerbitan NIB (format date : YYYY-MM-DD)
-* @apiParam {string(10)}    	dataNIB.tgl_perubahan_nib	Tanggal Perubahan NIB (format date : YYYY-MM-DD)
-* @apiParam {string(25)}    	dataNIB.oss_id	Oss Id adalah ID yang di Generate Sistem OSS dan Dikirimkan ke K/L/D Bersama Permohonan Nomor Induk Berusaha
-* @apiParam {string(25)}    	dataNIB.id_izin	Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
-* @apiParam {string(12)}    	dataNIB.kd_izin	Kode Izin Sistem K/L/D (* Lihat Lampiran 8)
-* @apiParam {string(10)}    	dataNIB.kd_daerah	Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
-* @apiParam {string(2)}    	dataNIB.kewenangan	00: Kewenangan Pusat;  01: Kewenangan Provinsi; 02: Kewenangan Kab/Kota
-* @apiParam {string(2)}    	dataNIB.jenis_pelaku_usaha	Jenis Pelaku Usaha (* Lihat Lampiran 18)
-* @apiParam {string(20)}    	dataNIB.no_npp	Nomor Pendaftaraan Perusahaan Untuk BPJS Ketenagakerjaan
-* @apiParam {string(20)}    	dataNIB.no_va	Nomor Pendaftaraan Perusahaan Untuk BPJS Kesehatan
-* @apiParam {string(23)}    	dataNIB.no_wlkp	Nomor Wajib Lapor Ketenagakerjaan Perusahaan
-* @apiParam {string(1)}    	dataNIB.flag_perusahaan	Flag :Y = Untuk Perusahaan Baru,N = Untuk Perusahaan Lama / Exist
-* @apiParam {string(1)}    	dataNIB.flag_ekspor	Y : Melakukan Aktifikas Ekspor, N : Tidak Melakukan Aktifitas Ekspor
-* @apiParam {string(1)}    	dataNIB.flag_impor	Y : Melakukan Aktifikas Impor, N : Tidak Melakukan Aktifitas Impor
-* @apiParam {string(2)}    	dataNIB.jenis_api	Jenis Angka Pengenal Impor (API) (* Lihat Lampiran 3)
-* @apiParam {string(1)}    	dataNIB.gabung_negara	PMA Merupakan Gabungan Negara Atau Tidak (* Y:Gabungan Negara, N: Bukan Gabungan Negara)
-* @apiParam {string(2)}    	dataNIB.negara_pma_dominan	Negara Asing Yang Memiliki Modal Mayoritas
-* @apiParam {number(20.2)}    	dataNIB.total_pma	Total Modal PMA
-* @apiParam {number(20.2)}    	dataNIB.nilai_pma_dominan	Nilai Modal PMA Dominan
-* @apiParam {number(20.2)}    	dataNIB.nilai_pmdn	Nilai Modal PMDN
-* @apiParam {number(9.2)}    	dataNIB.persen_pma	Persentase Modal PMA
-* @apiParam {number(9.2)}    	dataNIB.persen_pmdn	Persentase Modal PMDN
-* @apiParam {number(5)}    	dataNIB.kd_kawasan	Kode Kawasan (* Lihat Lampiran di https://oss.go.id/oss/#home/portal/lstKawasan)
-* @apiParam {string(2)}    	dataNIB.jenis_kawasan	Jenis Kawasan (* Lihat Lampiran 21)
-* @apiParam {string(5)}    	dataNIB.versi_pia	Versi PIA OSS
-* @apiParam {string(10)}    	dataNIB.jangka_waktu	Jangka Waktu (format date : YYYY-MM-DD)
-* @apiParam {string(2)}    	dataNIB.status_badan_hukum	Status Badan Hukum (* Lihat Lampiran 12)
-* @apiParam {string(2)}    	dataNIB.status_penanaman_modal	Status Penanaman Modal (* Lihat Lampiran 1)
-* @apiParam {string(15)}    	dataNIB.npwp_perseroan	NPWP Perseroan
-* @apiParam {string(255)}    	dataNIB.nama_perseroan	Nama Perseroan
-* @apiParam {string(255)}    	dataNIB.nama_singkatan	Nama Singkatan Perseroan
-* @apiParam {string(2)}    	dataNIB.jenis_perseroan	Jenis Perseroan (* Lihat Lampiran 2)
-* @apiParam {string(1)}    	dataNIB.status_perseroan	Status Perseroan (*Y: Terbuka, N:Tertutup)
-* @apiParam {string(255)}    	dataNIB.alamat_perseroan	Alamat Perseroan
-* @apiParam {string(7)}    	dataNIB.rt_rw_perseroan	Rt Rw Perseroan
-* @apiParam {string(50)}    	dataNIB.kelurahan_perseroan	Kelurahan Perseroan
-* @apiParam {string(10)}    	dataNIB.perseroan_daerah_id	ID Daerah Perseroan (* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
-* @apiParam {string(5)}    	dataNIB.kode_pos_perseroan	Kode Pos Perseroan
-* @apiParam {string(20)}    	dataNIB.nomor_telpon_perseroan	Nomor Telepon Perseroan
-* @apiParam {string(100)}    	dataNIB.email_perusahaan	Email Perusahaan
-* @apiParam {number(20.0)}    	dataNIB.dalam_bentuk_uang	Modal Dalam Bentuk Uang (Valuta : IDR)
-* @apiParam {string(50000)}    	dataNIB.dalam_bentuk_lain	Modal Dalam Bentuk Lainnya
-* @apiParam {number(20.0)}    	dataNIB.total_modal_dasar	Total Modal Dasar (Valuta : IDR)
-* @apiParam {number(20.0)}    	dataNIB.total_modal_ditempatkan	Total Modal Ditempatkan (Valuta : IDR)
-* @apiParam {string(1)}    	dataNIB.flag_umk	    flag_umk
-* @apiParam {object[]}    	dataNIB.pemegang_saham	Data pemegang saham
-* @apiParam {string(2)}    	dataNIB.pemegang_saham.jenis_pemegang_saham	Jenis Pemegang Saham (* Lihat Lampiran 13)
-* @apiParam {string(1)}    	dataNIB.pemegang_saham.flag_asing	Asal Pemegang Saham dari Dalam Negeri / Luar Negeri (Value : Y = asing, N = Bukan Asing)
-* @apiParam {string(20.0)}    	dataNIB.pemegang_saham.total_modal_pemegang	Total Modal Pemegang Saham (Valuta : IDR)
-* @apiParam {string(50)}    	dataNIB.pemegang_saham.jabatan_pemegang_saham	Jabatan Pemegang Saham
-* @apiParam {string(500)}    	dataNIB.pemegang_saham.nama_pemegang_saham	Nama Pemegang Saham
-* @apiParam {string(2)}    	dataNIB.pemegang_saham.jns_identitas_pemegang_saham	Jenis Identitas Pemegang Saham (* Lihat Lampiran 4)
-* @apiParam {string(100)}    	dataNIB.pemegang_saham.no_identitas_pemegang_saham	Nomor Identitas Pemegang Saham
-* @apiParam {string(10)}    	dataNIB.pemegang_saham.valid_identitas_pemegang_saham	Valid / Masa Berlaku Pemegang Saham (Format Date : YYYY-MM-DD)
-* @apiParam {string(2)}    	dataNIB.pemegang_saham.negara_asal_pemegang_saham	Negara Asal Pemegang Saham
-* @apiParam {string(50)}    	dataNIB.pemegang_saham.pengendali_pemegang_saham	Nama Pengendali Pemegang Saham
-* @apiParam {string(15)}    	dataNIB.pemegang_saham.npwp_pemegang_saham	NPWP Pemegang Saham
-* @apiParam {string(1024)}    	dataNIB.pemegang_saham.alamat_pemegang_saham	Alamat Pemegang Saham
-* @apiParam {string(25)}    	dataNIB.pemegang_saham.fax_pemegang_saham	Fax Pemegang Saham
-* @apiParam {string(100)}    	dataNIB.pemegang_saham.email_pemegang_saham	Email Pemegang Saham
-* @apiParam {string(2)}    	dataNIB.pemegang_saham.flag_pajak_pemegang_saham	Flag Validasi Pajak Pemegang Saham (* Lihat Lampiran 19)
-* @apiParam {string(255)}    	dataNIB.pemegang_saham.ket_pajak_pemegang_saham	Keterangan Validasi Pajak Pemegang Saham
-* @apiParam {object[]}    	dataNIB.penanggung_jwb	    penanggung_jwb
-* @apiParam {string(1)}    	dataNIB.penanggung_jwb.flag_asing	Asal Penanggung Jawab dari Dalam Negeri / Luar Negeri (Value : Y = asing, N = Bukan Asing)
-* @apiParam {string(2)}    	dataNIB.penanggung_jwb.jns_identitas_penanggung_jwb	Jenis Nik Penganggung Jawab (* Lihat Lampiran 4)
-* @apiParam {string(100)}    	dataNIB.penanggung_jwb.no_identitas_penanggung_jwb	Nomor Identitas Penanggung Jawab
-* @apiParam {string(500)}    	dataNIB.penanggung_jwb.nama_penanggung_jwb	Nama Penganggung Jawab
-* @apiParam {string(250)}    	dataNIB.penanggung_jwb.jabatan_penanggung_jwb	Jabatan Penanggung Jawab
-* @apiParam {string(2)}    	dataNIB.penanggung_jwb.kebangsaan_penanggung_jwb	Kebangsaan Penanggung Jawab (* Lihat Lampiran 6)
-* @apiParam {string(2)}    	dataNIB.penanggung_jwb.negara_asal_penanggung_jwb	Negara Asal Penanggung Jawab (* Sumber Kodefikasi Negara Mengikuti Standar Unedifact : http://www.unec e.org/cefact/loco de/service/locati on )
-* @apiParam {string(15)}    	dataNIB.penanggung_jwb.npwp_penanggung_jwb	NPWP Penanggung Jawab
-* @apiParam {string(1024)}    	dataNIB.penanggung_jwb.alamat_penanggung_jwb	Alamat Penanggung Jawab
-* @apiParam {string(50)}    	dataNIB.penanggung_jwb.jalan_penanggung_jwb	Alamat Jalan Penanggung Jawab
-* @apiParam {string(10)}    	dataNIB.penanggung_jwb.blok_penanggung_jwb	Alamat Blok Penanggung Jawab
-* @apiParam {string(10)}    	dataNIB.penanggung_jwb.no_penanggung_jwb	Alamat Nomor Penanggung Jawab
-* @apiParam {string(255)}    	dataNIB.penanggung_jwb.rt_rw_penanggung_jwb	RT RW Penanggung Jawab
-* @apiParam {string(255)}    	dataNIB.penanggung_jwb.kelurahan_penanggung_jwb	Kelurahan Penanggung Jawab
-* @apiParam {string(10)}    	dataNIB.penanggung_jwb.daerah_id_penanggung_jwb	ID Daerah Penanggung Jawab (* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
-* @apiParam {string(5)}    	dataNIB.penanggung_jwb.kode_pos_penanggung_jwb	Kode Pos Penanggung Jawab
-* @apiParam {string(50)}    	dataNIB.penanggung_jwb.no_telp_penanggung_jwb	Nomor Telepon Penanggung Jawab
-* @apiParam {string(50)}    	dataNIB.penanggung_jwb.no_hp_penanggung_jwb	Nomor Handphone Penanggung Jawab
-* @apiParam {string(50)}    	dataNIB.penanggung_jwb.no_fax_penanggung_jwb	Nomor Fax Penanggung Jawab
-* @apiParam {string(100)}    	dataNIB.penanggung_jwb.email_penanggung_jwb	Email Penanggung Jawab
-* @apiParam {string(2)}    	dataNIB.penanggung_jwb.flag_pajak_penanggung_jwb	Flag Validasi Pajak Penanggung Jawab (* Lihat Lampiran 19)
-* @apiParam {string(255)}    	dataNIB.penanggung_jwb.ket_pajak_penanggung_jwb	Keterangan Validasi Pajak Penanggung Jawab
-* @apiParam {string(100)}    	dataNIB.no_pengesahan	Nomor Pengesahan Akta Dari Kumham
-* @apiParam {string(10)}    	dataNIB.tgl_pengesahan	Tanggal Pengesahan Akta Dari Kumham (format date : YYYY-MM-DD)
-* @apiParam {string(100)}    	dataNIB.no_akta_lama	Nomor Akta Lama Sebelum Perubahan
-* @apiParam {string(10)}    	dataNIB.tgl_akta_lama	Tanggal Akta Lama Sebelum Perubahan (format date : YYYY-MM-DD)
-* @apiParam {string(100)}    	dataNIB.no_pengesahan_lama	Nomor Pengesahan Akta Lama Sebelum Perubahan Dari Kumham
-* @apiParam {string(10)}    	dataNIB.tgl_pengesahan_lama	Tanggal Pengesahan Akta Lama Sebelum Perubahan Dari Kumham (format date : YYYY-MM- DD)
-* @apiParam {object[]}    	dataNIB.legalitas	    legalitas
-* @apiParam {string(2)}    	dataNIB.legalitas.jenis_legal	Jenis Legal Perusahaan (* Lihat Lampiran 7)
-* @apiParam {string(100)}    	dataNIB.legalitas.no_legal	Nomor Legal Perusahaan
-* @apiParam {string(10)}    	dataNIB.legalitas.tgl_legal	Tanggal Legal Perusahaan (format date : YYYY-MM-DD)
-* @apiParam {string(255)}    	dataNIB.legalitas.alamat_notaris	Alamat Notaris
-* @apiParam {string(100)}    	dataNIB.legalitas.nama_notaris	Nama Notaris
-* @apiParam {string(100)}    	dataNIB.legalitas.telepon_notaris	Telepon Notaris
-* @apiParam {object}    	dataNIB.data_rptka	    data_rptka
-* @apiParam {string(2)}    	dataNIB.data_rptka.jenis_rptka	Jenis Flag RPTKA ( 01 : Baru, 02: Perubahan)
-* @apiParam {string(20)}    	dataNIB.data_rptka.no_rptka	No Bacode RPTKA
-* @apiParam {string(10)}    	dataNIB.data_rptka.rptka_awal	Masa Berlaku Dari Tanggal(format date : YYYY-MM- DD)
-* @apiParam {string(10)}    	dataNIB.data_rptka.rptka_akhir	Masa Berlaku Sampai Tanggal(format date : YYYY-MM- DD)
-* @apiParam {number(20.2)}    	dataNIB.data_rptka.rptka_gaji	Gaji Tenaga Asing
-* @apiParam {number(11)}    	dataNIB.data_rptka.jumlah_tka_rptka	Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)
-* @apiParam {string(10)}    	dataNIB.data_rptka.jangka_penggunaan_waktu	Jangka Waktu Penggunaan Tenaga Kerja Asing (TKA) dalam Izin Rencana Penggunaan Tenaga Kerja Asing (RPTKA) (format date : YYYY-MM-DD)
-* @apiParam {string(1)}    	dataNIB.data_rptka.jangka_waktu_permohonan_rptka	Jangka Waktu Permohonan RPTKA (dalam hitungan bulan)
-* @apiParam {object[]}	dataNIB.data_rptka.rptka_jabatan	    rptka_jabatan
-* @apiParam {string(11)}    	dataNIB.data_rptka.rptka_jabatan.id_jabatan	ID Jabatan Tenaga Kerja Asing berdasarkan https://jdih.kemnaker.go.id/data_puu/KEP247_MENX_2011.pdf
-* @apiParam {string(255)}    	dataNIB.data_rptka.rptka_jabatan.jabatan	Nama Jabatan
-* @apiParam {string(11)}    	dataNIB.data_rptka.rptka_jabatan.jumlah	Jumlah Orang Yang Memiliki Jabatan
-* @apiParam {string(10)}    	dataNIB.data_rptka.rptka_jabatan.tgl_mulai	Tanggal Mulai Jabatan (format date : YYYY-MM- DD)
-* @apiParam {string(10)}    	dataNIB.data_rptka.rptka_jabatan.tgl_selesai	Tanggal Selesai Jabatan (format date : YYYY-MM- DD)
-* @apiParam {string(255)}    	dataNIB.data_rptka.rptka_jabatan.keterangan	Keterangan
-* @apiParam {object[]}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping	    rptka_tki_pendamping
-* @apiParam {string(10)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.id_jabatan	Id Jabatan
-* @apiParam {string(10)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.id_pendamping	Id TKI Pendamping
-* @apiParam {string(100)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.nama	Nama TKI Pendamping
-* @apiParam {string(20)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.nik	Nomor NIK TKI Pendamping
-* @apiParam {string(255)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.jabatan	Nama Jabatan TKI Pendamping
-* @apiParam {string(25)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.hp	Nomor HP TKI Pendamping
-* @apiParam {string(100)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.email	Email TKI Pendampiag
-* @apiParam {string(65535)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.foto	Foto TKI Pendamping Attachment File dalam Bentukbentuk base64 dengan format (data:image/jpeg;base64,string() ENCODE IMAGE)
-* @apiParam {string(50)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.pendidikan_min	Tingkat Pendidikan Minimal TKI Pendamping
-* @apiParam {string(255)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.sertifikat	Sertifikat Kompetensi TKI Pendamping
-* @apiParam {string(11)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.pengalaman_kerja	Pengalaman Kerja TKI Pendamping (dalam tahun)
-* @apiParam {string(255)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.keterangan	Keterangan
-* @apiParam {object[]}	dataNIB.data_rptka.rptka_negara	    rptka_negara
-* @apiParam {string(2)}    	dataNIB.data_rptka.rptka_negara.id_negara	Negara Asal Tenaga Kerja Asing(* Sumber Kodefikasi Negara Mengikuti Standar Unedifact : http://www.unec e.org/cefact/loco de/service/locati on )
-* @apiParam {string(11)}    	dataNIB.data_rptka.rptka_negara.jumlah	Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)
-* @apiParam {object[]}	dataNIB.data_rptka.rptka_lokasi	    rptka_lokasi
-* @apiParam {string(10)}    	dataNIB.data_rptka.rptka_lokasi.lokasi_id	ID Daerah Penanggung Jawab (* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
-* @apiParam {string(11)}    	dataNIB.data_rptka.rptka_lokasi.jumlah	Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)
-* @apiParam {object[]}    	dataNIB.data_proyek	    data_proyek
-* @apiParam {string(25)}    	dataNIB.data_proyek.id_proyek	ID / Kode Proyek
-* @apiParam {string(26)}    	dataNIB.data_proyek.nomor_proyek	Nomor Permohonan Proyek
-* @apiParam {string(255)}    	dataNIB.data_proyek.uraian_usaha	Uraian Usaha Proyek
-* @apiParam {string(10)}    	dataNIB.data_proyek.jumlah_tki_l	Jumlah Tenaga Kerja Indonesia (TKI) Laki -Laki
-* @apiParam {string(10)}    	dataNIB.data_proyek.jumlah_tki_p	Jumlah Tenaga Kerja Indonesia (TKI) Perempuan
-* @apiParam {string(10)}    	dataNIB.data_proyek.jumlah_tka_l	Jumlah Tenaga Kerja Asing (TKA) Laki -Laki
-* @apiParam {string(10)}    	dataNIB.data_proyek.jumlah_tka_p	Jumlah Tenaga Kerja Asing (TKA) Perempuan
-* @apiParam {string(7)}    	dataNIB.data_proyek.kbli	Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)
-* @apiParam {string(3)}    	dataNIB.data_proyek.sektor	Sektor Usaha Berdasarkan KBLI (* Lihat Lampiran 20)
-* @apiParam {string(1)}    	dataNIB.data_proyek.memiliki_menguasai	Sudah Memiliki atar Menguasai Lahan (Value : Y = Sudah Memiliki atau Menguasai Lahan, N = Belum Memiliki atau Menguasai Lahan)
-* @apiParam {string(2)}    	dataNIB.data_proyek.jenis_lokasi	Lokasi Berada dalam Lintas Administratif (Value : Y = Berada Dalam Lintas Administrasi, N = Bukan Berada Dalam Lintas Administrasi)
-* @apiParam {string(2)}    	dataNIB.data_proyek.status_tanah	Status Kepemilikan Tanah (* Lihat Lampiran 5)
-* @apiParam {string(10)}    	dataNIB.data_proyek.luas_tanah	Luas Bidang tanah
-* @apiParam {string(2)}    	dataNIB.data_proyek.satuan_luas_tanah	Satuan Luas Tanah (*Lihat Lampiran 17)
-* @apiParam {number(19)}    	dataNIB.data_proyek.pembelian_pematang_tanah	Nilai Pembelian Pematang Tanah (Valuta:IDR)
-* @apiParam {number(19)}    	dataNIB.data_proyek.bangunan_gedung	Nilai Bangunan Gedung (Valuta:IDR)
-* @apiParam {number(19)}    	dataNIB.data_proyek.mesin_peralatan	Nilai Mesin Peralatan (Valuta:IDR)
-* @apiParam {number(19)}    	dataNIB.data_proyek.mesin_peralatan_usd	Nilai Mesin Peralatan dalam USD
-* @apiParam {number(19)}    	dataNIB.data_proyek.investasi_lain	Investasi Lainnya
-* @apiParam {number(19)}    	dataNIB.data_proyek.sub_jumlah	Jumlah Asset (Valuta:IDR)
-* @apiParam {number(19)}    	dataNIB.data_proyek.modal_kerja	Nilai Modal Kerja (Valuta:IDR)
-* @apiParam {number(19)}    	dataNIB.data_proyek.jumlah_investasi	Nilai Jumlah Investasi (Valuta:IDR)
-* @apiParam {string(10)}    	dataNIB.data_proyek.tanggal_kurs	Tanggal Kurs (format date : YYYY-MM-DD)
-* @apiParam {number(19)}    	dataNIB.data_proyek.nilai_kurs	Nilai Kurs
-* @apiParam {number(11)}    	dataNIB.data_proyek.kd_kawasan	Kode Kawasan (* Lihat Lampiran di https://oss.go.id/oss/#home/portal/lstKawasan)
-* @apiParam {string(1)}    	dataNIB.data_proyek.jawab_lokasi_b	kuisioner Lokasi Berdasarkan PP 24 Tahun 2018 Pasal 33 Ayat 1 Point B
-* @apiParam {string(1)}    	dataNIB.data_proyek.jawab_lokasi_c	kuisioner Lokasi Berdasarkan PP 24 Tahun 2018 Pasal 33 Ayat 1 Point C
-* @apiParam {string(1)}    	dataNIB.data_proyek.jawab_lokasi_d	kuisioner Lokasi Berdasarkan PP 24 Tahun 2018 Pasal 33 Ayat 1 Point D
-* @apiParam {string(1)}    	dataNIB.data_proyek.jawab_lokasi_e	kuisioner Lokasi Berdasarkan PP 24 Tahun 2018 Pasal 33 Ayat 1 Point E
-* @apiParam {string(1)}    	dataNIB.data_proyek.jawab_lokasi_f	kuisioner Lokasi Berdasarkan PP 24 Tahun 2018 Pasal 33 Ayat 1 Point F
-* @apiParam {string(1)}    	dataNIB.data_proyek.jawab_lokasi_g	kuisioner Lokasi Berdasarkan PP 24 Tahun 2018 Pasal 33 Ayat 1 Point G
-* @apiParam {string(1)}    	dataNIB.data_proyek.flag_perluasan	Proyek Merupakan Perluasan/Penge mbangan Usaha Atau Bukan (Value : Y = Proses Perluasan/Penge mbangan Usaha, N = Bukan Proses Perluasan/Penge mbangan Usaha)
-* @apiParam {string(1)}    	dataNIB.data_proyek.flag_cabang	Proyek Sebagai Kantor Cabang Atau Bukan (Value : Y = Sebagai Kantor Cabang, N = Bukan Sebagai Kantor Cabang)
-* @apiParam {string(15)}    	dataNIB.data_proyek.npwp_cabang	NPWP Kantor Cabang
-* @apiParam {string(255)}    	dataNIB.data_proyek.nama_cabang	Nama Kantor Cabang / Proyek
-* @apiParam {string(2)}    	dataNIB.data_proyek.jenis_identitas_pj	Jenis Identitas Penanggung Jawab Proyek (* Lihat Lampiran 4)
-* @apiParam {string(16)}    	dataNIB.data_proyek.no_identitas_pj	No Identitas Penanggung Jawab Proyek
-* @apiParam {string(100)}    	dataNIB.data_proyek.nama_pj	Nama Penanggung Jawab Proyek
-* @apiParam {string(2)}    	dataNIB.data_proyek.status_proyek	Status Proyek(* Lihat Lampiran 22)
-* @apiParam {string(2)}    	dataNIB.data_proyek.jenis_proyek	Jenis Proyek (* Lihat Lampiran 26)
-* @apiParam {string(255)}    	dataNIB.data_proyek.nama_kegiatan	Nama Proyek / Kegiatan Proyek, Untuk Perseorangan Digunakan Untuk Mencatat Nama Dagangannya Misal (UD. Percobaan Jaya)
-* @apiParam {string(1)}    	dataNIB.data_proyek.flag_merger	Flag Proyek Hasil Merger atau Bukan (Y : Hasil Merger, N: Bukan Hasil Merger)
-* @apiParam {string(15)}    	dataNIB.data_proyek.npwp_perseroan_merger	NPWP Perusahaan Merging
-* @apiParam {string(255)}    	dataNIB.data_proyek.nama_perseroan_merger	Nama Perusahaan Merging
-* @apiParam {string(10)}    	dataNIB.data_proyek.jumlah_lantai_bangunan	Jumlah Lantai Bangunan
-* @apiParam {string(10)}    	dataNIB.data_proyek.luas_lantai_bangunan	Luas Lantai Bangunan
-* @apiParam {string(1)}    	dataNIB.data_proyek.flag_psn	Flag Proyek Strategis Nasional (Y/N)
-* @apiParam {string(1)}    	dataNIB.data_proyek.pasal_181_a	Questionaire terkait PP 5/2021 pasal 181 poin 1.a
-* @apiParam {string(1)}    	dataNIB.data_proyek.file_pasal_181_a	File Izin Lokasi KEK/KI
-* @apiParam {string(1)}    	dataNIB.data_proyek.pasal_181_b	Questionaire terkait PP 5/2021 pasal 181 poin 1.b
-* @apiParam {string(1)}    	dataNIB.data_proyek.file_pasal_181_b	File Izin Lokasi yang sudah dimiliki
-* @apiParam {string(1)}    	dataNIB.data_proyek.pasal_181_c	Questionaire terkait PP 5/2021 pasal 181 poin 1.c
-* @apiParam {string(1)}    	dataNIB.data_proyek.pasal_181_d	Questionaire terkait PP 5/2021 pasal 181 poin 1.d
-* @apiParam {string(1)}    	dataNIB.data_proyek.pasal_181_3	Questionaire terkait PP 5/2021 pasal 181 poin 3
-* @apiParam {string(1)}    	dataNIB.data_proyek.flag_obyek_vital_nasional	Flag Obyek Vital Nasional
-* @apiParam {string(255)}    	dataNIB.data_proyek.nama_perairan	Nama Lokasi Perairan
-* @apiParam {string(10)}    	dataNIB.data_proyek.kedalaman	Kedalaman Perairan
-* @apiParam {string(65535)}    	dataNIB.data_proyek.file_rencana_teknis	    file_rencana_teknis
-* @apiParam {object[]}	dataNIB.data_proyek.data_lokasi_proyek	    data_lokasi_proyek
-* @apiParam {string(25)}    	dataNIB.data_proyek.data_lokasi_proyek.id_proyek_lokasi	ID / Kode Lokasi Proyek
-* @apiParam {string(10)}    	dataNIB.data_proyek.data_lokasi_proyek.proyek_daerah_id	Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
-* @apiParam {string(3)}    	dataNIB.data_proyek.data_lokasi_proyek.kd_kawasan	Kode Kawasan (* Lihat Lampiran di https://oss.go.id/oss/#home/portal/lstKawasan)
-* @apiParam {string(65535)}    	dataNIB.data_proyek.data_lokasi_proyek.alamat_usaha	Alamat Kegiatan Proyek / Usaha
-* @apiParam {string(6)}    	dataNIB.data_proyek.data_lokasi_proyek.id_kegiatan	Id Kegiatan Usaha Berdasarkan RDTR Digital
-* @apiParam {string(255)}    	dataNIB.data_proyek.data_lokasi_proyek.response_kegiatan	Response Kegiatan Usaha Berdasarkan Validasi Kegiatan RDTR Digital
-* @apiParam {string(2)}    	dataNIB.data_proyek.data_lokasi_proyek.jenis_kawasan	Jenis Kawasan (* Lihat Lampiran 16)
-* @apiParam {string(2)}    	dataNIB.data_proyek.data_lokasi_proyek.jenis_lokasi	Jenis Lokasi Lintas Administratif atau Tidak (01 : Lintas Administratif, 02 : Tidak Lintas Administratif)
-* @apiParam {string(2)}    	dataNIB.data_proyek.data_lokasi_proyek.status_lokasi	Status Lokasi(* Lihat Lampiran 25)
-* @apiParam {string(2)}    	dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek_shp	    data_lokasi_proyek_shp
-* @apiParam {object[]}    	dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek	    data_lokasi_proyek
-* @apiParam {number(11)}    	dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek.serial	Serial Koordinat
-* @apiParam {string(25)}    	dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek.lat_lng	Koordinat Latitude & Longitude
-* @apiParam {object[]}    	dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek	    data_posisi_proyek
-* @apiParam {string(25)}    	dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek.id_proyek_posisi	ID / Kode Posisi Proyek
-* @apiParam {string(25)}    	dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek.id_proyek_lokasi	ID / Kode Lokasi Proyek
-* @apiParam {string(2)}    	dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek.posisi_lokasi	Posisi Lokasi (* Lihat Lampiran 24)
-* @apiParam {object[]}	dataNIB.data_proyek.data_proyek_produk	    data_proyek_produk
-* @apiParam {string(25)}    	dataNIB.data_proyek.data_proyek_produk.id_produk	ID / Kode Produk
-* @apiParam {string(25)}    	dataNIB.data_proyek.data_proyek_produk.id_proyek	ID / Kode Proyek
-* @apiParam {string(7)}    	dataNIB.data_proyek.data_proyek_produk.kbli	Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)
-* @apiParam {string(10)}    	dataNIB.data_proyek.data_proyek_produk.id_bidang_usaha	ID Bidang Usaha Berdasarkan Kodefikasi Data Negatif Investasi (DNI) (* Lihat Lampiran 15)
-* @apiParam {string(1024)}    	dataNIB.data_proyek.data_proyek_produk.jenis_produksi	Rencana Produksi Yang Dihasilkan
-* @apiParam {number(20.2)}    	dataNIB.data_proyek.data_proyek_produk.kapasitas	Kapasitas produksi suatu produk
-* @apiParam {string(100)}    	dataNIB.data_proyek.data_proyek_produk.satuan	Satuan Dari Kapasitas Produksi
-* @apiParam {string(100)}    	dataNIB.data_proyek.data_proyek_produk.merk_dagang	Merk Dagang
-* @apiParam {string(100)}    	dataNIB.data_proyek.data_proyek_produk.pemegang_haki	Pemegang Hak Cipta
-* @apiParam {string(100)}    	dataNIB.data_proyek.data_proyek_produk.pemegang_paten	Pemegang Hak Paten
-* @apiParam {string(20)}    	dataNIB.data_proyek.data_proyek_produk.pi_nomor	Nomor Pendaftaran Penanaman Modal Untuk Case Grand Father Clause (GFC)
-* @apiParam {string(10)}    	dataNIB.data_proyek.data_proyek_produk.pi_tanggal	Tanggal Pendaftaran Penanaman Modal Untuk Case Grand Father Clause (GFC) format date : YYYY-MM- DD
-* @apiParam {string(16)}    	dataNIB.data_proyek.data_proyek_produk.pi_npwp	NPWP Pendaftaran Penanaman Modal Untuk Case Grand Father Clause (GFC)
-* @apiParam {string(9)}    	dataNIB.data_proyek.data_proyek_produk.id_kbli_ta	Penanda bahwa cakupan produk untuk kebutuhan tax allowance
-* @apiParam {number(3.2)}    	dataNIB.data_proyek.data_proyek_produk.tkdn	Tingkat Kandungan Dalam Negeri
-* @apiParam {object[]}    	dataNIB.data_dni	    data_dni
-* @apiParam {string(10)}    	dataNIB.data_dni.kd_dni	Kodefikasi Data Negatif Investasi (DNI) (* Lihat Lampiran 15)
-* @apiParam {object[]}    	dataNIB.data_checklist	    data_checklist
-* @apiParam {string(25)}    	dataNIB.data_checklist.id_produk	ID Produk
-* @apiParam {string(25)}    	dataNIB.data_checklist.id_proyek	ID / Kode Proyek
-* @apiParam {string(25)}    	dataNIB.data_checklist.id_izin	Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
-* @apiParam {string(3)}    	dataNIB.data_checklist.jenis _izin	Jenis Perizinan (* Lihat Lampiran 27)
-* @apiParam {string(13)}    	dataNIB.data_checklist.kd_izin	Kode Izin Sistem K/L/D (* https://services.oss.go.id/getListIzi n)
-* @apiParam {string(10)}    	dataNIB.data_checklist.kd_daerah	Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
-* @apiParam {string(255)}    	dataNIB.data_checklist.nama_izin	Nama Izin
-* @apiParam {string(100)}    	dataNIB.data_checklist.instansi	Nama Instansi
-* @apiParam {number(19)}    	dataNIB.data_checklist.id_bidang_spesifik	ID Bidang Spesifik
-* @apiParam {string(65535)}    	dataNIB.data_checklist.bidang_spesifik	Uraian Bidang Spesifik
-* @apiParam {number(19)}    	dataNIB.data_checklist.id_kewenangan	ID Kewenangan
-* @apiParam {string(255)}    	dataNIB.data_checklist.parameter_kewenangan	Parameter Kewenangan Izin
-* @apiParam {string(2)}    	dataNIB.data_checklist.kewenangan	00: Kewenangan Pusat; 01: Kewenangan Provinsi; 02: Kewenangan Kab/Kota
-* @apiParam {string(1)}    	dataNIB.data_checklist.flag_checklist	Flag Checklist Komitmen (* Lihat Lampiran 28)
-* @apiParam {string(1)}    	dataNIB.data_checklist.flag_transaksional	Flag : Y/N, Flag Izin Komersial/Operas ional Diajukan Transaksional (Bisa Mengajukan Berulang)
-* @apiParam {string(1)}    	dataNIB.data_checklist.flag_perpanjangan	Flag : Y/N, Flag Bahwa Izin Usaha ini Adalah Hasil Perpanjangan Dari Izin Usaha Yang Terbit Sebelum OSS
-* @apiParam {string(150)}    	dataNIB.data_checklist.no_izin	Nomor Izin Yang Terbit dan Masih Berlaku Sebelum OSS Diterapkan
-* @apiParam {string(10)}    	dataNIB.data_checklist.tgl_izin	Tanggal Izin Yang Terbit dan Masih Berlaku Sebelum OSS Diterapkan (* Format:YYYY- MM-DD)
-* @apiParam {string(65535)}    	dataNIB.data_checklist.file_izin	Attachment File Izin Yang Terbit dan Masih Berlaku Sebelum OSS Diterapkan Dalam Bentuk File PDF/Image Berupa Link (* Ukuran File Maks: 2MB)
-* @apiParam {object[]}	dataNIB.data_checklist.data_persyaratan	    data_persyaratan
-* @apiParam {string(25)}    	dataNIB.data_checklist.data_persyaratan.id_syarat	Id / Kode Persyaratan
-* @apiParam {string(50)}    	dataNIB.data_checklist.data_persyaratan.no_dokumen	Nomor Dokumen Persyaratan
-* @apiParam {string(8)}    	dataNIB.data_checklist.data_persyaratan.tgl_dokumen	Tanggal Dokumen Persyaratan (format date : YYYY-MM-DD)
-* @apiParam {string(65535)}    	dataNIB.data_checklist.data_persyaratan.file_dokumen	Attachment File Izin dalam Bentuk File PDF/Image Berupa Link (* Ukuran File Maks: 2MB)
-* @apiParam {string(255)}    	dataNIB.data_checklist.data_persyaratan.keterangan	Keterangan Dokumen Persyaratan
-* @apiParam {string(2)}    	dataNIB.jenis_id_user_proses	Kode Jenis Identitas (* Lihat Lampiran 4)
-* @apiParam {string(25)}    	dataNIB.no_id_user_proses	No Identitas Pemroses NIB
-* @apiParam {string(100)}    	dataNIB.nama_user_proses	Nama User Pemroses NIB
-* @apiParam {string(50)}    	dataNIB.email_user_proses	Email User Pemroses NIB
-* @apiParam {string(25)}    	dataNIB.hp_user_proses	No HP Pemroses NIB
-* @apiParam {string(255)}    	dataNIB.alamat_user_proses	Alamat Pemroses NIB
-* @apiParam {string(1)}    	dataNIB.jns_kelamin_user_proses	Jenis Kelamin Pemroses NIB (L : Laki-Laki, P : Perempuan)
-* @apiParam {string(100)}    	dataNIB.tempat_lahir_user_proses	Tempat Lahir Pemroses NIB
-* @apiParam {string(10)}    	dataNIB.tgl_lahir_user_proses	Tanggal Lahir User Pemroses (format date : YYYY-MM-DD)
-* @apiParam {string(10)}    	dataNIB.daerah_id_user_proses	ID Daerah User Pemroses(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
-* @apiParam {string(10)}    	dataNIB.rt_rw_user_proses	RT RW Pemroses NIB
-* @apiParam {string(50)}    	dataNIB.agama_user_proses	Agama Pemroses NIB
-* @apiParam {string(50)}    	dataNIB.status_perkawinan_user_proses	Status Perkawinan Pemroses NIB
-* @apiParam {string(50)}    	dataNIB.pekerjaan_user_proses	Pekerjaan Pemroses NIB
-* @apiParam {string(2)}    	dataNIB.status_nib	Status Penerbitan NIB (* Lihat Lampiran 14)
-* @apiParam {string(1)}    	dataNIB.tipe_dokumen 	Tipe Dokumen (9:Original, 5:Update, 3:Pencabutan, 4:Pembatalan)
+ * @apiBody {object}	dataNIB	dataNIB
+ * @apiBody {string(19){19}} dataNIB.tgl_terkirim_oss Tanggal Pengiriman NIB
+ * @apiBody {string(13)}    	dataNIB.nib	Nomor Induk Berusaha
+ * @apiBody {string(10)}    	dataNIB.tgl_pengajuan_nib	Tanggal Pengajuan NIB (format date : YYYY-MM-DD)
+ * @apiBody {string(10)}    	dataNIB.tgl_terbit_nib	Tanggal Penerbitan NIB (format date : YYYY-MM-DD)
+ * @apiBody {string(10)}    	dataNIB.tgl_perubahan_nib	Tanggal Perubahan NIB (format date : YYYY-MM-DD)
+ * @apiBody {string(25)}    	dataNIB.oss_id	Oss Id adalah ID yang di Generate Sistem OSS dan Dikirimkan ke K/L/D Bersama Permohonan Nomor Induk Berusaha
+ * @apiBody {string(25)}    	dataNIB.id_izin	Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
+ * @apiBody {string(12)}    	dataNIB.kd_izin	Kode Izin Sistem K/L/D (* Lihat Lampiran 8)
+ * @apiBody {string(10)}    	dataNIB.kd_daerah	Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
+ * @apiBody {string(2)}    	dataNIB.kewenangan	00: Kewenangan Pusat;  01: Kewenangan Provinsi; 02: Kewenangan Kab/Kota
+ * @apiBody {string(2)}    	dataNIB.jenis_pelaku_usaha	Jenis Pelaku Usaha (* Lihat Lampiran 18)
+ * @apiBody {string(20)}    	dataNIB.no_npp	Nomor Pendaftaraan Perusahaan Untuk BPJS Ketenagakerjaan
+ * @apiBody {string(20)}    	dataNIB.no_va	Nomor Pendaftaraan Perusahaan Untuk BPJS Kesehatan
+ * @apiBody {string(23)}    	dataNIB.no_wlkp	Nomor Wajib Lapor Ketenagakerjaan Perusahaan
+ * @apiBody {string(1)}    	dataNIB.flag_perusahaan	Flag :Y = Untuk Perusahaan Baru,N = Untuk Perusahaan Lama / Exist
+ * @apiBody {string(1)}    	dataNIB.flag_ekspor	Y : Melakukan Aktifikas Ekspor, N : Tidak Melakukan Aktifitas Ekspor
+ * @apiBody {string(1)}    	dataNIB.flag_impor	Y : Melakukan Aktifikas Impor, N : Tidak Melakukan Aktifitas Impor
+ * @apiBody {string(2)}    	dataNIB.jenis_api	Jenis Angka Pengenal Impor (API) (* Lihat Lampiran 3)
+ * @apiBody {string(1)}    	dataNIB.gabung_negara	PMA Merupakan Gabungan Negara Atau Tidak (* Y:Gabungan Negara, N: Bukan Gabungan Negara)
+ * @apiBody {string(2)}    	dataNIB.negara_pma_dominan	Negara Asing Yang Memiliki Modal Mayoritas
+ * @apiBody {number(20.2)}    	dataNIB.total_pma	Total Modal PMA
+ * @apiBody {number(20.2)}    	dataNIB.nilai_pma_dominan	Nilai Modal PMA Dominan
+ * @apiBody {number(20.2)}    	dataNIB.nilai_pmdn	Nilai Modal PMDN
+ * @apiBody {number(9.2)}    	dataNIB.persen_pma	Persentase Modal PMA
+ * @apiBody {number(9.2)}    	dataNIB.persen_pmdn	Persentase Modal PMDN
+ * @apiBody {number(5)}    	dataNIB.kd_kawasan	Kode Kawasan (* Lihat Lampiran di https://oss.go.id/oss/#home/portal/lstKawasan)
+ * @apiBody {string(2)}    	dataNIB.jenis_kawasan	Jenis Kawasan (* Lihat Lampiran 21)
+ * @apiBody {string(5)}    	dataNIB.versi_pia	Versi PIA OSS
+ * @apiBody {string(10)}    	dataNIB.jangka_waktu	Jangka Waktu (format date : YYYY-MM-DD)
+ * @apiBody {string(2)}    	dataNIB.status_badan_hukum	Status Badan Hukum (* Lihat Lampiran 12)
+ * @apiBody {string(2)}    	dataNIB.status_penanaman_modal	Status Penanaman Modal (* Lihat Lampiran 1)
+ * @apiBody {string(15)}    	dataNIB.npwp_perseroan	NPWP Perseroan
+ * @apiBody {string(255)}    	dataNIB.nama_perseroan	Nama Perseroan
+ * @apiBody {string(255)}    	dataNIB.nama_singkatan	Nama Singkatan Perseroan
+ * @apiBody {string(2)}    	dataNIB.jenis_perseroan	Jenis Perseroan (* Lihat Lampiran 2)
+ * @apiBody {string(1)}    	dataNIB.status_perseroan	Status Perseroan (*Y: Terbuka, N:Tertutup)
+ * @apiBody {string(255)}    	dataNIB.alamat_perseroan	Alamat Perseroan
+ * @apiBody {string(7)}    	dataNIB.rt_rw_perseroan	Rt Rw Perseroan
+ * @apiBody {string(50)}    	dataNIB.kelurahan_perseroan	Kelurahan Perseroan
+ * @apiBody {string(10)}    	dataNIB.perseroan_daerah_id	ID Daerah Perseroan (* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
+ * @apiBody {string(5)}    	dataNIB.kode_pos_perseroan	Kode Pos Perseroan
+ * @apiBody {string(20)}    	dataNIB.nomor_telpon_perseroan	Nomor Telepon Perseroan
+ * @apiBody {string(100)}    	dataNIB.email_perusahaan	Email Perusahaan
+ * @apiBody {number(20.0)}    	dataNIB.dalam_bentuk_uang	Modal Dalam Bentuk Uang (Valuta : IDR)
+ * @apiBody {string(50000)}    	dataNIB.dalam_bentuk_lain	Modal Dalam Bentuk Lainnya
+ * @apiBody {number(20.0)}    	dataNIB.total_modal_dasar	Total Modal Dasar (Valuta : IDR)
+ * @apiBody {number(20.0)}    	dataNIB.total_modal_ditempatkan	Total Modal Ditempatkan (Valuta : IDR)
+ * @apiBody {string(1)}    	dataNIB.flag_umk	    flag_umk
+ * @apiBody {string(10){10}} dataNIB.skala_usaha Skala Usaha Perusahaan
+ * @apiBody {string(2){2}} dataNIB.jenis_perubahan_terakhir Jenis Perubahan Terakhir Perusahaan
+ * @apiBody {string(1){1}} dataNIB.flag_perubahan_data_teknis Flag perubahan data teknis (jika value: N/null = Bukan Perubahan Data Jenis, value: Y = Perubahan data teknis)
+ * @apiBody {object[]}    	dataNIB.pemegang_saham	Data pemegang saham
+ * @apiBody {string(2)}    	dataNIB.pemegang_saham.jenis_pemegang_saham	Jenis Pemegang Saham (* Lihat Lampiran 13)
+ * @apiBody {string(1)}    	dataNIB.pemegang_saham.flag_asing	Asal Pemegang Saham dari Dalam Negeri / Luar Negeri (Value : Y = asing, N = Bukan Asing)
+ * @apiBody {string(20.0)}    	dataNIB.pemegang_saham.total_modal_pemegang	Total Modal Pemegang Saham (Valuta : IDR)
+ * @apiBody {string(50)}    	dataNIB.pemegang_saham.jabatan_pemegang_saham	Jabatan Pemegang Saham
+ * @apiBody {string(500)}    	dataNIB.pemegang_saham.nama_pemegang_saham	Nama Pemegang Saham
+ * @apiBody {string(2)}    	dataNIB.pemegang_saham.jns_identitas_pemegang_saham	Jenis Identitas Pemegang Saham (* Lihat Lampiran 4)
+ * @apiBody {string(100)}    	dataNIB.pemegang_saham.no_identitas_pemegang_saham	Nomor Identitas Pemegang Saham
+ * @apiBody {string(10)}    	dataNIB.pemegang_saham.valid_identitas_pemegang_saham	Valid / Masa Berlaku Pemegang Saham (Format Date : YYYY-MM-DD)
+ * @apiBody {string(2)}    	dataNIB.pemegang_saham.negara_asal_pemegang_saham	Negara Asal Pemegang Saham
+ * @apiBody {string(50)}    	dataNIB.pemegang_saham.pengendali_pemegang_saham	Nama Pengendali Pemegang Saham
+ * @apiBody {string(15)}    	dataNIB.pemegang_saham.npwp_pemegang_saham	NPWP Pemegang Saham
+ * @apiBody {string(1024)}    	dataNIB.pemegang_saham.alamat_pemegang_saham	Alamat Pemegang Saham
+ * @apiBody {string(25)}    	dataNIB.pemegang_saham.fax_pemegang_saham	Fax Pemegang Saham
+ * @apiBody {string(100)}    	dataNIB.pemegang_saham.email_pemegang_saham	Email Pemegang Saham
+ * @apiBody {string(2)}    	dataNIB.pemegang_saham.flag_pajak_pemegang_saham	Flag Validasi Pajak Pemegang Saham (* Lihat Lampiran 19)
+ * @apiBody {string(255)}    	dataNIB.pemegang_saham.ket_pajak_pemegang_saham	Keterangan Validasi Pajak Pemegang Saham
+ * @apiBody {object[]}    	dataNIB.penanggung_jwb	    penanggung_jwb
+ * @apiBody {string(1)}    	dataNIB.penanggung_jwb.flag_asing	Asal Penanggung Jawab dari Dalam Negeri / Luar Negeri (Value : Y = asing, N = Bukan Asing)
+ * @apiBody {string(2)}    	dataNIB.penanggung_jwb.jns_identitas_penanggung_jwb	Jenis Nik Penganggung Jawab (* Lihat Lampiran 4)
+ * @apiBody {string(100)}    	dataNIB.penanggung_jwb.no_identitas_penanggung_jwb	Nomor Identitas Penanggung Jawab
+ * @apiBody {string(500)}    	dataNIB.penanggung_jwb.nama_penanggung_jwb	Nama Penganggung Jawab
+ * @apiBody {string(250)}    	dataNIB.penanggung_jwb.jabatan_penanggung_jwb	Jabatan Penanggung Jawab
+ * @apiBody {string(2)}    	dataNIB.penanggung_jwb.kebangsaan_penanggung_jwb	Kebangsaan Penanggung Jawab (* Lihat Lampiran 6)
+ * @apiBody {string(2)}    	dataNIB.penanggung_jwb.negara_asal_penanggung_jwb	Negara Asal Penanggung Jawab (* Sumber Kodefikasi Negara Mengikuti Standar Unedifact : http://www.unec e.org/cefact/loco de/service/locati on )
+ * @apiBody {string(15)}    	dataNIB.penanggung_jwb.npwp_penanggung_jwb	NPWP Penanggung Jawab
+ * @apiBody {string(1024)}    	dataNIB.penanggung_jwb.alamat_penanggung_jwb	Alamat Penanggung Jawab
+ * @apiBody {string(50)}    	dataNIB.penanggung_jwb.jalan_penanggung_jwb	Alamat Jalan Penanggung Jawab
+ * @apiBody {string(10)}    	dataNIB.penanggung_jwb.blok_penanggung_jwb	Alamat Blok Penanggung Jawab
+ * @apiBody {string(10)}    	dataNIB.penanggung_jwb.no_penanggung_jwb	Alamat Nomor Penanggung Jawab
+ * @apiBody {string(255)}    	dataNIB.penanggung_jwb.rt_rw_penanggung_jwb	RT RW Penanggung Jawab
+ * @apiBody {string(255)}    	dataNIB.penanggung_jwb.kelurahan_penanggung_jwb	Kelurahan Penanggung Jawab
+ * @apiBody {string(10)}    	dataNIB.penanggung_jwb.daerah_id_penanggung_jwb	ID Daerah Penanggung Jawab (* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
+ * @apiBody {string(5)}    	dataNIB.penanggung_jwb.kode_pos_penanggung_jwb	Kode Pos Penanggung Jawab
+ * @apiBody {string(50)}    	dataNIB.penanggung_jwb.no_telp_penanggung_jwb	Nomor Telepon Penanggung Jawab
+ * @apiBody {string(50)}    	dataNIB.penanggung_jwb.no_hp_penanggung_jwb	Nomor Handphone Penanggung Jawab
+ * @apiBody {string(50)}    	dataNIB.penanggung_jwb.no_fax_penanggung_jwb	Nomor Fax Penanggung Jawab
+ * @apiBody {string(100)}    	dataNIB.penanggung_jwb.email_penanggung_jwb	Email Penanggung Jawab
+ * @apiBody {string(2)}    	dataNIB.penanggung_jwb.flag_pajak_penanggung_jwb	Flag Validasi Pajak Penanggung Jawab (* Lihat Lampiran 19)
+ * @apiBody {string(255)}    	dataNIB.penanggung_jwb.ket_pajak_penanggung_jwb	Keterangan Validasi Pajak Penanggung Jawab
+ * @apiBody {string(100)}    	dataNIB.no_pengesahan	Nomor Pengesahan Akta Dari Kumham
+ * @apiBody {string(10)}    	dataNIB.tgl_pengesahan	Tanggal Pengesahan Akta Dari Kumham (format date : YYYY-MM-DD)
+ * @apiBody {string(100)}    	dataNIB.no_akta_lama	Nomor Akta Lama Sebelum Perubahan
+ * @apiBody {string(10)}    	dataNIB.tgl_akta_lama	Tanggal Akta Lama Sebelum Perubahan (format date : YYYY-MM-DD)
+ * @apiBody {string(100)}    	dataNIB.no_pengesahan_lama	Nomor Pengesahan Akta Lama Sebelum Perubahan Dari Kumham
+ * @apiBody {string(10)}    	dataNIB.tgl_pengesahan_lama	Tanggal Pengesahan Akta Lama Sebelum Perubahan Dari Kumham (format date : YYYY-MM- DD)
+ * @apiBody {object[]}    	dataNIB.legalitas	    legalitas
+ * @apiBody {string(2)}    	dataNIB.legalitas.jenis_legal	Jenis Legal Perusahaan (* Lihat Lampiran 7)
+ * @apiBody {string(100)}    	dataNIB.legalitas.no_legal	Nomor Legal Perusahaan
+ * @apiBody {string(10)}    	dataNIB.legalitas.tgl_legal	Tanggal Legal Perusahaan (format date : YYYY-MM-DD)
+ * @apiBody {string(255)}    	dataNIB.legalitas.alamat_notaris	Alamat Notaris
+ * @apiBody {string(100)}    	dataNIB.legalitas.nama_notaris	Nama Notaris
+ * @apiBody {string(100)}    	dataNIB.legalitas.telepon_notaris	Telepon Notaris
+ * @apiBody {object}    	dataNIB.data_rptka	    data_rptka
+ * @apiBody {string(2)}    	dataNIB.data_rptka.jenis_rptka	Jenis Flag RPTKA ( 01 : Baru, 02: Perubahan)
+ * @apiBody {string(20)}    	dataNIB.data_rptka.no_rptka	No Bacode RPTKA
+ * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_awal	Masa Berlaku Dari Tanggal(format date : YYYY-MM- DD)
+ * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_akhir	Masa Berlaku Sampai Tanggal(format date : YYYY-MM- DD)
+ * @apiBody {number(20.2)}    	dataNIB.data_rptka.rptka_gaji	Gaji Tenaga Asing
+ * @apiBody {number(11)}    	dataNIB.data_rptka.jumlah_tka_rptka	Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)
+ * @apiBody {string(10)}    	dataNIB.data_rptka.jangka_penggunaan_waktu	Jangka Waktu Penggunaan Tenaga Kerja Asing (TKA) dalam Izin Rencana Penggunaan Tenaga Kerja Asing (RPTKA) (format date : YYYY-MM-DD)
+ * @apiBody {string(1)}    	dataNIB.data_rptka.jangka_waktu_permohonan_rptka	Jangka Waktu Permohonan RPTKA (dalam hitungan bulan)
+ * @apiBody {object[]}	dataNIB.data_rptka.rptka_jabatan	    rptka_jabatan
+ * @apiBody {string(11)}    	dataNIB.data_rptka.rptka_jabatan.id_jabatan	ID Jabatan Tenaga Kerja Asing berdasarkan https://jdih.kemnaker.go.id/data_puu/KEP247_MENX_2011.pdf
+ * @apiBody {string(255)}    	dataNIB.data_rptka.rptka_jabatan.jabatan	Nama Jabatan
+ * @apiBody {string(11)}    	dataNIB.data_rptka.rptka_jabatan.jumlah	Jumlah Orang Yang Memiliki Jabatan
+ * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_jabatan.tgl_mulai	Tanggal Mulai Jabatan (format date : YYYY-MM- DD)
+ * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_jabatan.tgl_selesai	Tanggal Selesai Jabatan (format date : YYYY-MM- DD)
+ * @apiBody {string(255)}    	dataNIB.data_rptka.rptka_jabatan.keterangan	Keterangan
+ * @apiBody {object[]}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping	    rptka_tki_pendamping
+ * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.id_jabatan	Id Jabatan
+ * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.id_pendamping	Id TKI Pendamping
+ * @apiBody {string(100)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.nama	Nama TKI Pendamping
+ * @apiBody {string(20)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.nik	Nomor NIK TKI Pendamping
+ * @apiBody {string(255)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.jabatan	Nama Jabatan TKI Pendamping
+ * @apiBody {string(25)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.hp	Nomor HP TKI Pendamping
+ * @apiBody {string(100)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.email	Email TKI Pendampiag
+ * @apiBody {string(65535)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.foto	Foto TKI Pendamping Attachment File dalam Bentukbentuk base64 dengan format (data:image/jpeg;base64,string() ENCODE IMAGE)
+ * @apiBody {string(50)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.pendidikan_min	Tingkat Pendidikan Minimal TKI Pendamping
+ * @apiBody {string(255)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.sertifikat	Sertifikat Kompetensi TKI Pendamping
+ * @apiBody {string(11)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.pengalaman_kerja	Pengalaman Kerja TKI Pendamping (dalam tahun)
+ * @apiBody {string(255)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.keterangan	Keterangan
+ * @apiBody {object[]}	dataNIB.data_rptka.rptka_negara	    rptka_negara
+ * @apiBody {string(2)}    	dataNIB.data_rptka.rptka_negara.id_negara	Negara Asal Tenaga Kerja Asing(* Sumber Kodefikasi Negara Mengikuti Standar Unedifact : http://www.unec e.org/cefact/loco de/service/locati on )
+ * @apiBody {string(11)}    	dataNIB.data_rptka.rptka_negara.jumlah	Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)
+ * @apiBody {object[]}	dataNIB.data_rptka.rptka_lokasi	    rptka_lokasi
+ * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_lokasi.lokasi_id	ID Daerah Penanggung Jawab (* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
+ * @apiBody {string(11)}    	dataNIB.data_rptka.rptka_lokasi.jumlah	Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)
+ * @apiBody {object[]}    	dataNIB.data_proyek	    data_proyek
+ * @apiBody {string(25)}    	dataNIB.data_proyek.id_proyek	ID / Kode Proyek
+ * @apiBody {string(26)}    	dataNIB.data_proyek.nomor_proyek	Nomor Permohonan Proyek
+ * @apiBody {string(255)}    	dataNIB.data_proyek.uraian_usaha	Uraian Usaha Proyek
+ * @apiBody {string(10)}    	dataNIB.data_proyek.jumlah_tki_l	Jumlah Tenaga Kerja Indonesia (TKI) Laki -Laki
+ * @apiBody {string(10)}    	dataNIB.data_proyek.jumlah_tki_p	Jumlah Tenaga Kerja Indonesia (TKI) Perempuan
+ * @apiBody {string(10)}    	dataNIB.data_proyek.jumlah_tka_l	Jumlah Tenaga Kerja Asing (TKA) Laki -Laki
+ * @apiBody {string(10)}    	dataNIB.data_proyek.jumlah_tka_p	Jumlah Tenaga Kerja Asing (TKA) Perempuan
+ * @apiBody {string(7)}    	dataNIB.data_proyek.kbli	Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)
+ * @apiBody {string(3)}    	dataNIB.data_proyek.sektor	Sektor Usaha Berdasarkan KBLI (* Lihat Lampiran 20)
+ * @apiBody {string(1)}    	dataNIB.data_proyek.memiliki_menguasai	Sudah Memiliki atar Menguasai Lahan (Value : Y = Sudah Memiliki atau Menguasai Lahan, N = Belum Memiliki atau Menguasai Lahan)
+ * @apiBody {string(2)}    	dataNIB.data_proyek.jenis_lokasi	Lokasi Berada dalam Lintas Administratif (Value : Y = Berada Dalam Lintas Administrasi, N = Bukan Berada Dalam Lintas Administrasi)
+ * @apiBody {string(2)}    	dataNIB.data_proyek.status_tanah	Status Kepemilikan Tanah (* Lihat Lampiran 5)
+ * @apiBody {string(10)}    	dataNIB.data_proyek.luas_tanah	Luas Bidang tanah
+ * @apiBody {string(2)}    	dataNIB.data_proyek.satuan_luas_tanah	Satuan Luas Tanah (*Lihat Lampiran 17)
+ * @apiBody {number(19)}    	dataNIB.data_proyek.pembelian_pematang_tanah	Nilai Pembelian Pematang Tanah (Valuta:IDR)
+ * @apiBody {number(19)}    	dataNIB.data_proyek.bangunan_gedung	Nilai Bangunan Gedung (Valuta:IDR)
+ * @apiBody {number(19)}    	dataNIB.data_proyek.mesin_peralatan	Nilai Mesin Peralatan (Valuta:IDR)
+ * @apiBody {number(19)}    	dataNIB.data_proyek.mesin_peralatan_usd	Nilai Mesin Peralatan dalam USD
+ * @apiBody {number(19)}    	dataNIB.data_proyek.investasi_lain	Investasi Lainnya
+ * @apiBody {number(19)}    	dataNIB.data_proyek.sub_jumlah	Jumlah Asset (Valuta:IDR)
+ * @apiBody {number(19)}    	dataNIB.data_proyek.modal_kerja	Nilai Modal Kerja (Valuta:IDR)
+ * @apiBody {number(19)}    	dataNIB.data_proyek.jumlah_investasi	Nilai Jumlah Investasi (Valuta:IDR)
+ * @apiBody {string(10)}    	dataNIB.data_proyek.tanggal_kurs	Tanggal Kurs (format date : YYYY-MM-DD)
+ * @apiBody {number(19)}    	dataNIB.data_proyek.nilai_kurs	Nilai Kurs
+ * @apiBody {number(11)}    	dataNIB.data_proyek.kd_kawasan	Kode Kawasan (* Lihat Lampiran di https://oss.go.id/oss/#home/portal/lstKawasan)
+ * @apiBody {string(1)}    	dataNIB.data_proyek.jawab_lokasi_b	kuisioner Lokasi Berdasarkan PP 24 Tahun 2018 Pasal 33 Ayat 1 Point B
+ * @apiBody {string(1)}    	dataNIB.data_proyek.jawab_lokasi_c	kuisioner Lokasi Berdasarkan PP 24 Tahun 2018 Pasal 33 Ayat 1 Point C
+ * @apiBody {string(1)}    	dataNIB.data_proyek.jawab_lokasi_d	kuisioner Lokasi Berdasarkan PP 24 Tahun 2018 Pasal 33 Ayat 1 Point D
+ * @apiBody {string(1)}    	dataNIB.data_proyek.jawab_lokasi_e	kuisioner Lokasi Berdasarkan PP 24 Tahun 2018 Pasal 33 Ayat 1 Point E
+ * @apiBody {string(1)}    	dataNIB.data_proyek.jawab_lokasi_f	kuisioner Lokasi Berdasarkan PP 24 Tahun 2018 Pasal 33 Ayat 1 Point F
+ * @apiBody {string(1)}    	dataNIB.data_proyek.jawab_lokasi_g	kuisioner Lokasi Berdasarkan PP 24 Tahun 2018 Pasal 33 Ayat 1 Point G
+ * @apiBody {string(1)}    	dataNIB.data_proyek.flag_perluasan	Proyek Merupakan Perluasan/Penge mbangan Usaha Atau Bukan (Value : Y = Proses Perluasan/Penge mbangan Usaha, N = Bukan Proses Perluasan/Penge mbangan Usaha)
+ * @apiBody {string(1)}    	dataNIB.data_proyek.flag_cabang	Proyek Sebagai Kantor Cabang Atau Bukan (Value : Y = Sebagai Kantor Cabang, N = Bukan Sebagai Kantor Cabang)
+ * @apiBody {string(15)}    	dataNIB.data_proyek.npwp_cabang	NPWP Kantor Cabang
+ * @apiBody {string(255)}    	dataNIB.data_proyek.nama_cabang	Nama Kantor Cabang / Proyek
+ * @apiBody {string(2)}    	dataNIB.data_proyek.jenis_identitas_pj	Jenis Identitas Penanggung Jawab Proyek (* Lihat Lampiran 4)
+ * @apiBody {string(16)}    	dataNIB.data_proyek.no_identitas_pj	No Identitas Penanggung Jawab Proyek
+ * @apiBody {string(100)}    	dataNIB.data_proyek.nama_pj	Nama Penanggung Jawab Proyek
+ * @apiBody {string(2)}    	dataNIB.data_proyek.status_proyek	Status Proyek(* Lihat Lampiran 22)
+ * @apiBody {string(2)}    	dataNIB.data_proyek.jenis_proyek	Jenis Proyek (* Lihat Lampiran 26)
+ * @apiBody {string(255)}    	dataNIB.data_proyek.nama_kegiatan	Nama Proyek / Kegiatan Proyek, Untuk Perseorangan Digunakan Untuk Mencatat Nama Dagangannya Misal (UD. Percobaan Jaya)
+ * @apiBody {string(1)}    	dataNIB.data_proyek.flag_merger	Flag Proyek Hasil Merger atau Bukan (Y : Hasil Merger, N: Bukan Hasil Merger)
+ * @apiBody {string(15)}    	dataNIB.data_proyek.npwp_perseroan_merger	NPWP Perusahaan Merging
+ * @apiBody {string(255)}    	dataNIB.data_proyek.nama_perseroan_merger	Nama Perusahaan Merging
+ * @apiBody {string(10)}    	dataNIB.data_proyek.jumlah_lantai_bangunan	Jumlah Lantai Bangunan
+ * @apiBody {string(10)}    	dataNIB.data_proyek.luas_lantai_bangunan	Luas Lantai Bangunan
+ * @apiBody {string(1)}    	dataNIB.data_proyek.flag_psn	Flag Proyek Strategis Nasional (Y/N)
+ * @apiBody {string(1)}    	dataNIB.data_proyek.pasal_181_a	Questionaire terkait PP 5/2021 pasal 181 poin 1.a
+ * @apiBody {string(1)}    	dataNIB.data_proyek.file_pasal_181_a	File Izin Lokasi KEK/KI
+ * @apiBody {string(1)}    	dataNIB.data_proyek.pasal_181_b	Questionaire terkait PP 5/2021 pasal 181 poin 1.b
+ * @apiBody {string(1)}    	dataNIB.data_proyek.file_pasal_181_b	File Izin Lokasi yang sudah dimiliki
+ * @apiBody {string(1)}    	dataNIB.data_proyek.pasal_181_c	Questionaire terkait PP 5/2021 pasal 181 poin 1.c
+ * @apiBody {string(1)}    	dataNIB.data_proyek.pasal_181_d	Questionaire terkait PP 5/2021 pasal 181 poin 1.d
+ * @apiBody {string(1)}    	dataNIB.data_proyek.pasal_181_3	Questionaire terkait PP 5/2021 pasal 181 poin 3
+ * @apiBody {string(1)}    	dataNIB.data_proyek.flag_obyek_vital_nasional	Flag Obyek Vital Nasional
+ * @apiBody {string(255)}    	dataNIB.data_proyek.nama_perairan	Nama Lokasi Perairan
+ * @apiBody {string(10)}    	dataNIB.data_proyek.kedalaman	Kedalaman Perairan
+ * @apiBody {string(65535)}    	dataNIB.data_proyek.file_rencana_teknis	    file_rencana_teknis
+ * @apiBody {object[]}	dataNIB.data_proyek.data_lokasi_proyek	    data_lokasi_proyek
+ * @apiBody {string(25)}    	dataNIB.data_proyek.data_lokasi_proyek.id_proyek_lokasi	ID / Kode Lokasi Proyek
+ * @apiBody {string(10)}    	dataNIB.data_proyek.data_lokasi_proyek.proyek_daerah_id	Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
+ * @apiBody {string(3)}    	dataNIB.data_proyek.data_lokasi_proyek.kd_kawasan	Kode Kawasan (* Lihat Lampiran di https://oss.go.id/oss/#home/portal/lstKawasan)
+ * @apiBody {string(65535)}    	dataNIB.data_proyek.data_lokasi_proyek.alamat_usaha	Alamat Kegiatan Proyek / Usaha
+ * @apiBody {string(6)}    	dataNIB.data_proyek.data_lokasi_proyek.id_kegiatan	Id Kegiatan Usaha Berdasarkan RDTR Digital
+ * @apiBody {string(255)}    	dataNIB.data_proyek.data_lokasi_proyek.response_kegiatan	Response Kegiatan Usaha Berdasarkan Validasi Kegiatan RDTR Digital
+ * @apiBody {string(2)}    	dataNIB.data_proyek.data_lokasi_proyek.jenis_kawasan	Jenis Kawasan (* Lihat Lampiran 16)
+ * @apiBody {string(2)}    	dataNIB.data_proyek.data_lokasi_proyek.jenis_lokasi	Jenis Lokasi Lintas Administratif atau Tidak (01 : Lintas Administratif, 02 : Tidak Lintas Administratif)
+ * @apiBody {string(2)}    	dataNIB.data_proyek.data_lokasi_proyek.status_lokasi	Status Lokasi(* Lihat Lampiran 25)
+ * @apiBody {string(2)}    	dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek_shp	    data_lokasi_proyek_shp
+ * @apiBody {object[]}    	dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek	    data_lokasi_proyek
+ * @apiBody {number(11)}    	dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek.serial	Serial Koordinat
+ * @apiBody {string(25)}    	dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek.lat_lng	Koordinat Latitude & Longitude
+ * @apiBody {object[]}    	dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek	    data_posisi_proyek
+ * @apiBody {string(25)}    	dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek.id_proyek_posisi	ID / Kode Posisi Proyek
+ * @apiBody {string(25)}    	dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek.id_proyek_lokasi	ID / Kode Lokasi Proyek
+ * @apiBody {string(2)}    	dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek.posisi_lokasi	Posisi Lokasi (* Lihat Lampiran 24)
+ * @apiBody {object[]}	dataNIB.data_proyek.data_proyek_produk	    data_proyek_produk
+ * @apiBody {string(25)}    	dataNIB.data_proyek.data_proyek_produk.id_produk	ID / Kode Produk
+ * @apiBody {string(25)}    	dataNIB.data_proyek.data_proyek_produk.id_proyek	ID / Kode Proyek
+ * @apiBody {string(7)}    	dataNIB.data_proyek.data_proyek_produk.kbli	Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)
+ * @apiBody {string(10)}    	dataNIB.data_proyek.data_proyek_produk.id_bidang_usaha	ID Bidang Usaha Berdasarkan Kodefikasi Data Negatif Investasi (DNI) (* Lihat Lampiran 15)
+ * @apiBody {string(1024)}    	dataNIB.data_proyek.data_proyek_produk.jenis_produksi	Rencana Produksi Yang Dihasilkan
+ * @apiBody {number(20.2)}    	dataNIB.data_proyek.data_proyek_produk.kapasitas	Kapasitas produksi suatu produk
+ * @apiBody {string(100)}    	dataNIB.data_proyek.data_proyek_produk.satuan	Satuan Dari Kapasitas Produksi
+ * @apiBody {string(100)}    	dataNIB.data_proyek.data_proyek_produk.merk_dagang	Merk Dagang
+ * @apiBody {string(100)}    	dataNIB.data_proyek.data_proyek_produk.pemegang_haki	Pemegang Hak Cipta
+ * @apiBody {string(100)}    	dataNIB.data_proyek.data_proyek_produk.pemegang_paten	Pemegang Hak Paten
+ * @apiBody {string(20)}    	dataNIB.data_proyek.data_proyek_produk.pi_nomor	Nomor Pendaftaran Penanaman Modal Untuk Case Grand Father Clause (GFC)
+ * @apiBody {string(10)}    	dataNIB.data_proyek.data_proyek_produk.pi_tanggal	Tanggal Pendaftaran Penanaman Modal Untuk Case Grand Father Clause (GFC) format date : YYYY-MM- DD
+ * @apiBody {string(16)}    	dataNIB.data_proyek.data_proyek_produk.pi_npwp	NPWP Pendaftaran Penanaman Modal Untuk Case Grand Father Clause (GFC)
+ * @apiBody {string(9)}    	dataNIB.data_proyek.data_proyek_produk.id_kbli_ta	Penanda bahwa cakupan produk untuk kebutuhan tax allowance
+ * @apiBody {number(3.2)}    	dataNIB.data_proyek.data_proyek_produk.tkdn	Tingkat Kandungan Dalam Negeri
+ * @apiBody {object[]}    	dataNIB.data_dni	    data_dni
+ * @apiBody {string(10)}    	dataNIB.data_dni.kd_dni	Kodefikasi Data Negatif Investasi (DNI) (* Lihat Lampiran 15)
+ * @apiBody {object[]}    	dataNIB.data_checklist	    data_checklist
+ * @apiBody {string(25)}    	dataNIB.data_checklist.id_produk	ID Produk
+ * @apiBody {string(25)}    	dataNIB.data_checklist.id_proyek	ID / Kode Proyek
+ * @apiBody {string(25)}    	dataNIB.data_checklist.id_izin	Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
+ * @apiBody {string(3)}    	dataNIB.data_checklist.jenis _izin	Jenis Perizinan (* Lihat Lampiran 27)
+ * @apiBody {string(13)}    	dataNIB.data_checklist.kd_izin	Kode Izin Sistem K/L/D (* https://services.oss.go.id/getListIzi n)
+ * @apiBody {string(10)}    	dataNIB.data_checklist.kd_daerah	Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
+ * @apiBody {string(255)}    	dataNIB.data_checklist.nama_izin	Nama Izin
+ * @apiBody {string(100)}    	dataNIB.data_checklist.instansi	Nama Instansi
+ * @apiBody {number(19)}    	dataNIB.data_checklist.id_bidang_spesifik	ID Bidang Spesifik
+ * @apiBody {string(65535)}    	dataNIB.data_checklist.bidang_spesifik	Uraian Bidang Spesifik
+ * @apiBody {number(19)}    	dataNIB.data_checklist.id_kewenangan	ID Kewenangan
+ * @apiBody {string(255)}    	dataNIB.data_checklist.parameter_kewenangan	Parameter Kewenangan Izin
+ * @apiBody {string(2)}    	dataNIB.data_checklist.kewenangan	00: Kewenangan Pusat; 01: Kewenangan Provinsi; 02: Kewenangan Kab/Kota
+ * @apiBody {string(1)}    	dataNIB.data_checklist.flag_checklist	Flag Checklist Komitmen (* Lihat Lampiran 28)
+ * @apiBody {string(1)}    	dataNIB.data_checklist.flag_transaksional	Flag : Y/N, Flag Izin Komersial/Operas ional Diajukan Transaksional (Bisa Mengajukan Berulang)
+ * @apiBody {string(1)}    	dataNIB.data_checklist.flag_perpanjangan	Flag : Y/N, Flag Bahwa Izin Usaha ini Adalah Hasil Perpanjangan Dari Izin Usaha Yang Terbit Sebelum OSS
+ * @apiBody {string(150)}    	dataNIB.data_checklist.no_izin	Nomor Izin Yang Terbit dan Masih Berlaku Sebelum OSS Diterapkan
+ * @apiBody {string(10)}    	dataNIB.data_checklist.tgl_izin	Tanggal Izin Yang Terbit dan Masih Berlaku Sebelum OSS Diterapkan (* Format:YYYY- MM-DD)
+ * @apiBody {string(65535)}    	dataNIB.data_checklist.file_izin	Attachment File Izin Yang Terbit dan Masih Berlaku Sebelum OSS Diterapkan Dalam Bentuk File PDF/Image Berupa Link (* Ukuran File Maks: 2MB)
+ * @apiBody {object[]}	dataNIB.data_checklist.data_persyaratan	    data_persyaratan
+ * @apiBody {string(25)}    	dataNIB.data_checklist.data_persyaratan.id_syarat	Id / Kode Persyaratan
+ * @apiBody {string(50)}    	dataNIB.data_checklist.data_persyaratan.no_dokumen	Nomor Dokumen Persyaratan
+ * @apiBody {string(8)}    	dataNIB.data_checklist.data_persyaratan.tgl_dokumen	Tanggal Dokumen Persyaratan (format date : YYYY-MM-DD)
+ * @apiBody {string(65535)}    	dataNIB.data_checklist.data_persyaratan.file_dokumen	Attachment File Izin dalam Bentuk File PDF/Image Berupa Link (* Ukuran File Maks: 2MB)
+ * @apiBody {string(255)}    	dataNIB.data_checklist.data_persyaratan.keterangan	Keterangan Dokumen Persyaratan
+ * @apiBody {string(2)}    	dataNIB.jenis_id_user_proses	Kode Jenis Identitas (* Lihat Lampiran 4)
+ * @apiBody {string(25)}    	dataNIB.no_id_user_proses	No Identitas Pemroses NIB
+ * @apiBody {string(100)}    	dataNIB.nama_user_proses	Nama User Pemroses NIB
+ * @apiBody {string(50)}    	dataNIB.email_user_proses	Email User Pemroses NIB
+ * @apiBody {string(25)}    	dataNIB.hp_user_proses	No HP Pemroses NIB
+ * @apiBody {string(255)}    	dataNIB.alamat_user_proses	Alamat Pemroses NIB
+ * @apiBody {string(1)}    	dataNIB.jns_kelamin_user_proses	Jenis Kelamin Pemroses NIB (L : Laki-Laki, P : Perempuan)
+ * @apiBody {string(100)}    	dataNIB.tempat_lahir_user_proses	Tempat Lahir Pemroses NIB
+ * @apiBody {string(10)}    	dataNIB.tgl_lahir_user_proses	Tanggal Lahir User Pemroses (format date : YYYY-MM-DD)
+ * @apiBody {string(10)}    	dataNIB.daerah_id_user_proses	ID Daerah User Pemroses(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
+ * @apiBody {string(10)}    	dataNIB.rt_rw_user_proses	RT RW Pemroses NIB
+ * @apiBody {string(50)}    	dataNIB.agama_user_proses	Agama Pemroses NIB
+ * @apiBody {string(50)}    	dataNIB.status_perkawinan_user_proses	Status Perkawinan Pemroses NIB
+ * @apiBody {string(50)}    	dataNIB.pekerjaan_user_proses	Pekerjaan Pemroses NIB
+ * @apiBody {string(2)}    	dataNIB.status_nib	Status Penerbitan NIB (* Lihat Lampiran 14)
+ * @apiBody {string(1)}    	dataNIB.tipe_dokumen 	Tipe Dokumen (9:Original, 5:Update, 3:Pencabutan, 4:Pembatalan)
  * @apiParamExample {json} RequestBody-Example:
  *     HTTP/1.1 200 OK
  *     {
  *       "dataNIB": {
+ *         "tgl_terkirim_oss": "",
  *         "nib": "",
  *         "tgl_pengajuan_nib": "",
  *         "tgl_terbit_nib": "",
@@ -3775,6 +3784,9 @@
  *         "total_modal_dasar": "",
  *         "total_modal_ditempatkan": "",
  *         "flag_umk": "",
+ *         "skalah_usaha": "",
+ *         "jenis_perubahan_terakhir": "",
+ *         "flag_perubahan_data_teknis": "",
  *         "pemegang_saham": [
  *           {
  *             "jenis_pemegang_saham": "",
