@@ -1615,7 +1615,26 @@
  *     --header 'Content-Type: application/json' \
  *     --data-raw '{
  *         "INQUERYNIB": {
- *             "nib": "0295010152755"
+ *             "nib": "{{nib}}"
+ *         }
+ *     }'
+ * 
+ *     curl --location --request POST 'https://server.digitaltelkom.dev/oss-sandbox/inqueryNIB' \
+ *     --header 'user_key: {{user_key}}' \
+ *     --header 'Content-Type: application/json' \
+ *     --data-raw '{
+ *         "INQUERYNIB": {
+ *             "nib": "{{nib}}",
+ *             "oss_id": "{{oss_id}}"
+ *         }
+ *     }'
+ * 
+ *    curl --location --request POST 'https://server.digitaltelkom.dev/oss-sandbox/inqueryNIB' \
+ *     --header 'user_key: {{user_key}}' \
+ *     --header 'Content-Type: application/json' \
+ *     --data-raw '{
+ *         "INQUERYNIB": {
+ *             "npwp": "{{npwp}}"
  *         }
  *     }'
 
@@ -1626,14 +1645,29 @@
  *       "Content-Type": "application/json",
  *       "user_key": {{user_key}}
  *     }
- * @apiParam {object}	    INQUERYNIB	        INQUERYNIB
- * @apiParam {string(13)}    	INQUERYNIB.nib	    Nomor Induk Berusaha
+ * @apiBody {object}	    INQUERYNIB	        INQUERYNIB
+ * @apiBody {string(13){13}}    	INQUERYNIB.nib	    Nomor Induk Berusaha
+ * @apiBody {string(25){25}} [INQUERYNIB.oss_id] OSS Id adalah ID yang di Generate Sistem OSS dan Dikirimkan ke K/L/D Bersama Permohonan Nomor Induk Berusaha
+ * @apiBody {string(16){16}} [INQUERYNIB.npwp] NPWP Perusahaan
 
  * @apiParamExample {json} RequestBody-Example:
  *     HTTP/1.1 200 OK
  *     {
  *     	 "INQUERYNIB": {
- *     		 "nib": ""
+ *     		 "nib": "{{nib}}"
+ *     	 }
+ *     }
+ * 
+ *    {
+ *     	 "INQUERYNIB": {
+ *     		 "nib": "{{nib}}",
+ *             "oss_id": "{{oss_id}}"
+ *     	 }
+ *     }
+ * 
+ *    {
+ *     	 "INQUERYNIB": {
+ *     		 "npwp": "{{npwp}}"
  *     	 }
  *     }
  * 
@@ -1664,6 +1698,7 @@
  * @apiSuccess (200) {number(5)}    	responinqueryNIB.dataNIB.kd_kawasan	Kode Kawasan (* Lihat Lampiran di https://oss.go.id/oss/#home/po rtal/lstKawasan)		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.jenis_kawasan	Jenis Kawasan (* Lihat Lampiran 21)		
  * @apiSuccess (200) {string(5)}    	responinqueryNIB.dataNIB.versi_pia	Versi PIA OSS		
+ * @apiSuccess (200) {string(2){2}} responinqueryNIB.dataNIB.skala_usaha Skala Usaha Perusahaan
  * @apiSuccess (200) {string(10)}    	responinqueryNIB.dataNIB.jangka_waktu	Jangka Waktu (format date : YYYY- MM-DD)		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.status_badan_hukum	Status Badan Hukum (* Lihat Lampiran 12)		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.status_penanaman_modal	Status Penanaman Modal (* Lihat Lampiran 1)		
@@ -1684,6 +1719,7 @@
  * @apiSuccess (200) {string(20.2)}    	responinqueryNIB.dataNIB.total_modal_dasar	Total Modal Dasar (Valuta : IDR)		
  * @apiSuccess (200) {string(20.2)}    	responinqueryNIB.dataNIB.total_modal_ditempatkan	Total Modal Ditempatkan (Valuta : IDR)		
  * @apiSuccess (200) {string(1)}    	responinqueryNIB.dataNIB.flag_umk	Flag yg menunjukkan umk atau non umk		
+ * @apiSuccess (200) {string(2){2}} responinqueryNIB.dataNIB.jenis_perubahan_terakhir Jenis Perubahan Terakhir Perusahaan
  * @apiSuccess (200) {object[]}    	responinqueryNIB.dataNIB.pemegang_saham	    pemegang_saham		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.pemegang_saham.jenis_pemegang_saham	Jenis Pemegang Saham (* Lihat Lampiran 13)		
  * @apiSuccess (200) {string(1)}    	responinqueryNIB.dataNIB.pemegang_saham.flag_asing	Asal Pemegang Saham dari Dalam Negeri / Luar Negeri (Value : Y = asing, N = Bukan Asing)		
@@ -1878,7 +1914,16 @@
  * @apiSuccess (200) {string(1)}    	responinqueryNIB.dataNIB.data_checklist.flag_transaksional	Flag : Y/N, Flag Izin Komersial / Operasional Diajukan Transaksional (Bisa Mengajukan Berulang)		
  * @apiSuccess (200) {string(1)}    	responinqueryNIB.dataNIB.data_checklist.flag_perpanjangan	Flag : Y/N, Flag Bahwa Izin Usaha Ini Adalah Hasil Perpanjangan Dari Zin Usaha Yang Terbit Sebelum OSS		
  * @apiSuccess (200) {string(15)}    	responinqueryNIB.dataNIB.data_checklist.kd_dokumen	Kode dokumen izin lingkungan		
- * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.data_checklist.nm_ dokumen	Nama dokumen izin lingkungan		
+ * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.data_checklist.nm_dokumen	Nama dokumen izin lingkungan		
+ * @apiSuccess (200) {object} [responinqueryNIB.dataNIB.data_checklist.data_teknis] Data Teknis
+ * @apiSuccess (200) {string(25){25}} [responinqueryNIB.dataNIB.data_checklist.data_teknis.id_komitmen] ID Komitmen
+ * @apiSuccess (200) {string(255){255}} [responinqueryNIB.dataNIB.data_checklist.data_teknis.nama_bangunan] Nama Bangunan
+ * @apiSuccess (200) {string(25){25}} [responinqueryNIB.dataNIB.data_checklist.data_teknis.luas_bangunan] Luas Bangunan
+ * @apiSuccess (200) {string(9){9}} [responinqueryNIB.dataNIB.data_checklist.data_teknis.jumlah_lantai] Jumlah Lantai
+ * @apiSuccess (200) {string(5){5}} [responinqueryNIB.dataNIB.data_checklist.data_teknis.tinggi_bangunan] Tinggi Bangunan
+ * @apiSuccess (200) {string(25){25}} [responinqueryNIB.dataNIB.data_checklist.data_teknis.luas_basement] Luas Basement
+ * @apiSuccess (200) {string(2){2}} [responinqueryNIB.dataNIB.data_checklist.data_teknis.jumlah_lantai_basement] Jumlah Lantai Basement
+ * @apiSuccess (200) {string(150){150}} [responinqueryNIB.dataNIB.dataNIB.data_checklist.data_teknis.perancang_dokumen_teknis] Perancang Dokumen Teknis
  * @apiSuccess (200) {object[]}    	responinqueryNIB.dataNIB.data_checklist.data_persyaratan	    data_persyaratan		
  * @apiSuccess (200) {string(25)}    	responinqueryNIB.dataNIB.data_checklist.data_persyaratan.id_syarat	Id / Kode Persyaratan		
  * @apiSuccess (200) {string(50)}    	responinqueryNIB.dataNIB.data_checklist.data_persyaratan.no_dokumen	Nomor Dokumen Persyaratan		
@@ -1931,6 +1976,7 @@
 *           "kd_kawasan": "",
 *           "jenis_kawasan": "",
 *           "versi_pia": "",
+*           "skala_usaha": "",
 *           "jangka_waktu": "",
 *           "status_badan_hukum": "",
 *           "status_penanaman_modal": "",
@@ -1951,6 +1997,7 @@
 *           "total_modal_dasar": "",
 *           "total_modal_ditempatkan": "",
 *           "flag_umk": "",
+*           "jenis_perubahan_terakhir": "",
 *           "pemegang_saham": [
 *             {
 *               "jenis_pemegang_saham": "",
@@ -2167,7 +2214,17 @@
 *               "flag_transaksional": "",
 *               "flag_perpanjangan": "",
 *               "kd_dokumen": "",
-*               "nm_ dokumen": "",
+*               "nm_ dokumen": "",              
+*               "data_teknis" : {
+*                  "id_komitmen" : "",
+*                  "nama_bangunan" : "",
+*                  "luas_bangunan" : "",
+*                  "jumlah_lantai" : "",
+*                  "tinggi_bangunan" : "",
+*                  "luas_basement" : "",
+*                  "jumlah_lantai_basement" : "",
+*                  "perancang_dokumen_teknis" : ""
+*               },
 *               "data_persyaratan": [
 *                 {
 *                   "id_syarat": "",
