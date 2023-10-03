@@ -2878,7 +2878,7 @@
  *     --header 'Content-Type: application/json' \
  *     --data-raw '{
  *      "INQUERYNIBSTPW": {
- *         "nib": "2334444"
+ *         "nib": "{{nib}}"
  *      }
  *     }'
  * @apiHeader {String} Content-Type Content Type Request.
@@ -2920,6 +2920,8 @@
  * @apiSuccess (200) {string(50)}   	responinqueryNIBSTPW.dataNIBSTPW.telp_perusahaan_ln	Telpon Prinsipal		
  * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.jangka_waktu	Jangka Waktu (* Date Format YYYY- MM-DD)		
  * @apiSuccess (200) {string(65535)}   	responinqueryNIBSTPW.dataNIBSTPW.file_prospektus	Attachment File Prospektus dalam Bentuk File PDF/Image Berupa Link (* Ukuran File Maks: 2MB)		
+ * @apiSuccess (200) {string(2){2}} responinqueryNIBSTPW.dataNIBSTPW.skala_usaha Skala Usaha Perusahaan
+ * @apiSuccess (200) {string(2){2}} responinqueryNIBSTPW.dataNIBSTPW.jenis_perubahan_terakhir Jenis Perubahan Terakhir Perusahaan
  * @apiSuccess (200) {string(5)}   	responinqueryNIBSTPW.dataNIBSTPW.versi_pia	Versi PIA OSS		
  * @apiSuccess (200) {object[]}    	responinqueryNIBSTPW.dataNIBSTPW.data_checklist	Data checklist		
  * @apiSuccess (200) {string(25)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.id_izin	Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin		
@@ -2980,6 +2982,8 @@
  *           "telp_perusahaan_ln": "",
  *           "jangka_waktu": "",
  *           "file_prospektus": "",
+ *           "skala_usaha": "",
+ *           "jenis_perubahan_terakhir": "",
  *           "versi_pia": "",
  *           "data_checklist": [
  *             {
