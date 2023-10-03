@@ -425,6 +425,9 @@
  *         "total_modal_dasar": "",
  *         "total_modal_ditempatkan": "",
  *         "flag_umk": "",
+ *         "flag_perubahan_data_teknis": "",
+ *         "skala_usaha": "",
+ *         "jenis_perubahan_data_teknis": "",
  *         "pemegang_saham": [
  *           {
  *             "jenis_pemegang_saham": "",
@@ -626,7 +629,15 @@
  *                 "pi_tanggal": "",
  *                 "pi_npwp": "",
  *                 "id_kbli_ta": "",
- *                 "tkdn": ""
+ *                 "tkdn": "",
+ *                 "flag_memiliki_halal": "",
+ *                 "nomor_sertifikat_halal": "",
+ *                 "masa_berlaku_sertifikat_halal": "",
+ *                 "flag_memiliki_sni": "",
+ *                 "nomor_sni": "",
+ *                 "masa_berlaku_sni": "",
+ *                 "flag_self_declare": "",
+ *                 "tipe_cakupan": ""
  *               }
  *             ]
  *           }
@@ -653,13 +664,13 @@
  *             "kewenangan": "",
  *             "flag_checklist": "",
  *             "flag_transaksional": "",
+ *             "kbli_konversi": "",
  *             "flag_perpanjangan": "",
  *             "no_izin": "",
  *             "tgl_izin": "",
  *             "file_izin": "",
  *             "kd_dokumen": "",
  *             "nm_dokumen": "",
- *             "kbli_konversi": "",
  *             "data_persyaratan": [
  *               {
  *                 "id_syarat": "",
@@ -668,7 +679,23 @@
  *                 "file_dokumen": "",
  *                 "keterangan": ""
  *               }
- *             ]
+ *             ],
+ *             "data_produk_halal" : {
+ *    						"id_pengajuan_sertifikat_halal" : "",
+ *					    	"uraian_jenis_produk" : "",
+ *					    	"kode_klasifikasi_produk" : "",
+ *					    	"flag_self_declare" : "",
+ *					     	"list_produk" : [
+ *					        	{
+ *				      				"id_cakupan_produk" : "",
+ *				      				"uraian_produk" : "",
+ *				      				"kbli" : "",
+ *				      				"id_proyek" : "",
+ *				      				"id_produk" : "",
+ *					      			"id_pengajuan_sertifikat_halal_detail" : ""
+ *				        		}
+ *				    		]
+ *			  		}
  *           }
  *         ],
  *         "jenis_id_user_proses": "",
@@ -744,6 +771,9 @@
  * @apiBody {number(20)}    	dataNIB.total_modal_dasar	    Total Modal Dasar (Valuta : IDR)
  * @apiBody {number(20)}    	dataNIB.total_modal_ditempatkan	    Total Modal Ditempatkan (Valuta : IDR)
  * @apiBody {string(1)}    	dataNIB.flag_umk	    Flag yang menandakan umk atau non umk
+ * @apiBody {string(1){1}} dataNIB.flag_perubahan_data_teknis Flag perubahan data teknis (jika value: N/null = Bukan Perubahan Data Jenis, value: Y = Perubahan data teknis)
+ * @apiBody {string(10){10}} dataNIB.skala_usaha Skala Usaha Perusahaan
+ * @apiBody {string(2){2}} dataNIB.jenis_perubahan_terakhir Jenis Perubahan Terakhir Perusahaan
  * @apiBody {object[]}    	dataNIB.pemegang_saham	    Data pemegang_saham
  * @apiBody {string(2)}    	dataNIB.pemegang_saham.jenis_pemegang_saham	    Jenis Pemegang Saham (* Lihat Lampiran 13)
  * @apiBody {string(1)}    	dataNIB.pemegang_saham.flag_asing	    Asal Pemegang Saham dari Dalam Negeri / Luar Negeri (Value : Y = asing, N= Bukan Asing)
@@ -913,6 +943,14 @@
  * @apiBody {string(16)}    	dataNIB.data_proyek.data_proyek_produk.pi_npwp	    NPWP Pendaftaran Penanaman Modal Untuk Case Grand Father Clause (GFC)
  * @apiBody {string(9)}    	dataNIB.data_proyek.data_proyek_produk.id_kbli_ta	    Penanda bahwa cakupan produk untuk kebutuhan tax allowance
  * @apiBody {number(3.2)}    	dataNIB.data_proyek.data_proyek_produk.tkdn	    Tingkat Kandungan Dalam Negeri
+ * @apiBody {string(1){1}} dataNIB.data_proyek.data_proyek_produk.flag_memiliki_halal
+ * @apiBody {string(255){255}} dataNIB.data_proyek.data_proyek_produk.nomor_sertifikat_halal
+ * @apiBody {string(10){10}} dataNIB.data_proyek.data_proyek_produk.masa_berlaku_sertifikat_halal
+ * @apiBody {string(1){1}} dataNIB.data_proyek.data_proyek_produk.flag_memiliki_sni
+ * @apiBody {string(255){255}} dataNIB.data_proyek.data_proyek_produk.nomor_sertifikat_sni
+ * @apiBody {string(10){10}} dataNIB.data_proyek.data_proyek_produk.masa_berlaku_sertifikat_sni
+ * @apiBody {string(1){1}} dataNIB.data_proyek.data_proyek_produk.flag_self_declare
+ * @apiBody {string(2){2}} dataNIB.data_proyek.data_proyek_produk.tipe_cakupan
  * @apiBody {object[]}    	dataNIB.data_dni	    data_dni
  * @apiBody {string(10)}    	dataNIB.data_dni.kd_dni	    Kodefikasi Data Negatif Investasi (DNI) (* Lihat Lampiran 15)
  * @apiBody {object[]}    	dataNIB.data_checklist	    data_checklist
@@ -932,6 +970,7 @@
  * @apiBody {string(1)}    	dataNIB.data_checklist.flag_checklist	    Flag Checklist Komitmen (* Lihat Lampiran 28)
  * @apiBody {string(1)}    	dataNIB.data_checklist.flag_transaksional	    Flag : Y/N, Flag Izin Komersial/Operasio nal Diajukan Transaksional (Bisa Mengajukan Berulang)
  * @apiBody {string(1)}    	dataNIB.data_checklist.flag_perpanjangan	    Flag : Y/N, Flag Bahwa Izin Usaha ini Adalah Hasil Perpanjangan Dari Izin Usaha Yang Terbit Sebelum OSS
+ * @apiBody {string(5){5}} dataNIB.data_checklist.kbli_konversi Kode KBLI
  * @apiBody {string(150)}    	dataNIB.data_checklist.no_izin	    Nomor Izin Yang Terbit dan Masih Berlaku Sebelum OSS Diterapkan
  * @apiBody {string(10)}    	dataNIB.data_checklist.tgl_izin	    Tanggal Izin Yang Terbit dan Masih Berlaku Sebelum OSS Diterapkan (* Format:YYYY-MM- DD)
  * @apiBody {string(65535)}    	dataNIB.data_checklist.file_izin	    Attachment File Izin Yang Terbit dan Masih Berlaku Sebelum OSS Diterapkan Dalam Bentuk File PDF/Image Berupa Link (* Ukuran File Maks: 2MB)
@@ -944,6 +983,18 @@
  * @apiBody {string(8)}    	dataNIB.data_checklist.data_persyaratan.tgl_dokumen	    Tanggal Dokumen Persyaratan (format date : YYYY-MM- DD)
  * @apiBody {string(65535)}    	dataNIB.data_checklist.data_persyaratan.file_dokumen	    Attachment File Izin dalam Bentuk File PDF/Image Berupa Link (* Ukuran File Maks: 2MB)
  * @apiBody {string(255)}    	dataNIB.data_checklist.data_persyaratan.keterangan	    Keterangan Dokumen Persyaratan
+ * @apiBody {object[]} [dataNIB.data_checklist.data_produk_halal] Berulang (N) Rows
+ * @apiBody {string(30){30}} [dataNIB.data_checklist.data_produk_halal.id_pengajuan_sertifikat_halal]
+ * @apiBody {string(225){225}} [dataNIB.data_checklist.data_produk_halal.uraian_jenis_produk]
+ * @apiBody {string(10){10}} [dataNIB.data_checklist.data_produk_halal.kode_klasifikasi_produk]
+ * @apiBody {string(1){1}} [dataNIB.data_checklist.data_produk_halal.flag_self_declare]
+ * @apiBody {object[]} [dataNIB.data_checklist.data_produk_halal.list_produk] Berulang (N) Rows
+ * @apiBody {string(9){9}} [dataNIB.data_checklist.data_produk_halal.list_produk.id_cakupan_produk]
+ * @apiBody {string(65535){65535}} [dataNIB.data_checklist.data_produk_halal.list_produk.uraian_produk]
+ * @apiBody {string(5){5}} [dataNIB.data_checklist.data_produk_halal.list_produk.kbli]
+ * @apiBody {string(30){30}} [dataNIB.data_checklist.data_produk_halal.list_produk.id_proyek]
+ * @apiBody {string(30){30}} [dataNIB.data_checklist.data_produk_halal.list_produk.id_produk]
+ * @apiBody {string(30){30}} [dataNIB.data_checklist.data_produk_halal.list_produk.id_pengajuan_sertifikat_halal]
  * @apiBody {string(2)}    	dataNIB.jenis_id_user_proses	    Kode Jenis Identitas (* Lihat Lampiran 4)
  * @apiBody {string(25)}    	dataNIB.no_id_user_proses	    No Identitas Pemroses NIB
  * @apiBody {string(100)}    	dataNIB.nama_user_proses	    Nama User Pemroses NIB
@@ -1012,6 +1063,9 @@
  *         "total_modal_dasar": "",
  *         "total_modal_ditempatkan": "",
  *         "flag_umk": "",
+ *         "flag_perubahan_data_teknis": "",
+ *         "skala_usaha": "",
+ *         "jenis_perubahan_data_teknis": "",
  *         "pemegang_saham": [
  *           {
  *             "jenis_pemegang_saham": "",
@@ -1213,7 +1267,15 @@
  *                 "pi_tanggal": "",
  *                 "pi_npwp": "",
  *                 "id_kbli_ta": "",
- *                 "tkdn": ""
+ *                 "tkdn": "",
+ *                 "flag_memiliki_halal": "",
+ *                 "nomor_sertifikat_halal": "",
+ *                 "masa_berlaku_sertifikat_halal": "",
+ *                 "flag_memiliki_sni": "",
+ *                 "nomor_sni": "",
+ *                 "masa_berlaku_sni": "",
+ *                 "flag_self_declare": "",
+ *                 "tipe_cakupan": ""
  *               }
  *             ]
  *           }
@@ -1241,12 +1303,12 @@
  *             "flag_checklist": "",
  *             "flag_transaksional": "",
  *             "flag_perpanjangan": "",
+ *             "kbli_konversi": "",
  *             "no_izin": "",
  *             "tgl_izin": "",
  *             "file_izin": "",
  *             "kd_dokumen": "",
  *             "nm_dokumen": "",
- *             "kbli_konversi": "",
  *             "data_persyaratan": [
  *               {
  *                 "id_syarat": "",
@@ -1255,7 +1317,23 @@
  *                 "file_dokumen": "",
  *                 "keterangan": ""
  *               }
- *             ]
+ *             ],
+ *             "data_produk_halal" : {
+ *    						"id_pengajuan_sertifikat_halal" : "",
+ *					    	"uraian_jenis_produk" : "",
+ *					    	"kode_klasifikasi_produk" : "",
+ *					    	"flag_self_declare" : "",
+ *					     	"list_produk" : [
+ *					        	{
+ *				      				"id_cakupan_produk" : "",
+ *				      				"uraian_produk" : "",
+ *				      				"kbli" : "",
+ *				      				"id_proyek" : "",
+ *				      				"id_produk" : "",
+ *					      			"id_pengajuan_sertifikat_halal_detail" : ""
+ *				        		}
+ *				    		]
+ *			  		}
  *           }
  *         ],
  *         "jenis_id_user_proses": "",
