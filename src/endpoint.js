@@ -4617,7 +4617,6 @@
  *     --data-raw '{
  *       "IZINFINAL": {
  *         "nib": "",
- *         "id_produk": "",
  *         "id_proyek": "",
  *         "oss_id": "",
  *         "id_izin": "",
@@ -4636,14 +4635,7 @@
  *         "file_lampiran": "",
  *         "nomenklatur_nomor_izin": "",
  *         "bln_berlaku_izin": "",
- *         "thn_berlaku_izin": "",
- *         "data_pnbp": [
- *           {
- *             "kd_akun": "",
- *             "kd_penerimaan": "",
- *             "nominal": ""
- *           }
- *         ]
+ *         "thn_berlaku_izin": ""
  *       }
  *     }'
  
@@ -4656,7 +4648,6 @@
  *     }
  * @apiBody {object}    	IZINFINAL	        IZINFINAL
  * @apiBody {string(13)}    	IZINFINAL.nib	    Nomor Induk Berusaha
- * @apiBody {string(25)}    	IZINFINAL.id_produk	    ID Produk
  * @apiBody {string(25)}    	IZINFINAL.id_proyek	    ID / Kode Proyek
  * @apiBody {string(25)}    	IZINFINAL.oss_id	    Oss Id adalah ID yang di Generate Sistem OSS dan Dikirimkan ke K/L/D Bersama Permohonan Nomor Induk Berusaha
  * @apiBody {string(25)}    	IZINFINAL.id_izin	    Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
@@ -4676,16 +4667,11 @@
  * @apiBody {string(255)}    	IZINFINAL.nomenklatur_nomor_izin	    Nomenklatur nomor izin
  * @apiBody {string(5)}    	IZINFINAL.bln_berlaku_izin	    Jangka waktu berlaku izin dalam bulan
  * @apiBody {string(5)}    	IZINFINAL.thn_berlaku_izin	    Jangka waktu berlaku izin dalam tahun
- * @apiBody {object[]}    	IZINFINAL.data_pnbp	    data_pnbp
- * @apiBody {string(20)}    	IZINFINAL.data_pnbp.kd_akun	    Kode Akun PNBP dari Simponi Kemenkeu
- * @apiBody {string(20)}    	IZINFINAL.data_pnbp.kd_penerimaan	    Kode Jenis Penerimaan dari Simponi Kemenkeu
- * @apiBody {number(20.0)}    	IZINFINAL.data_pnbp.nominal	    Jumlah Nilai PNBP (Default Valuta : IDR)
  * @apiParamExample {json} RequestBody-Example:
  *     HTTP/1.1 200 OK
  *     {
  *       "IZINFINAL": {
  *         "nib": "",
- *         "id_produk": "",
  *         "id_proyek": "",
  *         "oss_id": "",
  *         "id_izin": "",
@@ -4704,14 +4690,7 @@
  *         "file_lampiran": "",
  *         "nomenklatur_nomor_izin": "",
  *         "bln_berlaku_izin": "",
- *         "thn_berlaku_izin": "",
- *         "data_pnbp": [
- *           {
- *             "kd_akun": "",
- *             "kd_penerimaan": "",
- *             "nominal": ""
- *           }
- *         ]
+ *         "thn_berlaku_izin": ""
  *       }
  *     }
  * @apiSuccess (200) {Object} responupdateLicense                               Response update license
