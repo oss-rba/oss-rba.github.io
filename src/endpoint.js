@@ -2347,7 +2347,7 @@
  *     --header 'Content-Type: application/json' \
  *     --data-raw '{
  *         "CHECKNIB": {
- *             "nib": "8120207732259"
+ *             "nib": "{{nib}}"
  *         }
  *     }'
 
@@ -2375,7 +2375,6 @@
  * @apiSuccess (200) {object}    	responcheckNIB.dataNIB	                    dataNIB
  * @apiSuccess (200) {string(13)}    	responcheckNIB.dataNIB.nib	                Nomor Induk Berusaha
  * @apiSuccess (200) {string(100)}    	responcheckNIB.dataNIB.nama_perusahaan	    Nama Perusahaan
- * @apiSuccess (200) {string(15)}    	responcheckNIB.dataNIB.npwp_perusahaan	    NPWP Perusahaan
  * @apiSuccess (200) {string(2)}    	responcheckNIB.dataNIB.status	            Status NIB (*Lihat Lampiran 14)
  * @apiSuccessExample {json} Success-Response:
  *     HTTP/1.1 200 OK
@@ -2386,7 +2385,6 @@
  *     		 "dataNIB": {
  *     			 "nib": "",
  *     			 "nama_perusahaan": "",
- *     			 "npwp_perusahaan": "",
  *     			 "status": ""
  *     		 }
  *     	 }
