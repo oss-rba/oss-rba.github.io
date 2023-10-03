@@ -427,7 +427,7 @@
  *         "flag_umk": "",
  *         "flag_perubahan_data_teknis": "",
  *         "skala_usaha": "",
- *         "jenis_perubahan_data_teknis": "",
+ *         "jenis_perubahan_terkahir": "",
  *         "pemegang_saham": [
  *           {
  *             "jenis_pemegang_saham": "",
@@ -1065,7 +1065,7 @@
  *         "flag_umk": "",
  *         "flag_perubahan_data_teknis": "",
  *         "skala_usaha": "",
- *         "jenis_perubahan_data_teknis": "",
+ *         "jenis_perubahan_terakhir": "",
  *         "pemegang_saham": [
  *           {
  *             "jenis_pemegang_saham": "",
