@@ -131,7 +131,7 @@
  *       "Content-Type": "application/json",
  *       "user_key": {{user_key}}
  *     }
- * @apiBody {object}	    AKTA	                        AKTA
+ * @apiBody {Object}	    AKTA	                        AKTA
  * @apiBody {string(11)}    	AKTA.id_perusahaan	            ID Perusahaan Dari Sistem AHU
  * @apiBody {string(20)}    	AKTA.jangka_waktu	            Jangka Waktu (format date : YYYY-MM- DD)
  * @apiBody {string(2)}    	AKTA.status_badan_hukum	        Status Badan Hukum (* Lihat Lampiran 12)
@@ -152,20 +152,20 @@
  * @apiBody {string(50000)}    	AKTA.dalam_bentuk_lain	    Modal Dalam Bentuk Lainnya
  * @apiBody {string(5){5}} AKTA.tahun_kbli Tahun KBLI
  * @apiBody {string(5){5}} AKTA.kbli5 Kode KBLI
- * @apiBody {object[]}    	AKTA.data_kbli	                        data_kbli
+ * @apiBody {Object[]}    	AKTA.data_kbli	                        data_kbli
  * @apiBody {string(1024)}    	AKTA.data_kbli.kbli	                    Maksud & Tujuan KBLI
  * @apiBody {string(1024)}   	AKTA.data_kbli.uraian_usaha	            uraian_usaha
- * @apiBody {object[]} AKTA.modal_dasar Berulang (N) Rows
+ * @apiBody {Object[]} AKTA.modal_dasar Berulang (N) Rows
  * @apiBody {string(50){50}} AKTA.modal_dasar.klasifikasi_saham_modal_dasar Klasifikasi Saham Modal Dasar
  * @apiBody {number(18){18}} AKTA.modal_dasar.nominal_per_lbr_modal_dasar Nominal Perlembar Saham Dasar
  * @apiBody {number(18){18}} AKTA.modal_dasar.jum_lbr_saham_modal_dasar Lembar Saham Dasar
  * @apiBody {number(18){18}} AKTA.modal_dasar.total_modal_dasar Total Modal Dasar
- * @apiBody {object[]} AKTA.modal_ditempatkan Berulang (N) Rows
+ * @apiBody {Object[]} AKTA.modal_ditempatkan Berulang (N) Rows
  * @apiBody {string(50){50}} AKTA.modal_ditempatkan.klasifikasi_saham_modal_ditempatkan Klasifikasi Saham Modal Ditempatkan
  * @apiBody {number(18){18}} AKTA.modal_ditempatkan.nominal_per_lbr_modal_ditempatkan Nominal Perlembar Saham Ditempatkan
  * @apiBody {number(18){18}} AKTA.modal_ditempatkan.jum_lbr_saham_modal_ditempatkan Lembar Saham Ditempatkan
  * @apiBody {number(18){18}} AKTA.modal_ditempatkan.total_modal_ditempatkan Total Modal Ditempatkan
- * @apiBody {object[]}    	AKTA.pemegang_saham	                    Detail pemegang saham
+ * @apiBody {Object[]}    	AKTA.pemegang_saham	                    Detail pemegang saham
  * @apiBody {string(2)}    	AKTA.pemegang_saham.jenis_pemegang_saham	    Jenis Pemegang Saham (* Lihat Lampiran 13)
  * @apiBody {string(1)}    	AKTA.pemegang_saham.flag_asing	                Asal Pemegang Saham dari Dalam Negeri/Luar Negeri (Value : Y = asing; N = Bukan Asing)
  * @apiBody {string(20)}    	AKTA.pemegang_saham.klasifikasi_saham_pemegang	    klasifikasi_saham_pemegang
@@ -183,7 +183,7 @@
  * @apiBody {string(100)}    	AKTA.pemegang_saham.email_pemegang_saham	    email_pemegang_saham
  * @apiBody {string(50){50}} AKTA.pemegang_saham.klasifikasi_saham_pemegang Klasifikasi Saham Pemegang
  * @apiBody {string(18){18}} AKTA.pemegang_saham.nominal_per_lbr_pemegang Nominal Perlembar Saham Pemegang
- * @apiBody {object[]}    	AKTA.penanggung_jwb	                            Detail penanggung jawab
+ * @apiBody {Object[]}    	AKTA.penanggung_jwb	                            Detail penanggung jawab
  * @apiBody {string(1)}    	AKTA.penanggung_jwb.flag_asing	    Asal Penanggung Jawab dari Dalam Negeri / Luar Negeri (Value : Y = asing; N = Bukan Asing)
  * @apiBody {string(500)}    	AKTA.penanggung_jwb.nama_penanggung_jwb	    nama_penanggung_jwb
  * @apiBody {string(250)}    	AKTA.penanggung_jwb.jabatan_penanggung_jwb	    jabatan_penanggung_jwb
@@ -211,14 +211,14 @@
  * @apiBody {string(10)}    	AKTA.tgl_akta_lama	    Tanggal Akta Lama Sebelum Perubahan(format date : YYYY-MM-DD)
  * @apiBody {string(100)}    	AKTA.no_pengesahan_lama	    Nomor Pengesahan Akta Lama Sebelum Perubahan Dari Kumham
  * @apiBody {string(10)}    	AKTA.tgl_pengesahan_lama	    Tanggal Pengesahan Akta Lama Sebelum Perubahan Dari Kumham (format date : YYYY-MM-DD)
- * @apiBody {object[]}    	AKTA.legalitas	    Data legalitas
+ * @apiBody {Object[]}    	AKTA.legalitas	    Data legalitas
  * @apiBody {string(2)}    	AKTA.legalitas.jenis_akta	    Jenis Akta Perusahaan (* Lihat Lampiran 7)
  * @apiBody {string(100)}    	AKTA.legalitas.no_akta	    Nomor Akta Perusahaan
  * @apiBody {string(10)}    	AKTA.legalitas.tgl_akta	    Tanggal Akta Perusahaan (format date : YYYY-MM-DD)
  * @apiBody {string(100)}    	AKTA.legalitas.alamat_notaris	    alamat_notaris
  * @apiBody {string(255)}    	AKTA.legalitas.nama_notaris	    nama_notaris
  * @apiBody {string(100)}    	AKTA.legalitas.telepon_notaris	    telepon_notaris
- * @apiBody {object[]} [AKTA.merger] Berulang (N) Rows
+ * @apiBody {Object[]} [AKTA.merger] Berulang (N) Rows
  * @apiBody {string(10){10}} [AKTA.merger.tanggal_efektif] Tanggal Efektif Merger (format date: YYYY-MM-DD)
  * @apiBody {string(100){100}} [AKTA.merger.id_pt_surviving] ID PT Yang Menerima Penggabungan
  * @apiBody {string(255){255}} [AKTA.merger.nama_pt_surviving] Nama PT Yang Menerima Penggabungan
@@ -723,7 +723,7 @@
  *       "Content-Type": "application/json",
  *       "Token": "OSS000qw13242628gssssss812345654709820180514"
  *     }
- * @apiBody {object}	    dataNIB	                            Data NIB
+ * @apiBody {Object}	    dataNIB	                            Data NIB
  * @apiBody {string(13)}    	dataNIB.nib	                    Nomor Induk Berusaha
  * @apiBody {string(10)}    	dataNIB.tgl_pengajuan_nib	    Tanggal Pengajuan NIB (format date : YYYY-MM-DD)
  * @apiBody {string(10)}    	dataNIB.tgl_terbit_nib	    Tanggal Penerbitan NIB (format date : YYYY-MM-DD)
@@ -774,7 +774,7 @@
  * @apiBody {string(1){1}} dataNIB.flag_perubahan_data_teknis Flag perubahan data teknis (jika value: N/null = Bukan Perubahan Data Jenis, value: Y = Perubahan data teknis)
  * @apiBody {string(10){10}} dataNIB.skala_usaha Skala Usaha Perusahaan
  * @apiBody {string(2){2}} dataNIB.jenis_perubahan_terakhir Jenis Perubahan Terakhir Perusahaan
- * @apiBody {object[]}    	dataNIB.pemegang_saham	    Data pemegang_saham
+ * @apiBody {Object[]}    	dataNIB.pemegang_saham	    Data pemegang_saham
  * @apiBody {string(2)}    	dataNIB.pemegang_saham.jenis_pemegang_saham	    Jenis Pemegang Saham (* Lihat Lampiran 13)
  * @apiBody {string(1)}    	dataNIB.pemegang_saham.flag_asing	    Asal Pemegang Saham dari Dalam Negeri / Luar Negeri (Value : Y = asing, N= Bukan Asing)
  * @apiBody {number(20)}    	dataNIB.pemegang_saham.total_modal_pemegang	    Total Modal Pemegang Saham (Valuta : IDR)
@@ -791,7 +791,7 @@
  * @apiBody {string(100)}    	dataNIB.pemegang_saham.email_pemegang_saham	    email_pemegang_saham
  * @apiBody {string(2)}    	dataNIB.pemegang_saham.flag_pajak_pemegang_saham	    Flag Validasi Pajak Pemegang Saham (* Lihat Lampiran 19)
  * @apiBody {string(255)}    	dataNIB.pemegang_saham.ket_pajak_pemegang_saham	    Keterangan Validasi Pajak Pemegang Saham
- * @apiBody {object[]}    	dataNIB.penanggung_jwb	    Data penanggung jawab
+ * @apiBody {Object[]}    	dataNIB.penanggung_jwb	    Data penanggung jawab
  * @apiBody {string(1)}    	dataNIB.penanggung_jwb.flag_asing	    Asal Penanggung Jawab dari Dalam Negeri / Luar Negeri (Value : Y = asing, N= Bukan Asing)
  * @apiBody {string(2)}    	dataNIB.penanggung_jwb.jns_identitas_penanggung_jwb	    Jenis Nik Penganggung Jawab (* Lihat Lampiran 4)
  * @apiBody {string(100)}    	dataNIB.penanggung_jwb.no_identitas_penanggung_jwb	    no_identitas_penanggung_jwb
@@ -820,14 +820,14 @@
  * @apiBody {string(10)}    	dataNIB.tgl_akta_lama	    Tanggal Akta Lama Sebelum Perubahan (format date :YYYY-MM-DD)
  * @apiBody {string(100)}    	dataNIB.no_pengesahan_lama	    Nomor Pengesahan Akta Lama Sebelum Perubahan Dari Kumham
  * @apiBody {string(10)}    	dataNIB.tgl_pengesahan_lama	    Tanggal Pengesahan Akta Lama Sebelum Perubahan Dari Kumham (format date : YYYY-MM- DD)
- * @apiBody {object[]}    	dataNIB.legalitas	    Data legalitas
+ * @apiBody {Object[]}    	dataNIB.legalitas	    Data legalitas
  * @apiBody {string(2)}    	dataNIB.legalitas.jenis_legal	    Jenis Legal Perusahaan (* Lihat Lampiran 7)
  * @apiBody {string(100)}    	dataNIB.legalitas.no_legal	    Nomor Legal Perusahaan
  * @apiBody {string(10)}    	dataNIB.legalitas.tgl_legal	    Tanggal Legal Perusahaan (format date : YYYY-MM- DD)
  * @apiBody {string(255)}    	dataNIB.legalitas.alamat_notaris	    alamat_notaris
  * @apiBody {string(100)}    	dataNIB.legalitas.nama_notaris	    nama_notaris
  * @apiBody {string(100)}    	dataNIB.legalitas.telepon_notaris	    telepon_notaris
- * @apiBody {object}    	dataNIB.data_rptka	    data_rptka
+ * @apiBody {Object}    	dataNIB.data_rptka	    data_rptka
  * @apiBody {string(2)}    	dataNIB.data_rptka.jenis_rptka	    Jenis Flag RPTKA *( 01 : Baru, 02:Perubahan)
  * @apiBody {string(20)}    	dataNIB.data_rptka.no_rptka	    No Bacode RPTKA
  * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_awal	    Masa Berlaku Dari Tanggal(format date : YYYY-MM- DD)
@@ -836,14 +836,14 @@
  * @apiBody {string(11)}    	dataNIB.data_rptka.jumlah_tka_rptka	    Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)
  * @apiBody {string(10)}    	dataNIB.data_rptka.jangka_penggunaan_waktu	    Jangka Waktu Penggunaan Tenaga Kerja Asing (TKA) dalam Izin Rencana Penggunaan Tenaga Kerja Asing (RPTKA) (format date :YYYY-MM-DD)
  * @apiBody {string(1)}    	dataNIB.data_rptka.jangka_waktu_permohonan_rptka	    Jangka Waktu Permohonan RPTKA (dalam hitungan bulan)
- * @apiBody {object[]}    	dataNIB.data_rptka.rptka_jabatan	    Data RPTKA jabatan
+ * @apiBody {Object[]}    	dataNIB.data_rptka.rptka_jabatan	    Data RPTKA jabatan
  * @apiBody {string(11)}    	dataNIB.data_rptka.rptka_jabatan.id_jabatan	    ID Jabatan Tenaga Kerja Asing berdasarkan https://jdih.kemna ker.go.id/data_puu/KEP247_MENX_2011.pdf
  * @apiBody {string(255)}    	dataNIB.data_rptka.rptka_jabatan.jabatan	    Nama Jabatan
  * @apiBody {string(11)}    	dataNIB.data_rptka.rptka_jabatan.jumlah	    Jumlah Orang Yang Memiliki Jabatan
  * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_jabatan.tgl_mulai	    Tanggal Mulai Jabatan (format date: YYYY-MM-DD)
  * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_jabatan.tgl_selesai	    Tanggal Selesai Jabatan (format date: YYYY-MM-DD)
  * @apiBody {string(255)}    	dataNIB.data_rptka.rptka_jabatan.keterangan	    keterangan
- * @apiBody {object[]}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping	    rptka_tki_pendamping
+ * @apiBody {Object[]}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping	    rptka_tki_pendamping
  * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.id_jabatan	    Id jabatan
  * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.id_pendamping	    Id TKI Pendamping
  * @apiBody {string(100)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.nama	    Nama TKI Pendamping
@@ -856,13 +856,13 @@
  * @apiBody {string(255)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.sertifikat	    Sertifikat Kompetensi TKI Pendamping
  * @apiBody {number(11)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.pengalaman_kerja	    Pengalaman Kerja TKI Pendamping (dalam tahun)
  * @apiBody {string(255)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.keterangan	    keterangan
- * @apiBody {object[]}    	dataNIB.data_rptka.rptka_negara	    rptka_negara
+ * @apiBody {Object[]}    	dataNIB.data_rptka.rptka_negara	    rptka_negara
  * @apiBody {string(2)}    	dataNIB.data_rptka.rptka_negara.id_negara	    Negara Asal Tenaga Kerja Asing(* Sumber Kodefikasi Negara Mengikuti Standar Unedifact : http://www.unece. org/cefact/locode/s ervice/location )
  * @apiBody {number(11)}    	dataNIB.data_rptka.rptka_negara.jumlah	    Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)
- * @apiBody {object[]}    	dataNIB.data_rptka.rptka_lokasi	    Data RPTKA lokasi
+ * @apiBody {Object[]}    	dataNIB.data_rptka.rptka_lokasi	    Data RPTKA lokasi
  * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_lokasi.lokasi_id	    ID Daerah Penanggung Jawab (* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf )
  * @apiBody {number(11)}    	dataNIB.data_rptka.rptka_lokasi.jumlah	    Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)
- * @apiBody {object[]}    	dataNIB.data_proyek	    data_proyek
+ * @apiBody {Object[]}    	dataNIB.data_proyek	    data_proyek
  * @apiBody {string(25)}    	dataNIB.data_proyek.id_proyek	    id_proyek
  * @apiBody {string(26)}    	dataNIB.data_proyek.nomor_proyek	    Nomor Permohonan Proyek
  * @apiBody {string(255)}    	dataNIB.data_proyek.uraian_usaha	    Uraian Usaha Proyek
@@ -910,7 +910,7 @@
  * @apiBody {string(10)}    	dataNIB.data_proyek.skala_usaha	    Skala Usaha Perusahaan
  * @apiBody {string(5)}    	dataNIB.data_proyek.skala_resiko	    Skala Resiko Perusahaan
  * @apiBody {string(255)}    	dataNIB.data_proyek.deskripsi_kegiatan	    Deskripsi kegiatan
- * @apiBody {object[]}    	dataNIB.data_proyek.data_lokasi_proyek	    data_lokasi_proyek
+ * @apiBody {Object[]}    	dataNIB.data_proyek.data_lokasi_proyek	    data_lokasi_proyek
  * @apiBody {string(25)}    	dataNIB.data_proyek.data_lokasi_proyek.id_proyek_lokasi	    id_proyek_lokasi
  * @apiBody {string(10)}    	dataNIB.data_proyek.data_lokasi_proyek.proyek_daerah_id	    Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
  * @apiBody {string(3)}    	dataNIB.data_proyek.data_lokasi_proyek.kd_kawasan	    Kode Kawasan (* Lihat Lampiran di https://oss.go.id/ oss/#home/portal/lstKawasan)
@@ -920,14 +920,14 @@
  * @apiBody {string(2)}    	dataNIB.data_proyek.data_lokasi_proyek.jenis_kawasan	    Jenis Kawasan (* Lihat Lampiran 16)
  * @apiBody {string(2)}    	dataNIB.data_proyek.data_lokasi_proyek.jenis_lokasi	    Jenis Lokasi Lintas Administratif atau Tidak (01 : Lintas Administratif, 02 : Tidak Lintas Administratif)
  * @apiBody {string(2)}    	dataNIB.data_proyek.data_lokasi_proyek.status_lokasi	    Status Lokasi(* Lihat Lampiran 25)
- * @apiBody {object[]}    	dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek	    data_lokasi_proyek
+ * @apiBody {Object[]}    	dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek	    data_lokasi_proyek
  * @apiBody {string(11)}    	dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek.serial	    Serial Koordinat
  * @apiBody {string(255)}    	dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek.lat_lng	    Koordinat Latitude & Longitude
- * @apiBody {object[]}    	dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek	    data_posisi_proyek
+ * @apiBody {Object[]}    	dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek	    data_posisi_proyek
  * @apiBody {string(25)}    	dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek.id_proyek_posisi	    id_proyek_posisi
  * @apiBody {string(25)}    	dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek.id_proyek_lokasi	    id_proyek_lokasi
  * @apiBody {string(2)}    	dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek.posisi_lokasi	    posisi_lokasi
- * @apiBody {object[]}    	dataNIB.data_proyek.data_proyek_produk	    data_proyek_produk
+ * @apiBody {Object[]}    	dataNIB.data_proyek.data_proyek_produk	    data_proyek_produk
  * @apiBody {string(25)}    	dataNIB.data_proyek.data_proyek_produk.id_produk	    ID / Kode Produk
  * @apiBody {string(25)}    	dataNIB.data_proyek.data_proyek_produk.id_proyek	    ID / Kode Proyek
  * @apiBody {string(7)}    	dataNIB.data_proyek.data_proyek_produk.kbli	    Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)
@@ -951,9 +951,9 @@
  * @apiBody {string(10){10}} dataNIB.data_proyek.data_proyek_produk.masa_berlaku_sertifikat_sni
  * @apiBody {string(1){1}} dataNIB.data_proyek.data_proyek_produk.flag_self_declare
  * @apiBody {string(2){2}} dataNIB.data_proyek.data_proyek_produk.tipe_cakupan
- * @apiBody {object[]}    	dataNIB.data_dni	    data_dni
+ * @apiBody {Object[]}    	dataNIB.data_dni	    data_dni
  * @apiBody {string(10)}    	dataNIB.data_dni.kd_dni	    Kodefikasi Data Negatif Investasi (DNI) (* Lihat Lampiran 15)
- * @apiBody {object[]}    	dataNIB.data_checklist	    data_checklist
+ * @apiBody {Object[]}    	dataNIB.data_checklist	    data_checklist
  * @apiBody {string(25)}    	dataNIB.data_checklist.id_produk	    id_produk
  * @apiBody {string(25)}    	dataNIB.data_checklist.id_proyek	    id_proyek
  * @apiBody {string(25)}    	dataNIB.data_checklist.id_izin	    Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
@@ -977,18 +977,18 @@
  * @apiBody {string(15)}    	dataNIB.data_checklist.kd_dokumen	    Kode izin lingkungan (hanya untuk izin lingkungan)
  * @apiBody {string(255)}    	dataNIB.data_checklist.nm_dokumen	    Nama dokumen lingkungan (Hanya untuk izin lingkungan)
  * @apiBody {string(5)}    	dataNIB.data_checklist.kbli_konversi	    KBLI 2020 hasil konversi dari KBLI 2017 (jika ada)
- * @apiBody {object[]}    	dataNIB.data_checklist.data_persyaratan	    data_persyaratan
+ * @apiBody {Object[]}    	dataNIB.data_checklist.data_persyaratan	    data_persyaratan
  * @apiBody {string(25)}    	dataNIB.data_checklist.data_persyaratan.id_syarat	    Id / Kode Persyaratan
  * @apiBody {string(50)}    	dataNIB.data_checklist.data_persyaratan.no_dokumen	    Nomor Dokumen Persyaratan
  * @apiBody {string(8)}    	dataNIB.data_checklist.data_persyaratan.tgl_dokumen	    Tanggal Dokumen Persyaratan (format date : YYYY-MM- DD)
  * @apiBody {string(65535)}    	dataNIB.data_checklist.data_persyaratan.file_dokumen	    Attachment File Izin dalam Bentuk File PDF/Image Berupa Link (* Ukuran File Maks: 2MB)
  * @apiBody {string(255)}    	dataNIB.data_checklist.data_persyaratan.keterangan	    Keterangan Dokumen Persyaratan
- * @apiBody {object[]} [dataNIB.data_checklist.data_produk_halal] Berulang (N) Rows
+ * @apiBody {Object[]} [dataNIB.data_checklist.data_produk_halal] Berulang (N) Rows
  * @apiBody {string(30){30}} [dataNIB.data_checklist.data_produk_halal.id_pengajuan_sertifikat_halal]
  * @apiBody {string(225){225}} [dataNIB.data_checklist.data_produk_halal.uraian_jenis_produk]
  * @apiBody {string(10){10}} [dataNIB.data_checklist.data_produk_halal.kode_klasifikasi_produk]
  * @apiBody {string(1){1}} [dataNIB.data_checklist.data_produk_halal.flag_self_declare]
- * @apiBody {object[]} [dataNIB.data_checklist.data_produk_halal.list_produk] Berulang (N) Rows
+ * @apiBody {Object[]} [dataNIB.data_checklist.data_produk_halal.list_produk] Berulang (N) Rows
  * @apiBody {string(9){9}} [dataNIB.data_checklist.data_produk_halal.list_produk.id_cakupan_produk]
  * @apiBody {string(65535){65535}} [dataNIB.data_checklist.data_produk_halal.list_produk.uraian_produk]
  * @apiBody {string(5){5}} [dataNIB.data_checklist.data_produk_halal.list_produk.kbli]
@@ -1692,7 +1692,7 @@
  *       "Content-Type": "application/json",
  *       "user_key": {{user_key}}
  *     }
- * @apiBody {object}	    CHECKLICENSESTATUS	            CHECKLICENSESTATUS
+ * @apiBody {Object}	    CHECKLICENSESTATUS	            CHECKLICENSESTATUS
  * @apiBody {string(13)}    	CHECKLICENSESTATUS.id_izin	    id_izin
 
  * @apiParamExample {json} RequestBody-Example:
@@ -1703,10 +1703,10 @@
  *       }
  *     }
  * 
- * @apiSuccess (200) {object}	    responcheckLicenseStatus	                responcheckLicenseStatus
+ * @apiSuccess (200) {Object}	    responcheckLicenseStatus	                responcheckLicenseStatus
  * @apiSuccess (200) {string(3)}    	responcheckLicenseStatus.kode	            Kode Respon (*Lihat Lampiran 9)
  * @apiSuccess (200) {string(255)}    	responcheckLicenseStatus.keterangan	    Keterangan Respon
- * @apiSuccess (200) {object}    	responcheckLicenseStatus.dataIZIN	        dataIZIN
+ * @apiSuccess (200) {Object}    	responcheckLicenseStatus.dataIZIN	        dataIZIN
  * @apiSuccess (200) {string(13)}    	responcheckLicenseStatus.dataIZIN.nib	    Nomor Induk Berusaha
  * @apiSuccess (200) {string(25)}    	responcheckLicenseStatus.dataIZIN.id_proyek	    ID proyek
  * @apiSuccess (200) {string(25)}    	responcheckLicenseStatus.dataIZIN.id_izin	        Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
@@ -1751,7 +1751,7 @@
  * @apiName inqueryLicense
  * @apiGroup License
  * @apiExample {curl} Curl Request Example:
- * curl --location 'https://api-stg.oss.go.id/stg/v1/kl/rba/inqueryLicense' \
+ * curl --location 'https://server.digitaltelkom.dev/oss-sandbox/kl/rba/inqueryLicense' \
  * --header 'user_key: {{user_key}}' \
  * --header 'Content-Type: application/json' \
  * --data '{
@@ -1773,20 +1773,20 @@
  *    "id_izin": {{id_izin}}
  *  }
  * }
- * @apiBody {object} INQUERYLICENSE Payload Inquery License
+ * @apiBody {Object} INQUERYLICENSE Payload Inquery License
  * @apiBody {string(30){30}} INQUERYLICENSE.id_izin Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
  * 
- * @apiSuccess (200) {object} dataLicense Data License
+ * @apiSuccess (200) {Object} dataLicense Data License
  * @apiSuccess (200) {boolean} dataLicense.success Status Response
  * @apiSuccess (200) {number(3){3}} dataLicense.code Status Response Code <b>(* Lihat Lampiran 9)</b>
  * @apiSuccess (200) {string(100){100}} dataLicense.message Response Message
- * @apiSuccess (200) {object} dataLicense.data Response Data
+ * @apiSuccess (200) {Object} dataLicense.data Response Data
  * @apiSuccess (200) {string(25){25}} dataLicense.data.oss_id Oss Id adalah ID yang di Generate Sistem OSS dan Dikirimkan ke K/L/D Bersama Permohonan Nomor Induk Berusaha
  * @apiSuccess (200) {string(25){25}} dataLicense.data.id_izin Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
  * @apiSuccess (200) {string(12){12}} dataLicense.data.kd_izin Kode Izin Sistem K/L/D <b>(* Lihat Lampiran 8)</b>
  * @apiSuccess (200) {string(10){10}} dataLicense.data.kd_daerah Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf )
  * @apiSuccess (200) {string(2){2}} dataLicense.data.kewenangan Kewenangan <br>00: Kewenangan Pusat <br>01: Kewenangan Provinsi <br>02: Kewenangan Kab/Kota
- * @apiSuccess (200) {object[]} dataLicense.data.data_proyek Data Proyek
+ * @apiSuccess (200) {Object[]} dataLicense.data.data_proyek Data Proyek
  * @apiSuccess (200) {string(25){25}} dataLicense.data.data_proyek.id_proyek Id Proyek
  * @apiSuccess (200) {string(26){26}} dataLicense.data.data_proyek.nomor_proyek Nomor Permohonan Proyek
  * @apiSuccess (200) {string(255){255}} dataLicense.data.data_proyek.uraian_usaha Uraian Usaha Proyek
@@ -1801,7 +1801,7 @@
  * @apiSuccess (200) {string(2){2}} dataLicense.data.data_proyek.status_tanah Status Kepemilikan Tanah <b>(* Lihat Lampiran 5)</b>
  * @apiSuccess (200) {string(10){10}} dataLicense.data.data_proyek.luas_tanah Luas Bidang tanah
  * @apiSuccess (200) {string(2){2}} dataLicense.data.data_proyek.satuan_luas_tanah Satuan Luas Tanah <b>(*Lihat Lampiran 17)</b>
- * @apiSuccess (200) {object[]} dataLicense.data.data_checklist Data Checklist
+ * @apiSuccess (200) {Object[]} dataLicense.data.data_checklist Data Checklist
  * @apiSuccess (200) {string(25){25}} dataLicense.data.data_checklist.id_produk ID Produk
  * @apiSuccess (200) {string(25){25}} dataLicense.data.data_checklist.id_proyek ID Proyek
  * @apiSuccess (200) {string(25){25}} dataLicense.data.data_checklist.id_izin Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
@@ -1820,7 +1820,7 @@
  * @apiSuccess (200) {string(1){1}} dataLicense.data.data_checklist.flag_checklist	Flag Checklist Komitmen (* Lihat Lampiran 28)		
  * @apiSuccess (200) {string(1){1}} dataLicense.data.data_checklist.flag_transaksional	Flag : Y/N, Flag Izin Komersial / Operasional Diajukan Transaksional (Bisa Mengajukan Berulang)		
  * @apiSuccess (200) {string(1){1}} dataLicense.data.data_checklist.flag_perpanjangan	Flag : Y/N, Flag Bahwa Izin Usaha Ini Adalah Hasil Perpanjangan Dari Zin Usaha Yang Terbit Sebelum OSS		
- * @apiSuccess (200) {object} [dataLicense.data.data_checklist.data_teknis_lokasi] Data Teknis Lokasi
+ * @apiSuccess (200) {Object} [dataLicense.data.data_checklist.data_teknis_lokasi] Data Teknis Lokasi
  * @apiSuccess (200) {string(30){30}} [dataLicense.data.data_checklist.data_teknis_lokasi.id_komitmen] ID Komitmen Teknis Lokasi
  * @apiSuccess (200) {json} [dataLicense.data.data_checklist.data_teknis_lokasi.koefisien_dasar_bangunan] Koefisien Dasar Bangunan
  * @apiSuccess (200) {json} [dataLicense.data.data_checklist.data_teknis_lokasi.koefisien_lantai_bangunan] Koefisien Lantai Bangunan
@@ -1830,7 +1830,7 @@
  * @apiSuccess (200) {json} [dataLicense.data.data_checklist.data_teknis_lokasi.jalan_kolektor] Jalan Kolektor
  * @apiSuccess (200) {json} [dataLicense.data.data_checklist.data_teknis_lokasi.jalan_lokal] Jalan Lokal
  * @apiSuccess (200) {json} [dataLicense.data.data_checklist.data_teknis_lokasi.jalan_lingkungan] Jalan Lingkungan
- * @apiSuccess (200) {object} [dataLicense.data.data_checklist.data_teknis_bangunan] Data Teknis Bangunan
+ * @apiSuccess (200) {Object} [dataLicense.data.data_checklist.data_teknis_bangunan] Data Teknis Bangunan
  * @apiSuccess (200) {string(30){30}} [dataLicense.data.data_checklist.data_teknis_bangunan.id_komitmen] ID Komitmen Teknis Bangunan
  * @apiSuccess (200) {string(255){255}} [dataLicense.data.data_checklist.data_teknis_bangunan.nama_bangunan] Nama Bangunan
  * @apiSuccess (200) {string(25){25}} [dataLicense.data.data_checklist.data_teknis_bangunan.luas_bangunan] Luas Bangunan
@@ -1844,7 +1844,7 @@
  * @apiSuccess (200) {string(5){5}} [dataLicense.data.data_checklist.data_teknis_bangunan.tinggi_bangunan_disetujui] Tinggi Bangunan Disetujui
  * @apiSuccess (200) {string(25){25}} [dataLicense.data.data_checklist.data_teknis_bangunan.luas_basement_disetujui] Luas Basement Disetujui
  * @apiSuccess (200) {string(2){2}} [dataLicense.data.data_checklist.data_teknis_bangunan.jumlah_lantai_basement_disetujui] Jumlah Lantai Basement Disetujui
- * @apiSuccess (200) {object[]} dataLicense.data.data_checklist.data_teknis_lingkungan Data Teknis Lingkungan
+ * @apiSuccess (200) {Object[]} dataLicense.data.data_checklist.data_teknis_lingkungan Data Teknis Lingkungan
  * @apiSuccess (200) {string(13){13}} dataLicense.data.data_checklist.data_teknis_lingkungan.kd_izin Kode Izin Sistem K/L/D <b>(* service getDataReferensi kode :8)</b>
  * @apiSuccess (200) {string(300){300}} dataLicense.data.data_checklist.data_teknis_lingkungan.nama_izin Nama Dokumen Perizinan
  * @apiSuccess (200) {string(65535){65535}} dataLicense.data.data_checklist.data_teknis_lingkungan.status_izin Status Perizinan
@@ -1950,8 +1950,8 @@
  * @apiError (400) {Number(3){3}} dataLicense.code Kode Respon <b>(* Lihat Lampiran 9)</b>
  * @apiError (400) {String(255)} dataLicense.message Keterangan Respon (Data Parameter Salah)
  * @apiError (400) {boolean} dataLicense.success Status Response
- * @apiError (400) {object} dataLicense.data Data Response
- * @apiError (400) {object} dataLicense.meta Informasi Tambahan Response
+ * @apiError (400) {Object} dataLicense.data Data Response
+ * @apiError (400) {Object} dataLicense.meta Informasi Tambahan Response
  * @apiError (401) {Object} dataLicense Response receive license.
  * @apiError (401) {Number(3){3}} dataLicense.code Kode Respon <b>(* Lihat Lampiran 9)</b>
  * @apiError (401) {String(255)} dataLicense.message Keterangan Respon (User Akses Tidak Valid)
@@ -2029,7 +2029,7 @@
  *       "Content-Type": "application/json",
  *       "user_key": {{user_key}}
  *     }
- * @apiBody {object}	    INQUERYNIB	        INQUERYNIB
+ * @apiBody {Object}	    INQUERYNIB	        INQUERYNIB
  * @apiBody {string(13){13}}    	INQUERYNIB.nib	    Nomor Induk Berusaha
  * @apiBody {string(25){25}} [INQUERYNIB.oss_id] OSS Id adalah ID yang di Generate Sistem OSS dan Dikirimkan ke K/L/D Bersama Permohonan Nomor Induk Berusaha
  * @apiBody {string(16){16}} [INQUERYNIB.npwp] NPWP Perusahaan
@@ -2055,10 +2055,10 @@
  *     	 }
  *     }
  * 
- * @apiSuccess (200) {object}	    responinqueryNIB	Data responinqueryNIB		
+ * @apiSuccess (200) {Object}	    responinqueryNIB	Data responinqueryNIB		
  * @apiSuccess (200) {string(3)}    	responinqueryNIB.kode	Kode respon		
  * @apiSuccess (200) {string(255)}    	responinqueryNIB.keterangan	    keterangan		
- * @apiSuccess (200) {object}    	responinqueryNIB.dataNIB	    dataNIB		
+ * @apiSuccess (200) {Object}    	responinqueryNIB.dataNIB	    dataNIB		
  * @apiSuccess (200) {string(13)}    	responinqueryNIB.dataNIB.nib	Nomor Induk Berusaha		
  * @apiSuccess (200) {string(10)}    	responinqueryNIB.dataNIB.tgl_pengajuan_nib	Tanggal Pengajuan NIB (format date : YYYY-MM-DD)		
  * @apiSuccess (200) {string(10)}    	responinqueryNIB.dataNIB.tgl_terbit_nib	Tanggal Penerbitan NIB (format date : YYYY-MM-DD)		
@@ -2104,7 +2104,7 @@
  * @apiSuccess (200) {string(20.2)}    	responinqueryNIB.dataNIB.total_modal_ditempatkan	Total Modal Ditempatkan (Valuta : IDR)		
  * @apiSuccess (200) {string(1)}    	responinqueryNIB.dataNIB.flag_umk	Flag yg menunjukkan umk atau non umk		
  * @apiSuccess (200) {string(2){2}} responinqueryNIB.dataNIB.jenis_perubahan_terakhir Jenis Perubahan Terakhir Perusahaan
- * @apiSuccess (200) {object[]}    	responinqueryNIB.dataNIB.pemegang_saham	    pemegang_saham		
+ * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.pemegang_saham	    pemegang_saham		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.pemegang_saham.jenis_pemegang_saham	Jenis Pemegang Saham (* Lihat Lampiran 13)		
  * @apiSuccess (200) {string(1)}    	responinqueryNIB.dataNIB.pemegang_saham.flag_asing	Asal Pemegang Saham dari Dalam Negeri / Luar Negeri (Value : Y = asing, N = Bukan Asing)		
  * @apiSuccess (200) {string(20.0)}    	responinqueryNIB.dataNIB.pemegang_saham.total_modal_pemegang	Total Modal Pemegang Saham (Valuta : IDR)		
@@ -2121,7 +2121,7 @@
  * @apiSuccess (200) {string(100)}    	responinqueryNIB.dataNIB.pemegang_saham.email_pemegang_saham	Email Pemegang Saham		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.pemegang_saham.flag_pajak_pemegang_saham	Flag Validasi Pajak Pemegang Saham (* Lihat Lampiran 19)		
  * @apiSuccess (200) {string(10)}    	responinqueryNIB.dataNIB.pemegang_saham.ket_pajak_pemegang_saham	    ket_pajak_pemegang_saham		
- * @apiSuccess (200) {object[]}    	responinqueryNIB.dataNIB.penanggung_jwb	    penanggung_jwb		
+ * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.penanggung_jwb	    penanggung_jwb		
  * @apiSuccess (200) {string(1)}    	responinqueryNIB.dataNIB.penanggung_jwb.flag_asing	Asal penanggung jawab dari Dalam Negeri / Luar Negeri (Value : Y = asing, N = Bukan Asing)		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.penanggung_jwb.jns_identitas_penanggung_jwb	Jenis idetitas penanggung jawab		
  * @apiSuccess (200) {string(100)}    	responinqueryNIB.dataNIB.penanggung_jwb.no_identitas_penanggung_jwb	    no_identitas_penanggung_jwb		
@@ -2150,14 +2150,14 @@
  * @apiSuccess (200) {string(10)}    	responinqueryNIB.dataNIB.tgl_akta_lama	Tanggal Akta Lama Sebelum Perubahan (format date : YYYY- MM-DD)		
  * @apiSuccess (200) {string(100)}    	responinqueryNIB.dataNIB.no_pengesahan_lama	Nomor Pengesahan Akta Lama Sebelum Perubahan Dari Kumham		
  * @apiSuccess (200) {string(10)}    	responinqueryNIB.dataNIB.tgl_pengesahan_lama	Tanggal Pengesahan Akta Lama Sebelum Perubahan Dari Kumham (format date : YYYY-MM-DD)		
- * @apiSuccess (200) {object[]}    	responinqueryNIB.dataNIB.legalitas	    legalitas		
+ * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.legalitas	    legalitas		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.legalitas.jenis_legal	Jenis Legal Perusahaan (* Lihat Lampiran 7)		
  * @apiSuccess (200) {string(100)}    	responinqueryNIB.dataNIB.legalitas.no_legal	Nomor Legal Perusahaan		
  * @apiSuccess (200) {string(10)}    	responinqueryNIB.dataNIB.legalitas.tgl_legal	Tanggal Legal Perusahaan (format date : YYYY-MM-DD)		
  * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.legalitas.alamat_notaris	Alamat Notaris		
  * @apiSuccess (200) {string(100)}    	responinqueryNIB.dataNIB.legalitas.nama_notaris	Nama Notaris		
  * @apiSuccess (200) {string(100)}    	responinqueryNIB.dataNIB.legalitas.telepon_notaris	Telepon Notaris		
- * @apiSuccess (200) {object}    	responinqueryNIB.dataNIB.data_rptka	    data_rptka		
+ * @apiSuccess (200) {Object}    	responinqueryNIB.dataNIB.data_rptka	    data_rptka		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.data_rptka.jenis_rptka	Jenis Flag RPTKA *( 01 : Baru, 02: Perubahan)		
  * @apiSuccess (200) {string(20)}    	responinqueryNIB.dataNIB.data_rptka.no_rptka	No Bacode RPTKA		
  * @apiSuccess (200) {string(10)}    	responinqueryNIB.dataNIB.data_rptka.rptka_awal	Masa Berlaku Dari Tanggal(format date : YYYY-MM-DD)		
@@ -2166,14 +2166,14 @@
  * @apiSuccess (200) {number(11)}    	responinqueryNIB.dataNIB.data_rptka.jumlah_tka_rptka	Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)		
  * @apiSuccess (200) {string(10)}    	responinqueryNIB.dataNIB.data_rptka.jangka_penggunaan_waktu	Jangka Waktu Penggunaan Tenaga Kerja Asing (TKA) dalam Izin Rencana Penggunaan Tenaga Kerja Asing (RPTKA) (format date : YYYY- MM-DD)		
  * @apiSuccess (200) {number(1)}    	responinqueryNIB.dataNIB.data_rptka.jangka_waktu_permohonan_rptka	Jangka Waktu Permohonan RPTKA		
- * @apiSuccess (200) {object[]}    	responinqueryNIB.dataNIB.data_rptka.rptka_jabatan	    rptka_jabatan		
+ * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.data_rptka.rptka_jabatan	    rptka_jabatan		
  * @apiSuccess (200) {number(11)}    	responinqueryNIB.dataNIB.data_rptka.rptka_jabatan.id_jabatan	ID Jabatan Tenaga Kerja Asing berdasarkan https://jdih.kemnaker.go.id/data_puu/KEP247_MENX_2011.pd f		
  * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.data_rptka.rptka_jabatan.jabatan	Nama Jabatan		
  * @apiSuccess (200) {number(11)}    	responinqueryNIB.dataNIB.data_rptka.rptka_jabatan.jumlah	Jumlah Orang Yang Memiliki Jabatan		
  * @apiSuccess (200) {string(10)}    	responinqueryNIB.dataNIB.data_rptka.rptka_jabatan.tgl_mulai	Tanggal Mulai Jabatan format date		
  * @apiSuccess (200) {string(10)}    	responinqueryNIB.dataNIB.data_rptka.rptka_jabatan.tgl_selesai	Tanggal Selesai Jabatan format date : YYYY-MM-DD)		
  * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.data_rptka.rptka_jabatan.keterangan	Keterangan		
- * @apiSuccess (200) {object[]}    	responinqueryNIB.dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping	    rptka_tki_pendamping		
+ * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping	    rptka_tki_pendamping		
  * @apiSuccess (200) {number(10)}    	responinqueryNIB.dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.id_jabatan	Id Jabatan		
  * @apiSuccess (200) {number(10)}    	responinqueryNIB.dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.id_pendamping	Id TKI Pendamping		
  * @apiSuccess (200) {string(100)}    	responinqueryNIB.dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.nama	Nama TKI Pendamping		
@@ -2186,13 +2186,13 @@
  * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.sertifikat	Sertifikat Kompetensi TKI Pendamping		
  * @apiSuccess (200) {number(11)}    	responinqueryNIB.dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.pengalaman_kerja	Pengalaman Kerja TKI Pendamping (dalam tahun)		
  * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.keterangan	Keterangan		
- * @apiSuccess (200) {object[]}    	responinqueryNIB.dataNIB.data_rptka.rptka_negara	    rptka_negara		
+ * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.data_rptka.rptka_negara	    rptka_negara		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.data_rptka.rptka_negara.id_negara	Negara Asal Tenaga Kerja Asing(* Sumber Kodefikasi Negara Mengikuti Standar Unedifact : http://www.unece.org/cefact/loco de/service/location )		
  * @apiSuccess (200) {number(11)}    	responinqueryNIB.dataNIB.data_rptka.rptka_negara.jumlah	Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)		
- * @apiSuccess (200) {object[]}    	responinqueryNIB.dataNIB.data_rptka.rptka_lokasi	    rptka_lokasi		
+ * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.data_rptka.rptka_lokasi	    rptka_lokasi		
  * @apiSuccess (200) {string(10)}    	responinqueryNIB.dataNIB.data_rptka.rptka_lokasi.lokasi_id	ID Daerah Penanggung Jawab (* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)		
  * @apiSuccess (200) {number(11)}    	responinqueryNIB.dataNIB.data_rptka.rptka_lokasi.jumlah	Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)		
- * @apiSuccess (200) {object[]}    	responinqueryNIB.dataNIB.data_proyek	    data_proyek		
+ * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.data_proyek	    data_proyek		
  * @apiSuccess (200) {string(25)}    	responinqueryNIB.dataNIB.data_proyek.id_proyek	ID / Kode Proyek		
  * @apiSuccess (200) {string(26)}    	responinqueryNIB.dataNIB.data_proyek.nomor_proyek	Nomor Permohonan Proyek		
  * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.data_proyek.uraian_usaha	Uraian Usaha Proyek		
@@ -2240,7 +2240,7 @@
  * @apiSuccess (200) {string(50)}    	responinqueryNIB.dataNIB.data_proyek.skala_usaha	Skala usaha		
  * @apiSuccess (200) {string(50)}    	responinqueryNIB.dataNIB.data_proyek.skala_resiko	Skala resiko		
  * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.data_proyek.deskripsi_kegiatan	Deskripsi kegiatan		
- * @apiSuccess (200) {object[]}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek	    data_lokasi_proyek		
+ * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek	    data_lokasi_proyek		
  * @apiSuccess (200) {string(25)}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.id_proyek_lokasi	ID / Kode Lokasi Proyek		
  * @apiSuccess (200) {string(10)}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.proyek_daerah_id	Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019: https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)		
  * @apiSuccess (200) {string(3)}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.kd_kawasan	Kode Kawasan (* Lihat Lampiran 30)		
@@ -2250,14 +2250,14 @@
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.jenis_kawasan	Jenis Kawasan (* Lihat Lampiran 16)		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.jenis_lokasi	Jenis Lokasi Lintas Administratif atau Tidak (01 : Lintas Administratif, 02 : Tidak Lintas Administratif)		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.status_lokasi	Status Lokasi(* Lihat Lampiran 25)		
- * @apiSuccess (200) {object[]}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek	    data_lokasi_proyek		
+ * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek	    data_lokasi_proyek		
  * @apiSuccess (200) {number(11)}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek.serial	Serial Koordinat		
  * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek.lat_lng	Koordinat Latitude & Longitude		
- * @apiSuccess (200) {object[]}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek	    data_posisi_proyek		
+ * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek	    data_posisi_proyek		
  * @apiSuccess (200) {string(25)}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek.id_proyek_posisi	ID / Kode Posisi Proyek		
  * @apiSuccess (200) {string(25)}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek.id_proyek_lokasi	ID / Kode Lokasi Proyek		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek.posisi_lokasi	Posisi Lokasi (* Lihat Lampiran 24)		
- * @apiSuccess (200) {object[]}    	responinqueryNIB.dataNIB.data_proyek.data_proyek_produk	    data_proyek_produk		
+ * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.data_proyek.data_proyek_produk	    data_proyek_produk		
  * @apiSuccess (200) {string(25)}    	responinqueryNIB.dataNIB.data_proyek.data_proyek_produk.id_produk	ID / Kode Produk		
  * @apiSuccess (200) {string(25)}    	responinqueryNIB.dataNIB.data_proyek.data_proyek_produk.id_proyek	ID / Kode Proyek		
  * @apiSuccess (200) {string(7)}    	responinqueryNIB.dataNIB.data_proyek.data_proyek_produk.kbli	Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)		
@@ -2273,9 +2273,9 @@
  * @apiSuccess (200) {string(16)}    	responinqueryNIB.dataNIB.data_proyek.data_proyek_produk.pi_npwp	NPWP Pendaftaran Penanaman Modal Untuk Case Grand Father Clause (GFC)		
  * @apiSuccess (200) {string(9)}    	responinqueryNIB.dataNIB.data_proyek.data_proyek_produk.id_kbli_ta	Penanda Bahwa Cakupan Produk Untuk Kebutuhan Tax Allowance		
  * @apiSuccess (200) {number(3.2)}    	responinqueryNIB.dataNIB.data_proyek.data_proyek_produk.tkdn	Tingkat Kandungan Dalam Negeri		
- * @apiSuccess (200) {object[]}    	responinqueryNIB.dataNIB.data_dni	    data_dni		
+ * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.data_dni	    data_dni		
  * @apiSuccess (200) {string(10)}    	responinqueryNIB.dataNIB.data_dni.kd_dni	Kodefikasi Data Negatif Investasi (DNI) (* Lihat Lampiran 15)		
- * @apiSuccess (200) {object[]}    	responinqueryNIB.dataNIB.data_checklist	    data_checklist		
+ * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.data_checklist	    data_checklist		
  * @apiSuccess (200) {string(25)}    	responinqueryNIB.dataNIB.data_checklist.id_produk	ID Produk		
  * @apiSuccess (200) {string(25)}    	responinqueryNIB.dataNIB.data_checklist.id_proyek	ID / Kode Proyek		
  * @apiSuccess (200) {string(25)}    	responinqueryNIB.dataNIB.data_checklist.id_izin	Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin		
@@ -2299,7 +2299,7 @@
  * @apiSuccess (200) {string(1)}    	responinqueryNIB.dataNIB.data_checklist.flag_perpanjangan	Flag : Y/N, Flag Bahwa Izin Usaha Ini Adalah Hasil Perpanjangan Dari Zin Usaha Yang Terbit Sebelum OSS		
  * @apiSuccess (200) {string(15)}    	responinqueryNIB.dataNIB.data_checklist.kd_dokumen	Kode dokumen izin lingkungan		
  * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.data_checklist.nm_dokumen	Nama dokumen izin lingkungan		
- * @apiSuccess (200) {object} [responinqueryNIB.dataNIB.data_checklist.data_teknis] Data Teknis
+ * @apiSuccess (200) {Object} [responinqueryNIB.dataNIB.data_checklist.data_teknis] Data Teknis
  * @apiSuccess (200) {string(25){25}} [responinqueryNIB.dataNIB.data_checklist.data_teknis.id_komitmen] ID Komitmen
  * @apiSuccess (200) {string(255){255}} [responinqueryNIB.dataNIB.data_checklist.data_teknis.nama_bangunan] Nama Bangunan
  * @apiSuccess (200) {string(25){25}} [responinqueryNIB.dataNIB.data_checklist.data_teknis.luas_bangunan] Luas Bangunan
@@ -2307,8 +2307,8 @@
  * @apiSuccess (200) {string(5){5}} [responinqueryNIB.dataNIB.data_checklist.data_teknis.tinggi_bangunan] Tinggi Bangunan
  * @apiSuccess (200) {string(25){25}} [responinqueryNIB.dataNIB.data_checklist.data_teknis.luas_basement] Luas Basement
  * @apiSuccess (200) {string(2){2}} [responinqueryNIB.dataNIB.data_checklist.data_teknis.jumlah_lantai_basement] Jumlah Lantai Basement
- * @apiSuccess (200) {string(150){150}} [responinqueryNIB.dataNIB.dataNIB.data_checklist.data_teknis.perancang_dokumen_teknis] Perancang Dokumen Teknis
- * @apiSuccess (200) {object[]}    	responinqueryNIB.dataNIB.data_checklist.data_persyaratan	    data_persyaratan		
+ * @apiSuccess (200) {string(150){150}} [responinqueryNIB.dataNIB.data_checklist.data_teknis.perancang_dokumen_teknis] Perancang Dokumen Teknis
+ * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.data_checklist.data_persyaratan	    data_persyaratan		
  * @apiSuccess (200) {string(25)}    	responinqueryNIB.dataNIB.data_checklist.data_persyaratan.id_syarat	Id / Kode Persyaratan		
  * @apiSuccess (200) {string(50)}    	responinqueryNIB.dataNIB.data_checklist.data_persyaratan.no_dokumen	Nomor Dokumen Persyaratan		
  * @apiSuccess (200) {string(8)}    	responinqueryNIB.dataNIB.data_checklist.data_persyaratan.tgl_dokumen	Tanggal Dokumen Persyaratan (format date : YYYY-MM-DD)		
@@ -2679,7 +2679,7 @@
  *       "Content-Type": "application/json",
  *       "user_key": {{user_key}}
  *     }
- * @apiBody {object}	    CHECKNIB	        CHECKNIB
+ * @apiBody {Object}	    CHECKNIB	        CHECKNIB
  * @apiBody {string(13)}    	CHECKNIB.nib	    Nomor Induk Berusaha
 
  * @apiParamExample {json} RequestBody-Example:
@@ -2690,10 +2690,10 @@
  *     	}
  *     }
  * 
- * @apiSuccess (200) {object}	    responcheckNIB	                            responcheckNIB
+ * @apiSuccess (200) {Object}	    responcheckNIB	                            responcheckNIB
  * @apiSuccess (200) {string(3)}    	responcheckNIB.kode	                        Kode Respon (*Lihat Lampiran 9)
  * @apiSuccess (200) {string(255)}    	responcheckNIB.keterangan	                Keterangan Respon
- * @apiSuccess (200) {object}    	responcheckNIB.dataNIB	                    dataNIB
+ * @apiSuccess (200) {Object}    	responcheckNIB.dataNIB	                    dataNIB
  * @apiSuccess (200) {string(13)}    	responcheckNIB.dataNIB.nib	                Nomor Induk Berusaha
  * @apiSuccess (200) {string(100)}    	responcheckNIB.dataNIB.nama_perusahaan	    Nama Perusahaan
  * @apiSuccess (200) {string(2)}    	responcheckNIB.dataNIB.status	            Status NIB (*Lihat Lampiran 14)
@@ -2749,7 +2749,7 @@
  *       "Content-Type": "application/json",
  *       "user_key": {{user_key}}
  *     }
- * @apiBody {object}	    CHECKNIBERROR	Data check NIB error
+ * @apiBody {Object}	    CHECKNIBERROR	Data check NIB error
  * @apiBody {string(10)}    	CHECKNIBERROR.tgl_awal	    Periode Tanggal Awal NIB Terbit (*Date Format YYYY-MM-DD)
  * @apiBody {string(10)}    	CHECKNIBERROR.tgl_akhir	    Periode Tanggal Akhir NIB Terbit (*Date Format YYYY-MM-DD)
 
@@ -2761,12 +2761,12 @@
  *     		 "tgl_akhir": ""
  *     	 }
  *     }
- * @apiSuccess (200) {object}	    responcheckNIBError	                                    responcheckNIBError
+ * @apiSuccess (200) {Object}	    responcheckNIBError	                                    responcheckNIBError
  * @apiSuccess (200) {string(3)}    	responcheckNIBError.kode	                            Kode Respon (*Lihat Lampiran 9)
  * @apiSuccess (200) {string(255)}    	responcheckNIBError.keterangan	                        Keterangan Respon
- * @apiSuccess (200) {object}    	responcheckNIBError.checkNIBError	                    checkNIBError
+ * @apiSuccess (200) {Object}    	responcheckNIBError.checkNIBError	                    checkNIBError
  * @apiSuccess (200) {number(11)}    	responcheckNIBError.checkNIBError.jumlah	            Jumlah data NIB yang error
- * @apiSuccess (200) {object[]}    	responcheckNIBError.checkNIBError.dataNIB	            dataNIB
+ * @apiSuccess (200) {Object[]}    	responcheckNIBError.checkNIBError.dataNIB	            dataNIB
  * @apiSuccess (200) {string(13)}    	responcheckNIBError.checkNIBError.dataNIB.nib	        Nomor Induk Berusaha
  * @apiSuccess (200) {string(25)}    	responcheckNIBError.checkNIBError.dataNIB.oss_id	    (Optional) Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
  * @apiSuccess (200) {string(12)}    	responcheckNIBError.checkNIBError.dataNIB.kd_izin	    Kode Izin Sistem K/L/D (* Lihat Lampiran 8)
@@ -2827,7 +2827,7 @@
  *       "Content-Type": "application/json",
  *       "user_key": {{user_key}}
  *     }
- * @apiBody {object}	    CHECKNIBUPDATE	                Data check NIB updated
+ * @apiBody {Object}	    CHECKNIBUPDATE	                Data check NIB updated
  * @apiBody {string(10)}    	CHECKNIBUPDATE.tgl_awal	        Periode Tanggal Awal NIB Terbit (*Date Format YYYY-MM-DD)
  * @apiBody {string(10)}    	CHECKNIBUPDATE.tgl_akhir	    Periode Tanggal Akhir NIB Terbit (*Date Format YYYY-MM-DD)
 
@@ -2839,12 +2839,12 @@
  *     		 "tgl_akhir": ""
  *     	 }
  *     }
- * @apiSuccess (200) {object}	        responcheckNIBUpdate	                                responcheckNIBUpdate
+ * @apiSuccess (200) {Object}	        responcheckNIBUpdate	                                responcheckNIBUpdate
  * @apiSuccess (200) {string(3)}    	responcheckNIBUpdate.kode	                            Kode Respon (*Lihat Lampiran 9)
  * @apiSuccess (200) {string(255)}    	responcheckNIBUpdate.keterangan	                        Kode Respon (*Lihat Lampiran 9)
- * @apiSuccess (200) {object}    	    responcheckNIBUpdate.checkNIBUpdate	                    checkNIBUpdate
+ * @apiSuccess (200) {Object}    	    responcheckNIBUpdate.checkNIBUpdate	                    checkNIBUpdate
  * @apiSuccess (200) {number(11)}    	responcheckNIBUpdate.checkNIBUpdate.jumlah	            Jumlah data permohonan yang telah update status
- * @apiSuccess (200) {object[]}    	    responcheckNIBUpdate.checkNIBUpdate.dataNIB	            dataNIB
+ * @apiSuccess (200) {Object[]}    	    responcheckNIBUpdate.checkNIBUpdate.dataNIB	            dataNIB
  * @apiSuccess (200) {string(13)}    	responcheckNIBUpdate.checkNIBUpdate.dataNIB.nib	        Nomor Induk Berusaha
  * @apiSuccess (200) {string(25)}    	responcheckNIBUpdate.checkNIBUpdate.dataNIB.oss_id	    (Optional) Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
  * @apiSuccess (200) {string(12)}    	responcheckNIBUpdate.checkNIBUpdate.dataNIB.kd_izin	    Kode Izin Sistem K/L/D (* Lihat Lampiran 8)
@@ -2909,7 +2909,7 @@
  *       "Content-Type": "application/json",
  *       "user_key": {{user_key}}
  *     }
- * @apiBody {object}	    REKONNIB	                Data Rekon NIB
+ * @apiBody {Object}	    REKONNIB	                Data Rekon NIB
  * @apiBody {string(10)}    	REKONNIB.tgl_awal	        Periode Tanggal Awal NIB Terbit (*Date Format YYYY-MM-DD)
  * @apiBody {string(10)}    	REKONNIB.tgl_akhir	        Periode Tanggal Akhir NIB Terbit (*Date Format YYYY-MM-DD)
 
@@ -2921,12 +2921,12 @@
  *     		 "tgl_akhir": ""
  *     	 }
  *     }
- * @apiSuccess (200) {object}	    responrekonNIB	                            responrekonNIB
+ * @apiSuccess (200) {Object}	    responrekonNIB	                            responrekonNIB
  * @apiSuccess (200) {string(3)}    	responrekonNIB.kode	                        Kode Respon (*Lihat Lampiran 9)
  * @apiSuccess (200) {string(255)}    	responrekonNIB.keterangan	                Keterangan Respon
- * @apiSuccess (200) {object}    	responrekonNIB.rekonNIB	                    rekonNIB
+ * @apiSuccess (200) {Object}    	responrekonNIB.rekonNIB	                    rekonNIB
  * @apiSuccess (200) {number(11)}    	responrekonNIB.rekonNIB.jumlah	            Jumlah data permohonan yang terkirim
- * @apiSuccess (200) {object[]}    	responrekonNIB.rekonNIB.dataNIB	            dataNIB
+ * @apiSuccess (200) {Object[]}    	responrekonNIB.rekonNIB.dataNIB	            dataNIB
  * @apiSuccess (200) {string(13)}    	responrekonNIB.rekonNIB.dataNIB.nib	        Nomor Induk Berusaha
  * @apiSuccess (200) {string(25)}    	responrekonNIB.rekonNIB.dataNIB.oss_id	    (Optional) Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
  * @apiSuccess (200) {string(12)}    	responrekonNIB.rekonNIB.dataNIB.kd_izin	    Kode Izin Sistem K/L/D (* Lihat Lampiran 8)
@@ -2963,6 +2963,7 @@
  *     	 }
  *     }
  */
+
 /**
  * @api {post} /receiveNIBSTPW Receive NIB STPW
  * @apiVersion 5.0.0
@@ -3041,7 +3042,7 @@
  *       "Content-Type": "application/json",
  *       "Token": "OSS000qw13242628gssssss812345654709820180514"
  *     }
- * @apiBody {object}	    dataNIBSTPW	                            dataNIBSTPW
+ * @apiBody {Object}	    dataNIBSTPW	                            dataNIBSTPW
  * @apiBody {string(13)}    	dataNIBSTPW.nib	                        Nomor Induk Berusaha
  * @apiBody {string(10)}    	dataNIBSTPW.tgl_pengajuan_nib	        Tanggal Pengajuan NIB (* Date Format YYYY-MM-DD)
  * @apiBody {string(10)}    	dataNIBSTPW.tgl_terbit_nib	            Tanggal Terbit NIB (* Date Format YYYY-MM-DD)
@@ -3065,7 +3066,7 @@
  * @apiBody {string(10)}    	dataNIBSTPW.jangka_waktu	            Jangka Waktu (* Date Format YYYY- MM-DD)
  * @apiBody {string(65535)}    	dataNIBSTPW.file_prospektus	            Attachment File Prospektus dalam Bentuk File PDF/Image Berupa Link (* Ukuran File Maks: 2MB)
  * @apiBody {string(5)}    	dataNIBSTPW.versi_pia	                Versi PIA OSS
- * @apiBody {object[]}    	dataNIBSTPW.data_checklist	            data_checklist
+ * @apiBody {Object[]}    	dataNIBSTPW.data_checklist	            data_checklist
  * @apiBody {string(25)}    	dataNIBSTPW.data_checklist.id_izin	    Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
  * @apiBody {string(3)}    	dataNIBSTPW.data_checklist.jenis_izin	Jenis Perizinan (* Lihat Lampiran 27)
  * @apiBody {string(13)}    	dataNIBSTPW.data_checklist.kd_izin	    Kode Izin Sistem K/L/D
@@ -3209,7 +3210,7 @@
  *       "Content-Type": "application/json",
  *       "user_key": {{user_key}}
  *     }
- * @apiBody {object}	    INQUERYNIBSTPW	        INQUERYNIBSTPW
+ * @apiBody {Object}	    INQUERYNIBSTPW	        INQUERYNIBSTPW
  * @apiBody {string(13)}    	INQUERYNIBSTPW.nib	    Nomor Induk Berusaha
  * @apiParamExample {json} RequestBody-Example:
  *     HTTP/1.1 200 OK
@@ -3219,10 +3220,10 @@
  *     	 }
  *     }
  * 
-  * @apiSuccess (200) {object}	responinqueryNIBSTPW	responinqueryNIBSTPW		
+ * @apiSuccess (200) {Object}	responinqueryNIBSTPW	responinqueryNIBSTPW		
  * @apiSuccess (200) {string(3)}    	responinqueryNIBSTPW.kode	    kode		
  * @apiSuccess (200) {string(255)}    	responinqueryNIBSTPW.keterangan	    keterangan		
- * @apiSuccess (200) {object}    	responinqueryNIBSTPW.dataNIBSTPW	    dataNIBSTPW		
+ * @apiSuccess (200) {Object}    	responinqueryNIBSTPW.dataNIBSTPW	    dataNIBSTPW		
  * @apiSuccess (200) {string(13)}   	responinqueryNIBSTPW.dataNIBSTPW.nib	Nomor Induk Berusaha		
  * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.tgl_pengajuan_nib	Tanggal Pengajuan NIB (* Date Format YYYY-MM-DD)		
  * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.tgl_terbit_nib	Tanggal Terbit NIB (* Date Format YYYY-MM-DD)		
@@ -3244,7 +3245,7 @@
  * @apiSuccess (200) {string(2){2}} responinqueryNIBSTPW.dataNIBSTPW.skala_usaha Skala Usaha Perusahaan
  * @apiSuccess (200) {string(2){2}} responinqueryNIBSTPW.dataNIBSTPW.jenis_perubahan_terakhir Jenis Perubahan Terakhir Perusahaan
  * @apiSuccess (200) {string(5)}   	responinqueryNIBSTPW.dataNIBSTPW.versi_pia	Versi PIA OSS		
- * @apiSuccess (200) {object[]}    	responinqueryNIBSTPW.dataNIBSTPW.data_checklist	Data checklist		
+ * @apiSuccess (200) {Object[]}    	responinqueryNIBSTPW.dataNIBSTPW.data_checklist	Data checklist		
  * @apiSuccess (200) {string(25)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.id_izin	Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin		
  * @apiSuccess (200) {string(3)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.jenis_izin	Jenis Perizinan (* Lihat Lampiran 27)		
  * @apiSuccess (200) {string(13)}	responinqueryNIBSTPW.dataNIBSTPW.data_checklist.kd_izin	Kode Izin Sistem K/L/D (*https://services.oss.go.id/getListIzin)		
@@ -3363,6 +3364,108 @@
  */
 
 /**
+ * @api {post} /inqueryProyek Inquery Proyek
+ * @apiVersion 5.0.0
+ * @apiDescription Get Data Proyek di Sistem OSS
+ * @apiName inqueryProyek
+ * @apiGroup Proyek
+ * @apiExample {curl} Curl Request Example:
+ * curl --location 'https://server.digitaltelkom.dev/oss-sandbox/kl/rba/inqueryProyek' \
+ * --header 'user_key: f9c53f291ab3b47251ef5b001b4f6dcc' \
+ * --header 'Content-Type: application/json' \
+ * --header 'Cookie: 37dda41a6b8fc67de27a64fec9698b47=4e06c88a3ce14c94d5e42eebe16ddc32; 8dd21093c6d03524cf9bc1ea99ad0576=47e7fbc87991cbe1eb3c8af290c81fbe' \
+ * --data '{
+ *     "nib": "{{nib}}",
+ *     "id_proyek": "{{id_proyek}}"
+ *     "kbli": {{kbli}} // optional
+ * }'
+ * @apiHeader {String} Content-Type Content Type Request.
+ * @apiHeader {String} user_key Users unique access-key.
+ * @apiHeaderExample {json} Header-Example:
+ *     {
+ *       "Content-Type": "application/json",
+ *       "user_key": {{user_key}}
+ *     }
+ * @apiBody {string(13){13}} nib Nomor Induk Berusaha
+ * @apiBody {string(25){25}} id_proyek ID Proyek
+ * @apiBody {string(5){5}} [kbli] Kode KBLI <b>(* Menggunakan Kode KBLI Tahun 2020)</b>
+ * @apiParamExample {json} RequestBody-Example:
+ * {
+ *   "nib": "{{nib}}",
+ *   "id_proyek": "{{id_proyek}}",
+ *   "kbli": "{{kbli}}" //optional
+ * }
+ * @apiSuccess (200) {Number(3){3}} kode_status Kode Respon (* Lihat Lampiran 9)
+ * @apiSuccess (200) {string(255){255}} keterangan Keterangan Respon
+ * @apiSuccess (200) {Object} data Data Respon
+ * @apiSuccess (200) {string(150){150}} data.nama_perusahaan Nama Perusahaan
+ * @apiSuccess (200) {string(255){255}} data.alamat_perusahaan Alamat Perusahaan
+ * @apiSuccess (200) {string(16){16}} data.npwp_perusahaaan NPWP Perusahaan
+ * @apiSuccess (200) {string(2){2}} data.jenis_pelaku_usaha Jenis Pelaku Usaha <b>(* Lihat Lampiran 18)</b>
+ * @apiSuccess (200) {string(10){10}} data.tgl_terbit_nib Tanggal Terbit NIB
+ * @apiSuccess (200) {string(2){2}} data.skala_usaha Skala Usaha Perusahaan
+ * @apiSuccess (200) {Object[]} data.data_proyek Data Proyek
+ * @apiSuccess (200) {String(25){25}} data.data_proyek.id_proyek ID Proyek
+ * @apiSuccess (200) {String(5){5}} data.data_proyek.kbli Kode KBLI <b>(* Menggunakan Kode KBLI Tahun 2020)</b>
+ * @apiSuccess (200) {String(16){16}} [data.data_proyek.npwp_kantor_cabang] NPWP Kantor Cabang
+ * @apiSuccess (200) {String(2){2}} data.data_proyek.skala_usaha Skala Usaha Perusahaan
+ * @apiSuccess (200) {String(10){10}} data.data_proyek.tgl_pengajuan_proyek Tanggal Pengajuan Proyek (format date: YYYY-MM-DD)
+ * @apiSuccess (200) {String(65535){65535}} data.data_proyek.alamat_usaha Alamat Kegiatan Proyek / Usaha
+ * @apiSuccess (200) {String(10){10}} data.data_proyek.kd_daerah Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf )
+ * @apiSuccess (200) {Number(19){19}} data.data_proyek.sub_jumlah Jumlah Asset (Valuta:IDR)
+ * @apiSuccess (200) {Number(19){19}} data.data_proyek.modal_kerja Nilai Modal Kerja (Valuta:IDR)
+ * @apiSuccess (200) {Number(19){19}} data.data_proyek.jumlah_investasi Nilai Jumlah Investasi (Valuta:IDR)
+ * @apiSuccess (200) {Object[]} data.data_proyek.fasilitas Data Fasilitas
+ * @apiSuccess (200) {String(2){2}} data.data_proyek.fasilitas.flag_fasilitas Jenis Fasilitas IKN
+ * <br>00: Non-IKN
+ * <br>01: IKN - Penanaman Modal
+ * <br>02: Dearah Mitra
+ * <br>03: IKN - Pembuatan / Pemindahan Kantor Pusat
+ * <br>04: IKN - Financial Center
+ * @apiSuccess (200) {String(25){25}} data.data_proyek.fasilitas.id_permohonan_fasilitas ID Permohonan Fasilitas
+ * @apiSuccess (200) {String(50){50}} data.data_proyek.fasilitas.nomor_kmk_fasilitas Nomor KMK Fasilitas
+ * @apiSuccess (200) {String(10){10}} data.data_proyek.fasilitas.tgl_persetujuan Tanggal Pengajuan Fasilitas
+ * @apiSuccess (200) {Object} data.data_proyek.data_teknis_lokasi Data Teknis Lokasi
+ * @apiSuccess (200) {Number(20){20}} data.data_proyek.data_teknis_lokasi.luas_tanah_disetujui Luas Tanah Disetujui
+ * @apiSuccess (200) {String(2){2}} data.data_proyek.data_teknis_lokasi.satuan_luas_tanah_disetujui Satuan Luas Tanah Disetujui <b>(*Lihat Lampiran 17)</b>
+ * 
+ * @apiError (400) {Number(3){3}} kode_status Kode Respon <b>(* Lihat Lampiran 9)</b>
+ * @apiError (400) {String(255)} keterangan Keterangan Respon (Data Parameter Salah)
+ * @apiError (400) {Object} [data] Data Response
+ * @apiError (400) {Object} meta Informasi Tambahan Response
+ * @apiError (400) {String(50){50}} meta.message Pesan Informasi
+ * @apiERror (400) {String(25){25}} meta.field Param
+ * @apiError (401) {Number(3){3}} kode_status Kode Respon <b>(* Lihat Lampiran 9)</b>
+ * @apiError (401) {String(255)} keterangan Keterangan Respon (User Akses Tidak Valid)
+ * @apiError (403) {Number(3){3}} kode_status Kode Respon <b>(* Lihat Lampiran 9)</b>
+ * @apiError (403) {String(255)} keterangan Keterangan Respon (Ilegal Inquiry / Akses.)
+ * @apiError (404) {Number(3){3}} kode_status Kode Respon <b>(* Lihat Lampiran 9)</b>
+ * @apiError (404) {String(255)} keterangan Keterangan Respon (Data / Service Tidak Ditemukan.)
+ * @apiError (405) {Number(3){3}} kode_status Kode Respon <b>(* Lihat Lampiran 9)</b>
+ * @apiError (405) {String(255)} keterangan Keterangan Respon (Akses Service Ditolak)
+ * @apiError (500) {Number(3){3}} kode_status Kode Respon <b>(* Lihat Lampiran 9)</b>
+ * @apiError (500) {String(255)} keterangan Keterangan Respon (Proses Payload Data Di Sistem OSS Gagal)
+ * @apiError (504) {Number(3){3}} kode_status Kode Respon <b>(* Lihat Lampiran 9)</b>
+ * @apiError (504) {String(255)} keterangan Keterangan Respon (Proses Payload Data Di Sistem OSS Timeout)
+ * @apiErrorExample Error-Response:
+ * {
+ *   "kode_status": 400,
+ *   "keterangan": "parameter tidak ditemukan",
+ *   "data": null,
+ *   "meta": [
+ *       {
+ *           "message": "nib is required",
+ *           "field": "nib"
+ *       },
+ *       {
+ *           "message": "id_proyek is required",
+ *           "field": "id_proyek"
+ *       }
+ *   ]
+ *}
+ */
+
+/**
  * @api {post} /getDataReferensi Get Data Referensi
  * @apiVersion 5.0.0
  * @apiDescription Get Data Referensi di Sistem OSS
@@ -3384,7 +3487,7 @@
  *       "Content-Type": "application/json",
  *       "user_key": {{user_key}}
  *     }
- * @apiBody {object}	    GETDATAREFERENSI	    GETDATAREFERENSI
+ * @apiBody {Object}	    GETDATAREFERENSI	    GETDATAREFERENSI
  * @apiBody {string(3)}    	GETDATAREFERENSI.kode	Kode Referensi (* Lihat Lampiran 29)
 
  * @apiParamExample {json} RequestBody-Example:
@@ -3395,10 +3498,10 @@
  *     	 }
  *     }
  * 
- * @apiSuccess (200) {object}	    respongetDataReferensi	                respongetDataReferensi
+ * @apiSuccess (200) {Object}	    respongetDataReferensi	                respongetDataReferensi
  * @apiSuccess (200) {string(3)}    	respongetDataReferensi.kode	            Kode Respon (*Lihat Lampiran 9)
  * @apiSuccess (200) {string(255)}    	respongetDataReferensi.keterangan	    Keterangan Respon
- * @apiSuccess (200) {object[]}    	respongetDataReferensi.dataReferensi	Data referensi    
+ * @apiSuccess (200) {Object[]}    	respongetDataReferensi.dataReferensi	Data referensi    
  * @apiSuccess (200) {string(25)}    	respongetDataReferensi.dataReferensi.kode_referensi	    Kode Data Referensi
  * @apiSuccess (200) {string(65535)}    	respongetDataReferensi.dataReferensi.uraian_referensi	    Uraian Data Referensi
  * @apiSuccess (200) {string(255)}    	respongetDataReferensi.dataReferensi.keterangan_referensi	    Keterangan Data Referensi
@@ -3458,7 +3561,7 @@
  *       "Content-Type": "application/json",
  *       "Token": "OSS000qw13242628gssssss812345654709820180514"
  *     }
- * @apiBody {object}	    receiveFileDS	            AKTA
+ * @apiBody {Object}	    receiveFileDS	            AKTA
  * @apiBody {string(3)}    	receiveFileDS.id_izin	    ID izin
  * @apiBody {string(13)}    	receiveFileDS.nib	        Nomor Induk Berusaha
  * @apiBody {string(65535)}    	receiveFileDS.file_izin	    URL File Izin
@@ -3841,7 +3944,7 @@
  *       "Content-Type": "application/json",
  *       "Token": "OSS000qw13242628gssssss812345654709820180514"
  *     }
- * @apiBody {object}	dataNIB	dataNIB
+ * @apiBody {Object}	dataNIB	dataNIB
  * @apiBody {string(19){19}} dataNIB.tgl_terkirim_oss Tanggal Pengiriman NIB
  * @apiBody {string(13)}    	dataNIB.nib	Nomor Induk Berusaha
  * @apiBody {string(10)}    	dataNIB.tgl_pengajuan_nib	Tanggal Pengajuan NIB (format date : YYYY-MM-DD)
@@ -3893,7 +3996,7 @@
  * @apiBody {string(10){10}} dataNIB.skala_usaha Skala Usaha Perusahaan
  * @apiBody {string(2){2}} dataNIB.jenis_perubahan_terakhir Jenis Perubahan Terakhir Perusahaan
  * @apiBody {string(1){1}} dataNIB.flag_perubahan_data_teknis Flag perubahan data teknis (jika value: N/null = Bukan Perubahan Data Jenis, value: Y = Perubahan data teknis)
- * @apiBody {object[]}    	dataNIB.pemegang_saham	Data pemegang saham
+ * @apiBody {Object[]}    	dataNIB.pemegang_saham	Data pemegang saham
  * @apiBody {string(2)}    	dataNIB.pemegang_saham.jenis_pemegang_saham	Jenis Pemegang Saham (* Lihat Lampiran 13)
  * @apiBody {string(1)}    	dataNIB.pemegang_saham.flag_asing	Asal Pemegang Saham dari Dalam Negeri / Luar Negeri (Value : Y = asing, N = Bukan Asing)
  * @apiBody {string(20.0)}    	dataNIB.pemegang_saham.total_modal_pemegang	Total Modal Pemegang Saham (Valuta : IDR)
@@ -3910,7 +4013,7 @@
  * @apiBody {string(100)}    	dataNIB.pemegang_saham.email_pemegang_saham	Email Pemegang Saham
  * @apiBody {string(2)}    	dataNIB.pemegang_saham.flag_pajak_pemegang_saham	Flag Validasi Pajak Pemegang Saham (* Lihat Lampiran 19)
  * @apiBody {string(255)}    	dataNIB.pemegang_saham.ket_pajak_pemegang_saham	Keterangan Validasi Pajak Pemegang Saham
- * @apiBody {object[]}    	dataNIB.penanggung_jwb	    penanggung_jwb
+ * @apiBody {Object[]}    	dataNIB.penanggung_jwb	    penanggung_jwb
  * @apiBody {string(1)}    	dataNIB.penanggung_jwb.flag_asing	Asal Penanggung Jawab dari Dalam Negeri / Luar Negeri (Value : Y = asing, N = Bukan Asing)
  * @apiBody {string(2)}    	dataNIB.penanggung_jwb.jns_identitas_penanggung_jwb	Jenis Nik Penganggung Jawab (* Lihat Lampiran 4)
  * @apiBody {string(100)}    	dataNIB.penanggung_jwb.no_identitas_penanggung_jwb	Nomor Identitas Penanggung Jawab
@@ -3939,14 +4042,14 @@
  * @apiBody {string(10)}    	dataNIB.tgl_akta_lama	Tanggal Akta Lama Sebelum Perubahan (format date : YYYY-MM-DD)
  * @apiBody {string(100)}    	dataNIB.no_pengesahan_lama	Nomor Pengesahan Akta Lama Sebelum Perubahan Dari Kumham
  * @apiBody {string(10)}    	dataNIB.tgl_pengesahan_lama	Tanggal Pengesahan Akta Lama Sebelum Perubahan Dari Kumham (format date : YYYY-MM- DD)
- * @apiBody {object[]}    	dataNIB.legalitas	    legalitas
+ * @apiBody {Object[]}    	dataNIB.legalitas	    legalitas
  * @apiBody {string(2)}    	dataNIB.legalitas.jenis_legal	Jenis Legal Perusahaan (* Lihat Lampiran 7)
  * @apiBody {string(100)}    	dataNIB.legalitas.no_legal	Nomor Legal Perusahaan
  * @apiBody {string(10)}    	dataNIB.legalitas.tgl_legal	Tanggal Legal Perusahaan (format date : YYYY-MM-DD)
  * @apiBody {string(255)}    	dataNIB.legalitas.alamat_notaris	Alamat Notaris
  * @apiBody {string(100)}    	dataNIB.legalitas.nama_notaris	Nama Notaris
  * @apiBody {string(100)}    	dataNIB.legalitas.telepon_notaris	Telepon Notaris
- * @apiBody {object}    	dataNIB.data_rptka	    data_rptka
+ * @apiBody {Object}    	dataNIB.data_rptka	    data_rptka
  * @apiBody {string(2)}    	dataNIB.data_rptka.jenis_rptka	Jenis Flag RPTKA ( 01 : Baru, 02: Perubahan)
  * @apiBody {string(20)}    	dataNIB.data_rptka.no_rptka	No Bacode RPTKA
  * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_awal	Masa Berlaku Dari Tanggal(format date : YYYY-MM- DD)
@@ -3955,14 +4058,14 @@
  * @apiBody {number(11)}    	dataNIB.data_rptka.jumlah_tka_rptka	Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)
  * @apiBody {string(10)}    	dataNIB.data_rptka.jangka_penggunaan_waktu	Jangka Waktu Penggunaan Tenaga Kerja Asing (TKA) dalam Izin Rencana Penggunaan Tenaga Kerja Asing (RPTKA) (format date : YYYY-MM-DD)
  * @apiBody {string(1)}    	dataNIB.data_rptka.jangka_waktu_permohonan_rptka	Jangka Waktu Permohonan RPTKA (dalam hitungan bulan)
- * @apiBody {object[]}	dataNIB.data_rptka.rptka_jabatan	    rptka_jabatan
+ * @apiBody {Object[]}	dataNIB.data_rptka.rptka_jabatan	    rptka_jabatan
  * @apiBody {string(11)}    	dataNIB.data_rptka.rptka_jabatan.id_jabatan	ID Jabatan Tenaga Kerja Asing berdasarkan https://jdih.kemnaker.go.id/data_puu/KEP247_MENX_2011.pdf
  * @apiBody {string(255)}    	dataNIB.data_rptka.rptka_jabatan.jabatan	Nama Jabatan
  * @apiBody {string(11)}    	dataNIB.data_rptka.rptka_jabatan.jumlah	Jumlah Orang Yang Memiliki Jabatan
  * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_jabatan.tgl_mulai	Tanggal Mulai Jabatan (format date : YYYY-MM- DD)
  * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_jabatan.tgl_selesai	Tanggal Selesai Jabatan (format date : YYYY-MM- DD)
  * @apiBody {string(255)}    	dataNIB.data_rptka.rptka_jabatan.keterangan	Keterangan
- * @apiBody {object[]}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping	    rptka_tki_pendamping
+ * @apiBody {Object[]}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping	    rptka_tki_pendamping
  * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.id_jabatan	Id Jabatan
  * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.id_pendamping	Id TKI Pendamping
  * @apiBody {string(100)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.nama	Nama TKI Pendamping
@@ -3975,13 +4078,13 @@
  * @apiBody {string(255)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.sertifikat	Sertifikat Kompetensi TKI Pendamping
  * @apiBody {string(11)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.pengalaman_kerja	Pengalaman Kerja TKI Pendamping (dalam tahun)
  * @apiBody {string(255)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.keterangan	Keterangan
- * @apiBody {object[]}	dataNIB.data_rptka.rptka_negara	    rptka_negara
+ * @apiBody {Object[]}	dataNIB.data_rptka.rptka_negara	    rptka_negara
  * @apiBody {string(2)}    	dataNIB.data_rptka.rptka_negara.id_negara	Negara Asal Tenaga Kerja Asing(* Sumber Kodefikasi Negara Mengikuti Standar Unedifact : http://www.unec e.org/cefact/loco de/service/locati on )
  * @apiBody {string(11)}    	dataNIB.data_rptka.rptka_negara.jumlah	Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)
- * @apiBody {object[]}	dataNIB.data_rptka.rptka_lokasi	    rptka_lokasi
+ * @apiBody {Object[]}	dataNIB.data_rptka.rptka_lokasi	    rptka_lokasi
  * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_lokasi.lokasi_id	ID Daerah Penanggung Jawab (* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
  * @apiBody {string(11)}    	dataNIB.data_rptka.rptka_lokasi.jumlah	Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)
- * @apiBody {object[]}    	dataNIB.data_proyek	    data_proyek
+ * @apiBody {Object[]}    	dataNIB.data_proyek	    data_proyek
  * @apiBody {string(25)}    	dataNIB.data_proyek.id_proyek	ID / Kode Proyek
  * @apiBody {string(26)}    	dataNIB.data_proyek.nomor_proyek	Nomor Permohonan Proyek
  * @apiBody {string(255)}    	dataNIB.data_proyek.uraian_usaha	Uraian Usaha Proyek
@@ -4040,7 +4143,7 @@
  * @apiBody {string(255)}    	dataNIB.data_proyek.nama_perairan	Nama Lokasi Perairan
  * @apiBody {string(10)}    	dataNIB.data_proyek.kedalaman	Kedalaman Perairan
  * @apiBody {string(65535)}    	dataNIB.data_proyek.file_rencana_teknis	    file_rencana_teknis
- * @apiBody {object[]}	dataNIB.data_proyek.data_lokasi_proyek	    data_lokasi_proyek
+ * @apiBody {Object[]}	dataNIB.data_proyek.data_lokasi_proyek	    data_lokasi_proyek
  * @apiBody {string(25)}    	dataNIB.data_proyek.data_lokasi_proyek.id_proyek_lokasi	ID / Kode Lokasi Proyek
  * @apiBody {string(10)}    	dataNIB.data_proyek.data_lokasi_proyek.proyek_daerah_id	Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
  * @apiBody {string(3)}    	dataNIB.data_proyek.data_lokasi_proyek.kd_kawasan	Kode Kawasan (* Lihat Lampiran di https://oss.go.id/oss/#home/portal/lstKawasan)
@@ -4051,14 +4154,14 @@
  * @apiBody {string(2)}    	dataNIB.data_proyek.data_lokasi_proyek.jenis_lokasi	Jenis Lokasi Lintas Administratif atau Tidak (01 : Lintas Administratif, 02 : Tidak Lintas Administratif)
  * @apiBody {string(2)}    	dataNIB.data_proyek.data_lokasi_proyek.status_lokasi	Status Lokasi(* Lihat Lampiran 25)
  * @apiBody {string(2)}    	dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek_shp	    data_lokasi_proyek_shp
- * @apiBody {object[]}    	dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek	    data_lokasi_proyek
+ * @apiBody {Object[]}    	dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek	    data_lokasi_proyek
  * @apiBody {number(11)}    	dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek.serial	Serial Koordinat
  * @apiBody {string(25)}    	dataNIB.data_proyek.data_lokasi_proyek.data_lokasi_proyek.lat_lng	Koordinat Latitude & Longitude
- * @apiBody {object[]}    	dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek	    data_posisi_proyek
+ * @apiBody {Object[]}    	dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek	    data_posisi_proyek
  * @apiBody {string(25)}    	dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek.id_proyek_posisi	ID / Kode Posisi Proyek
  * @apiBody {string(25)}    	dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek.id_proyek_lokasi	ID / Kode Lokasi Proyek
  * @apiBody {string(2)}    	dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek.posisi_lokasi	Posisi Lokasi (* Lihat Lampiran 24)
- * @apiBody {object[]}	dataNIB.data_proyek.data_proyek_produk	    data_proyek_produk
+ * @apiBody {Object[]}	dataNIB.data_proyek.data_proyek_produk	    data_proyek_produk
  * @apiBody {string(25)}    	dataNIB.data_proyek.data_proyek_produk.id_produk	ID / Kode Produk
  * @apiBody {string(25)}    	dataNIB.data_proyek.data_proyek_produk.id_proyek	ID / Kode Proyek
  * @apiBody {string(7)}    	dataNIB.data_proyek.data_proyek_produk.kbli	Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)
@@ -4074,9 +4177,9 @@
  * @apiBody {string(16)}    	dataNIB.data_proyek.data_proyek_produk.pi_npwp	NPWP Pendaftaran Penanaman Modal Untuk Case Grand Father Clause (GFC)
  * @apiBody {string(9)}    	dataNIB.data_proyek.data_proyek_produk.id_kbli_ta	Penanda bahwa cakupan produk untuk kebutuhan tax allowance
  * @apiBody {number(3.2)}    	dataNIB.data_proyek.data_proyek_produk.tkdn	Tingkat Kandungan Dalam Negeri
- * @apiBody {object[]}    	dataNIB.data_dni	    data_dni
+ * @apiBody {Object[]}    	dataNIB.data_dni	    data_dni
  * @apiBody {string(10)}    	dataNIB.data_dni.kd_dni	Kodefikasi Data Negatif Investasi (DNI) (* Lihat Lampiran 15)
- * @apiBody {object[]}    	dataNIB.data_checklist	    data_checklist
+ * @apiBody {Object[]}    	dataNIB.data_checklist	    data_checklist
  * @apiBody {string(25)}    	dataNIB.data_checklist.id_produk	ID Produk
  * @apiBody {string(25)}    	dataNIB.data_checklist.id_proyek	ID / Kode Proyek
  * @apiBody {string(25)}    	dataNIB.data_checklist.id_izin	Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
@@ -4096,7 +4199,7 @@
  * @apiBody {string(150)}    	dataNIB.data_checklist.no_izin	Nomor Izin Yang Terbit dan Masih Berlaku Sebelum OSS Diterapkan
  * @apiBody {string(10)}    	dataNIB.data_checklist.tgl_izin	Tanggal Izin Yang Terbit dan Masih Berlaku Sebelum OSS Diterapkan (* Format:YYYY- MM-DD)
  * @apiBody {string(65535)}    	dataNIB.data_checklist.file_izin	Attachment File Izin Yang Terbit dan Masih Berlaku Sebelum OSS Diterapkan Dalam Bentuk File PDF/Image Berupa Link (* Ukuran File Maks: 2MB)
- * @apiBody {object[]}	dataNIB.data_checklist.data_persyaratan	    data_persyaratan
+ * @apiBody {Object[]}	dataNIB.data_checklist.data_persyaratan	    data_persyaratan
  * @apiBody {string(25)}    	dataNIB.data_checklist.data_persyaratan.id_syarat	Id / Kode Persyaratan
  * @apiBody {string(50)}    	dataNIB.data_checklist.data_persyaratan.no_dokumen	Nomor Dokumen Persyaratan
  * @apiBody {string(8)}    	dataNIB.data_checklist.data_persyaratan.tgl_dokumen	Tanggal Dokumen Persyaratan (format date : YYYY-MM-DD)
@@ -4507,7 +4610,7 @@
  *       "Content-Type": "application/json",
  *       "user_key": {{user_key}}
  *     }
- * @apiBody {object}	    IZINFINALKKPR	IZINFINALKKPR
+ * @apiBody {Object}	    IZINFINALKKPR	IZINFINALKKPR
  * @apiBody {string(25)}    	IZINFINALKKPR.id_proyek	    ID / Kode Proyek
  * @apiBody {string(25)}    	IZINFINALKKPR.oss_id	    Oss Id adalah ID yang di Generate Sistem OSS dan Dikirimkan ke K/L/D Bersama Pengajuan Perizinan
  * @apiBody {string(25)}    	IZINFINALKKPR.id_izin	    Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
@@ -4517,7 +4620,7 @@
  * @apiBody {string(50)}    	IZINFINALKKPR.nip_status	    Nip pemroses Status Izin
  * @apiBody {string(50)}    	IZINFINALKKPR.nama_status	    Nama pemroses Status Izin
  * @apiBody {string(65535)}    	IZINFINALKKPR.keterangan	    Keterangan
- * @apiBody {object}    	IZINFINALKKPR.data_teknis	    data_teknis
+ * @apiBody {Object}    	IZINFINALKKPR.data_teknis	    data_teknis
  * @apiBody {string(20)}    	IZINFINALKKPR.data_teknis.luas	    Luas tanah/perairan yang disetujui
  * @apiBody {string(10)}    	IZINFINALKKPR.data_teknis.jenis_peruntukan	    Jenis peruntukan pemanfaatan ruang
  * @apiBody {number(20.2)}    	IZINFINALKKPR.data_teknis.koefisien_dasar_bangunan	    Koefisien dasar bangunan maksimum
@@ -4695,7 +4798,7 @@
  *       "Content-Type": "application/json",
  *       "Token": "OSS000qw13242628gssssss812345654709820180514"
  *     }
- * @apiBody {object}	dataNIBPSE	dataNIBPSE			
+ * @apiBody {Object}	dataNIBPSE	dataNIBPSE			
  * @apiBody {string(13)}    	dataNIBPSE.nib	Nomor Induk Berusaha			
  * @apiBody {string(10)}    	dataNIBPSE.tgl_pengajuan_nib	Tanggal Pengajuan NIB (* Date Format YYYY-MM-DD)			
  * @apiBody {string(10)}    	dataNIBPSE.tgl_terbit_nib	Tanggal Terbit NIB (* Date Format YYYY-MM-DD)			
@@ -4715,7 +4818,7 @@
  * @apiBody {string(255)}    	dataNIBPSE.tgl_akta_pendirian	Tanggal Akta Pendirian			
  * @apiBody {string(255)}    	dataNIBPSE.file_akta_prinsipal	File Akta Prinsipal			
  * @apiBody {string(2)}    	dataNIBPSE.file_akta_domisili	File Akta Domisili			
- * @apiBody {object[]}    	dataNIBPSE.penanggung_jwb	    penanggung_jwb			
+ * @apiBody {Object[]}    	dataNIBPSE.penanggung_jwb	    penanggung_jwb			
  * @apiBody {string(2)}    	dataNIBPSE.penanggung_jwb.no_identitas_penanggung_jwb	Nomor Identitas Penanggung Jawab			
  * @apiBody {string(100)}    	dataNIBPSE.penanggung_jwb.nama_penanggung_jwb	Nama Penanggung Jawab			
  * @apiBody {string(2)}    	dataNIBPSE.penanggung_jwb.negara_asal_penanggung_jwb	Negara Asal Penanggung Jawab			
@@ -4723,7 +4826,7 @@
  * @apiBody {string(10)}    	dataNIBPSE.penanggung_jwb.daerah_id_penanggung_jwb	Daerah ID Penanggung Jawab			
  * @apiBody {string(20)}    	dataNIBPSE.penanggung_jwb.no_telp_penanggung_jwb	No Telepon Penanggung Jawab			
  * @apiBody {string(100)}    	dataNIBPSE.penanggung_jwb.email_penanggung_jwb	Email Penanggung Jawab			
- * @apiBody {object[]}    	dataNIBPSE.data_proyek	    data_proyek			
+ * @apiBody {Object[]}    	dataNIBPSE.data_proyek	    data_proyek			
  * @apiBody {string(30)}    	dataNIBPSE.data_proyek.id_proyek	ID Proyek			
  * @apiBody {string(100)}    	dataNIBPSE.data_proyek.nama_sistem_elektronik	Nama Sistem Elektronik			
  * @apiBody {string(3)}    	dataNIBPSE.data_proyek.sektor_sistem	Sektor			
@@ -4736,7 +4839,7 @@
  * @apiBody {string(255)}    	dataNIBPSE.data_proyek.uraian_proses_bisnis_sistem	Uraian proses bisnis system			
  * @apiBody {string(30)}    	dataNIBPSE.data_proyek.jumlah_pengguna_indonesia	Jumlah pengguna Indonesia			
  * @apiBody {string(30)}    	dataNIBPSE.data_proyek.nilai_transaksi_indonesia	Nilai transaksi indonesia			
- * @apiBody {object[]}    	dataNIBPSE.data_checklist	    data_checklist			
+ * @apiBody {Object[]}    	dataNIBPSE.data_checklist	    data_checklist			
  * @apiBody {string(25)}    	dataNIBPSE.data_checklist.id_proyek	ID Proyek OSS			
  * @apiBody {string(25)}    	dataNIBPSE.data_checklist.id_izin	Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS			
  * @apiBody {string(13)}    	dataNIBPSE.data_checklist.kd_izin	Kode Izin Sistem K/L/D			
@@ -4891,7 +4994,7 @@
  *       "Content-Type": "application/json",
  *       "user_key": {{user_key}}
  *     }
- * @apiBody {object}	    INQUERYFILEDS	                        INQUERYFILEDS
+ * @apiBody {Object}	    INQUERYFILEDS	                        INQUERYFILEDS
  * @apiBody {string(25)}    	INQUERYFILEDS.id_permohonan_izin	    Merupakan ID pengajuan, yaitu permohonan perizinan yang digenerate oleh sistem OSS
  * @apiParamExample {json} RequestBody-Example:
  *     HTTP/1.1 200 OK
@@ -4971,7 +5074,7 @@
  *       "Content-Type": "application/json",
  *       "user_key": {{user_key}}
  *     }
- * @apiBody {object}    	IZINFINAL	        IZINFINAL
+ * @apiBody {Object}    	IZINFINAL	        IZINFINAL
  * @apiBody {string(13)}    	IZINFINAL.nib	    Nomor Induk Berusaha
  * @apiBody {string(25)}    	IZINFINAL.id_proyek	    ID / Kode Proyek
  * @apiBody {string(25)}    	IZINFINAL.oss_id	    Oss Id adalah ID yang di Generate Sistem OSS dan Dikirimkan ke K/L/D Bersama Permohonan Nomor Induk Berusaha
@@ -5078,7 +5181,7 @@
  *       "Content-Type": "application/json",
  *       "user_key": {{user_key}}
  *     }
- * @apiBody {object}	 receiveCertificate	                        receiveCertificate
+ * @apiBody {Object}	 receiveCertificate	                        receiveCertificate
  * @apiBody {string}    receiveCertificate.id_permohonan_izin	    id_permohonan_izin
  * @apiBody {string}    receiveCertificate.nomor_sertifikat	    nomor_sertifikat
  * @apiBody {string}    receiveCertificate.url_sertifikat	        url_sertifikat
@@ -5100,7 +5203,7 @@
  *         }
  *      }
  * 
- * @apiSuccess (200) {object}	    responReceiveCertificate	                                        responReceiveCertificate
+ * @apiSuccess (200) {Object}	    responReceiveCertificate	                                        responReceiveCertificate
  * @apiSuccess (200) {string}    	responReceiveCertificate.kode	                                    kode
  * @apiSuccess (200) {string}    	responReceiveCertificate.keterangan	                                keterangan
  * @apiSuccess (200) {string}    	responReceiveCertificate.dataCertificate	                        dataCertificate
@@ -5160,7 +5263,7 @@
  *       "Content-Type": "application/json",
  *       "user_key": {{user_key}}
  *     }
- * @apiSuccess (200) {object}	    responInqueryCertificate	                                        responInqueryCertificate
+ * @apiSuccess (200) {Object}	    responInqueryCertificate	                                        responInqueryCertificate
  * @apiSuccess (200) {string}    	responInqueryCertificate.kode	                                    kode
  * @apiSuccess (200) {string}    	responInqueryCertificate.keterangan	                                keterangan
  * @apiSuccess (200) {string}    	responInqueryCertificate.dataCertificate	                        dataCertificate
