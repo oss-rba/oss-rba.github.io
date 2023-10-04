@@ -1663,8 +1663,8 @@
  * @apiErrorExample Error-Response:
  *      {
  *         "responreceiveLicenseStatus": {
- *           "kode": 200,
- *           "keterangan": "Sukses",
+ *           "kode": 400,
+ *           "keterangan": "Data izin tidak ditemukan",
  *           "dataNIB": {}
  *         }
  *      }
