@@ -3189,7 +3189,7 @@
  */
 
 /**
- * @api {post} /inqueryNIBSTPW Inquery NIB SPTW
+ * @api {post} /inqueryNIBSTPW Inquery NIB STPW
  * @apiVersion 5.0.0
  * @apiDescription Inquery Data Nomor Induk Berusaha (NIB) Surat Tanda Pendaftaraan Waralaba (STPW) di Sistem OSS
  * @apiName inqueryNIBSTPW
