@@ -3364,6 +3364,11 @@
  */
 
 /**
+ * @api {post} /fetchNIB Fetch NIB
+ * @apiVersion 5.0.0
+ */
+
+/**
  * @api {post} /inqueryProyek Inquery Proyek
  * @apiVersion 5.0.0
  * @apiDescription Get Data Proyek di Sistem OSS
@@ -3371,9 +3376,8 @@
  * @apiGroup Proyek
  * @apiExample {curl} Curl Request Example:
  * curl --location 'https://server.digitaltelkom.dev/oss-sandbox/kl/rba/inqueryProyek' \
- * --header 'user_key: f9c53f291ab3b47251ef5b001b4f6dcc' \
+ * --header 'user_key: {{user_key}}' \
  * --header 'Content-Type: application/json' \
- * --header 'Cookie: 37dda41a6b8fc67de27a64fec9698b47=4e06c88a3ce14c94d5e42eebe16ddc32; 8dd21093c6d03524cf9bc1ea99ad0576=47e7fbc87991cbe1eb3c8af290c81fbe' \
  * --data '{
  *     "nib": "{{nib}}",
  *     "id_proyek": "{{id_proyek}}"
