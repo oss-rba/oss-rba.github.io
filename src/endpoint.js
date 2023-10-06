@@ -3290,7 +3290,7 @@
  *    "responfetchNIB": {
  *      "kode": 400,
  *      "keterangan": "parameter tidak ditemukan",
- *      "data": null,
+ *      "dataNIB": null,
  *      "meta": [
  *          {
  *               "message": "nib is required",
