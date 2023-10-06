@@ -3526,7 +3526,7 @@
  * @apiErrorExample Error-Response:
  * {
  *    "responfetchNIB": {
- *      "kode_status": 400,
+ *      "kode": 400,
  *      "keterangan": "parameter tidak ditemukan",
  *      "data": null,
  *      "meta": [
