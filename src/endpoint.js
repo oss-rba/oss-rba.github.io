@@ -3270,9 +3270,10 @@
  * @apiError (400) {Object} responfetchNIB Data Response Fetch NIB
  * @apiError (400) {Number(3){3}} responfetchNIB.kode Kode Respon <b>(* Lihat Lampiran 9)</b>
  * @apiError (400) {String(255)} responfetchNIB.keterangan Keterangan Respon (Data Parameter Salah)
+ * @apiError (400) {Object} [responfetchNIB.dataNIB] Respon Data
  * @apiError (400) {Object} [responfetchNIB.meta] Informasi Tambahan Response
- * @apiError (400) {String(50){50}} responfetchNIB.meta.message Pesan Informasi
- * @apiERror (400) {String(25){25}} responfetchNIB.meta.field Param
+ * @apiError (400) {String(50){50}} [responfetchNIB.meta.message] Pesan Informasi
+ * @apiERror (400) {String(25){25}} [responfetchNIB.meta.field] Param
  * @apiError (401) {Number(3){3}} responfetchNIB.kode Kode Respon <b>(* Lihat Lampiran 9)</b>
  * @apiError (401) {String(255)} responfetchNIB.keterangan Keterangan Respon (User Akses Tidak Valid)
  * @apiError (403) {Number(3){3}} responfetchNIB.kode Kode Respon <b>(* Lihat Lampiran 9)</b>
