@@ -3158,6 +3158,7 @@
  * @apiSuccess (200) {Number(3){3}} responfetchNIB.kode Kode Respon (* Lihat Lampiran 9)
  * @apiSuccess (200) {string(255){255}} responfetchNIB.keterangan Keterangan Respon
  * @apiSuccess (200) {Object} responfetchNIB.dataNIB Data Respon
+ * @apiSuccess (200) {string(24){24}} responfetchNIB.dataNIB._id Referensi Log ID
  * @apiSuccess (200) {string(13){13}} responfetchNIB.dataNIB.nib Nomor Induk Berusaha
  * @apiSuccess (200) {string(10){10}} responfetchNIB.dataNIB.tgl_pengajuan_nib Tanggal Pengajuan NIB (format date : YYYY-MM-DD)
  * @apiSuccess (200) {string(10){10}} responfetchNIB.dataNIB.tgl_terbit_nib	Tanggal Penerbitan NIB (format date : YYYY-MM-DD)
