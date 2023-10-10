@@ -1716,7 +1716,7 @@
  * @apiSuccessExample {json} Success-Response:
  *     HTTP/1.1 200 OK
  *     {
- *       "responcheckLicenseStatus": {
+ *       "responcheckStatusLicense": {
  *         "kode": "",
  *         "keterangan": "",
  *         "dataIZIN": {
@@ -1737,9 +1737,16 @@
  * @apiError (504) 504 Proses Payload Data Di Sistem OSS Timeout.
  * @apiErrorExample Error-Response:
  *     {
- *     	 "responsecheckLicenceStatus": {
+ *     	 "responsecheckStatusLicence": {
  *     		 "kode": 500,
- *     		 "keterangan": "Terjadi kesalahan sistem, hubungi tim teknis OSS"
+ *     		 "keterangan": "Terjadi kesalahan sistem, hubungi tim teknis OSS",
+ *         "dataIZIN": {
+ *           "nib": "",
+ *           "id_proyek": "",
+ *           "id_izin": "",
+ *           "kd_status": "",
+ *           "uraian_status": ""
+ *         }
  *     	 }
  *     }
  */
@@ -2721,7 +2728,12 @@
  *     {
  *     	 "responcheckNIB": {
  *     		 "kode": "",
- *     		 "keterangan": ""
+ *     		 "keterangan": "",
+ *         "dataNIB": {
+ *     			 "nib": "",
+ *     			 "nama_perusahaan": "",
+ *     			 "status": ""
+ *     		 }
  *     	 }
  *     }
  */
@@ -5087,7 +5099,9 @@
  *     {
  *     	 "responupdateLicense": {
  *     		 "kode": "",
- *     		 "keterangan": ""
+ *     		 "keterangan": "",
+ *         "keterangan_reset_izin_ds": "",
+ *         "nomor_izin": ""
  *     	 }
  *     }
  */
