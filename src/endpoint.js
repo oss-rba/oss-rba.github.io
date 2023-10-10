@@ -3258,7 +3258,7 @@
  * @apiSuccess (200) {string(26){26}} responfetchNIB.dataNIB.data_proyek.nomor_proyek	Nomor Permohonan Proyek		
  * @apiSuccess (200) {string(255){255}} responfetchNIB.dataNIB.data_proyek.uraian_usaha Uraian Usaha Proyek
  * @apiSuccess (200) {Object[]} responfetchNIB.dataNIB.data_proyek.kbli Data KBLI
- * @apiSuccess (200) {string(5){5}} responfetchNIB.dataNIB.data_proyek.kbli.kbli Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)
+ * @apiSuccess (200) {string(7){7}} responfetchNIB.dataNIB.data_proyek.kbli.kbli Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)
  * @apiSuccess (200) {string(255){255}} responfetchNIB.dataNIB.data_proyek.kbli.nama_kbli Uraian KBLI
  * @apiSuccess (200) {string(25){25}} responfetchNIB.dataNIB.data_proyek.kbli.id_izin
  * Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
