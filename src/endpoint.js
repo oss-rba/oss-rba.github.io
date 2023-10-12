@@ -1737,7 +1737,7 @@
  * @apiError (504) 504 Proses Payload Data Di Sistem OSS Timeout.
  * @apiErrorExample Error-Response:
  *     {
- *     	 "responsecheckStatusLicence": {
+ *     	 "responsecheckStatusLicense": {
  *     		 "kode": 500,
  *     		 "keterangan": "Terjadi kesalahan sistem, hubungi tim teknis OSS",
  *         "dataIZIN": {
