@@ -1741,11 +1741,7 @@
  *     		 "kode": 500,
  *     		 "keterangan": "Terjadi kesalahan sistem, hubungi tim teknis OSS",
  *         "dataIZIN": {
- *           "nib": "",
- *           "id_proyek": "",
- *           "id_izin": "",
- *           "kd_status": "",
- *           "uraian_status": ""
+ *           "id_izin": ""
  *         }
  *     	 }
  *     }
