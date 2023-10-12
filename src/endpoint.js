@@ -1717,14 +1717,14 @@
  *     HTTP/1.1 200 OK
  *     {
  *       "responcheckStatusLicense": {
- *         "kode": "",
- *         "keterangan": "",
+ *         "kode": 200,
+ *         "keterangan": "Sukses",
  *         "dataIZIN": {
- *           "nib": "",
- *           "id_proyek": "",
- *           "id_izin": "",
- *           "kd_status": "",
- *           "uraian_status": ""
+ *           "nib": "123455",
+ *           "id_proyek": "123456",
+ *           "id_izin": "I-12334",
+ *           "kd_status": "58",
+ *           "uraian_status": "Izin terbit/SS terverifikasi"
  *         }
  *       }
  *     }
@@ -2708,12 +2708,12 @@
  *     HTTP/1.1 200 OK
  *     {
  *     	 "responcheckNIB": {
- *     		 "kode": "",
- *     		 "keterangan": "",
+ *     		 "kode": 200,
+ *     		 "keterangan": "Sukses",
  *     		 "dataNIB": {
- *     			 "nib": "",
- *     			 "nama_perusahaan": "",
- *     			 "status": ""
+ *     			 "nib": "1234567",
+ *     			 "nama_perusahaan": "01",
+ *     			 "status": "Testing"
  *     		 }
  *     	 }
  *     }
@@ -2727,8 +2727,8 @@
  * @apiErrorExample Error-Response:
  *     {
  *     	 "responcheckNIB": {
- *     		 "kode": "",
- *     		 "keterangan": "",
+ *     		 "kode": 400,
+ *     		 "keterangan": "Data NIB tidak ditemukan",
  *         "dataNIB": {
  *     			 "nib": "",
  *     			 "nama_perusahaan": "",
@@ -5082,10 +5082,10 @@
  *     HTTP/1.1 200 OK
  *     {
  *     	 "responupdateLicense": {
- *     		 "kode": "",
- *     		 "keterangan": "",
- *     		 "keterangan_reset_izin_ds": "",
- *     		 "nomor_izin": ""
+ *     		 "kode": 200,
+ *     		 "keterangan": "Sukses",
+ *     		 "keterangan_reset_izin_ds": "Berhasil Reset DS",
+ *     		 "nomor_izin": "11111111"
  *     	 }
  *     }
  * @apiError (400) 400 Data Parameter Salah.
@@ -5098,9 +5098,9 @@
  * @apiErrorExample Error-Response:
  *     {
  *     	 "responupdateLicense": {
- *     		 "kode": "",
- *     		 "keterangan": "",
- *         "keterangan_reset_izin_ds": "",
+ *     		 "kode": 400,
+ *     		 "keterangan": "OSS ID tidak ditemukan",
+ *         "keterangan_reset_izin_ds": "Gagal Reset DS",
  *         "nomor_izin": ""
  *     	 }
  *     }
