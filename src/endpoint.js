@@ -3275,6 +3275,134 @@
  * @apiSuccess (200) {string(3){3}} responfetchNIB.dataNIB.data_proyek.kbli.jenis_perizinan Jenis Perizinan (* Lihat Lampiran 27)
  * @apiSuccess (200) {string(10){10}} responfetchNIB.dataNIB.data_proyek.tgl_masa_berlaku Tanggal Masa Berlaku Perizinan
  * @apiSuccess (200) {string(65535){65535}} responfetchNIB.dataNIB.data_proyek.status_pengajuan Status Pengajuan Perizinan
+ * @apiSuccessExample {json} Succes-Response:
+ * {
+ *    "responfetchNIB": {
+ *        "kode": 200,
+ *        "keterangan": "",
+ *        "dataNIB": {
+ *            "_id": "",
+ *            "nib": "",
+ *            "tgl_pengajuan_nib": "",
+ *            "tgl_terbit_nib": "",
+ *            "tgl_perubahan_nib": "",
+ *            "oss_id": "",
+ *            "jenis_pelaku_usaha": null,
+ *            "nama_perseroan": "",
+ *            "alamat_perseroan": "",
+ *            "rt_rw_perseroan": "",
+ *            "perseroan_daerah_id": "",
+ *            "nomor_telepon_perseroan": "",
+ *            "email_perusahaan": "",
+ *            "data_perusahaan": {
+ *                "data_legal": [
+ *                    {
+ *                        "no_pengesahan": "",
+ *                        "tgl_pengesahan": "",
+ *                        "no_akta_lama": null,
+ *                        "no_pengesahan_lama": null,
+ *                        "tgl_pengesahan_lama": null,
+ *                        "jenis_akta": ""
+ *                    }
+ *                ],
+ *                "data_pemegang_saham": [
+ *                    {
+ *                        "jenis_pemegang_saham": null,
+ *                        "flag_asing": "",
+ *                        "total_modal_pemegang": 0,
+ *                        "jabatan_pemegang_saham": "",
+ *                        "nama_pemegang_saham": "",
+ *                        "jns_identitas_pemegang_saham": "",
+ *                        "no_identitas_pemegang_saham": "",
+ *                        "negara_asal_pemegang_saham": "",
+ *                        "npwp_pemegang_saham": "",
+ *                        "alamat_pemegang_saham": "",
+ *                    }
+ *                ],
+ *                "data_penanggung_jawab": [
+ *                    {
+ *                        "flag_asing": "",
+ *                        "jns_identitas_penanggung_jwb": "",
+ *                        "no_identitas_penanggung_jwb": "",
+ *                        "nama_penanggung_jwb": "",
+ *                        "jabatan_penanggung_jwb": "",
+ *                        "negara_asal_penanggung_jwb": "",
+ *                        "npwp_penanggung_jwb": "",
+ *                        "alamat_penanggung_jwb": ""
+ *                    }
+ *                ],
+ *                "data_rptka": {
+ *                    "jenis_rptka": null,
+ *                    "no_rptka": null,
+ *                    "rptka_awal": null,
+ *                    "rptka_akhir": null,
+ *                    "rptka_gaji": 0,
+ *                    "jumlah_tka_rptka": 0,
+ *                    "jangka_penggunaan_waktu": null,
+ *                    "jangka_waktu_permohonan_rptka": 0,
+ *                    "rptka_jabatan": [
+ *                        {
+ *                            "id_jabatan": 0,
+ *                            "jabatan": null,
+ *                            "jumlah": 0,
+ *                            "tgl_mulai": null,
+ *                            "tgl_selesai": null,
+ *                            "keterangan": null,
+ *                            "rptka_tki_pendamping": [
+ *                                {
+ *                                    "id_jabatan": 0,
+ *                                    "id_pendamping": 0,
+ *                                    "nama": null,
+ *                                    "nik": null,
+ *                                    "jabatan": null,
+ *                                    "hp": null,
+ *                                    "email": null,
+ *                                    "foto": null,
+ *                                    "pendidikan_min": null,
+ *                                    "sertifikat": null,
+ *                                    "pengalaman_kerja": 0,
+ *                                    "keterangan": null
+ *                                }
+ *                            ]
+ *                        }
+ *                    ],
+ *                    "rptka_negara": [
+ *                        {
+ *                            "id_negara": null,
+ *                            "jumlah": 0
+ *                        }
+ *                    ],
+ *                    "rptka_lokasi": [
+ *                        {
+ *                            "lokasi_id": null,
+ *                            "jumlah": 0
+ *                        }
+ *                    ]
+ *                }
+ *            },
+ *            "data_proyek": [
+ *                {
+ *                    "id_proyek": "",
+ *                    "kd_resiko": null,
+ *                    "uraian_usaha": "",
+ *                    "kbli": [
+ *                        {
+ *                            "kbli": "",
+ *                            "nama_kbli": "",
+ *                            "id_izin": "",
+ *                            "no_izin": null,
+ *                            "kd_izin": "",
+ *                            "tipe_oss": "",
+ *                            "jenis_perizinan": "",
+ *                            "tgl_masa_berlaku": null
+ *                        }
+ *                    ]
+ *                }
+ *            ]
+ *        },
+ *        "meta": null
+ *    }
+ * }
  * 
  * @apiError (400) {Object} responfetchNIB Data Response Fetch NIB
  * @apiError (400) {Number(3){3}} responfetchNIB.kode Kode Respon <b>(* Lihat Lampiran 9)</b>
