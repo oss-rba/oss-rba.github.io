@@ -93,6 +93,7 @@ Untuk Referensi Kode Izin Bisa didapatkan melalui method getDataReferensi dengan
 #### <span id="api-example-for-a-submenu-entry">Lampiran 10 - DATA KODE STATUS IZIN</span>
 | KODE | STATUS                                  | KETERANGAN                                                                                 |
 |------|-----------------------------------------|--------------------------------------------------------------------------------------------|
+|  05  | Proses Penapisan                        | Penapisan dokumen lingkungan             |
 |  09  | Telah Melengkapi Persyaratan            | Dokumen permohonan dan persyaratan izin sudah diisi dan dilengkapi                         |
 |  10  |  Dokumen Lengkap                        | Dokumen permohonan izin sudah lengkap dan benar                                            |
 |  11  |  Dokumen Belum Lengkap                  |  Dokumen permohonan izin belum lengkap                                                     |

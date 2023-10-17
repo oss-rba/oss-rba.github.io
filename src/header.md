@@ -25,7 +25,8 @@
 | 4.3.13 | 10/05/2023 | Tim Teknis OSS | Penambahan flag_perubahan_data_teknis di Methode receiveNIB |
 | 4.3.14 | 24/05/2023 | Tim Teknis OSS | Perubahan Payload/Response inqueryNIB |
 | 4.3.15 | 06/07/2023 | Tim Teknis OSS | Penambahan email_preferensi receiveNIBPSE |
-| 4.3.16 | 14/09/2023 | Tim Teknis OSs | Penghapusan payload di receiveLicense<br>- data_pnbp <br>- id_produk <br><br>Penambahan payload di receiveLicense<br>- jenis_perizinan <br>- data_teknis IMB <br><br>Penambahan payload di receiveLicenseStatus<br>- persetujuan_form <br>- file_lampiran <br><br> Update cardinality (required/optional) payload receiveLicenseStatus|
+| 4.3.16 | 14/09/2023 | Tim Teknis OSS | Penghapusan payload di receiveLicense<br>- data_pnbp <br>- id_produk <br><br>Penambahan payload di receiveLicense<br>- jenis_perizinan <br>- data_teknis IMB <br><br>Penambahan payload di receiveLicenseStatus<br>- persetujuan_form <br>- file_lampiran <br><br> Update cardinality (required/optional) payload receiveLicenseStatus|
+| 4.3.17 | 17/10/2023 | Tim Teknis OSS | - Penyesuaian request dan response service: <br> 1. checkNIB <br> 2. checkLicenseStatus <br> 3. updateLicense <br><br> - Penambahan kode status izin 05 |
 
 ## <span id="api-example-for-a-submenu-entry">Background</span>
 
