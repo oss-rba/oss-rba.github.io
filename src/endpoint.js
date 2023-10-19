@@ -3174,6 +3174,7 @@
  * @apiSuccess (200) {string(25){25}} responfetchNIB.dataNIB.oss_id
  * Oss Id adalah ID yang di Generate Sistem OSS dan Dikirimkan ke K/L/D Bersama Permohonan Nomor Induk Berusaha
  * @apiSuccess (200) {string(2){2}} responfetchNIB.dataNIB.jenis_pelaku_usaha Jenis Pelaku Usaha (* Lihat Lampiran 18)
+ * @apiBody {string(10){10}} dataNIB.skala_usaha Skala Usaha Perusahaan
  * @apiSuccess (200) {string(255){255}} responfetchNIB.dataNIB.nama_perseroan Nama Perseroan
  * @apiSuccess (200) {string(255){255}} responfetchNIB.dataNIB.alamat_perseroan Alamat Perseroan
  * @apiSuccess (200) {string(7){7}} responfetchNIB.dataNIB.rt_rw_perseroan	Rt Rw Perseroan
@@ -3288,6 +3289,7 @@
  *            "tgl_perubahan_nib": "",
  *            "oss_id": "",
  *            "jenis_pelaku_usaha": null,
+ *            "skala_usaha": "",
  *            "nama_perseroan": "",
  *            "alamat_perseroan": "",
  *            "rt_rw_perseroan": "",
@@ -4349,7 +4351,7 @@
  *         "total_modal_dasar": "",
  *         "total_modal_ditempatkan": "",
  *         "flag_umk": "",
- *         "skalah_usaha": "",
+ *         "skala_usaha": "",
  *         "jenis_perubahan_terakhir": "",
  *         "flag_perubahan_data_teknis": "",
  *         "pemegang_saham": [
