@@ -4618,8 +4618,8 @@
  *     HTTP/1.1 200 OK
  *     {
  *     	 "responreceiveNIBKKPR": {
- *     		 "status": "",
- *     		 "keterangan": ""
+ *     		 "status": "1",
+ *     		 "keterangan": "Berhasil menyimpan data"
  *     	 }
  *     }
  * @apiError (400) 400 Data Parameter Salah.
@@ -4632,8 +4632,8 @@
  * @apiErrorExample Error-Response:
  *     {
  *     	 "responreceiveNIBKKPR": {
- *     		 "status": "",
- *     		 "keterangan": ""
+ *     		 "status": "2",
+ *     		 "keterangan": "Gagal menyimpan data"
  *     	 }
  *     }
  */
