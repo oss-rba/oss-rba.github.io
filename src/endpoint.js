@@ -943,15 +943,15 @@
  * @apiBody {string(16)}    	dataNIB.data_proyek.data_proyek_produk.pi_npwp	    NPWP Pendaftaran Penanaman Modal Untuk Case Grand Father Clause (GFC)
  * @apiBody {string(9)}    	dataNIB.data_proyek.data_proyek_produk.id_kbli_ta	    Penanda bahwa cakupan produk untuk kebutuhan tax allowance
  * @apiBody {number(3.2)}    	dataNIB.data_proyek.data_proyek_produk.tkdn	    Tingkat Kandungan Dalam Negeri
- * @apiBody {string(1){1}} dataNIB.data_proyek.data_proyek_produk.flag_memiliki_halal
- * @apiBody {string(255){255}} dataNIB.data_proyek.data_proyek_produk.nomor_sertifikat_halal
- * @apiBody {string(10){10}} dataNIB.data_proyek.data_proyek_produk.masa_berlaku_sertifikat_halal
- * @apiBody {string(1){1}} dataNIB.data_proyek.data_proyek_produk.flag_memiliki_sni
- * @apiBody {string(255){255}} dataNIB.data_proyek.data_proyek_produk.nomor_sertifikat_sni
- * @apiBody {string(10){10}} dataNIB.data_proyek.data_proyek_produk.masa_berlaku_sertifikat_sni
- * @apiBody {string(1){1}} dataNIB.data_proyek.data_proyek_produk.flag_self_declare
- * @apiBody {string(2){2}} dataNIB.data_proyek.data_proyek_produk.tipe_cakupan
- * @apiBody {Object[]}    	dataNIB.data_dni	    data_dni
+ * @apiBody {string(1){1}} dataNIB.data_proyek.data_proyek_produk.flag_memiliki_halal Flag Memilki Halal
+ * @apiBody {string(255){255}} dataNIB.data_proyek.data_proyek_produk.nomor_sertifikat_halal Nomor Sertifikat Halal
+ * @apiBody {string(10){10}} dataNIB.data_proyek.data_proyek_produk.masa_berlaku_sertifikat_halal Masa Berlaku Sertifikat Halal
+ * @apiBody {string(1){1}} dataNIB.data_proyek.data_proyek_produk.flag_memiliki_sni Flag Produk Memilki SNI
+ * @apiBody {string(255){255}} dataNIB.data_proyek.data_proyek_produk.nomor_sertifikat_sni Nomor Sertifikat Standar Nasional Indonesia (SNI)
+ * @apiBody {string(10){10}} dataNIB.data_proyek.data_proyek_produk.masa_berlaku_sertifikat_sni Masa Berlaku Sertifikat SNI
+ * @apiBody {string(1){1}} dataNIB.data_proyek.data_proyek_produk.flag_self_declare Flag Self Declare
+ * @apiBody {string(2){2}} dataNIB.data_proyek.data_proyek_produk.tipe_cakupan Tipe Cakupan
+ * @apiBody {Object[]}    	dataNIB.data_dni	    data_dni Berulang (N) Rows
  * @apiBody {string(10)}    	dataNIB.data_dni.kd_dni	    Kodefikasi Data Negatif Investasi (DNI) (* Lihat Lampiran 15)
  * @apiBody {Object[]}    	dataNIB.data_checklist	    data_checklist
  * @apiBody {string(25)}    	dataNIB.data_checklist.id_produk	    id_produk
