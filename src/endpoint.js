@@ -151,10 +151,10 @@
  * @apiBody {string(20)}    	AKTA.dalam_bentuk_uang	    Modal Dalam Bentuk Uang (Valuta : IDR)
  * @apiBody {string(50000)}    	AKTA.dalam_bentuk_lain	    Modal Dalam Bentuk Lainnya
  * @apiBody {string(5){5}} AKTA.tahun_kbli Tahun KBLI
- * @apiBody {string(5){5}} AKTA.kbli5 Kode KBLI
  * @apiBody {Object[]}    	AKTA.data_kbli	                        data_kbli
  * @apiBody {string(1024)}    	AKTA.data_kbli.kbli	                    Maksud & Tujuan KBLI
  * @apiBody {string(1024)}   	AKTA.data_kbli.uraian_usaha	            uraian_usaha
+ * @apiBody {string(5){5}} AKTA.data_kbli.kbli5 Kode KBLI
  * @apiBody {Object[]} AKTA.modal_dasar Berulang (N) Rows
  * @apiBody {string(50){50}} AKTA.modal_dasar.klasifikasi_saham_modal_dasar Klasifikasi Saham Modal Dasar
  * @apiBody {number(18){18}} AKTA.modal_dasar.nominal_per_lbr_modal_dasar Nominal Perlembar Saham Dasar
