@@ -109,6 +109,7 @@ Untuk Referensi Kode Izin Bisa didapatkan melalui method getDataReferensi dengan
 |  42  | Data Konfirmasi Persyaratan             | Mulai kembali perhitungan SLA perizinan                                                    |
 |  43  | Re-Konfirmasi Persyaratan               | Pemberhentian perhitungan SLA kembali ke awal                                              |
 |  44  | Data Re-Konfirmasi Persyaratan          | Mulai kembali perhitungan SLA perizinan dari awal                                          |
+|  45  | Persyaratan terverifikasi               | Persetujuan status persyaratan oleh dinas teknis                                           |
 |  50  | Disetujui                               | Petugas menyetujui Izin dari Pelaku Usaha                                                  |
 |  60  | Peringatan                              | Petugas memberikan peringatan terhadap Izin Pelaku Usaha, apabila Izin tersebut bermasalah |
 |  70  | Penghentian Sementara Kegiatan Berusaha | Petugas menghentikan sementara kegiatan berusaha, apabila Izin tersebut bermasalah         |
