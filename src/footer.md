@@ -367,5 +367,6 @@ Untuk Referensi Kode Izin Bisa didapatkan melalui method getDataReferensi dengan
 |  29  | Kode Jabatan Tenaga Kerja Asing                   |
 |  30  | Kode KBLI Berdasarkan Mapping ke KBLI             |
 |  31  | Kode Bidang Spesifik                              |
+|  32  | Kode Kawasan                                      |
 #### <span id="api-example-for-a-submenu-entry">Lampiran 30 - DATA KODE KAWASAN</span>
-Untuk Referensi Kode Kawasan Bisa didapatkan melalui method getDataReferensi dengan memasukkan kode 30
+Untuk Referensi Kode Kawasan Bisa didapatkan melalui method <strong>getDataReferensi</strong> dengan memasukkan kode 32
