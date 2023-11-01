@@ -2110,7 +2110,7 @@
  * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.pemegang_saham	    pemegang_saham		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.pemegang_saham.jenis_pemegang_saham	Jenis Pemegang Saham (* Lihat Lampiran 13)		
  * @apiSuccess (200) {string(1)}    	responinqueryNIB.dataNIB.pemegang_saham.flag_asing	Asal Pemegang Saham dari Dalam Negeri / Luar Negeri (Value : Y = asing, N = Bukan Asing)		
- * @apiSuccess (200) {string(20.0)}    	responinqueryNIB.dataNIB.pemegang_saham.total_modal_pemegang	Total Modal Pemegang Saham (Valuta : IDR)		
+ * @apiSuccess (200) {number(20.0)}    	responinqueryNIB.dataNIB.pemegang_saham.total_modal_pemegang	Total Modal Pemegang Saham (Valuta : IDR)		
  * @apiSuccess (200) {string(50)}    	responinqueryNIB.dataNIB.pemegang_saham.jabatan_pemegang_saham	Jabatan Pemegang Saham		
  * @apiSuccess (200) {string(500)}    	responinqueryNIB.dataNIB.pemegang_saham.nama_pemegang_saham	Nama Pemegang Saham		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.pemegang_saham.jns_identitas_pemegang_saham	Jenis Identitas Pemegang Saham (* Lihat Lampiran 4)		
@@ -2129,7 +2129,7 @@
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.penanggung_jwb.jns_identitas_penanggung_jwb	Jenis idetitas penanggung jawab		
  * @apiSuccess (200) {string(100)}    	responinqueryNIB.dataNIB.penanggung_jwb.no_identitas_penanggung_jwb	    no_identitas_penanggung_jwb		
  * @apiSuccess (200) {string(500)}    	responinqueryNIB.dataNIB.penanggung_jwb.nama_penanggung_jwb	    nama_penanggung_jwb		
- * @apiSuccess (200) {string(250)}    	responinqueryNIB.dataNIB.penanggung_jwb.jabatan_penanggung_jwb	    jabatan_penanggung_jwb		
+ * @apiSuccess (200) {string(50)}    	responinqueryNIB.dataNIB.penanggung_jwb.jabatan_penanggung_jwb	    jabatan_penanggung_jwb		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.penanggung_jwb.kebangsaan_penanggung_jwb	    kebangsaan_penanggung_jwb		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.penanggung_jwb.negara_asal_penanggung_jwb	    negara_asal_penanggung_jwb		
  * @apiSuccess (200) {string(15)}    	responinqueryNIB.dataNIB.penanggung_jwb.npwp_penanggung_jwb	    npwp_penanggung_jwb		
@@ -2240,7 +2240,7 @@
  * @apiSuccess (200) {string(1)}    	responinqueryNIB.dataNIB.data_proyek.flag_merger	Flag Proyek Hasil Merger atau Bukan (Y: Hasil Merger, N: Bukan Hasil Merger)		
  * @apiSuccess (200) {string(15)}    	responinqueryNIB.dataNIB.data_proyek.npwp_perseroan_merger	NPWP Perusahaan Merger		
  * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.data_proyek.nama_perseroan_merger	Nama Perusahaan Merger		
- * @apiSuccess (200) {string(50)}    	responinqueryNIB.dataNIB.data_proyek.skala_usaha	Skala usaha		
+ * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.data_proyek.skala_usaha	Skala usaha		
  * @apiSuccess (200) {string(50)}    	responinqueryNIB.dataNIB.data_proyek.skala_resiko	Skala resiko		
  * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.data_proyek.deskripsi_kegiatan	Deskripsi kegiatan		
  * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek	    data_lokasi_proyek		
@@ -2277,7 +2277,7 @@
  * @apiSuccess (200) {string(9)}    	responinqueryNIB.dataNIB.data_proyek.data_proyek_produk.id_kbli_ta	Penanda Bahwa Cakupan Produk Untuk Kebutuhan Tax Allowance		
  * @apiSuccess (200) {number(3.2)}    	responinqueryNIB.dataNIB.data_proyek.data_proyek_produk.tkdn	Tingkat Kandungan Dalam Negeri		
  * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.data_dni	    data_dni		
- * @apiSuccess (200) {string(10)}    	responinqueryNIB.dataNIB.data_dni.kd_dni	Kodefikasi Data Negatif Investasi (DNI) (* Lihat Lampiran 15)		
+ * @apiSuccess (200) {number(10)}    	responinqueryNIB.dataNIB.data_dni.kd_dni	Kodefikasi Data Negatif Investasi (DNI) (* Lihat Lampiran 15)		
  * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.data_checklist	    data_checklist		
  * @apiSuccess (200) {string(25)}    	responinqueryNIB.dataNIB.data_checklist.id_produk	ID Produk		
  * @apiSuccess (200) {string(25)}    	responinqueryNIB.dataNIB.data_checklist.id_proyek	ID / Kode Proyek		
@@ -2653,8 +2653,9 @@
  * @apiErrorExample Error-Response:
  *     {
  *     	 "responinqueryNIB": {
- *     		 "kode": "",
- *     		 "keterangan": ""
+ *     		 "kode": 400,
+ *     		 "keterangan": "Data NIB tidak ditemukan",
+ *         "dataNIB": [],
  *     	 }
  *     }
  */
