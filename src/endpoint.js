@@ -2337,7 +2337,7 @@
  *     HTTP/1.1 200 OK
  *     {
 *       "responinqueryNIB": {
-*         "kode": "",
+*         "kode": 200,
 *         "keterangan": "",
 *         "dataNIB": {
 *           "nib": "",
@@ -2655,7 +2655,7 @@
  *     	 "responinqueryNIB": {
  *     		 "kode": 400,
  *     		 "keterangan": "Data NIB tidak ditemukan",
- *         "dataNIB": [],
+ *     		 "dataNIB": [],
  *     	 }
  *     }
  */
