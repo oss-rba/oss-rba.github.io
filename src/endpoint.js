@@ -2709,8 +2709,8 @@
  *     		 "keterangan": "Sukses",
  *     		 "dataNIB": {
  *     			 "nib": "1234567",
- *     			 "nama_perusahaan": "01",
- *     			 "status": "Testing"
+ *     			 "nama_perusahaan": "Testing",
+ *     			 "status": "01"
  *     		 }
  *     	 }
  *     }
