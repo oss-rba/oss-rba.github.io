@@ -283,8 +283,8 @@ Untuk Referensi Kode Izin Bisa didapatkan melalui method getDataReferensi dengan
 #### <span id="api-example-for-a-submenu-entry">Lampiran 21 - DATA KODE JENIS KAWASAN</span>
 | KODE | KETERANGAN                    |
 |------|-------------------------------|
-|  01  | Kawasaki Industri (KI)        |
-|  02  | Kawasaki Ekonomi Khusus (KEK) |
+|  01  | Kawasan Industri (KI)        |
+|  02  | Kawasan Ekonomi Khusus (KEK) |
 |  03  | Free Trade Zone (FTZ)         |
 #### <span id="api-example-for-a-submenu-entry">Lampiran 22 - DATA KODE STATUS PROYEK</span>
 | KODE | KETERANGAN |
