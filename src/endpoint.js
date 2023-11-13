@@ -3176,7 +3176,7 @@
  * Oss Id adalah ID yang di Generate Sistem OSS dan Dikirimkan ke K/L/D Bersama Permohonan Nomor Induk Berusaha
  * @apiSuccess (200) {string(2){2}} responfetchNIB.dataNIB.jenis_pelaku_usaha Jenis Pelaku Usaha (* Lihat Lampiran 18)
  * @apiSuccess (200) {string(2){2}} responfetchNIB.dataNIB.jenis_perusahaan Jenis Perusahaan (* Lihat Lampiran 2)
- * @apiSuccess {string(10){10}} responfetchNIB.dataNIB.skala_usaha Skala Usaha Perusahaan
+ * @apiSuccess (200) {string(10){10}} responfetchNIB.dataNIB.skala_usaha Skala Usaha Perusahaan
  * @apiSuccess (200) {string(2)} responfetchNIB.dataNIB.status_penanaman_modal Status Penanaman Modal (* Lihat Lampiran 1)		
  * @apiSuccess (200) {string(255){255}} responfetchNIB.dataNIB.nama_perseroan Nama Perseroan
  * @apiSuccess (200) {string(255){255}} responfetchNIB.dataNIB.alamat_perseroan Alamat Perseroan
