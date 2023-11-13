@@ -3185,9 +3185,6 @@
  * yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
  * @apiSuccess (200) {string(20){20}} responfetchNIB.dataNIB.nomor_telpon_perseroan	Nomor Telepon Perseroan
  * @apiSuccess (200) {string(100){100}} responfetchNIB.dataNIB.email_perusahaan	Email Perusahaan
- * @apiSuccess (200) {Object} [responfetchNIB.dataNIB.data_perusahaan] Data Perusahaan
- * @apiSuccess (200) {Object[]} [responfetchNIB.dataNIB.data_perusahaan.data_legal] Data Legal Perusahaan
- * @apiSuccess (200) {string(100){100}} [responfetchNIB.dataNIB.data_perusahaan.data_legal.no_pengesahan] Nomor Pengesahan Perusahaan	
  * @apiSuccess (200) {Object[]} responfetchNIB.dataNIB.data_proyek Data Proyek		
  * @apiSuccess (200) {string(25){25}} responfetchNIB.dataNIB.data_proyek.id_proyek ID / Kode Proyek
  * @apiSuccess (200) {string(50){50}} responfetchNIB.dataNIB.data_proyek.kd_resiko Skala resiko		
@@ -3225,13 +3222,6 @@
  *            "perseroan_daerah_id": "",
  *            "nomor_telepon_perseroan": "",
  *            "email_perusahaan": "",
- *            "data_perusahaan": {
- *                "data_legal": [
- *                    {
- *                        "no_pengesahan": "",
- *                    }
- *                ],
- *            },
  *            "data_proyek": [
  *                {
  *                    "id_proyek": "",
