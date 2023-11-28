@@ -3181,6 +3181,7 @@
  * @apiSuccess (200) {string(255){255}} responfetchNIB.dataNIB.nama_perseroan Nama Perseroan
  * @apiSuccess (200) {string(255){255}} responfetchNIB.dataNIB.alamat_perseroan Alamat Perseroan
  * @apiSuccess (200) {string(7){7}} responfetchNIB.dataNIB.rt_rw_perseroan	Rt Rw Perseroan
+ * @apiSuccess (200) {string(16){16}} responfetchNIB.dataNIB.npwp_perusahaaan NPWP Perusahaan
  * @apiSuccess (200) {string(10){10}} responfetchNIB.dataNIB.perseroan_daerah_id ID Daerah Perseroan (* Menggunakan Kodefikasi
  * yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
  * @apiSuccess (200) {string(20){20}} responfetchNIB.dataNIB.nomor_telpon_perseroan	Nomor Telepon Perseroan
