@@ -3220,6 +3220,7 @@
  *            "nama_perseroan": "",
  *            "alamat_perseroan": "",
  *            "rt_rw_perseroan": "",
+ *            "npwp_perusahaaan": "",
  *            "perseroan_daerah_id": "",
  *            "nomor_telepon_perseroan": "",
  *            "email_perusahaan": "",
