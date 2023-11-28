@@ -371,3 +371,10 @@ Untuk Referensi Kode Izin Bisa didapatkan melalui method getDataReferensi dengan
 |  32  | Kode Kawasan                                      |
 #### <span id="api-example-for-a-submenu-entry">Lampiran 30 - DATA KODE KAWASAN</span>
 Untuk Referensi Kode Kawasan Bisa didapatkan melalui method <strong>getDataReferensi</strong> dengan memasukkan kode 32
+#### <span id="api-example-for-a-submenu-entry">Lampiran 31 - DATA SKALA USAHA</span>
+| KODE | KETERANGAN                                        |
+|------|---------------------------------------------------|
+|  01  | Usaha Mikro                                       |
+|  02  | Usaha Kecil                                       |
+|  03  | Usaha Menengah                                    |
+|  04  | Usaha Besar                                       |
