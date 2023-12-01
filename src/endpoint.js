@@ -717,7 +717,7 @@
  *       }
  *     }'
  * @apiHeader {String} Content-Type Content Type Request.
- * @apiHeader {String} Token SHA1(USERNAME+PASSWORD+NPWP+DATE(Ymd))
+ * @apiHeader {String} Token SHA1(USERNAME+PASSWORD+NIB+DATE(Ymd))
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
@@ -833,7 +833,7 @@
  * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_awal	    Masa Berlaku Dari Tanggal(format date : YYYY-MM- DD)
  * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_akhir	    Masa Berlaku Sampai Tanggal(format date : YYYY-MM- DD)
  * @apiBody {number(20.2)}    	dataNIB.data_rptka.rptka_gaji	    Gaji Tenaga Asing
- * @apiBody {string(11)}    	dataNIB.data_rptka.jumlah_tka_rptka	    Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)
+ * @apiBody {number(11)}    	dataNIB.data_rptka.jumlah_tka_rptka	    Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)
  * @apiBody {string(10)}    	dataNIB.data_rptka.jangka_penggunaan_waktu	    Jangka Waktu Penggunaan Tenaga Kerja Asing (TKA) dalam Izin Rencana Penggunaan Tenaga Kerja Asing (RPTKA) (format date :YYYY-MM-DD)
  * @apiBody {string(1)}    	dataNIB.data_rptka.jangka_waktu_permohonan_rptka	    Jangka Waktu Permohonan RPTKA (dalam hitungan bulan)
  * @apiBody {Object[]}    	dataNIB.data_rptka.rptka_jabatan	    Data RPTKA jabatan
@@ -1362,8 +1362,8 @@
  *     HTTP/1.1 200 OK
  *     {
  *     	 "responreceiveNIB": {
- *     		 "status": "",
- *     		 "keterangan": ""
+ *     		 "status": "1",
+ *     		 "keterangan": "Berhasil menyimpan data"
  *     	 }
  *     }
  * @apiError (400) 400 Data Parameter Salah.
@@ -1376,8 +1376,8 @@
  * @apiErrorExample Error-Response:
  *     {
  *     	 "responreceiveNIB": {
- *     		 "status": "",
- *     		 "keterangan": ""
+ *     		 "status": "2",
+ *     		 "keterangan": "Gagal menyimpan data"
  *     	 }
  *     }
  */
@@ -2807,7 +2807,7 @@
  *       }
  *     }'
  * @apiHeader {String} Content-Type Content Type Request.
- * @apiHeader {String} Token SHA1(USERNAME+PASSWORD+NPWP+DATE(Ymd))
+ * @apiHeader {String} Token SHA1(USERNAME+PASSWORD+NIB+DATE(Ymd))
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
@@ -3475,7 +3475,7 @@
  *         }
  *     }'
  * @apiHeader {String} Content-Type Content Type Request.
- * @apiHeader {String} Token SHA1(USERNAME+PASSWORD+NPWP+DATE(Ymd))
+ * @apiHeader {String} Token SHA1(USERNAME+PASSWORD+NIB+DATE(Ymd))
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
@@ -3858,7 +3858,7 @@
  *       }
  *     }'
  * @apiHeader {String} Content-Type Content Type Request.
- * @apiHeader {String} Token SHA1(USERNAME+PASSWORD+NPWP+DATE(Ymd))
+ * @apiHeader {String} Token SHA1(USERNAME+PASSWORD+NIB+DATE(Ymd))
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
@@ -4712,7 +4712,7 @@
  *       }
  *     }'
  * @apiHeader {String} Content-Type Content Type Request.
- * @apiHeader {String} Token SHA1(USERNAME+PASSWORD+NPWP+DATE(Ymd))
+ * @apiHeader {String} Token SHA1(USERNAME+PASSWORD+NIB+DATE(Ymd))
  * @apiHeaderExample {json} Header-Example:
  *     {
  *       "Content-Type": "application/json",
