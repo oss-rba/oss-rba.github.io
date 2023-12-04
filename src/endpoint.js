@@ -2987,7 +2987,7 @@
  *     HTTP/1.1 200 OK
  *     {
  *     	 "INQUERYNIBSTPW": {
- *     		 "nib": ""
+ *     		 "nib": {{nib}}
  *     	 }
  *     }
  * 
@@ -3000,6 +3000,10 @@
  * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.tgl_terbit_nib	Tanggal Terbit NIB (* Date Format YYYY-MM-DD)		
  * @apiSuccess (200) {string(10)}   	responinqueryNIBSTPW.dataNIBSTPW.tgl_perubahan_nib	Tanggal Perubahan NIB (* Date Format YYYY-MM-DD)		
  * @apiSuccess (200) {string(25)}   	responinqueryNIBSTPW.dataNIBSTPW.oss_id	Oss ID adalah ID yang di Generate Sistem OSS dan Dikirimkan ke L/L/D Bersama Permohonan Nomor Induk Berusaha (NIB)		
+ * @apiSuccess (200) {string(25)}    	responinqueryNIBSTPW.dataNIBSTPW.id_izin	    Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
+ * @apiSuccess (200) {string(12)}    	responinqueryNIBSTPW.dataNIBSTPW.kd_izin	    Kode Izin Sistem K/L/D (* Lihat Lampiran 8)
+ * @apiSuccess (200) {string(10)}    	responinqueryNIBSTPW.dataNIBSTPW.kd_daerah	    Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf )
+ * @apiSuccess (200) {string(2)}    	responinqueryNIBSTPW.dataNIBSTPW.kewenangan	    Kewenangan (00: Kewenangan Pusat; 01: Kewenangan Provinsi; 02: Kewenangan Kab/Kota)
  * @apiSuccess (200) {string(2)}   	responinqueryNIBSTPW.dataNIBSTPW.jenis_pelaku_usaha	Jenis Pelaku Usaha (* Lihat Lampiran 18)		
  * @apiSuccess (200) {string(25)}   	responinqueryNIBSTPW.dataNIBSTPW.nama_pj	Nama Penanggung Jawab		
  * @apiSuccess (200) {string(255)}   	responinqueryNIBSTPW.dataNIBSTPW.alamat_pj	Alamat Penanggung Jawab		
@@ -3054,14 +3058,18 @@
  *     HTTP/1.1 200 OK
  *     {
  *       "responinqueryNIBSTPW": {
- *         "kode": "",
- *         "keterangan": "",
+ *         "kode": 200,
+ *         "keterangan": "Sukses",
  *         "dataNIBSTPW": {
  *           "nib": "",
  *           "tgl_pengajuan_nib": "",
  *           "tgl_terbit_nib": "",
  *           "tgl_perubahan_nib": "",
  *           "oss_id": "",
+ *           "id_izin": "-",
+ *           "kd_izin": "-",
+ *           "kd_daerah": "-",
+ *           "kewenangan": "-",
  *           "jenis_pelaku_usaha": "",
  *           "nama_pj": "",
  *           "alamat_pj": "",
@@ -3128,8 +3136,9 @@
  * @apiErrorExample Error-Response:
  *     {
  *     	 "responinqueryNIBSTPW": {
- *     		 "kode": "",
- *     		 "keterangan": ""
+ *     		 "kode": 400,
+ *     		 "keterangan": "Data NIB tidak ditemukan",
+ *         "dataNIBSTPW": []
  *     	 }
  *     }
  */
