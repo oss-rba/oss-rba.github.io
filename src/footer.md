@@ -115,8 +115,6 @@ Untuk Referensi Kode Izin Bisa didapatkan melalui method getDataReferensi dengan
 |  70  | Penghentian Sementara Kegiatan Berusaha | Petugas menghentikan sementara kegiatan berusaha, apabila Izin tersebut bermasalah         |
 |  80  | Pengenaan Denda Administratif           | Petugas memberikan denda administratif, apabila Izin tersebut bermasalah                   |
 | 90   | Ditolak                                 | Petugas menolak permohonan Izin Usaha                                                      |
-| 91   | Pencabutan Perizinan Berusaha           | Petugas mencabut Izin Usaha                                                                |
-| 92   | Pembatalan Perizinan Berusaha           | Petugas membatalkan Izin Berusaha                                                          |
 | 93   | Penolakan Persyaratan                   | Penolakan status persyaratan oleh Dinas Teknis                                             |
 #### <span id="api-example-for-a-submenu-entry">Lampiran 11 - DATA KODE KLASIFIKASI SAHAM</span>
 | KODE                              | KETERANGAN                                |
