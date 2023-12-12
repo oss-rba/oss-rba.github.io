@@ -1,6 +1,6 @@
 /**
  * @api {post} /receiveLegal Receive Legal
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Menerima Data Legal Akta Pendirian & Pngesahan serta NPWP dari sistem AHU Online Kemenkumham ke Sisitem OSS
  * @apiName receiveLegal
  * @apiGroup Legal
@@ -367,7 +367,7 @@
 
 /**
  * @api {post} /receiveNIB Receive NIB
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Mengirimkan Data NIB & Checklist Izin dari Sistem OSS ke Sistem K/L/D
  * @apiName receiveNIB
  * @apiGroup NIB
@@ -1384,7 +1384,7 @@
 
 /**
  * @api {post} /receiveLicense Receive License
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Pengiriman Data Izin Final dari Sistem K/L/D ke Sistem OSS
  * @apiName receiveLicense
  * @apiGroup License
@@ -1543,7 +1543,7 @@
 
 /**
  * @api {post} /receiveLicenseStatus Receive License Status
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Pengiriman Data Status Izin dari Sistem K/L/D ke Sistem OSS
  * @apiGroup License
  * @apiExample {curl} Curl Request Example:
@@ -1672,7 +1672,7 @@
 
 /**
  * @api {post} /checkLicenseStatus Check License Status
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Pengecekan Data Status Izin dari Sistem K/L/D ke Sistem OSS
  * @apiName checkLicenseStatus
  * @apiGroup License
@@ -1749,7 +1749,7 @@
 
 /**
  * @api {post} /inqueryLicense Inquery License
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Inquery Data Izin di Sistem OSS
  * @apiName inqueryLicense
  * @apiGroup License
@@ -1992,7 +1992,7 @@
 
 /**
  * @api {post} /inqueryNIB Inquery NIB
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Inquery Data Nomor Induk Berusaha (NIB) di Sistem OSS
  * @apiName inqueryNIB
  * @apiGroup NIB
@@ -2662,7 +2662,7 @@
 
 /**
  * @api {post} /checkNIB Check NIB
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Cek Data Nomor Induk Berusaha (NIB) yang Ada di Sistem OSS
  * @apiName checkNIB
  * @apiGroup NIB
@@ -2737,7 +2737,7 @@
 
 /**
  * @api {post} /receiveNIBSTPW Receive NIB STPW
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Mengirimkan Data NIB STPW & Checklist Izin dari Sistem OSS ke Sistem K/L/D
  * @apiName receiveNIBSTPW
  * @apiGroup NIB
@@ -2961,7 +2961,7 @@
 
 /**
  * @api {post} /inqueryNIBSTPW Inquery NIB STPW
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Inquery Data Nomor Induk Berusaha (NIB) Surat Tanda Pendaftaraan Waralaba (STPW) di Sistem OSS
  * @apiName inqueryNIBSTPW
  * @apiGroup NIB
@@ -3145,7 +3145,7 @@
 
 /**
  * @api {post} /fetchNIB Fetch NIB
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiName fetchNIB
  * @apiGroup NIB
  * @apiExample {curl} Curl Request Example:
@@ -3295,7 +3295,7 @@
 
 /**
  * @api {post} /inqueryProyek Inquery Proyek
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Get Data Proyek di Sistem OSS
  * @apiName inqueryProyek
  * @apiGroup Proyek
@@ -3396,7 +3396,7 @@
 
 /**
  * @api {post} /getDataReferensi Get Data Referensi
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Get Data Referensi di Sistem OSS
  * @apiName getDataReferensi
  * @apiGroup Referensi
@@ -3467,7 +3467,7 @@
 
 /**
  * @api {post} /receiveFileDS Receive File DS
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Mengirimkan Data File Izin Yang diterbitkan oleh OSS dan Sudah Di Tanda Tangani Secara Elektronik dari Sistem OSS ke Sistem K/L/D
  * @apiName receiveFileDS
  * @apiGroup File DS
@@ -3532,7 +3532,7 @@
 
 /**
  * @api {post} /receiveNIBKKPR Receive NIB KKPR
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Menerima Data Legal Akta Pendirian & Pngesahan serta NPWP dari sistem AHU Online Kemenkumham ke Sisitem OSS
  * @apiName receiveNIBKKPR
  * @apiGroup NIB
@@ -4489,7 +4489,7 @@
 
 /**
  * @api {post} /receiveLicenseKKPR Receive License KKPR
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Pengiriman Data Persetujuan PKKPR dari Sistem K/L/D ke Sistem OSS
  * @apiName receiveLicenseKKPR
  * @apiGroup License
@@ -4634,7 +4634,7 @@
 
 /**
  * @api {post} /receiveNIBPSE Receive NIB PSE
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Mengirimkan Data NIB PSE Asing dari Sistem OSS ke Sistem K/L/D
  * @apiName receiveNIBPSE
  * @apiGroup NIB
@@ -4902,7 +4902,7 @@
 
 /**
  * @api {post} /inqueryFileDS Inquery File DS
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Service digunakan oleh sistem K/L/D untuk mendapatkan informasi url file hasil merge dokumen Izin, Sertifikat Standar, atau PB-UMKU berdasarkan id izin
  * @apiName inqueryFileDS
  * @apiGroup File DS
@@ -4963,7 +4963,7 @@
 
 /**
  * @api {post} /updateLicense Update License
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Pengiriman Data Izin Final dari Sistem K/L/D ke Sistem OSS
  * @apiName updateLicense
  * @apiGroup License
@@ -5085,7 +5085,7 @@
 
 /**
  * @api {post} /receiveCertificate Receive Certificate
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Receive Certificate di Sistem OSS
  * @apiName receiveCertificate
  * @apiGroup Certificate
@@ -5179,7 +5179,7 @@
 
 /**
  * @api {get} /inqueryCertificate/{id_permohonan_izin} Inquiry Certificate
- * @apiVersion 4.3.18
+ * @apiVersion 4.3.19
  * @apiDescription Inquery Certificate di Sistem OSS
  * @apiName inqueryCertificate
  * @apiGroup Certificate
