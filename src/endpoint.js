@@ -427,7 +427,7 @@
  *         "flag_umk": "",
  *         "flag_perubahan_data_teknis": "",
  *         "skala_usaha": "",
- *         "jenis_perubahan_terkahir": "",
+ *         "jenis_perubahan_terakhir": "",
  *         "pemegang_saham": [
  *           {
  *             "jenis_pemegang_saham": "",
@@ -835,17 +835,17 @@
  * @apiBody {number(20.2)}    	dataNIB.data_rptka.rptka_gaji	    Gaji Tenaga Asing
  * @apiBody {number(11)}    	dataNIB.data_rptka.jumlah_tka_rptka	    Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)
  * @apiBody {string(10)}    	dataNIB.data_rptka.jangka_penggunaan_waktu	    Jangka Waktu Penggunaan Tenaga Kerja Asing (TKA) dalam Izin Rencana Penggunaan Tenaga Kerja Asing (RPTKA) (format date :YYYY-MM-DD)
- * @apiBody {string(1)}    	dataNIB.data_rptka.jangka_waktu_permohonan_rptka	    Jangka Waktu Permohonan RPTKA (dalam hitungan bulan)
+ * @apiBody {number(1)}    	dataNIB.data_rptka.jangka_waktu_permohonan_rptka	    Jangka Waktu Permohonan RPTKA (dalam hitungan bulan)
  * @apiBody {Object[]}    	dataNIB.data_rptka.rptka_jabatan	    Data RPTKA jabatan
- * @apiBody {string(11)}    	dataNIB.data_rptka.rptka_jabatan.id_jabatan	    ID Jabatan Tenaga Kerja Asing berdasarkan https://jdih.kemna ker.go.id/data_puu/KEP247_MENX_2011.pdf
+ * @apiBody {number(11)}    	dataNIB.data_rptka.rptka_jabatan.id_jabatan	    ID Jabatan Tenaga Kerja Asing berdasarkan https://jdih.kemna ker.go.id/data_puu/KEP247_MENX_2011.pdf
  * @apiBody {string(255)}    	dataNIB.data_rptka.rptka_jabatan.jabatan	    Nama Jabatan
- * @apiBody {string(11)}    	dataNIB.data_rptka.rptka_jabatan.jumlah	    Jumlah Orang Yang Memiliki Jabatan
+ * @apiBody {number(11)}    	dataNIB.data_rptka.rptka_jabatan.jumlah	    Jumlah Orang Yang Memiliki Jabatan
  * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_jabatan.tgl_mulai	    Tanggal Mulai Jabatan (format date: YYYY-MM-DD)
  * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_jabatan.tgl_selesai	    Tanggal Selesai Jabatan (format date: YYYY-MM-DD)
  * @apiBody {string(255)}    	dataNIB.data_rptka.rptka_jabatan.keterangan	    keterangan
  * @apiBody {Object[]}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping	    rptka_tki_pendamping
- * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.id_jabatan	    Id jabatan
- * @apiBody {string(10)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.id_pendamping	    Id TKI Pendamping
+ * @apiBody {number(10)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.id_jabatan	    Id jabatan
+ * @apiBody {number(10)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.id_pendamping	    Id TKI Pendamping
  * @apiBody {string(100)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.nama	    Nama TKI Pendamping
  * @apiBody {string(20)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.nik	    Nomor NIK TKI Pendamping
  * @apiBody {string(255)}    	dataNIB.data_rptka.rptka_jabatan.rptka_tki_pendamping.jabatan	    Nama Jabatan TKI Pendamping
@@ -870,12 +870,12 @@
  * @apiBody {number(10)}    	dataNIB.data_proyek.jumlah_tki_p	    Jumlah Tenaga Kerja Indonesia (TKI) Perempuan
  * @apiBody {number(10)}    	dataNIB.data_proyek.jumlah_tka_l	    Jumlah Tenaga Kerja Asing (TKA) Laki -Laki
  * @apiBody {number(10)}    	dataNIB.data_proyek.jumlah_tka_p	    Jumlah Tenaga Kerja Asing (TKA) Perempuan
- * @apiBody {string(7)}    	dataNIB.data_proyek.kbli	    Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)
+ * @apiBody {number(7)}    	dataNIB.data_proyek.kbli	    Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)
  * @apiBody {string(3)}    	dataNIB.data_proyek.sektor	    Sektor Usaha Berdasarkan KBLI (* Lihat Lampiran 20)
  * @apiBody {string(1)}    	dataNIB.data_proyek.memiliki_menguasai	    Sudah Memiliki atar Menguasai Lahan (Value : Y = Sudah Memiliki atau Menguasai Lahan, N = Belum Memiliki atau Menguasai Lahan)
  * @apiBody {string(2)}    	dataNIB.data_proyek.jenis_lokasi	    Lokasi Berada dalam Lintas Administratif (Value : Y = Berada Dalam Lintas Administrasi, N = Bukan Berada Dalam Lintas Administrasi)
  * @apiBody {string(2)}    	dataNIB.data_proyek.status_tanah	    Status Kepemilikan Tanah (* Lihat Lampiran 5)
- * @apiBody {string(10)}    	dataNIB.data_proyek.luas_tanah	    Luas Bidang tanah
+ * @apiBody {number(10)}    	dataNIB.data_proyek.luas_tanah	    Luas Bidang tanah
  * @apiBody {string(2)}    	dataNIB.data_proyek.satuan_luas_tanah	    Satuan Luas Tanah (*Lihat Lampiran 17)
  * @apiBody {number(19)}    	dataNIB.data_proyek.pembelian_pematang_tanah	    Nilai Pembelian Pematang Tanah (Valuta:IDR)
  * @apiBody {number(19)}    	dataNIB.data_proyek.bangunan_gedung	    Nilai Bangunan Gedung (Valuta:IDR)
@@ -930,8 +930,8 @@
  * @apiBody {Object[]}    	dataNIB.data_proyek.data_proyek_produk	    data_proyek_produk
  * @apiBody {string(25)}    	dataNIB.data_proyek.data_proyek_produk.id_produk	    ID / Kode Produk
  * @apiBody {string(25)}    	dataNIB.data_proyek.data_proyek_produk.id_proyek	    ID / Kode Proyek
- * @apiBody {string(7)}    	dataNIB.data_proyek.data_proyek_produk.kbli	    Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)
- * @apiBody {string(10)}    	dataNIB.data_proyek.data_proyek_produk.id_bidang_usaha	    ID Bidang Usaha Berdasarkan Kodefikasi Data Negatif Investasi (DNI) (* Lihat Lampiran 15)
+ * @apiBody {number(7)}    	dataNIB.data_proyek.data_proyek_produk.kbli	    Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)
+ * @apiBody {number(10)}    	dataNIB.data_proyek.data_proyek_produk.id_bidang_usaha	    ID Bidang Usaha Berdasarkan Kodefikasi Data Negatif Investasi (DNI) (* Lihat Lampiran 15)
  * @apiBody {string(1024)}    	dataNIB.data_proyek.data_proyek_produk.jenis_produksi	    Rencana Produksi Yang Dihasilkan
  * @apiBody {number(20.2)}    	dataNIB.data_proyek.data_proyek_produk.kapasitas	    Kapasitas produksi suatu produk
  * @apiBody {string(100)}    	dataNIB.data_proyek.data_proyek_produk.satuan	    Satuan Dari Kapasitas Produksi
@@ -970,13 +970,13 @@
  * @apiBody {string(1)}    	dataNIB.data_checklist.flag_checklist	    Flag Checklist Komitmen (* Lihat Lampiran 28)
  * @apiBody {string(1)}    	dataNIB.data_checklist.flag_transaksional	    Flag : Y/N, Flag Izin Komersial/Operasio nal Diajukan Transaksional (Bisa Mengajukan Berulang)
  * @apiBody {string(1)}    	dataNIB.data_checklist.flag_perpanjangan	    Flag : Y/N, Flag Bahwa Izin Usaha ini Adalah Hasil Perpanjangan Dari Izin Usaha Yang Terbit Sebelum OSS
- * @apiBody {string(5){5}} dataNIB.data_checklist.kbli_konversi Kode KBLI
+ * @apiBody {number(5){5}} dataNIB.data_checklist.kbli_konversi Kode KBLI
  * @apiBody {string(150)}    	dataNIB.data_checklist.no_izin	    Nomor Izin Yang Terbit dan Masih Berlaku Sebelum OSS Diterapkan
  * @apiBody {string(10)}    	dataNIB.data_checklist.tgl_izin	    Tanggal Izin Yang Terbit dan Masih Berlaku Sebelum OSS Diterapkan (* Format:YYYY-MM- DD)
  * @apiBody {string(65535)}    	dataNIB.data_checklist.file_izin	    Attachment File Izin Yang Terbit dan Masih Berlaku Sebelum OSS Diterapkan Dalam Bentuk File PDF/Image Berupa Link (* Ukuran File Maks: 2MB)
  * @apiBody {string(15)}    	dataNIB.data_checklist.kd_dokumen	    Kode izin lingkungan (hanya untuk izin lingkungan)
  * @apiBody {string(255)}    	dataNIB.data_checklist.nm_dokumen	    Nama dokumen lingkungan (Hanya untuk izin lingkungan)
- * @apiBody {string(5)}    	dataNIB.data_checklist.kbli_konversi	    KBLI 2020 hasil konversi dari KBLI 2017 (jika ada)
+ * @apiBody {number(5)}    	dataNIB.data_checklist.kbli_konversi	    KBLI 2020 hasil konversi dari KBLI 2017 (jika ada)
  * @apiBody {Object[]}    	dataNIB.data_checklist.data_persyaratan	    data_persyaratan
  * @apiBody {string(25)}    	dataNIB.data_checklist.data_persyaratan.id_syarat	    Id / Kode Persyaratan
  * @apiBody {string(50)}    	dataNIB.data_checklist.data_persyaratan.no_dokumen	    Nomor Dokumen Persyaratan
@@ -989,9 +989,9 @@
  * @apiBody {string(10){10}} [dataNIB.data_checklist.data_produk_halal.kode_klasifikasi_produk]
  * @apiBody {string(1){1}} [dataNIB.data_checklist.data_produk_halal.flag_self_declare]
  * @apiBody {Object[]} [dataNIB.data_checklist.data_produk_halal.list_produk] Berulang (N) Rows
- * @apiBody {string(9){9}} [dataNIB.data_checklist.data_produk_halal.list_produk.id_cakupan_produk]
+ * @apiBody {number(9){9}} [dataNIB.data_checklist.data_produk_halal.list_produk.id_cakupan_produk]
  * @apiBody {string(65535){65535}} [dataNIB.data_checklist.data_produk_halal.list_produk.uraian_produk]
- * @apiBody {string(5){5}} [dataNIB.data_checklist.data_produk_halal.list_produk.kbli]
+ * @apiBody {number(5){5}} [dataNIB.data_checklist.data_produk_halal.list_produk.kbli]
  * @apiBody {string(30){30}} [dataNIB.data_checklist.data_produk_halal.list_produk.id_proyek]
  * @apiBody {string(30){30}} [dataNIB.data_checklist.data_produk_halal.list_produk.id_produk]
  * @apiBody {string(30){30}} [dataNIB.data_checklist.data_produk_halal.list_produk.id_pengajuan_sertifikat_halal]
@@ -1797,12 +1797,12 @@
  * @apiSuccess (200) {number(10){10}} dataLicense.data.data_proyek.jumlah_tki_p Jumlah Tenaga Kerja Indonesia (TKI) Perempuan
  * @apiSuccess (200) {number(10){10}} dataLicense.data.data_proyek.jumlah_tka_l Jumlah Tenaga Kerja Asing (TKA) Laki -Laki
  * @apiSuccess (200) {number(10){10}} dataLicense.data.data_proyek.jumlah_tka_p Jumlah Tenaga Kerja Asing (TKA) Perempuan
- * @apiSuccess (200) {string(5){5}} dataLicense.data.data_proyek.kbli Kode KBLI <b>(* Menggunakan Kode KBLI Tahun 2020)</b>
+ * @apiSuccess (200) {number(5){5}} dataLicense.data.data_proyek.kbli Kode KBLI <b>(* Menggunakan Kode KBLI Tahun 2020)</b>
  * @apiSuccess (200) {string(3){3}} dataLicense.data.data_proyek.sektor Sektor Usaha Berdasarkan KBLI <b>(* Lihat Lampiran 20)</b>
  * @apiSuccess (200) {string(1){1}} dataLicense.data.data_proyek.memiliki_menguasai Sudah Memiliki atar Menguasai Lahan <br>(Value : Y = Sudah Memiliki atau Menguasai Lahan, N = Belum Memiliki atau Menguasai Lahan)
  * @apiSuccess (200) {string(2){2}} dataLicense.data.data_proyek.jenis_lokasi Lokasi Berada dalam Lintas Administratif <br>(Value : Y = Berada Dalam Lintas Administrasi, N = Bukan Berada Dalam Lintas Administrasi)
  * @apiSuccess (200) {string(2){2}} dataLicense.data.data_proyek.status_tanah Status Kepemilikan Tanah <b>(* Lihat Lampiran 5)</b>
- * @apiSuccess (200) {string(10){10}} dataLicense.data.data_proyek.luas_tanah Luas Bidang tanah
+ * @apiSuccess (200) {number(10){10}} dataLicense.data.data_proyek.luas_tanah Luas Bidang tanah
  * @apiSuccess (200) {string(2){2}} dataLicense.data.data_proyek.satuan_luas_tanah Satuan Luas Tanah <b>(*Lihat Lampiran 17)</b>
  * @apiSuccess (200) {Object[]} dataLicense.data.data_checklist Data Checklist
  * @apiSuccess (200) {string(25){25}} dataLicense.data.data_checklist.id_produk ID Produk
@@ -2203,7 +2203,7 @@
  * @apiSuccess (200) {number(10)}    	responinqueryNIB.dataNIB.data_proyek.jumlah_tki_p	Jumlah Tenaga Kerja Indonesia (TKI) Perempuan		
  * @apiSuccess (200) {number(10)}    	responinqueryNIB.dataNIB.data_proyek.jumlah_tka_l	Jumlah Tenaga Kerja Asing (TKA) Laki -Laki		
  * @apiSuccess (200) {number(10)}    	responinqueryNIB.dataNIB.data_proyek.jumlah_tka_p	Jumlah Tenaga Kerja Asing (TKA) Perempuan		
- * @apiSuccess (200) {string(7)}    	responinqueryNIB.dataNIB.data_proyek.kbli	Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)		
+ * @apiSuccess (200) {number(7)}    	responinqueryNIB.dataNIB.data_proyek.kbli	Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)		
  * @apiSuccess (200) {string(3)}    	responinqueryNIB.dataNIB.data_proyek.sektor	Sektor Usaha Berdasarkan KBLI (* Lihat Lampiran 20)		
  * @apiSuccess (200) {string(1)}    	responinqueryNIB.dataNIB.data_proyek.memiliki_menguasai	Sudah Memiliki atar Menguasai Lahan (Value : Y = Sudah Memiliki atau Menguasai Lahan, N = Belum Memiliki atau Menguasai Lahan)		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.data_proyek.jenis_lokasi	Lokasi Berada dalam Lintas Administratif (Value : Y = Berada Dalam Lintas Administrasi, N = Bukan Berada Dalam Lintas Administrasi)		
@@ -2263,7 +2263,7 @@
  * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.data_proyek.data_proyek_produk	    data_proyek_produk		
  * @apiSuccess (200) {string(25)}    	responinqueryNIB.dataNIB.data_proyek.data_proyek_produk.id_produk	ID / Kode Produk		
  * @apiSuccess (200) {string(25)}    	responinqueryNIB.dataNIB.data_proyek.data_proyek_produk.id_proyek	ID / Kode Proyek		
- * @apiSuccess (200) {string(7)}    	responinqueryNIB.dataNIB.data_proyek.data_proyek_produk.kbli	Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)		
+ * @apiSuccess (200) {number(7)}    	responinqueryNIB.dataNIB.data_proyek.data_proyek_produk.kbli	Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)		
  * @apiSuccess (200) {number(10)}    	responinqueryNIB.dataNIB.data_proyek.data_proyek_produk.id_bidang_usaha	ID Bidang Usaha Berdasarkan Kodefikasi Data Negatif Investasi (DNI) (* Lihat Lampiran 15)		
  * @apiSuccess (200) {string(1024)}    	responinqueryNIB.dataNIB.data_proyek.data_proyek_produk.jenis_produksi	Rencana Produksi Yang Dihasilkan		
  * @apiSuccess (200) {number(20.2)}    	responinqueryNIB.dataNIB.data_proyek.data_proyek_produk.kapasitas	Kapasitas produksi suatu produk		
@@ -3335,7 +3335,7 @@
  * @apiSuccess (200) {string(2){2}} data.skala_usaha Skala Usaha Perusahaan
  * @apiSuccess (200) {Object[]} data.data_proyek Data Proyek
  * @apiSuccess (200) {String(25){25}} data.data_proyek.id_proyek ID Proyek
- * @apiSuccess (200) {String(5){5}} data.data_proyek.kbli Kode KBLI <b>(* Menggunakan Kode KBLI Tahun 2020)</b>
+ * @apiSuccess (200) {number(5){5}} data.data_proyek.kbli Kode KBLI <b>(* Menggunakan Kode KBLI Tahun 2020)</b>
  * @apiSuccess (200) {String(16){16}} [data.data_proyek.npwp_kantor_cabang] NPWP Kantor Cabang
  * @apiSuccess (200) {String(2){2}} data.data_proyek.skala_usaha Skala Usaha Perusahaan
  * @apiSuccess (200) {String(10){10}} data.data_proyek.tgl_pengajuan_proyek Tanggal Pengajuan Proyek (format date: YYYY-MM-DD)
@@ -3986,7 +3986,7 @@
  * @apiBody {number(20.2){20}} dataNIB.data_rptka.rptka_gaji	Gaji Tenaga Asing
  * @apiBody {number(11){11}} dataNIB.data_rptka.jumlah_tka_rptka	Jumlah Tenaga Kerja Asing (TKA) dalam Rencana Penggunaan Tenaga Kerja Asing (RPTKA)
  * @apiBody {string(10){10}} dataNIB.data_rptka.jangka_penggunaan_waktu	Jangka Waktu Penggunaan Tenaga Kerja Asing (TKA) dalam Izin Rencana Penggunaan Tenaga Kerja Asing (RPTKA) (format date : YYYY-MM-DD)
- * @apiBody {string(1){1}} dataNIB.data_rptka.jangka_waktu_permohonan_rptka	Jangka Waktu Permohonan RPTKA (dalam hitungan bulan)
+ * @apiBody {number(1){1}} dataNIB.data_rptka.jangka_waktu_permohonan_rptka	Jangka Waktu Permohonan RPTKA (dalam hitungan bulan)
  * @apiBody {Object[]}	dataNIB.data_rptka.rptka_jabatan	    rptka_jabatan
  * @apiBody {number(11){11}} dataNIB.data_rptka.rptka_jabatan.id_jabatan	ID Jabatan Tenaga Kerja Asing berdasarkan https://jdih.kemnaker.go.id/data_puu/KEP247_MENX_2011.pdf
  * @apiBody {string(255){255}} dataNIB.data_rptka.rptka_jabatan.jabatan	Nama Jabatan
@@ -4021,7 +4021,7 @@
  * @apiBody {number(10){10}} dataNIB.data_proyek.jumlah_tki_p	Jumlah Tenaga Kerja Indonesia (TKI) Perempuan
  * @apiBody {number(10){10}} dataNIB.data_proyek.jumlah_tka_l	Jumlah Tenaga Kerja Asing (TKA) Laki -Laki
  * @apiBody {number(10){10}} dataNIB.data_proyek.jumlah_tka_p	Jumlah Tenaga Kerja Asing (TKA) Perempuan
- * @apiBody {string(7){7}} dataNIB.data_proyek.kbli	Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)
+ * @apiBody {number(7){7}} dataNIB.data_proyek.kbli	Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)
  * @apiBody {string(3){3}} dataNIB.data_proyek.sektor	Sektor Usaha Berdasarkan KBLI (* Lihat Lampiran 20)
  * @apiBody {string(1){1}} dataNIB.data_proyek.memiliki_menguasai	Sudah Memiliki atar Menguasai Lahan (Value : Y = Sudah Memiliki atau Menguasai Lahan, N = Belum Memiliki atau Menguasai Lahan)
  * @apiBody {string(2){2}} dataNIB.data_proyek.jenis_lokasi	Lokasi Berada dalam Lintas Administratif (Value : Y = Berada Dalam Lintas Administrasi, N = Bukan Berada Dalam Lintas Administrasi)
@@ -4093,8 +4093,8 @@
  * @apiBody {Object[]}	dataNIB.data_proyek.data_proyek_produk	    data_proyek_produk
  * @apiBody {string(25){25}} dataNIB.data_proyek.data_proyek_produk.id_produk	ID / Kode Produk
  * @apiBody {string(25){25}} dataNIB.data_proyek.data_proyek_produk.id_proyek	ID / Kode Proyek
- * @apiBody {string(7){7}} dataNIB.data_proyek.data_proyek_produk.kbli	Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)
- * @apiBody {string(10){10}} dataNIB.data_proyek.data_proyek_produk.id_bidang_usaha	ID Bidang Usaha Berdasarkan Kodefikasi Data Negatif Investasi (DNI) (* Lihat Lampiran 15)
+ * @apiBody {number(7){7}} dataNIB.data_proyek.data_proyek_produk.kbli	Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)
+ * @apiBody {number(10){10}} dataNIB.data_proyek.data_proyek_produk.id_bidang_usaha	ID Bidang Usaha Berdasarkan Kodefikasi Data Negatif Investasi (DNI) (* Lihat Lampiran 15)
  * @apiBody {string(1024){1024}} dataNIB.data_proyek.data_proyek_produk.jenis_produksi	Rencana Produksi Yang Dihasilkan
  * @apiBody {number(20.2){20}} dataNIB.data_proyek.data_proyek_produk.kapasitas	Kapasitas produksi suatu produk
  * @apiBody {string(100){100}} dataNIB.data_proyek.data_proyek_produk.satuan	Satuan Dari Kapasitas Produksi
