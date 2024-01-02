@@ -3763,6 +3763,9 @@
  *             "nama_perairan": "",
  *             "kedalaman": "",
  *             "file_rencana_teknis": "",
+ *             "flag_multi_kbli": "",
+ *             "id_proyek_utama": "",
+ *             "jumlah_multi_kbli": 0,
  *             "data_lokasi_proyek": [
  *               {
  *                 "id_proyek_lokasi": "",
@@ -3787,7 +3790,12 @@
  *                     "id_proyek_lokasi": "",
  *                     "posisi_lokasi": ""
  *                   }
- *                 ]
+ *                 ],
+ *                 "data_investasi": {
+ *                    "jenis_akumulasi": "",
+ *                    "modal_kerja": 0,
+ *                    "jumlah_investasi": 0
+ *                 }
  *               }
  *             ],
  *             "data_proyek_produk": [
@@ -4072,7 +4080,10 @@
  * @apiBody {string(255){255}} dataNIB.data_proyek.nama_perairan	Nama Lokasi Perairan
  * @apiBody {number(10){10}} dataNIB.data_proyek.kedalaman	Kedalaman Perairan
  * @apiBody {string(65535){65535}} dataNIB.data_proyek.file_rencana_teknis	    file_rencana_teknis
- * @apiBody {Object[]}	dataNIB.data_proyek.data_lokasi_proyek	    data_lokasi_proyek
+ * @apiBody {string(1){1}} dataNIB.data_proyek.flag_multi_kbli Flag Multi KBLI
+ * @apiBody {string(23){23}} dataNIB.data_proyek.id_proyek_utama Id Proyek Utama
+ * @apiBody {number(11){11}} dataNIB.data_proyek.jumlah_multi_kbli Jumlah Mutli KBLI
+ * @apiBody {Object[]}	dataNIB.data_proyek.data_lokasi_proyek data_lokasi_proyek
  * @apiBody {string(25){25}} dataNIB.data_proyek.data_lokasi_proyek.id_proyek_lokasi	ID / Kode Lokasi Proyek
  * @apiBody {string(10){10}} dataNIB.data_proyek.data_lokasi_proyek.proyek_daerah_id	Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
  * @apiBody {string(3){3}} dataNIB.data_proyek.data_lokasi_proyek.kd_kawasan	Kode Kawasan (* Lihat Lampiran di https://oss.go.id/oss/#home/portal/lstKawasan)
@@ -4090,6 +4101,10 @@
  * @apiBody {string(25){25}} dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek.id_proyek_posisi	ID / Kode Posisi Proyek
  * @apiBody {string(25){25}} dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek.id_proyek_lokasi	ID / Kode Lokasi Proyek
  * @apiBody {string(2){2}} dataNIB.data_proyek.data_lokasi_proyek.data_posisi_proyek.posisi_lokasi	Posisi Lokasi (* Lihat Lampiran 24)
+ * @apiBody {Object} dataNIB.data_proyek.data_lokasi_proyek.data_investasi Data Investasi
+ * @apiBody {string(2){2}} dataNIB.data_proyek.data_lokasi_proyek.data_investasi.jenis_akumulasi Jenis Akumulasi
+ * @apiBody {number(11){11}} dataNIB.data_proyek.data_lokasi_proyek.data_investasi.modal_kerja Modal Kerja berdasarkan Lokasi
+ * @apiBody {number(11){11}} dataNIB.data_proyek.data_lokasi_proyek.data_investasi.jumlah_investasi Jumlah Investasi berdasarkan Lokasi
  * @apiBody {Object[]}	dataNIB.data_proyek.data_proyek_produk	    data_proyek_produk
  * @apiBody {string(25){25}} dataNIB.data_proyek.data_proyek_produk.id_produk	ID / Kode Produk
  * @apiBody {string(25){25}} dataNIB.data_proyek.data_proyek_produk.id_proyek	ID / Kode Proyek
@@ -4365,6 +4380,9 @@
  *             "nama_perairan": "",
  *             "kedalaman": "",
  *             "file_rencana_teknis": "",
+ *             "flag_multi_kbli": "",
+ *             "id_proyek_utama": "",
+ *             "jumlah_multi_kbli": 0,
  *             "data_lokasi_proyek": [
  *               {
  *                 "id_proyek_lokasi": "",
@@ -4384,7 +4402,12 @@
  *                     "id_proyek_lokasi": "",
  *                     "posisi_lokasi": ""
  *                   }
- *                 ]
+ *                 ],
+ *                 "data_investasi": {
+ *                    "jenis_akumulasi": "",
+ *                    "modal_kerja": 0,
+ *                    "jumlah_investasi": 0
+ *                 }
  *               }
  *             ],
  *             "data_proyek_produk": [
