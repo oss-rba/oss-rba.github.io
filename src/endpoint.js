@@ -3357,6 +3357,45 @@
  * @apiSuccess (200) {Object} data.data_proyek.data_teknis_lokasi Data Teknis Lokasi
  * @apiSuccess (200) {Number(20){20}} data.data_proyek.data_teknis_lokasi.luas_tanah_disetujui Luas Tanah Disetujui
  * @apiSuccess (200) {String(2){2}} data.data_proyek.data_teknis_lokasi.satuan_luas_tanah_disetujui Satuan Luas Tanah Disetujui <b>(*Lihat Lampiran 17)</b>
+ * @apiSuccessExample {json} Succes-Response:
+ * {
+ *   "kode_status": 200,
+ *   "keterangan": "sukses",
+ *   "data": {
+ *     "nama_perusahaan": "",
+ *     "alamat_perseroan": "",
+ *     "npwp_perusahaan": "",
+ *     "jenis_pelaku_usaha": "",
+ *     "tgl_terbit_nib": "",
+ *     "skala_usaha_final": "",
+ *     "data_proyek": [
+ *       {
+ *         "id_proyek": "",
+ *         "kbli": "",
+ *         "npwp_kantor_cabang": "",
+ *         "skala_usaha": "",
+ *         "tgl_pengajuan_proyek": "",
+ *         "alamat_usaha": "",
+ *         "kd_daerah": "",
+ *         "sub_jumlah": 0,
+ *         "modal_kerja": 0,
+ *         "jumlah_investasi": 0,
+ *         "fasilitas": [
+ *           {
+ *             "flag_fasilitas": "",
+ *             "id_permohonan_fasilitas": "",
+ *             "nomor_kmk_fasilitas": "",
+ *             "tgl_pengajuan_fasilitas": ""
+ *           }
+ *         ],
+ *         "data_teknis_lokasi": {
+ *           "luas_tanah_disetujui": 0,
+ *           "satuan_luas_tanah_disetujui": ""
+ *         }
+ *       }
+ *     ]
+ *   }
+ * }
  * 
  * @apiError (400) {Number(3){3}} kode_status Kode Respon <b>(* Lihat Lampiran 9)</b>
  * @apiError (400) {String(255)} keterangan Keterangan Respon (Data Parameter Salah)
