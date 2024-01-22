@@ -1712,6 +1712,7 @@
  * @apiSuccess (200) {string(25)}    	responcheckLicenseStatus.dataIZIN.id_izin	        Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
  * @apiSuccess (200) {string(2)}    	responcheckLicenseStatus.dataIZIN.kd_status	    Kode Status Perizinan (* Lihat Lampiran 10)
  * @apiSuccess (200) {string(255)}    	responcheckLicenseStatus.dataIZIN.uraian_status	    Uraian status
+ * @apiSuccess (200) {text} responcheckLicenseStatus.dataIZIN.file_lampiran File Lampiran
 
  * @apiSuccessExample {json} Success-Response:
  *     HTTP/1.1 200 OK
@@ -1725,6 +1726,7 @@
  *           "id_izin": "I-12334",
  *           "kd_status": "58",
  *           "uraian_status": "Izin terbit/SS terverifikasi"
+ *           "file_lampiran": ""
  *         }
  *       }
  *     }
