@@ -3192,11 +3192,8 @@
  * @apiSuccess (200) {string(255){255}} responfetchNIB.dataNIB.nama_perseroan Nama Perseroan
  * @apiSuccess (200) {string(255){255}} responfetchNIB.dataNIB.alamat_perseroan Alamat Perseroan
  * @apiSuccess (200) {string(7){7}} responfetchNIB.dataNIB.rt_rw_perseroan	Rt Rw Perseroan
- * @apiSuccess (200) {string(16){16}} responfetchNIB.dataNIB.npwp_perusahaaan NPWP Perusahaan
  * @apiSuccess (200) {string(10){10}} responfetchNIB.dataNIB.perseroan_daerah_id ID Daerah Perseroan (* Menggunakan Kodefikasi
  * yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
- * @apiSuccess (200) {string(20){20}} responfetchNIB.dataNIB.nomor_telpon_perseroan	Nomor Telepon Perseroan
- * @apiSuccess (200) {string(100){100}} responfetchNIB.dataNIB.email_perusahaan	Email Perusahaan
  * @apiSuccess (200) {Object[]} responfetchNIB.dataNIB.data_proyek Data Proyek		
  * @apiSuccess (200) {string(25){25}} responfetchNIB.dataNIB.data_proyek.id_proyek ID / Kode Proyek
  * @apiSuccess (200) {string(50){50}} responfetchNIB.dataNIB.data_proyek.kd_resiko Skala resiko		
@@ -3211,7 +3208,6 @@
  * @apiSuccess (200) {string(25){25}} responfetchNIB.dataNIB.data_proyek.kbli.tipe_oss
  * @apiSuccess (200) {string(3){3}} responfetchNIB.dataNIB.data_proyek.kbli.jenis_perizinan Jenis Perizinan (* Lihat Lampiran 27)
  * @apiSuccess (200) {string(10){10}} responfetchNIB.dataNIB.data_proyek.tgl_masa_berlaku Tanggal Masa Berlaku Perizinan
- * @apiSuccess (200) {string(65535){65535}} responfetchNIB.dataNIB.data_proyek.status_pengajuan Status Pengajuan Perizinan
  * @apiSuccessExample {json} Succes-Response:
  * {
  *    "responfetchNIB": {
@@ -3231,10 +3227,7 @@
  *            "nama_perseroan": "",
  *            "alamat_perseroan": "",
  *            "rt_rw_perseroan": "",
- *            "npwp_perusahaaan": "",
  *            "perseroan_daerah_id": "",
- *            "nomor_telepon_perseroan": "",
- *            "email_perusahaan": "",
  *            "data_proyek": [
  *                {
  *                    "id_proyek": "",
