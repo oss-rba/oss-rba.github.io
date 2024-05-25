@@ -1761,7 +1761,8 @@
  * --header 'Content-Type: application/json' \
  * --data '{
  *    "INQUERYLICENSE": {
- *        "id_izin": "{{id_izin}}"
+ *        "id_izin": "{{id_izin}}",
+ *        "data_persyaratan": TRUE
  *    }
  * }'
  * @apiHeader {string} Content-Type Content Type Request.
@@ -1775,11 +1776,13 @@
  * HTTP/1.1 200 OK
  * {
  *  "INQUERYLICENSE": {
- *    "id_izin": {{id_izin}}
+ *    "id_izin": "{{id_izin}}",
+ *    "data_persyaratan": TRUE
  *  }
  * }
  * @apiBody {Object} INQUERYLICENSE Payload Inquery License
  * @apiBody {string(30){30}} INQUERYLICENSE.id_izin Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
+ * @apiBody {string} [INQUERYLICENSE.data_persyaratan] Dapat digunakan menggunakan untuk memanggil url file syarat yang di upload oleh Pelaku Usaha
  * 
  * @apiSuccess (200) {Object} dataLicense Data License
  * @apiSuccess (200) {boolean} dataLicense.success Status Response
@@ -1814,48 +1817,22 @@
  * @apiSuccess (200) {string(13){13}} dataLicense.data.data_checklist.kd_izin	Kode Izin Sistem K/L/D (* service getDataReferensi kode : 8)		
  * @apiSuccess (200) {string(10){10}} dataLicense.data.data_checklist.kd_daerah	Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)		
  * @apiSuccess (200) {string(255){255}} dataLicense.data.data_checklist.nama_izin	Nama Izin		
- * @apiSuccess (200) {string(150){150}} dataLicense.data.data_checklist.no_izin	Nomor Izin		
- * @apiSuccess (200) {string(10){10}} dataLicense.data.data_checklist.tgl_izin	Tanggal Izin (format date : YYYY-MM-DD)		
  * @apiSuccess (200) {string(100){100}} dataLicense.data.data_checklist.instansi	Nama Instansi		
- * @apiSuccess (200) {number(19){19}} dataLicense.data.data_checklist.id_bidang_spesifik	ID Bidang Spesifik		
- * @apiSuccess (200) {string(65535){65535}} dataLicense.data.data_checklist.bidang_spesifik	Uraian Bidang Spesifik		
+ * @apiSuccess (200) {number(19){19}} dataLicense.data.data_checklist.id_bidang_spesifik	ID Bidang Spesifik	
  * @apiSuccess (200) {number(19){19}} dataLicense.data.data_checklist.id_kewenangan	ID Kewenangan		
- * @apiSuccess (200) {string(255){255}} dataLicense.data.data_checklist.parameter_kewenangan	Parameter Kewenangan Izin		
- * @apiSuccess (200) {string(2){2}} dataLicense.data.data_checklist.kewenangan	00: Kewenangan Pusat; <br>01: Kewenangan Provinsi; <br>02: Kewenangan Kab/Kota		
- * @apiSuccess (200) {string(1){1}} dataLicense.data.data_checklist.flag_checklist	Flag Checklist Komitmen (* Lihat Lampiran 28)		
+ * @apiSuccess (200) {string(255){255}} dataLicense.data.data_checklist.parameter_kewenangan	Parameter Kewenangan Izin	
+ * @apiSuccess (200) {string(2){2}} dataLicense.data.data_checklist.kewenangan	00: Kewenangan Pusat; <br>01: Kewenangan Provinsi; <br>02: Kewenangan Kab/Kota	
+ * @apiSuccess (200) {string(1){1}} dataLicense.data.data_checklist.flag_checklist	Flag Checklist Komitmen (* Lihat Lampiran 28)			
  * @apiSuccess (200) {string(1){1}} dataLicense.data.data_checklist.flag_transaksional	Flag : Y/N, Flag Izin Komersial / Operasional Diajukan Transaksional (Bisa Mengajukan Berulang)		
  * @apiSuccess (200) {string(1){1}} dataLicense.data.data_checklist.flag_perpanjangan	Flag : Y/N, Flag Bahwa Izin Usaha Ini Adalah Hasil Perpanjangan Dari Zin Usaha Yang Terbit Sebelum OSS		
- * @apiSuccess (200) {Object} [dataLicense.data.data_checklist.data_teknis_lokasi] Data Teknis Lokasi
- * @apiSuccess (200) {string(30){30}} [dataLicense.data.data_checklist.data_teknis_lokasi.id_komitmen] ID Komitmen Teknis Lokasi
- * @apiSuccess (200) {json} [dataLicense.data.data_checklist.data_teknis_lokasi.koefisien_dasar_bangunan] Koefisien Dasar Bangunan
- * @apiSuccess (200) {json} [dataLicense.data.data_checklist.data_teknis_lokasi.koefisien_lantai_bangunan] Koefisien Lantai Bangunan
- * @apiSuccess (200) {json} [dataLicense.data.data_checklist.data_teknis_lokasi.koefisien_dasar_hijau] Koefisien Dasar Hijau
- * @apiSuccess (200) {json} [dataLicense.data.data_checklist.data_teknis_lokasi.garis_sempadan_bangunan] Garis Sempadan Bangunan
- * @apiSuccess (200) {json} [dataLicense.data.data_checklist.data_teknis_lokasi.jalan_arteri] Jalan Arteri
- * @apiSuccess (200) {json} [dataLicense.data.data_checklist.data_teknis_lokasi.jalan_kolektor] Jalan Kolektor
- * @apiSuccess (200) {json} [dataLicense.data.data_checklist.data_teknis_lokasi.jalan_lokal] Jalan Lokal
- * @apiSuccess (200) {json} [dataLicense.data.data_checklist.data_teknis_lokasi.jalan_lingkungan] Jalan Lingkungan
- * @apiSuccess (200) {Object} [dataLicense.data.data_checklist.data_teknis_bangunan] Data Teknis Bangunan
- * @apiSuccess (200) {string(30){30}} [dataLicense.data.data_checklist.data_teknis_bangunan.id_komitmen] ID Komitmen Teknis Bangunan
- * @apiSuccess (200) {string(255){255}} [dataLicense.data.data_checklist.data_teknis_bangunan.nama_bangunan] Nama Bangunan
- * @apiSuccess (200) {string(25){25}} [dataLicense.data.data_checklist.data_teknis_bangunan.luas_bangunan] Luas Bangunan
- * @apiSuccess (200) {number(5){5}}} [dataLicense.data.data_checklist.data_teknis_bangunan.jumlah_lantai] Jumlah Lantai
- * @apiSuccess (200) {string(5){5}} [dataLicense.data.data_checklist.data_teknis_bangunan.tinggi_bangunan] Tinggi Bangunan
- * @apiSuccess (200) {string(25){25}} [dataLicense.data.data_checklist.data_teknis_bangunan.luas_basement] Luas Basement
- * @apiSuccess (200) {string(2){2}} [dataLicense.data.data_checklist.data_teknis_bangunan.jumlah_lantai_basement] Jumlah Lantai Basement
- * @apiSuccess (200) {string(150){150}} [dataLicense.data.data_checklist.data_teknis_bangunan.perancang_dokumen_teknis] Perancang Dokumen Teknis
- * @apiSuccess (200) {string(25){25}} [dataLicense.data.data_checklist.data_teknis_bangunan.luas_bangunan_disetujui] Luas Bangunan Disetujui
- * @apiSuccess (200) {string(2){2}} [dataLicense.data.data_checklist.data_teknis_bangunan.jumlah_lantai_disetujui] Jumlah Lantai Disetujui
- * @apiSuccess (200) {string(5){5}} [dataLicense.data.data_checklist.data_teknis_bangunan.tinggi_bangunan_disetujui] Tinggi Bangunan Disetujui
- * @apiSuccess (200) {string(25){25}} [dataLicense.data.data_checklist.data_teknis_bangunan.luas_basement_disetujui] Luas Basement Disetujui
- * @apiSuccess (200) {string(2){2}} [dataLicense.data.data_checklist.data_teknis_bangunan.jumlah_lantai_basement_disetujui] Jumlah Lantai Basement Disetujui
- * @apiSuccess (200) {Object[]} dataLicense.data.data_checklist.data_teknis_lingkungan Data Teknis Lingkungan
- * @apiSuccess (200) {string(13){13}} dataLicense.data.data_checklist.data_teknis_lingkungan.kd_izin Kode Izin Sistem K/L/D <b>(* service getDataReferensi kode :8)</b>
- * @apiSuccess (200) {string(300){300}} dataLicense.data.data_checklist.data_teknis_lingkungan.nama_izin Nama Dokumen Perizinan
- * @apiSuccess (200) {string(65535){65535}} dataLicense.data.data_checklist.data_teknis_lingkungan.status_izin Status Perizinan
- * @apiSuccess (200) {string(25){25}} dataLicense.data.data_checklist.data_teknis_lingkungan.nomor_izin Nomor Izin Yang Terbit dan Masih Berlaku Sebelum OSS Diterapkan
- * @apiSuccess (200) {string(65535){65535}} dataLicense.data.data_checklist.data_teknis_lingkungan.file_respon
- * @apiSuccess (200) {string(65535){65535}} dataLicense.data.data_checklist.data_teknis_lingkungan.file_izin Attachment File Izin Yang Terbit dan Masih Berlaku Sebelum OSS Diterapkan Dalam Bentuk File PDF/Image Berupa Link (* Ukuran File Maks: 2MB)
+ * @apiSuccess (200) {string(150){150}} dataLicense.data.data_checklist.no_izin	Nomor Izin	
+ * @apiSuccess (200) {string(10){10}} dataLicense.data.data_checklist.tgl_izin	Tanggal Izin (format date : YYYY-MM-DD)		
+ * @apiSuccess (200) {Object[]} [dataLicense.data.data_checklist.data_persyaratan] Data Persyaratan
+ * @apiSuccess (200) {string(25){25}} [dataLicense.data.data_checklist.data_persyaratan.id_syarat] Nomor syarat OSS
+ * @apiSuccess (200) {string(10){10}} [dataLicense.data.data_checklist.data_persyaratan.no_dokumen]  ID dokumen
+ * @apiSuccess (200) {string(10){10}} [dataLicense.data.data_checklist.data_persyaratan.tgl_dokumen] Tanggal Dokumen (format date : YYYY-MM-DD)		
+ * @apiSuccess (200) {string(65535)} [dataLicense.data.data_checklist.data_persyaratan.file_dokumen] URL file dokumen 
+ * @apiSuccess (200) {string(255){255}} [dataLicense.data.data_checklist.data_persyaratan.keterangan] Keterangan dokumen
  * 
  * @apiSuccessExample {json} Success-Response:
  * HTTP/1.1 200 OK
@@ -1865,92 +1842,64 @@
  *       "code": 200,
  *       "message": "Berhasil mendapatkan data izin",
  *       "data": {
- *           "oss_id": "",
- *           "id_izin": "",
- *           "kd_izin": "",
- *           "kd_daerah": "",
- *           "kewenangan": "",
- *           "data_proyek": [
+ *         "oss_id": "",
+ *         "id_izin": "",
+ *         "kd_izin": "",
+ *         "kd_daerah": "",
+ *         "kewenangan": "",
+ *         "data_proyek": [
+ *           {
+ *             "id_proyek": "",
+ *             "nomor_proyek": "",
+ *             "uraian_usaha": "",
+ *             "jumlah_tki_l": 0,
+ *             "jumlah_tki_p": 0,
+ *             "jumlah_tka_l": 0,
+ *             "jumlah_tka_p": 0,
+ *             "kbli": "",
+ *             "sektor": "",
+ *             "memiliki_menguasai": "",
+ *             "jenis_lokasi": "",
+ *             "status_tanah": "",
+ *             "luas_tanah": "",
+ *             "satuan_luas_tanah": ""
+ *           }
+ *         ],
+ *         "data_checklist": [
+ *           {
+ *             "id_produk": "",
+ *             "id_proyek": "",
+ *             "id_izin": "",
+ *             "jenis_izin": "",
+ *             "kd_izin": "",
+ *             "kd_daerah": "",
+ *             "nama_izin": "",
+ *             "instansi": "",
+ *             "id_bidang_spesifik": "",
+ *             "bidang_spesifik": "",
+ *             "id_kewenangan": "",
+ *             "parameter_kewenangan": "",
+ *             "kewenangan": "",
+ *             "flag_checklist": "",
+ *             "flag_transaksional": "",
+ *             "flag_perpanjangan": "",
+ *             "no_izin": "",
+ *             "tgl_izin": "",
+ *             "data_persyaratan": [
  *               {
- *                   "id_proyek": "",
- *                   "nomor_proyek": "",
- *                   "uraian_usaha": "",
- *                   "jumlah_tki_l": 0,
- *                   "jumlah_tki_p": 0,
- *                   "jumlah_tka_l": 0,
- *                   "jumlah_tka_p": 0,
- *                   "kbli": "",
- *                   "sektor": "",
- *                   "memiliki_menguasai": "",
- *                   "jenis_lokasi": "",
- *                   "status_tanah": "",
- *                   "luas_tanah": "",
- *                   "satuan_luas_tanah": ""
+ *                 "id_syarat": "",
+ *                 "no_dokumen": "",
+ *                 "tgl_dokumen": "",
+ *                 "file_dokumen": "",
+ *                 "keterangan": ""
  *               }
- *           ],
- *           "data_checklist": [
- *               {
- *                   "id_produk": "",
- *                   "id_proyek": "",
- *                   "id_izin": "",
- *                   "jenis_izin": "",
- *                   "kd_izin": "",
- *                   "kd_daerah": "",
- *                   "nama_izin": "",
- *                   "instansi": "",
- *                   "id_bidang_spesifik": "",
- *                   "bidang_spesifik": "",
- *                   "id_kewenangan": "",
- *                   "parameter_kewenangan": "",
- *                   "kewenangan": "",
- *                   "flag_checklist": "",
- *                   "flag_transaksional": "",
- *                   "flag_perpanjangan": "",
- *                   "no_izin": "",
- *                   "tgl_izin": "",
- *                   "data_teknis_lokasi": {
- *                       "id_komitmen": "",
- *                       "koefisien_dasar_bangunan": "",
- *                       "koefisien_lantai_bangunan": "",
- *                       "koefisien_dasar_hijau": "",
- *                       "koefisien_tapak_basement": "",
- *                       "garis_sempadan_bangunan": "",
- *                       "jalan_arteri": "",
- *                       "jalan_kolektor": "",
- *                       "jalan_lokal": "",
- *                       "jalan_lingkungan": ""
- *                   },
- *                   "data_teknis_bangunan": {
- *                       "id_komitmen": "",
- *                       "nama_bangunan": "",
- *                       "luas_bangunan": "",
- *                       "jumlah_lantai": "",
- *                       "tinggi_bangunan": "",
- *                       "luas_basement": "",
- *                       "jumlah_lantai_basement": "",
- *                       "perancang_dokumen_teknis": "",
- *                       "luas_bangunan_disetujui": "",
- *                       "jumlah_lantai_disetujui": "",
- *                       "tinggi_bangunan_disetujui": "",
- *                       "luas_basement_disetujui": "",
- *                       "jumlah_lantai_basement_disetujui": ""
- *                   },
- *                   "data_teknis_lingkungan": [
- *                       {
- *                           "kd_izin": "",
- *                           "nama_izin": "",
- *                           "status_izin": "",
- *                           "nomor_izin": "",
- *                           "file_respon": "",
- *                           "file_lampiran": ""
- *                       }
- *                   ]
- *               }
- *           ]
+ *             ]
+ *           }
+ *         ]
  *       },
  *       "meta": null
+ *     }
  *   }
- * }
  * @apiError (400) {Object} dataLicense Response receive license.
  * @apiError (400) {Number(3){3}} dataLicense.code Kode Respon <b>(* Lihat Lampiran 9)</b>
  * @apiError (400) {String(255)} dataLicense.message Keterangan Respon (Data Parameter Salah)
