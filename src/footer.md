@@ -55,7 +55,7 @@
 | KODE | KETERANGAN   |
 |------|--------------|
 |  01  | Sewa         |
-|  02  | Bukan Sewa   |
+|  02  | Milik Sendiri   |
 |  03  | Pinjam Pakai |
 
 #### <span id="api-example-for-a-submenu-entry">Lampiran 6 - DATA JENIS ASAL INVESTOR</span>
@@ -149,82 +149,147 @@ Untuk Referensi Kode Izin Bisa didapatkan melalui method getDataReferensi dengan
 | 04   | Diizinkan Beroperasi |
 | 05   | Dibekukan            |
 | 06   | Dicabut              |
-#### <span id="api-example-for-a-submenu-entry">Lampiran 15 - DATA KODE DAFTAR NEGATIF INVESTASI (DNI)</span>
+#### <span id="api-example-for-a-submenu-entry">Lampiran 15 - DATA KODE REFERENSI BIDANG USAHA PENANAMAN MODAL (BUPM)</span>
 | KODE | KETERANGAN                                                                                                                                                                                   |
 |------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1    | Maksimal 70% bagi penanam modal dari negara-negara ASEAN; dan                                                                                                                                |
-| 2    | Penanaman Modal Asing Maksimal 67%                                                                                                                                                           |
-| 3    | Bertempat di dalam mal dan tidak stand alone                                                                                                                                                 |
-|  4   | Penambahan outlet store berdasarkan ekspor p erformance (pay perfomwnce)                                                                                                                     |
-|  5   | Bahan baku dari Hutan Tanaman Industri (HTI) atau berasal dari Chip Impor jika bahan baku dalam negeri tidak mencukupi                                                                       |
-| 6    | Bahan Baku Minimal 20% Berasal dari Kebun Sendiri                                                                                                                                            |
-|  7   | Dapat dilakukan diseluruh Ibukota Provinsi Indonesia Timur kecuali Makassar dan Manado                                                                                                       |
-|  8   | Dapat dilakukan diseluruh Ibukota Provinsi Indonesia Timur kecuali Makassar dan Manado                                                                                                       |
-|  9   | Hanya berlaku pada 4 (empat) pelabuhan di↵wilayah Indonesia bagian timur yaitu:↵Pelabuhan Bitung, Pelabuhan Ambon, Pelabuhan Kupang, dan Pelabuhan Sarong khusus Negara-negara anggota ASEAN |
-|  10  | Hanya monopoli untuk Lembaga Penyiaran Publik↵Radio. Republik Indonesia (RRI), Televisi Republik Indonesia (TVRI), dan Lembaga Penyiaran Publik Lokal (LPPL)                                 |
-| 11   | Hanya untuk penambahan dan pengembangan usaha                                                                                                                                                |
-| 12   | Izin Khusus dari Kementerian Kesehatan                                                                                                                                                       |
-| 13   | Izin Khusus dari Kementerian Kesehatan                                                                                                                                                       |
-| 14   | Izin Khusus dari Kementerian Kesehatan                                                                                                                                                       |
-| 15   | Izin Khusus dari Kementerian Perhubungan                                                                                                                                                     |
-|  16  | Izin Khusus dari Kementerian Perhubungan terkait dengan persyaratan modal minimum                                                                                                            |
-| 17   | Izin operasional dari BOTASUPAL/BIN                                                                                                                                                          |
-| 18   | Izin Operasional dari Mabes Polri                                                                                                                                                            |
-| 19   | Jaringan distribusi dan tempatnya khusus                                                                                                                                                     |
-| 20   | Kewajiban Perkebunan Plasma Sebesar 20%                                                                                                                                                      |
-| 21   | Lokasi Tertentu yang ditetapkan oleh Kementerian Pertanian                                                                                                                                   |
-| 22   | lzin Khusus dari Kementerian Kesehatan                                                                                                                                                       |
-| 23   | Maksimal 51% bagi penanam modal dari negara-negara ASEAN                                                                                                                                     |
-|  25  |  Maksimal 70% bagi penanam modal dari negara-negara ASEAN                                                                                                                                    |
-| 26   | Maksimal 70% bagi penanam modal dari negara-negara ASEAN; dan                                                                                                                                |
-| 28   | Modal dalam negeri 100%                                                                                                                                                                      |
-|  29  | Modal dalam negeri 100% dan Izin Khusus dari↵Kementerian Kelautan dan Perikanan mengenai alokasi sumber daya ikan dan titik koordinat daerah penangkapan ikan                                |
-|  30  | Pemenuhan kebutuhan bahan baku paling banyak 80% dengan pola kemitraan                                                                                                                       |
-|  31  | Pemenuhan kebutuhan bahan baku paling kurang 20% dari kapasitas produksi berasal dari kebun karet sendiri                                                                                    |
-|  32  | Pemilik modal nasional harus tetap lebih besar dari keseluruhan pemilik modal asing (single majority)                                                                                        |
-|  33  | Pemyataan kerjasama dengan lembaga yang terakreditasi/ laboratorium di Indonesia/ lembaga nasional bidang litbang yang ditunjuk oleh Kementerian Lingkungan Hidup dan Kehutanan              |
-|  35  |  Penanaman Modal Asing Maksimal 100%                                                                                                                                                         |
-| 36   | Penanaman Modal Asing Maksimal 30%                                                                                                                                                           |
-| 37   | Penanaman Modal Asing Maksimal 33%                                                                                                                                                           |
-| 38   | Penanaman Modal Asing Maksimal 49%                                                                                                                                                           |
-| 39   | Penanaman Modal Asing Maksimal 49%, dengan 51% untuk BUMN                                                                                                                                    |
-| 40   | Penanaman Modal Asing Maksimal 51%                                                                                                                                                           |
-| 41   | Penanaman Modal Asing Maksimal 67%                                                                                                                                                           |
-|  42  | Penanaman Modal Asing Maksimal 70% bagi penanam modal dari negara- negara ASEAN                                                                                                              |
-|  43  |  Penanaman Modal Asing Maksimal 75%                                                                                                                                                          |
-| 44   | Penanaman Modal Asing Maksimal 80%                                                                                                                                                           |
-| 45   | Penanaman Modal Asing Maksimal 85%                                                                                                                                                           |
-| 46   | Penanaman Modal Asing Maksimal 90%                                                                                                                                                           |
-|  47  | Penanaman Modal Asing Maksimal 95%↵(Maksimal 100% apabila dalam rangka KPS selama masa konsesi)                                                                                              |
-| 48   | Penanaman Modal Asing Maksimal 95%                                                                                                                                                           |
-|  49  | Penanaman Modal Asing Maksimal 95% (Maksimal 100% apabila dalam rangka Kerjasama Pemerintah Swasta/KPS selama masa konsesi)                                                                  |
-| 50   | Penanaman Modal Asing Maksimum 20%                                                                                                                                                           |
-| 51   | Penanaman Modal Asing Maksimum 49%                                                                                                                                                           |
-| 52   | Perizinan Khusus dari Otoritas Jasa Keuangan                                                                                                                                                 |
-| 53   | Rekomendasi dari Kcmenterian Pertahanan                                                                                                                                                      |
-|  54  | Rekomendasi dari Kementerian Lingkungan Hidup↵dan Kementerian Perindustrian khusus untuk industri yang menggunakan bahan baku accu bekas                                                     |
-|  55  |  Rekomendasi dari Kementerian Lingkungan Hidup dan Kehutanan                                                                                                                                 |
-| 56   | Rekomendasi dari Kementerian Perindustrian                                                                                                                                                   |
-|  57  | Rekomendasi pasokan bahan baku berkelanjutan dari Kementerian Lingkungan Hidup dan Kehutanan                                                                                                 |
-|  58  | Sesuai dengan ketentuan yang ditetapkan BPOM dan Kementerian Perdagangan                                                                                                                     |
-|  59  | Sesuai Undang-Undang Nomor 12 Tahun 2012 tentang Pendidikan Tinggi serta Peraturan Pelaksanaannya                                                                                            |
-|  60  | Sesuai Undang-Undang Nomor 20 Tahun 2003 tentang Sistem Pendidikan Nasional (Sisdikmas) serta Peraturan Pelaksanaannya                                                                       |
-| 61   | Surat Izin Usaha Perdagangan Minuman Beralkohol (SIUP-MB)                                                                                                                                    |
-|  62  | Untuk penanaman modal baru, hanya industri↵rokok skala kecil dan menengah yang bermitra↵dengan industri rokok skala besar yang sudah↵memiliki lUI pada bidang usaha sejenis                  |
-|  63  | Untuk perluasan usaha, hanya industri rokok↵yang telah memiliki Izin Usaha Tndustri (lUI)↵pada bidang usaha sejenis                                                                          |
-|  64  |  Dicadangkan untuk UMKMK                                                                                                                                                                     |
-| 65   | Kemitraan dengan UMKMK                                                                                                                                                                       |
-| 66   | Bidang Usaha Tidak Termasuk Dalam DNI                                                                                                                                                        |
-|  67  | Usaha Perbenihan/Pembibitan Tanaman Pangan Pokok dengan Luas lebih dari 25 Ha                                                                                                                |
-| 68   | Usaha Budidaya Tanaman Pangan Pokok dengan Luas lebih dari 25 Ha                                                                                                                             |
-| 69   | Usaha Industri Perbenihan Perkebunan dengan Luas 25 Ha atau Lebih                                                                                                                            |
-|  70  | Usaha Perkebunan dengan Luas 25 Ha atau Lebih Sampai Luasan Tertentu Tanpa Unit Pengolahan                                                                                                   |
-|  71  |  Usaha Perkebunan dengan Luas 25 Ha atau Lebih yang Terintegrasi dengan Unit Pengolahan dengan Kapasitas Sama atau Melebihi Kapasitas Tertentu                                               |
-| 72   | Usaha dengan Kapasitas Sama atau Melebihi Kapasitas Tertentu                                                                                                                                 |
-|  73  |  Usaha Budidaya Tanaman Pangan Pokok dengan Luas Kurang dari 25 Ha                                                                                                                           |
-| 74   | Usaha Perbenihan Perkebunan dengan Luas Kurang dari 25 Ha                                                                                                                                    |
-| 75   | Usaha Perkebunan dengan Luas Kurang dari 25 Ha                                                                                                                                               |
-| 76   | Usaha Kapasitas Tertentu                                                                                                                                                                     |
+|   1   |	Maksimal 70% bagi penanam modal dari negara-negara ASEAN    |
+|   2   |	Penanaman Modal Asing Maksimal 67%                          |
+|   3   |	Bertempat di dalam mal dan tidak stand alone                |
+|   4   |	Penambahan outlet store berdasarkan ekspor performance (pay perfomance) |
+| 5 | Bahan baku dari Hutan Tanaman Industri (HTI) atau berasal dari Chip Impor jika bahan baku dalam negeri tidak mencukupi |
+| 6 | Bahan Baku Minimal 20% Berasal dari Kebun Sendiri |
+| 7 | Dapat dilakukan diseluruh Ibukota Provinsi Indonesia Timur kecuali Makassar dan Manado |
+| 8 | Dapat dilakukan diseluruh Ibukota Provinsi Indonesia Timur kecuali Makassar dan Manado |
+| 9 | Hanya berlaku pada 4 (empat) pelabuhan di wilayah Indonesia bagian timur yaitu: Pelabuhan Bitung, Pelabuhan Ambon, Pelabuhan Kupang, dan Pelabuhan Sarong khusus Negara-negara anggota ASEAN |
+| 10 | Hanya monopoli untuk Lembaga Penyiaran Publik Radio. Republik Indonesia (RRI), Televisi Republik Indonesia (TVRI), dan Lembaga Penyiaran Publik Lokal (LPPL) |
+| 11 | Hanya untuk penambahan dan pengembangan usaha |
+| 12 | Izin Khusus dari Kementerian Kesehatan |
+| 13 | Izin Khusus dari Kementerian Kesebatan |
+| 14 | Izin Khusus dari Kementerian Kesehatan |
+| 15 | Izin Khusus dari Kementerian Perhubungan |
+| 16 | Izin Khusus dari Kementerian Perhubungan terkait dengan persyaratan modal minimum |
+| 17 | Izin operasional dari BOTASUPAL/BIN |
+| 18 | Izin Operasional dari Mabes Polri |
+| 19 | Jaringan distribusi dan tempatnya khusus |
+| 20 | Kewajiban Perkebunan Plasma Sebesar 20% |
+| 21 | Lokasi Tertentu yang ditetapkan oleh Kementerian Pertanian |
+| 22 | lzin Khusus dari Kementerian Kesehatan |
+| 23 | Maksimal 51% bagi penanam modal dari negara-negara ASEAN |
+| 25 | Maksimal 70% bagi penanam modal dari negara-negara ASEAN |
+| 26 | Maksimal 70% bagi penanam modal dari negara-negara ASEAN |
+| 28 | Modal dalam negeri 100% |
+| 29 | Modal dalam negeri 100% dan Izin Khusus dari Kementerian Kelautan dan Perikanan mengenai alokasi sumber daya ikan dan titik koordinat daerah penangkapan ikan |
+| 30 | Pemenuhan kebutuhan bahan baku paling banyak 80% dengan pola kemitraan |
+| 31 | Pemenuhan kebutuhan bahan baku paling kurang 20% dari kapasitas produksi berasal dari kebun karet sendiri |
+| 32 | Pemilik modal nasional harus tetap lebih besar dari keseluruhan pemilik modal asing (single majority) |
+| 33 | Pemyataan kerjasama dengan lembaga yang terakreditasi/ laboratorium di Indonesia/ lembaga nasional bidang litbang yang ditunjuk oleh Kementerian Lingkungan Hidup dan Kehutanan |
+| 35 | Penanaman Modal Dalam Negeri Maksimal 100% |
+| 36 | Penanaman Modal Asing Maksimal 30% |
+| 37 | Penanaman Modal Asing Maksimal 33% |
+| 38 | Penanaman Modal Asing Maksimal 49% |
+| 39 | Penanaman Modal Asing Maksimal 49%, dengan 51% untuk BUMN |
+| 40 | Penanaman Modal Asing Maksimal 51% |
+| 41 | Penanaman Modal Asing Maksimal 67% |
+| 42 | Penanaman Modal Asing Maksimal 60% bagi penanam modal dari negara-negara ASEAN |
+| 43 | Penanaman Modal Asing Maksimal 75% |
+| 44 | Penanaman Modal Asing Maksimal 80% |
+| 45 | Penanaman Modal Asing Maksimal 85% |
+| 46 | Penanaman Modal Asing Maksimal 90% |
+| 47 | Penanaman Modal Asing Maksimal 95% (Maksimal 100% apabila dalam rangka KPS selama masa konsesi) |
+| 48 | Penanaman Modal Asing Maksimal 95% |
+| 49 | Penanaman Modal Asing Maksimal 95% (Maksimal 100% apabila dalam rangka Kerjasama Pemerintah Swasta/KPS selama masa konsesi) |
+| 50 | Penanaman Modal Asing Maksimum 20% |
+| 51 | Penanaman Modal Asing Maksimum 49% |
+| 52 | Perizinan Khusus dari Otoritas Jasa Keuangan |
+| 53 | Rekomendasi dari Kementerian Pertahanan |
+| 54 | Rekomendasi dari Kementerian Lingkungan Hidup dan Kementerian Perindustrian khusus untuk industri yang menggunakan bahan baku accu bekas |
+| 55 | Rekomendasi dari Kementerian Lingkungan Hidup dan Kehutanan |
+| 56 | Rekomendasi dari Kementerian Perindustrian |
+| 57 | Rekomendasi pasokan bahan baku berkelanjutan dari Kementerian Lingkungan Hidup dan Kehutanan |
+| 58 | Sesuai dengan ketentuan yang ditetapkan BPOM dan Kementerian Perdagangan |
+| 59 | Sesuai Undang-Undang Nomor 12 Tahun 2012 tentang Pendidikan Tinggi serta Peraturan Pelaksanaannya |
+| 60 | Sesuai Undang-Undang Nomor 20 Tahun 2003 tentang Sistem Pendidikan Nasional (Sisdikmas) serta Peraturan Pelaksanaannya |
+| 61 | Surat Izin Usaha Perdagangan Minuman Beralkohol (SIUP-MB) |
+| 62 | Untuk penanaman modal baru, hanya industri rokok skala kecil dan menengah yang bermitra dengan industri rokok skala besar yang sudah memiliki lUI pada bidang usaha sejenis |
+| 63 | Untuk perluasan usaha, hanya industri rokok yang telah memiliki Izin Usaha Tndustri (lUI) pada bidang usaha sejenis |
+| 64 | Dialokasikan untuk Koperasi dan UMKM |
+| 65 | Kemitraan dengan Koperasi dan UMKM |
+| 66 | Bidang Usaha Tidak Termasuk Dalam DNI |
+| 67 | Usaha Perbenihan/Pembibitan Tanaman Pangan Pokok dengan Luas lebih dari 25 Ha |
+| 68 | Usaha Budidaya Tanaman Pangan Pokok dengan Luas lebih dari 25 Ha |
+| 69 | Usaha Industri Perbenihan Perkebunan dengan Luas 25 Ha atau Lebih |
+| 70 | Usaha Perkebunan dengan Luas 25 Ha atau Lebih Sampai Luasan Tertentu Tanpa Unit Pengolahan |
+| 71 | Usaha Perkebunan dengan Luas 25 Ha atau Lebih yang Terintegrasi dengan Unit Pengolahan dengan Kapasitas Sama atau Melebihi Kapasitas Tertentu |
+| 72 | Usaha dengan Kapasitas Sama atau Melebihi Kapasitas Tertentu |
+| 73 | Usaha Budidaya Tanaman Pangan Pokok dengan Luas Kurang dari 25 Ha |
+| 74 | Usaha Perbenihan Perkebunan dengan Luas Kurang dari 25 Ha |
+| 75 | Usaha Perkebunan dengan Luas Kurang dari 25 Ha |
+| 76 | Usaha Kapasitas Tertentu, Dicadangkan untuk UMKMK |
+| 77 | Penanaman Modal Asing diperbolehkan 100% |
+| 78 | Pertanian Tanaman Pangan dengan Luas Kurang dari 25 Ha |
+| 79 | Kapasitas Produksi Sampai Dengan Kurang Dari 2000 M3 Per Tahun |
+| 80 | Pembangkit Listrik < 1 MW |
+| 81 | Modal dalam negeri 100% dalam rangka Akta Pendirian |
+| 82 | Modal asing maksimal 49% (melalui pasar modal) dalam rangka penambahan atau pengembangan usaha |
+| 83 | Modal asing maksimal 20% (melalui pasar modal) dalam rangka penambahan atau pengembangan usaha |
+| 84 | Kepemilikan modal berdasarkan persetujuan dari Menteri Pertahanan |
+| 85 | Untuk Perluasan Usaha, hanya Industri Minuman Keras Mengandung Alkohol yang telah memiliki perizinan berusaha pada bidang usaha sejenis |
+| 86 | Untuk Perluasan Usaha, hanya Industri Minuman Mengandung Alkohol (Anggur) yang telah memiliki perizinan berusaha pada bidang usaha sejenis |
+| 87 | Untuk Perluasan Usaha, hanya Industri Minuman Mengandung Malt yang telah memiliki perizinan berusaha pada bidang usaha sejenis |
+| 88 | Beragama Islam |
+| 89 | Dalam hal terdapat kepentingan strategis, modal asing dapat melebihi 49% dengan persetujuan Menteri Pertahanan |
+| 90 | Kegiatan usaha ini hanya dapat dilaksanakan oleh pelaku usaha yang berbentuk Badan Usaha |
+| 91 | Penanaman Modal Asing Maksimal 51% bagi penanaman modal dari negara Australia |
+| 92 | Penanaman Modal Asing Maksimal 100% bagi penanaman modal dari negara Jepang |
+| 93 | Batasan luas minimum Perkebunan Kelapa Sawit dengan Luas 1200 Ha-6000 Ha |
+| 94 | Batasan luas minimum Perkebunan Tebu dengan Luas 400 Ha-2000 Ha |
+| 95 | Batasan luas minimum Budidaya Teh dengan Luas 120 Ha-600 Ha |
+| 96 | Memiliki modal paling sedikit Rp. 500.000.000,00 (lima ratus juta rupiah) |
+| 97 | Batasan luas maksimum Kelapa Sawit diatas 6000 Ha-100.000 Ha satu perusahaan secara nasional |
+| 98 | Batasan luas maksimum Perkebunan Tebu diatas 2000 Ha-125.000 Ha satu perusahaan secara nasional |
+| 99 | Batasan luas maksimum Budidaya Teh diatas 600 Ha-14.000 Ha satu perusahaan secara nasional |
+| 100 | Batasan luas maksimum perkebunan kakao maksimum 13.000 Ha untuk satu perusahaan secara nasional |
+| 101 | Batasan luas maksimum perkebunan kelapa maksimum 35.000 Ha untuk satu perusahaan secara nasional |
+| 102 | Batasan luas maksimum perkebunan karet maksimum 23.000 Ha untuk satu perusahaan secara nasional |
+| 103 | Batasan luas maksimum perkebunan tembakau maksimum 5.000 Ha untuk satu perusahaan secara nasional |
+| 104 | Kemitraan dengan Koperasi dan UMKM bagi PMA yang penanam modalnya berasal dari negara ASEAN |
+| 105 | Batasan luas maksimum perkebunan kopi maksimum 13.000 Ha untuk satu perusahaan secara nasional |
+| 106 | Modal Modal dalam negeri 100%, Pemegang Saham wajib beragama Islam dan berbentuk Badan Usaha |
+| 107 | Bidang usaha yang dibatasi dan diawasi secara ketat serta diatur dalam peraturan perundang-undangan tersendiri di bidang pengendalian dan pengawasan minuman beralkohol |
+| 108 | Kegiatan usaha ini hanya dapat dilaksanakan oleh pelaku usaha yang berbentuk Badan Hukum (Perseroan Terbatas) |
+| 109 | Surat penunjukan sebagai sub -Distributor dari Distributor Minuman Beralkohol |
+| 110 | Pendirian sesuai dengan ketentuan peraturan perundang-undangan mengenai Toko Swalayan |
+| 111 | Memiliki Kemitraan dengan usaha mikro atau usaha kecil |
+| 112 | Penanam modal asing harus dilakukan terintegrasi dengan Pusat Perbelanjaan yang telah memiliki Perizinan Berusaha |
+| 113 | Memenuhi ketentuan pembatasan kepemilikan gerai/outlet sesuai dengan ketentuan peraturan perundang-undangan mengenai Toko Swalayan |
+| 114 | Pendirian sesuai dengan ketentuan peraturan perundang-undangan mengenai pusat perbelanjaan |
+| 115 | Wajib menyediakan dan/atau menawarkan Ruang usaha dalam rangka kemitraan dengan harga jual atau biaya sewa sesuai kemampuan kepada usaha mikro dan kecil |
+| 116 | Besaran modal dasar perusahaan paling sedikit 30% dari belanja modal selama masa konsesi, ditambah besaran biaya operasional untuk 12 (dua belas) bulan sebagaimana tercantum dalam rencana bisnis |
+| 117 | Memiliki modal dasar paling sedikit setara dengan 80.000 (delapan puluh ribu) Special Drawing Right (SDR) |
+| 118 | Memiliki modal disetor yang tercantum dalam akta pendirian perusahaan paling sedikit Rp5.000.000.000,00 (lima miliar rupiah) |
+| 119 | Kegiatan usaha ini hanya dapat dilaksanakan oleh pelaku usaha yang berbentuk Badan Usaha |
+| 120 | Kegiatan usaha ini hanya dapat dilaksanakan oleh pelaku usaha yang berbentuk Badan Hukum (Perseroan Terbatas) |
+| 121 | Bidang usaha yang dibatasi dan diawasi secara ketat serta diatur dalam peraturan perundang-undangan tersendiri di bidang pengendalian dan pengawasan minuman beralkohol |
+| 122 | Bidang usaha yang Anda pilih mewajibkan dimiliki dan dikelola oleh warga negara Indonesia beragama Islam sesuai dengan ketentuan Peraturan Menteri Agama Nomor 5 Tahun 2021. |
+| 123 | Kegiatan usaha ini hanya dapat dilaksanakan oleh pelaku usaha yang berbentuk Badan Layanan Umum atau Badan Layanan Umum Daerah |
+| 124 | Kegiatan usaha ini hanya dapat dilaksanakan oleh pelaku usaha yang berbentuk Yayasan |
+| 125 | Kegiatan usaha ini hanya dapat dilaksanakan oleh pelaku usaha yang berbentuk Persyarikatan atau Perkumpulan |
+| 126 | Kegiatan usaha ini hanya dapat dilaksanakan oleh pelaku usaha yang berbentuk Badan Hukum Lainnya |
+| 127 | Kegiatan usaha ini hanya dapat dilaksanakan di dalam Kawasan Ekonomi Khusus |
+| 128 | Kegiatan usaha ini hanya dapat dilaksanakan oleh pelaku usaha Perseorangan |
+| 129 | Kegiatan usaha ini hanya dapat dilaksanakan oleh pelaku usaha yang berbentuk Koperasi |
+| 130 | Kegiatan usaha ini hanya dapat dilaksanakan oleh pelaku usaha yang berbentuk Perusahaan Umum (Perum) |
+| 131 | Kegiatan usaha ini hanya dapat dilaksanakan oleh pelaku usaha yang memiliki modal asing (PMA) |
+| 132 | Kegiatan usaha ini hanya dapat dilaksanakan oleh Badan Penyelenggara berbentuk badan hukum nirlaba lain sesuai dengan ketentuan peraturan perundang-undangan |
+| 134 | Penanaman Modal Asing Maksimal 95% dengan kewajiban untuk menggunakan 20% bahan baku dari perkebunan sendiri bagi penanaman modal dari negara Norwegia selaku negara anggota EFTA berdasarkan perjanjian internasional |
+| 135 | Penanaman Modal Asing Maksimal 95% dengan kewajiban untuk menggunakan 20% bahan baku dari perkebunan sendiri bagi penanaman modal dari negara Swiss selaku negara anggota EFTA berdasarkan perjanjian internasional |
+| 136 | Penanaman Modal Asing Maksimal 95% dengan kewajiban untuk menggunakan 20% bahan baku dari perkebunan sendiri bagi penanaman modal dari negara Islandia selaku negara anggota EFTA berdasarkan perjanjian internasional |
+| 137 | Penanaman Modal Asing Maksimal 95% dengan kewajiban untuk menggunakan 20% bahan baku dari perkebunan sendiri bagi penanaman modal dari negara Liechtenstein selaku negara anggota EFTA berdasarkan perjanjian internasional |
+| 138 | Kemitraan dengan Koperasi dan UMKM bagi penanaman modal dari negara anggota EFTA (Norwegia, Swiss, Islandia, dan Liechtenstein) berdasarkan perjanjian internasional |
+| 139 | Terbuka 100% bagi penanaman modal dari negara anggota EFTA (Norwegia, Swiss, Islandia, dan Liechtenstein) berdasarkan perjanjian internasional |
+| 140 | Tidak Mengikat bagi penanaman modal dari negara anggota EFTA (Norwegia, Swiss, Islandia, dan Liechtenstein) berdasarkan perjanjian internasional |
+| 141 | Bidang Usaha ini hanya bisa dilakukan oleh badan Usaha Firma/Persekutuan Perdata |
+| 142 | Penanaman Modal Asing Maksimal 51% bagi penanaman modal dari negara Korea Selatan |
 #### <span id="api-example-for-a-submenu-entry">Lampiran 16 - DATA KODE JENIS LOKASI</span>
 | KODE | KETERANGAN      |
 |------|-----------------|
