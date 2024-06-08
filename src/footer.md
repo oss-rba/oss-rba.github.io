@@ -321,35 +321,32 @@ Untuk Referensi Kode Izin Bisa didapatkan melalui method getDataReferensi dengan
 |  22  |  Perusahaan Umum Daerah (Perumda) |
 |  23  |  Perusahaan Daerah (Perusda)      |
 #### <span id="api-example-for-a-submenu-entry">Lampiran 20 - KODE REFERENSI SEKTOR</span>
-| KODE | SEKTOR                              | KEMENTERIAN                                 |
-|------|-------------------------------------|---------------------------------------------|
-| 010  | Dalam Negeri                        | Kementerian Dalam Negeri                    |
-| 012  | Pertahanan                          | Kementerian Pertahanan                      |
-| 013  | Hukum dan Hak Asasi Manusia         | Kementerian Hukum dan Hak Asasi Manusia     |
-| 015  | Keuangan                            | Kementerian Keuangan                        |
-| 018  | Pertanian                           | Kementerian Pertanian                       |
-| 019  | Industri                            | Kementerian Perindustrian                   |
-| 020  | Energi dan Sumber Daya Mineral      | Kementerian Energi dan Sumber Daya Mineral  |
-| 010  | Dalam Negeri                        | Kementerian Dalam Negeri                    |
-
-| 020  | Ketenagalistrikan                   | Energi dan Sumber Daya Mineral          |
-| 018  | Pertanian                           | Pertanian                               |
-|  029 |  Lingkungan Hidup Dan Kehutanan     |  Lingkungan Hidup Dan Kehutanan         |
-|  033 | Pekerjaan Umum Dan Perumahan Rakyat |  Pekerjaan Umum Dan Perumahan Rakyat    |
-| 032  | Kelautan Dan Perikanan              | Kelautan Dan Perikanan                  |
-| 024  | Kesehatan                           | Kesehatan                               |
-| 063  | Obat Dan Makanan                    | Obat Dan Makanan                        |
-| 019  | Perindustrian                       | Perindustrian                           |
-| 090  | Perdagangan                         | Perdagangan                             |
-| 022  | Perhubungan                         | Perhubungan                             |
-| 059  | Komunikasi dan Informatika          | Komunikasi dan Informatika              |
-| 015  | Keuangan                            | Keuangan                                |
-| 040  | Pariwisata                          | Pariwisata                              |
-| 023  | Pendidikan dan Kebudayaan           | Pendidikan dan Kebudayaan               |
-| 042  | Pendidikan Tinggi                   | Riset, Teknologi, dan Pendidikan Tinggi |
-| 025  | Agama dan Keagamaan                 | Agama                                   |
-| 026  | Ketenagakerjaan                     | Ketenagakerjaan                         |
-| 060  | Kepolisian                          | Kepolisian                              |
+| KODE | SEKTOR                                           | KEMENTERIAN                                                                                    |
+|------|--------------------------------------------------|------------------------------------------------------------------------------------------------|
+| 010  | Dalam Negeri                                     | Kementerian Dalam Negeri                                                                       |
+| 012  | Pertahanan                                       | Kementerian Pertahanan                                                                         |
+| 013  | Hukum dan Hak Asasi Manusia                      | Kementerian Hukum dan Hak Asasi Manusia                                                        |
+| 015  | Keuangan                                         | Kementerian Keuangan                                                                           |
+| 018  | Pertanian                                        | Kementerian Pertanian                                                                          |
+| 019  | Industri                                         | Kementerian Perindustrian                                                                      |
+| 020  | Energi dan Sumber Daya Mineral                   | Kementerian Energi dan Sumber Daya Mineral                                                     |
+| 022  | Perhubungan                                      | Kementerian Perhubungan                                                                        |
+| 023  | Pendidikan                                       | Kementerian Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi                           |
+| 024  | Agama                                            | Kementerian Agama                                                                              |
+| 026  | Ketenagakerjaan                                  | Kementerian Ketenagakerjaan                                                                    |
+| 029  | Lingkungan Hidup dan Kehutanan                   | Kementerian Lingkungan Hidup dan Kehutanan                                                     |
+| 032  | Kelautan dan Perikanan                           | Kementerian Kelautan dan Perikanan                                                             |
+| 033  | Pekerjaan Umum dan Perumahan Rakyat              | Kementerian Pekerjaan Umum dan Perumahan Rakyat                                                |
+| 040  | Pariwisata                                       | Kementerian Pariwisata dan Ekonomi Kreatif                                                     |
+| 042  | Riset Teknologi dan Pendidikan                   | Kementerian Riset Teknologi dan Pendidikan                                                     |
+| 044  | Koperasi dan UKM                                 | Kementerian Koperasi dan UKM                                                                   |
+| 056  | Agraria dan Tata Ruang/Badan Pertahanan Nasional | Kementerian Agraria dan Tata Ruang/Badan Pertahanan Nasional                                   |
+| 059  | Komunikasi dan Informatika                       | Kementerian Komunikasi dan Informatika                                                         |
+| 060  | Kepolisian                                       | Kepolisian                                                                                     |
+| 063  | Obat Dan Makanan                                 | Kementerian Pengawas Obat Dan Makanan                                                          |
+| 084  | Badan Standarisasi Nasional                      | Badan Standarisasi Nasional                                                                    |
+| 085  | Ketenaganukliran                                 | Badan Tenaga Nuklir Nasional                                                                   |
+| 090  | Perdagangan                                      | Kementerian Perdagangan                                                                        |
 #### <span id="api-example-for-a-submenu-entry">Lampiran 21 - DATA KODE JENIS KAWASAN</span>
 | KODE | KETERANGAN                    |
 |------|-------------------------------|
