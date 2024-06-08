@@ -30,6 +30,7 @@
 | 4.3.18 | 18/10/2023 | Tim Teknis OSS | 1. Penambahan Kode Status Izin 05 <br> &nbsp;&nbsp;&nbsp;&nbsp; "Penapisan dokumen lingkungan" <br> 2. Penambahan Kode Status Izin 45 <br> &nbsp;&nbsp;&nbsp;&nbsp; “Persetujuan status persyaratan oleh dinas teknis” <br> 3. Penambahan Data Kode Referensi 32 <br> &nbsp;&nbsp;&nbsp;&nbsp; “Kode Kawasan” <br> 4. Penyesuaian Data Kode Kawasan menjadi “Untuk Referensi Kode Kawasan Bisa didapatkan melalui method getDataReferensi dengan memasukkan kode 32” |
 | 4.3.19 | 28/11/2023 | Tim Teknis OSS | 1. Penambahan input parameter fetchNIB : npwp_perusahaan<br>2. Penghapusan respon parameteter fetchNIB : Data Legal<br>3. Penambahan Data Skala Usaha<br>&nbsp;&nbsp;&nbsp;&nbsp;a. 01 - Usaha Mikro<br>&nbsp;&nbsp;&nbsp;&nbsp;b. 02 - Usaha Kecil<br>&nbsp;&nbsp;&nbsp;&nbsp;c. 03 - Usaha Menengah<br>&nbsp;&nbsp;&nbsp;&nbsp;d. 04 - Usaha Besar<br>4. Penghapusan Kode Status Izin<br>&nbsp;&nbsp;&nbsp;&nbsp;a. 91 - Pencabutan Perizinan Berusaha<br>&nbsp;&nbsp;&nbsp;&nbsp;b. 92 - Pembatalan Perizinan Berusaha |
 | 4.3.20 | 22/01/2024 | Tim Teknis OSS | 1. Penambahan respon file_lampiran pada checkLicenseStatus |
+| 4.3.21 | 31/05/2024 | Tim Teknis OSS | 1. Penambahan API inqueryLicense<br>2. Lampiran 15 : Data Kode Referensi Bidang Usaha Penanaman Modal(BUPM)<br>
 
 ## <span id="api-example-for-a-submenu-entry">Background</span>
 
