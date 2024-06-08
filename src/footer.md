@@ -303,16 +303,10 @@ Untuk Referensi Kode Izin Bisa didapatkan melalui method getDataReferensi dengan
 #### <span id="api-example-for-a-submenu-entry">Lampiran 18 - DATA KODE JENIS PELAKU USAHA</span>
 | KODE | KETERANGAN                        |
 |------|-----------------------------------|
-|  11  |  Non Perseorangan                 |
-|  12  |  Perseorangan                     |
-|  13  |  Mikro                            |
-|  14  |  Perwakilan (SIUP3A)              |
-|  15  |  Perwakilan	(BUJKA)            |
-|  16  |  Perwakilan (KPPA)                |
-|  17  |  STPW Luar Negeri                 |
-|  21  |  Perusahaan Umum (Perum)          |
-|  22  |  Perusahaan Umum Daerah (Perumda) |
-|  23  |  Perusahaan Daerah (Perusda)      |
+|  01  |  Badan Usaha                      |
+|  02  |  Perseorangan                     |
+|  03  |  Kantor Perwakilan                |
+|  04  |  Badan Usaha Luar Negeri          |
 #### <span id="api-example-for-a-submenu-entry">Lampiran 19 - DATA STATUS FLAG PAJAK</span>
 | KODE | KETERANGAN                        |
 |------|-----------------------------------|
@@ -327,8 +321,17 @@ Untuk Referensi Kode Izin Bisa didapatkan melalui method getDataReferensi dengan
 |  22  |  Perusahaan Umum Daerah (Perumda) |
 |  23  |  Perusahaan Daerah (Perusda)      |
 #### <span id="api-example-for-a-submenu-entry">Lampiran 20 - KODE REFERENSI SEKTOR</span>
-| KODE | SEKTOR                              | KEMENTERIAN                             |
-|------|-------------------------------------|-----------------------------------------|
+| KODE | SEKTOR                              | KEMENTERIAN                                 |
+|------|-------------------------------------|---------------------------------------------|
+| 010  | Dalam Negeri                        | Kementerian Dalam Negeri                    |
+| 012  | Pertahanan                          | Kementerian Pertahanan                      |
+| 013  | Hukum dan Hak Asasi Manusia         | Kementerian Hukum dan Hak Asasi Manusia     |
+| 015  | Keuangan                            | Kementerian Keuangan                        |
+| 018  | Pertanian                           | Kementerian Pertanian                       |
+| 019  | Industri                            | Kementerian Perindustrian                   |
+| 020  | Energi dan Sumber Daya Mineral      | Kementerian Energi dan Sumber Daya Mineral  |
+| 010  | Dalam Negeri                        | Kementerian Dalam Negeri                    |
+
 | 020  | Ketenagalistrikan                   | Energi dan Sumber Daya Mineral          |
 | 018  | Pertanian                           | Pertanian                               |
 |  029 |  Lingkungan Hidup Dan Kehutanan     |  Lingkungan Hidup Dan Kehutanan         |

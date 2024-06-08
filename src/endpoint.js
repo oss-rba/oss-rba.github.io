@@ -3100,7 +3100,7 @@
  * @apiName fetchNIB
  * @apiGroup NIB
  * @apiExample {curl} Curl Request Example:
- *  curl --location 'https://server.digitaltelkom.dev/oss-sandbox/kl/rba/inqueryProyek' \
+ *  curl --location 'https://server.digitaltelkom.dev/oss-sandbox/kl/rba/fetchNIB' \
  * --header 'user_key: {{user_key}}' \
  * --header 'Content-Type: application/json' \
  * --data '{
