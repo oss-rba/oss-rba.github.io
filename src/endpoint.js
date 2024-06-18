@@ -587,6 +587,7 @@
  *             "skala_usaha": "",
  *             "skala_resiko": "",
  *             "deskripsi_kegiatan": "",
+ *             "satu_lini": "",
  *             "data_lokasi_proyek": [
  *               {
  *                 "id_proyek_lokasi": "",
@@ -910,6 +911,7 @@
  * @apiBody {string(10)}    	dataNIB.data_proyek.skala_usaha	    Skala Usaha Perusahaan
  * @apiBody {string(5)}    	dataNIB.data_proyek.skala_resiko	    Skala Resiko Perusahaan
  * @apiBody {string(255)}    	dataNIB.data_proyek.deskripsi_kegiatan	    Deskripsi kegiatan
+ * @apiBody {string(1)}      dataNIB.data_proyek.satu_lini         Keterangan Proyek Satu Lini(Y : Proyek Satu Lini , N : Bukan Proyek Satu Lini)
  * @apiBody {Object[]}    	dataNIB.data_proyek.data_lokasi_proyek	    data_lokasi_proyek
  * @apiBody {string(25)}    	dataNIB.data_proyek.data_lokasi_proyek.id_proyek_lokasi	    id_proyek_lokasi
  * @apiBody {string(10)}    	dataNIB.data_proyek.data_lokasi_proyek.proyek_daerah_id	    Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
@@ -1225,6 +1227,7 @@
  *             "skala_usaha": "",
  *             "skala_resiko": "",
  *             "deskripsi_kegiatan": "",
+ *             "satu_lini": "",
  *             "data_lokasi_proyek": [
  *               {
  *                 "id_proyek_lokasi": "",
@@ -2193,7 +2196,8 @@
  * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.data_proyek.nama_perseroan_merger	Nama Perusahaan Merger		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.data_proyek.skala_usaha	Skala usaha		
  * @apiSuccess (200) {string(50)}    	responinqueryNIB.dataNIB.data_proyek.skala_resiko	Skala resiko		
- * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.data_proyek.deskripsi_kegiatan	Deskripsi kegiatan		
+ * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.data_proyek.deskripsi_kegiatan	Deskripsi kegiatan	
+ * @apiSuccess (200) {string(1)}      responinqueryNIB.dataNIB.data_proyek.satu_lini    Keterangan Proyek Satu Lini(Y : Proyek Satu Lini , N : Bukan Proyek Satu Lini)
  * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek	    data_lokasi_proyek		
  * @apiSuccess (200) {string(25)}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.id_proyek_lokasi	ID / Kode Lokasi Proyek		
  * @apiSuccess (200) {string(10)}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.proyek_daerah_id	Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019: https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)		
@@ -2485,6 +2489,7 @@
 *               "skala_usaha": "",
 *               "skala_resiko": "",
 *               "deskripsi_kegiatan": "",
+*               "satu_lini": "",
 *               "data_lokasi_proyek": [
 *                 {
 *                   "id_proyek_lokasi": "",
