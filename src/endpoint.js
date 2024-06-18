@@ -367,7 +367,7 @@
 
 /**
  * @api {post} /receiveNIB Receive NIB
- * @apiVersion 4.3.19
+ * @apiVersion 4.3.22
  * @apiDescription Mengirimkan Data NIB & Checklist Izin dari Sistem OSS ke Sistem K/L/D
  * @apiName receiveNIB
  * @apiGroup NIB
@@ -1946,7 +1946,7 @@
 
 /**
  * @api {post} /inqueryNIB Inquery NIB
- * @apiVersion 4.3.19
+ * @apiVersion 4.3.22
  * @apiDescription Inquery Data Nomor Induk Berusaha (NIB) di Sistem OSS
  * @apiName inqueryNIB
  * @apiGroup NIB
@@ -3244,7 +3244,7 @@
 
 /**
  * @api {post} /inqueryProyek Inquery Proyek
- * @apiVersion 4.3.19
+ * @apiVersion 4.3.22
  * @apiDescription Get Data Proyek di Sistem OSS
  * @apiName inqueryProyek
  * @apiGroup Proyek
@@ -3376,24 +3376,24 @@
  *         ],
  *         "satu_lini": [
  *           {
- *             "nib_satu_lini": null,
- *             "id_proyek_satu_lini": null,
- *             "flag_utama": null,
- *             "kbli": null,
- *             "urutan_lini": null,
- *             "jenis_kegiatan_usaha": null,
- *             "upload_flowchart": null,
- *             "id_resiko": null,
- *             "id_kbli_kewenangan": null,
- *             "kd_resiko": null,
- *             "pembelian_pematang_tanah": null,
- *             "bangunan_gedung": null,
- *             "mesin_peralatan": null,
- *             "mesin_peralatan_usd": null,
- *             "investasi_lain": null,
- *             "sub_jumlah": null,
- *             "modal_kerja": null,
- *             "jumlah_investasi": null
+ *             "nib_satu_lini": "",
+ *             "id_proyek_satu_lini": "",
+ *             "flag_utama": "",
+ *             "kbli": "",
+ *             "urutan_lini": "",
+ *             "jenis_kegiatan_usaha": "",
+ *             "upload_flowchart": "",
+ *             "id_resiko": "",
+ *             "id_kbli_kewenangan": "",
+ *             "kd_resiko": "",
+ *             "pembelian_pematang_tanah": "",
+ *             "bangunan_gedung": "",
+ *             "mesin_peralatan": "",
+ *             "mesin_peralatan_usd": "",
+ *             "investasi_lain": "",
+ *             "sub_jumlah": "",
+ *             "modal_kerja": "",
+ *             "jumlah_investasi": ""
  *           }
  *         ]
  *       }
