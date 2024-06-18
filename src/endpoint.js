@@ -587,6 +587,7 @@
  *             "skala_usaha": "",
  *             "skala_resiko": "",
  *             "deskripsi_kegiatan": "",
+ *             "satu_lini": "",
  *             "data_lokasi_proyek": [
  *               {
  *                 "id_proyek_lokasi": "",
@@ -910,6 +911,7 @@
  * @apiBody {string(10)}    	dataNIB.data_proyek.skala_usaha	    Skala Usaha Perusahaan
  * @apiBody {string(5)}    	dataNIB.data_proyek.skala_resiko	    Skala Resiko Perusahaan
  * @apiBody {string(255)}    	dataNIB.data_proyek.deskripsi_kegiatan	    Deskripsi kegiatan
+ * @apiBody {string(1)}      dataNIB.data_proyek.satu_lini         Keterangan Proyek Satu Lini(Y : Proyek Satu Lini , N : Bukan Proyek Satu Lini)
  * @apiBody {Object[]}    	dataNIB.data_proyek.data_lokasi_proyek	    data_lokasi_proyek
  * @apiBody {string(25)}    	dataNIB.data_proyek.data_lokasi_proyek.id_proyek_lokasi	    id_proyek_lokasi
  * @apiBody {string(10)}    	dataNIB.data_proyek.data_lokasi_proyek.proyek_daerah_id	    Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019 : https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)
@@ -1225,6 +1227,7 @@
  *             "skala_usaha": "",
  *             "skala_resiko": "",
  *             "deskripsi_kegiatan": "",
+ *             "satu_lini": "",
  *             "data_lokasi_proyek": [
  *               {
  *                 "id_proyek_lokasi": "",
@@ -2193,7 +2196,8 @@
  * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.data_proyek.nama_perseroan_merger	Nama Perusahaan Merger		
  * @apiSuccess (200) {string(2)}    	responinqueryNIB.dataNIB.data_proyek.skala_usaha	Skala usaha		
  * @apiSuccess (200) {string(50)}    	responinqueryNIB.dataNIB.data_proyek.skala_resiko	Skala resiko		
- * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.data_proyek.deskripsi_kegiatan	Deskripsi kegiatan		
+ * @apiSuccess (200) {string(255)}    	responinqueryNIB.dataNIB.data_proyek.deskripsi_kegiatan	Deskripsi kegiatan	
+ * @apiSuccess (200) {string(1)}      responinqueryNIB.dataNIB.data_proyek.satu_lini    Keterangan Proyek Satu Lini(Y : Proyek Satu Lini , N : Bukan Proyek Satu Lini)
  * @apiSuccess (200) {Object[]}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek	    data_lokasi_proyek		
  * @apiSuccess (200) {string(25)}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.id_proyek_lokasi	ID / Kode Lokasi Proyek		
  * @apiSuccess (200) {string(10)}    	responinqueryNIB.dataNIB.data_proyek.data_lokasi_proyek.proyek_daerah_id	Daerah/Lokasi Investasi(* Menggunakan Kodefikasi yang diterbitkan oleh Kemendagri - Permendagri No 72 Tahun 2019: https://www.kemendagri.go.id/files/2020/PMDN 72 TH 2019+lampiran.pdf)		
@@ -2485,6 +2489,7 @@
 *               "skala_usaha": "",
 *               "skala_resiko": "",
 *               "deskripsi_kegiatan": "",
+*               "satu_lini": "",
 *               "data_lokasi_proyek": [
 *                 {
 *                   "id_proyek_lokasi": "",
@@ -3297,10 +3302,34 @@
  * <br>04: IKN - Financial Center
  * @apiSuccess (200) {String(25){25}} data.data_proyek.fasilitas.id_permohonan_fasilitas ID Permohonan Fasilitas
  * @apiSuccess (200) {String(50){50}} data.data_proyek.fasilitas.nomor_kmk_fasilitas Nomor KMK Fasilitas
- * @apiSuccess (200) {String(10){10}} data.data_proyek.fasilitas.tgl_persetujuan Tanggal Pengajuan Fasilitas
+ * @apiSuccess (200) {String(10){10}} data.data_proyek.fasilitas.tgl_persetujuan_fasilitas Tanggal Persetujuan Fasilitas
  * @apiSuccess (200) {Object} data.data_proyek.data_teknis_lokasi Data Teknis Lokasi
  * @apiSuccess (200) {Number(20){20}} data.data_proyek.data_teknis_lokasi.luas_tanah_disetujui Luas Tanah Disetujui
  * @apiSuccess (200) {String(2){2}} data.data_proyek.data_teknis_lokasi.satuan_luas_tanah_disetujui Satuan Luas Tanah Disetujui <b>(*Lihat Lampiran 17)</b>
+ * @apiSuccess (200) {Object} data.data_proyek.data_checklist Data Checklist
+ * @apiSuccess (200) {String(25){25}} data.data_proyek.data_checklist.id_izin Merupakan ID Pengajuan Permohonan Perizinan yang di Generate Sistem OSS, Untuk Pengiriman Status Izin
+ * @apiSuccess (200) {String(25){25}} data.data_proyek.data_checklist.kd_izin Kode Izin Sistem K/L/D <b>(* service getDataReferensi kode :8)</b>
+ * @apiSuccess (200) {String(255){255}} data.data_proyek.data_checklist.nama_izin Nama Izin
+ * @apiSuccess (200) {String(255){255}} data.data_proyek.data_checklist.no_izin Nomor Izin
+ * @apiSuccess (200) {String(255){255}} data.data_proyek.data_checklist.tgl_izin Tanggal Izin (* Format : YYYY-MM-DD)
+ * @apiSuccess (200) {Object} data.data_proyek.satu_lini Data Satu Lini
+ * @apiSuccess (200) {String(25){25}} data.data_proyek.satu_lini.nib_satu_lini ID NIB Satu Lini
+ * @apiSuccess (200) {String(25){25}} data.data_proyek.satu_lini.id_proyek_satu_lini ID / Kode Proyek Satu Lini
+ * @apiSuccess (200) {String(25){25}} data.data_proyek.satu_lini.flag_utama Y : Satu Lini Utama / N : Satu Lini Non Utama
+ * @apiSuccess (200) {String(25){25}} data.data_proyek.satu_lini.kbli Kode KBLI (* Menggunakan Kode KBLI Tahun 2020)
+ * @apiSuccess (200) {String(25){25}} data.data_proyek.satu_lini.urutan_lini Urutan Lini
+ * @apiSuccess (200) {String(255){255}} data.data_proyek.satu_lini.jenis_kegiatan_usaha Jenis Kegiatan Usaha (* 01 : Utama / 02 : Pendukung)
+ * @apiSuccess (200) {String(255){255}} data.data_proyek.satu_lini.upload_flowchart URL File Upload Flowchart
+ * @apiSuccess (200) {String(20){20}} data.data_proyek.satu_lini.id_resiko ID Resiko yang di Generate Sistem OSS
+ * @apiSuccess (200) {String(25){25}} data.data_proyek.satu_lini.id_kbli_kewenangan ID KBLI Kewenangan
+ * @apiSuccess (200) {String(2){2}} data.data_proyek.satu_lini.kd_resiko Resiko KBLI
+ * @apiSuccess (200) {String(25){25}} data.data_proyek.satu_lini.pembelian_pematang_tanah Harga Pembelian Pematang Tahan
+ * @apiSuccess (200) {String(25){25}} data.data_proyek.satu_lini.bangunan_gedung Harga Bangunan Gedung
+ * @apiSuccess (200) {String(25){25}} data.data_proyek.satu_lini.mesin_peralatan Harga Mesin Peralatan
+ * @apiSuccess (200) {String(25){25}} data.data_proyek.satu_lini.mesin_peralatan_usd Harga USD Mesin Peralatan
+ * @apiSuccess (200) {String(25){25}} data.data_proyek.satu_lini.investasi_lain Jumlah Investasi Lain
+ * @apiSuccess (200) {String(25){25}} data.data_proyek.satu_lini.modal_kerja Jumlah Modal Kerja
+ * @apiSuccess (200) {String(25){25}} data.data_proyek.satu_lini.jumlah_investasi Jumlah Investasi
  * @apiSuccessExample {json} Succes-Response:
  * {
  *   "kode_status": 200,
@@ -3329,13 +3358,44 @@
  *             "flag_fasilitas": "",
  *             "id_permohonan_fasilitas": "",
  *             "nomor_kmk_fasilitas": "",
- *             "tgl_pengajuan_fasilitas": ""
+ *             "tgl_persetujuan_fasilitas": ""
  *           }
  *         ],
  *         "data_teknis_lokasi": {
  *           "luas_tanah_disetujui": 0,
  *           "satuan_luas_tanah_disetujui": ""
- *         }
+ *         },
+ *         "data_checklist": [
+ *           {
+ *             "id_izin": "",
+ *             "kd_izin": "",
+ *             "nama_izin": "",
+ *             "no_izin": "",
+ *             "tgl_izin": ""
+ *           }
+ *         ],
+ *         "satu_lini": [
+ *           {
+ *             "nib_satu_lini": null,
+ *             "id_proyek_satu_lini": null,
+ *             "flag_utama": null,
+ *             "kbli": null,
+ *             "urutan_lini": null,
+ *             "jenis_kegiatan_usaha": null,
+ *             "upload_flowchart": null,
+ *             "id_resiko": null,
+ *             "id_kbli_kewenangan": null,
+ *             "kd_resiko": null,
+ *             "pembelian_pematang_tanah": null,
+ *             "bangunan_gedung": null,
+ *             "mesin_peralatan": null,
+ *             "mesin_peralatan_usd": null,
+ *             "investasi_lain": null,
+ *             "sub_jumlah": null,
+ *             "modal_kerja": null,
+ *             "jumlah_investasi": null
+ *           }
+ *         ]
  *       }
  *     ]
  *   }
