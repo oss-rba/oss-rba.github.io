@@ -386,6 +386,7 @@ Untuk Referensi Kode Izin Bisa didapatkan melalui method getDataReferensi dengan
 | 02   | Pendukung                  |
 | 03   | Kantor Cabang Administrasi |
 | 04   | Perluasan                  |
+| 05   | Pendukung UMKU             |
 #### <span id="api-example-for-a-submenu-entry">Lampiran 27 - DATA JENIS IZIN</span>
 | KODE | KETERANGAN         |
 |------|--------------------|
